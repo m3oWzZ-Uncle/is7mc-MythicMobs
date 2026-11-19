@@ -1,0 +1,17 @@
+# Private AI training data
+/incoming/
+/memory/
+/feedback/
+/training/
+
+# Temporary files
+*.log
+*.tmp
+.env
+.env.*
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
