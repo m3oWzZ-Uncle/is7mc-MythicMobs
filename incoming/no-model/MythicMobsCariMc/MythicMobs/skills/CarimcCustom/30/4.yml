@@ -1,0 +1,270 @@
+#
+EVENT_THREE_FOUR_SKILL_1:
+  Cooldown: 25
+  Skills:
+  - delay 1
+  - potion{type=DAMAGE_RESISTANCE;duration=99999;level=10;particles=false;icon=false;force=true} @self
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+
+  - delay 20
+  - potion{type=LEVITATION;duration=100;level=5;particles=false;icon=false;force=true} @self
+  - delay 50
+  - leap{velocity=250} @target
+  - delay 15
+  - potion{type=LEVITATION;duration=15;level=1;particles=false;icon=false;force=true} @self
+  - jump{velocity=-100}
+  - delay 10
+  - throw{velocity=20;velocityY=5} @PIR{r=6}
+  - sound{s=entity.dragon_fireball.explode;v=1.0;p=0.8} @self
+  - damage{amount=30-100;ignoreArmor=true} @PIR{r=6}
+  - playanimation{a=2;audience=World} @PIR{r=6}
+  - effect:particles{p=reddust;color=#700000;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - effect:particles{p=reddust;color=#ff0000;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - delay 5
+  - effect:particles{p=reddust;color=#700000;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - effect:particles{p=reddust;color=#ff0000;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=1;level=1;particles=false;icon=false;force=true} @self
+
+##################################################
+
+EVENT_THREE_FOUR_SKILL_2:
+  Cooldown: 32
+  Skills:
+  - sound{s=entity.evoker.cast_spell;v=1;sc=hostile;p=1.3} @self
+  - projectile{bulletType=MOB;mm=THE_vietnamflag;bspin=10;rs=10;onTick=EVENT_THREE_FOUR_SKILL_2-Tick;onHit=EVENT_THREE_FOUR_SKILL_2-Hit;onEnd=EVENT_THREE_FOUR_SKILL_2-EndHit;v=14;i=1;hR=1;vR=1;mr=25;tyo=1.1;sfo=0;syo=1.1;g=0.4} @RandomLocationsNearCaster{a=3;r=10;minr=6;s=2}
+  - projectile{bulletType=MOB;mm=THE_vietnamflag;bspin=10;rs=10;onTick=EVENT_THREE_FOUR_SKILL_2-Tick;onHit=EVENT_THREE_FOUR_SKILL_2-Hit;onEnd=EVENT_THREE_FOUR_SKILL_2-EndHit;v=14;i=1;hR=1;vR=1;mr=25;tyo=1.1;sfo=0;syo=1.1;g=0.4} @RandomLocationsNearCaster{a=3;r=8;minr=6;s=2}
+  - projectile{bulletType=MOB;mm=THE_vietnamflag;bspin=10;rs=10;onTick=EVENT_THREE_FOUR_SKILL_2-Tick;onHit=EVENT_THREE_FOUR_SKILL_2-Hit;onEnd=EVENT_THREE_FOUR_SKILL_2-EndHit;v=14;i=1;hR=1;vR=1;mr=25;tyo=1.1;sfo=0;syo=1.1;g=0.4} @RandomLocationsNearCaster{a=3;r=6;minr=6;s=2}
+  - projectile{bulletType=MOB;mm=THE_vietnamflag;bspin=10;rs=10;onTick=EVENT_THREE_FOUR_SKILL_2-Tick;onHit=EVENT_THREE_FOUR_SKILL_2-Hit;onEnd=EVENT_THREE_FOUR_SKILL_2-EndHit;v=14;i=1;hR=1;vR=1;mr=25;tyo=1.1;sfo=0;syo=1.1;g=0.4} @RandomLocationsNearCaster{a=3;r=4;minr=2;s=2}
+  - projectile{bulletType=MOB;mm=THE_vietnamflag;bspin=10;rs=10;onTick=EVENT_THREE_FOUR_SKILL_2-Tick;onHit=EVENT_THREE_FOUR_SKILL_2-Hit;onEnd=EVENT_THREE_FOUR_SKILL_2-EndHit;v=14;i=1;hR=1;vR=1;mr=25;tyo=1.1;sfo=0;syo=1.1;g=0.1} @EIR{r=25;target=players} 0.5
+  - delay 10
+  - sound{s=entity.evoker.cast_spell;v=1;sc=hostile;p=0.4} @self
+  - projectile{bulletType=MOB;mm=THE_vietnamflag;bspin=10;rs=10;onTick=EVENT_THREE_FOUR_SKILL_2-Tick;onHit=EVENT_THREE_FOUR_SKILL_2-Hit;onEnd=EVENT_THREE_FOUR_SKILL_2-EndHit;v=6;i=1;hR=1;vR=1;mr=25;tyo=1.1;sfo=0;syo=1.1;g=0.2} @RandomLocationsNearCaster{a=5;r=10;minr=6;s=1}
+  - projectile{bulletType=MOB;mm=THE_vietnamflag;bspin=10;rs=10;onTick=EVENT_THREE_FOUR_SKILL_2-Tick;onHit=EVENT_THREE_FOUR_SKILL_2-Hit;onEnd=EVENT_THREE_FOUR_SKILL_2-EndHit;v=6;i=1;hR=1;vR=1;mr=25;tyo=1.1;sfo=0;syo=1.1;g=0.2} @RandomLocationsNearCaster{a=5;r=5;minr=2;s=1}
+EVENT_THREE_FOUR_SKILL_2-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#db0f00;amount=1;speed=0.02;hS=0;vS=0} @origin
+  - effect:particles{p=reddust;color=#d200d9;amount=1;speed=0.02;hS=0;vS=0} @origin
+EVENT_THREE_FOUR_SKILL_2_EFFECTS-Tick:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#f200ff;amount=10;radius=1.2} @Sphere{r=20;points=15}
+  - effect:particlesphere{p=reddust;color=#ab0000;amount=10;radius=1.2} @Sphere{r=20;points=15}
+EVENT_THREE_FOUR_SKILL_2-EndHit:
+  Skills:
+  - damage{a=30-100;i=true} @ENO{r=3;target=players}
+  - throw{velocity=5;velocityY=2} @ENO{r=3;target=players}
+  - sound{s=block.wool.break;v=1;sc=hostile;p=0.4} @self
+EVENT_THREE_FOUR_SKILL_2-Hit:
+  Skills:
+  - damage{a=30to80;i=true}
+
+#################################################################################
+
+EVENT_THREE_FOUR_SKILL_3:
+  Cooldown: 40
+  Skills:
+  - projectile{onTick=EVENT_THREE_FOUR_SKILL_3-Tick;onHit=EVENT_THREE_FOUR_SKILL_3-Hit;onEnd=EVENT_THREE_FOUR_SKILL_3-End;v=10;i=1;hR=1;vR=1;syo=20} @target
+  - sound{s=item.hoe.till;v=1.0;p=1.0} @self
+EVENT_THREE_FOUR_SKILL_3-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=65;speed=0;hS=0.8;vS=0.8} @origin
+  - effect:particles{p=explosion_normal;amount=15;speed=0;hS=0.8;vS=0.8} @origin
+  - particles{particle=block;m=dirt;amount=100;hS=0.7;vS=0.7} @origin
+  - particles{particle=block;m=obsidian;amount=100;hS=0.7;vS=0.7} @origin
+EVENT_THREE_FOUR_SKILL_3-Hit:
+  Skills:
+  - damage{a=30-80;ia=true}
+  - potion{type=SLOW;duration=60;lvl=2}
+  - effect:explosion
+  - ignite{ticks=120}
+EVENT_THREE_FOUR_SKILL_3-End:
+  Skills:
+  - damage{a=30-100;ia=true} @PlayersNearOrigin{r=5}
+  - potion{type=SLOW;duration=100;lvl=2} @PlayersNearOrigin{r=5}
+  - effect:explosion
+  - ignite{ticks=120} @PlayersNearOrigin{r=5}
+  - blockwave{duration=60;material=dirt;radius=4;radiusY=7;velocity=1;shape=sphere} @origin
+
+##############################################################
+
+EVENT_THREE_FOUR_COMBATL_1:
+  Conditions:
+  - incombat true
+  Skills:
+  - damage{a=5;i=true}
+  - effect:sound{s=entity.elder_guardian.hurt;v=0.3;p=0.7} @self
+  - potion{t=SLOW;d=60;l=1;force=true;p=false} @target
+EVENT_THREE_FOUR_COMBATL_2:
+  Conditions:
+  - incombat true
+  Skills:
+  - damage{a=8;i=true}
+  - effect:sound{s=entity.elder_guardian.hurt;v=0.3;p=0.7} @self
+  - potion{t=SLOW;d=60;l=1;force=true;p=false} @target
+
+EVENT_THREE_FOUR_COMBATL_3:
+  Skills:
+  - delay 2
+  - playanimation{a=0;audience=World} @self
+  - damage{a=10-20;pk=true;pi=true}
+  - sound{s=entity.player.attack.crit;p=1.7;sc=master}
+  - sound{s=entity.mooshroom.shear;p=1.8;sc=master}
+  - delay 3
+  - playanimation{a=1;audience=World} @self
+  - damage{a=10-20;pk=true;pi=true}
+  - sound{s=entity.player.attack.crit;p=1.7;sc=master}
+  - sound{s=entity.mooshroom.shear;p=1.8;sc=master}
+  - potion{type=weakness;duration=20;level=10;p=false}
+
+EVENT_THREE_FOUR_ONSPAWN:
+  Skills:
+  - delay 5
+  - skill{s=EVENT_THREE_FOUR_SPAWNING_TITLE} @self
+  - setstance{stance=KNIGHT_ONSPAWN} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=99999;level=10;force=true;p=false} @self
+  - stun{d=55;f=false;g=true} @self
+  - effect:lightning @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @PIR{r=30}
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @PIR{r=30}
+  - delay 5
+  - effect:particlebox{p=reddust;color=#000029;amount=10;radius=3} @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#03f0fc;amount=10;radius=2} @self
+  - equip{item=EVENT_THREE_FOUR__HEAD:HEAD} @self
+  - mount{type=EVENT_THREE_FOUR_HORSE}
+#
+  - effect:lightning @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @PIR{r=30}
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @PIR{r=30}
+  - delay 5
+  - effect:particlebox{p=reddust;color=#000029;amount=10;radius=3} @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#03f0fc;amount=10;radius=2} @self
+  - equip{item=EVENT_THREE_FOUR__CHESTPLATE:CHEST} @self
+#
+  - effect:lightning @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @PIR{r=30}
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @PIR{r=30}
+  - delay 5
+  - effect:particlebox{p=reddust;color=#000029;amount=10;radius=3} @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#03f0fc;amount=10;radius=2} @self
+  - equip{item=EVENT_THREE_FOUR__LEGGINGS:LEGS} @self
+#
+  - effect:lightning @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @PIR{r=30}
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @PIR{r=30}
+  - delay 5
+  - effect:particlebox{p=reddust;color=#000029;amount=10;radius=3} @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#03f0fc;amount=10;radius=2} @self
+  - equip{item=EVENT_THREE_FOUR__BOOTS:FEET} @self
+#
+  - effect:lightning @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @PIR{r=30}
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @PIR{r=30}
+  - delay 5
+  - effect:particlebox{p=reddust;color=#000029;amount=10;radius=3} @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#03f0fc;amount=10;radius=2} @self
+  - equip{item=EVENT_THREE_FOUR__SWORD:HAND} @self
+  - delay 5
+  - potion{type=DAMAGE_RESISTANCE;duration=1;level=1;force=true;p=false} @self
+  - healpercent{m=1.0} @self
+  - setstance{stance=KNIGHT_SPAWN_1} @self
+  - skill{s=EVENT_THREE_FOUR_ONSPAWN_AI} @self
+
+EVENT_THREE_FOUR_SPAWNING_TITLE:
+  Skills:
+  - sendtitle{title="<#FFB693>☠ &8[<#FF651B>Trùm&8] &fBạch Mã <#8A00FF>Hoảng Tử <#FFB693>☠";subtitle="&8○ &fđã được hồi sinh &8○";d=100} @PIR{r=25}
+  
+  
+EVENT_THREE_FOUR_ONSPAWN_AI:
+  Skills:
+  - delay 5
+  - runaitargetselector{target=players} @self
+  - runaigoalselector{goal=float} @self
+  - runaigoalselector{goal=meleeattack} @self
+
+
+EVENT_THREE_FOUR_WIN:
+  Conditions:
+  - targetwithin 30
+  Skills:
+  - effect:lightning{repeat=5;repeatInterval=3;localizedradius=20;localized=true} @self
+  - delay 5
+  - summon{type=EVENT_THREE_FOUR_PILE;a=1} @selfLocation
+
+
+######################################
+
+EVENT_THREE_FOUR_EQUIPMENT_EXTRA:
+  Cooldown: 99999
+  Skills:
+  - effect:lightning @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#000029;amount=25;radius=5} @self
+  - effect:particlebox{p=reddust;color=#00eeff;amount=25;radius=5} @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#03f0fc;amount=20;radius=4} @self
+  - effect:particlebox{p=reddust;color=#00eeff;amount=20;radius=4} @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#03f0fc;amount=20;radius=3} @self
+  - effect:particlebox{p=reddust;color=#00eeff;amount=20;radius=3} @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#03f0fc;amount=15;radius=2} @self
+  - effect:particlebox{p=reddust;color=#00eeff;amount=15;radius=2} @self
+  - delay 5
+  - effect:particlebox{p=reddust;color=#03f0fc;amount=10;radius=1} @self
+  - effect:particlebox{p=reddust;color=#00eeff;amount=10;radius=1} @self
+  - equip{item=EVENT_THREE_FOUR__SWORD:OFFHAND} @self
+  - message{m="<mob.name><&co>&r &fMày không Thể Tiêu diệt được tao đâu!"} @PlayersInRadius{r=50}
+  
+EVENT_THREE_FOUR_HEAL:
+  Cooldown: 99999
+  Skills:
+  - dismount
+  - command{c="mm mobs kill EVENT_THREE_FOUR_HORSE"}
+  - runaitargetselector{target=clear}
+  - runaigoalselector{goal=clear}
+  - potion{type=DAMAGE_RESISTANCE;duration=99999;level=99;force=true;p=false} @self
+  - effect:particlesphere{particle=VILLAGER_ANGRY;amount=10;radius=2} @self
+  - message{m="<mob.name><&co>&r &fHAHA, Mày thực sự nghĩ rằng Mày có thể giết tao sao??!"} @PlayersInRadius{r=50}
+  - delay 10
+  - effect:explosion @Self
+  - damage{amount=10} @PlayersInRadius{r=5}
+  - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
+  - delay 2
+  - teleport{spreadh=0;spreadv=0} @CasterSpawnLocation
+  - stun{d=40;f=true;g=false} @self
+  - delay 40
+  - equip{item=ENCHANTED_GOLDEN_APPLE:HAND} @self
+  - jump{velocity=2}
+  - delay 5
+  - stun{d=80;f=true;g=true} @self
+  - lightning{d=60} @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @PIR{r=30}
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @PIR{r=30}
+  - delay 20
+  - lightning{d=60} @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @PIR{r=30}
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @PIR{r=30}
+  - delay 20
+  - lightning{d=60} @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @PIR{r=30}
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @PIR{r=30}
+  - delay 20
+  - lightning{d=60} @self
+  - sound{s=entity.lightning_bolt.impact;sc=hostile;v=1} @PIR{r=30}
+  - sound{s=entity.lightning_bolt.thunder;sc=hostile;v=0.5} @PIR{r=30}
+  - delay 20
+  - effect:particlesphere{particle=heart;amount=10;radius=3} @self
+  - healpercent{m=1.0} @self
+  - delay 5
+  - potion{type=DAMAGE_RESISTANCE;duration=0;level=0;force=true;p=false} @self
+  - equip{item=EVENT_THREE_FOUR__SWORD:HAND} @self
+  - equip{item=EVENT_THREE_FOUR__HEAD_TW:HEAD} @self
+  - runaigoalselector{goal=meleeattack}
+  - runaitargetselector{target=players}
+  - delay 60
+  - skill{s=EVENT_THREE_FOUR_EQUIPMENT_EXTRA}

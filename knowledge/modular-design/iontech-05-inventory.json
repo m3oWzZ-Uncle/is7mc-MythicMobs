@@ -1,0 +1,1896 @@
+[
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/flame_flicker-spell.yml",
+    "sha256": "1044317f9500a2e2efd195d05e0e3c337defe76443024a10e4cd8a106ece50f2",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "flame_flicker-cast",
+        "line": 4
+      },
+      {
+        "id": "flame_flicker-exec",
+        "line": 9
+      },
+      {
+        "id": "flame_flicker-fire",
+        "line": 13
+      },
+      {
+        "id": "flame_flicker-tick",
+        "line": 23
+      },
+      {
+        "id": "flame_flicker-hit_entity",
+        "line": 35
+      },
+      {
+        "id": "flame_flicker-hit_entity-critical",
+        "line": 45
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "flame_flicker-fire",
+        "to": "setRandomID",
+        "line": 15,
+        "kind": "metaskill"
+      },
+      {
+        "from": "flame_flicker-fire",
+        "to": "flame_flicker-tick",
+        "line": 19,
+        "kind": "metaskill"
+      },
+      {
+        "from": "flame_flicker-fire",
+        "to": "flame_flicker-hit_entity",
+        "line": 20,
+        "kind": "metaskill"
+      },
+      {
+        "from": "flame_flicker-fire",
+        "to": "flame_flicker-end",
+        "line": 21,
+        "kind": "metaskill"
+      },
+      {
+        "from": "flame_flicker-hit_entity",
+        "to": "flame_flicker-hit_entity-critical",
+        "line": 37,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/frost_breath-spell.yml",
+    "sha256": "5a8bcc1ddd63e83f4098970717b2dcd070f0b2e22b45857756ab50982c80d222",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "frost_breath-cast",
+        "line": 3
+      },
+      {
+        "id": "frost_breath-exec",
+        "line": 12
+      },
+      {
+        "id": "frost_breath-fire",
+        "line": 23
+      },
+      {
+        "id": "frost_breath-start",
+        "line": 32
+      },
+      {
+        "id": "frost_breath-hit_entity",
+        "line": 37
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "frost_breath-cast",
+        "to": "spell-cooldown",
+        "line": 9,
+        "kind": "metaskill"
+      },
+      {
+        "from": "frost_breath-exec",
+        "to": "frost_breath-fire",
+        "line": 14,
+        "kind": "metaskill"
+      },
+      {
+        "from": "frost_breath-fire",
+        "to": "frost_breath-start",
+        "line": 27,
+        "kind": "metaskill"
+      },
+      {
+        "from": "frost_breath-fire",
+        "to": "frost_breath-hit_entity",
+        "line": 28,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/frost_shard-spell.yml",
+    "sha256": "23f3123504e0523aa4024726d2f1fff18d1f02dcbce44acbbb2ece61913b240a",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "frost_shard-cast",
+        "line": 3
+      },
+      {
+        "id": "frost_shard-exec",
+        "line": 9
+      },
+      {
+        "id": "frost_shard-fire",
+        "line": 15
+      },
+      {
+        "id": "frost_shard-tick",
+        "line": 27
+      },
+      {
+        "id": "frost_shard-hit_entity",
+        "line": 31
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "frost_shard-cast",
+        "to": "frost_shard-exec",
+        "line": 5,
+        "kind": "metaskill"
+      },
+      {
+        "from": "frost_shard-exec",
+        "to": "frost_shard-cast",
+        "line": 13,
+        "kind": "metaskill"
+      },
+      {
+        "from": "frost_shard-fire",
+        "to": "setRandomID",
+        "line": 17,
+        "kind": "metaskill"
+      },
+      {
+        "from": "frost_shard-fire",
+        "to": "frost_shard-tick",
+        "line": 23,
+        "kind": "metaskill"
+      },
+      {
+        "from": "frost_shard-fire",
+        "to": "frost_shard-hit_entity",
+        "line": 24,
+        "kind": "metaskill"
+      },
+      {
+        "from": "frost_shard-fire",
+        "to": "frost_shard-end",
+        "line": 25,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/glacial_spikes-spell.yml",
+    "sha256": "d24ed3ec8a29b39f180dd6d36b07c02d72f140a5294c2fe63738ffe7facd50b7",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "glacial_spikes-cast",
+        "line": 3
+      },
+      {
+        "id": "glacial_spikes-exec",
+        "line": 8
+      },
+      {
+        "id": "glacial_spikes-target",
+        "line": 13
+      },
+      {
+        "id": "glacial_spikes-fire",
+        "line": 23
+      },
+      {
+        "id": "glacial_spikes-start",
+        "line": 31
+      },
+      {
+        "id": "glacial_spikes-tick",
+        "line": 41
+      },
+      {
+        "id": "glacial_spikes-hit_entity",
+        "line": 61
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "glacial_spikes-target",
+        "to": "setRandomID",
+        "line": 15,
+        "kind": "metaskill"
+      },
+      {
+        "from": "glacial_spikes-target",
+        "to": "glacial_spikes-fire",
+        "line": 20,
+        "kind": "metaskill"
+      },
+      {
+        "from": "glacial_spikes-fire",
+        "to": "glacial_spikes-start",
+        "line": 27,
+        "kind": "metaskill"
+      },
+      {
+        "from": "glacial_spikes-fire",
+        "to": "glacial_spikes-tick",
+        "line": 28,
+        "kind": "metaskill"
+      },
+      {
+        "from": "glacial_spikes-fire",
+        "to": "glacial_spikes-hit_entity",
+        "line": 29,
+        "kind": "metaskill"
+      },
+      {
+        "from": "glacial_spikes-hit_entity",
+        "to": "knockback",
+        "line": 67,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/gravity_slam-skills.yml",
+    "sha256": "827d702c05b94f48c34b2d0410726ecd82deef733fee460d383a628eb3924847",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "gravity_slam-cast",
+        "line": 3
+      },
+      {
+        "id": "gravity_slam-targeting_start",
+        "line": 10
+      },
+      {
+        "id": "gravity_slam-targeting_tick",
+        "line": 16
+      },
+      {
+        "id": "gravity_slam-targeting_tracedown",
+        "line": 24
+      },
+      {
+        "id": "gravity_slam-targeting_move",
+        "line": 31
+      },
+      {
+        "id": "gravity_slam-exec",
+        "line": 38
+      },
+      {
+        "id": "gravity_slam-start",
+        "line": 43
+      },
+      {
+        "id": "gravity_slam-apply",
+        "line": 49
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "gravity_slam-targeting_start",
+        "to": "false",
+        "line": 12,
+        "kind": "metaskill"
+      },
+      {
+        "from": "gravity_slam-targeting_tick",
+        "to": "gravity_slam-targeting_tracedown",
+        "line": 21,
+        "kind": "metaskill"
+      },
+      {
+        "from": "gravity_slam-targeting_tracedown",
+        "to": "gravity_slam-targeting_move",
+        "line": 28,
+        "kind": "metaskill"
+      },
+      {
+        "from": "gravity_slam-exec",
+        "to": "gravity_slam-start",
+        "line": 40,
+        "kind": "metaskill"
+      },
+      {
+        "from": "gravity_slam-start",
+        "to": "gravity_slam-apply",
+        "line": 46,
+        "kind": "metaskill"
+      },
+      {
+        "from": "gravity_slam-apply",
+        "to": "stun",
+        "line": 74,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/spark_jolt-spell.yml",
+    "sha256": "82aa37d526d75be225e1a1ee2f391682037ad4c290d2bbf0f7bfbec11c5396f3",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "spark_jolt-cast",
+        "line": 3
+      },
+      {
+        "id": "spark_jolt-exec",
+        "line": 10
+      },
+      {
+        "id": "spark_jolt-fire",
+        "line": 16
+      },
+      {
+        "id": "spark_jolt-tick",
+        "line": 27
+      },
+      {
+        "id": "spark_jolt-hit_entity",
+        "line": 39
+      },
+      {
+        "id": "spark_jolt-damage",
+        "line": 47
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "spark_jolt-cast",
+        "to": "setRandomID",
+        "line": 5,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spark_jolt-cast",
+        "to": "spark_jolt-exec",
+        "line": 6,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spark_jolt-exec",
+        "to": "spark_jolt-cast",
+        "line": 14,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spark_jolt-fire",
+        "to": "spark_jolt-tick",
+        "line": 23,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spark_jolt-fire",
+        "to": "spark_jolt-hit_entity",
+        "line": 24,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spark_jolt-fire",
+        "to": "spark_jolt-end",
+        "line": 25,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spark_jolt-hit_entity",
+        "to": "pierce-hit",
+        "line": 41,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spark_jolt-hit_entity",
+        "to": "spark_jolt-damage",
+        "line": 42,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spark_jolt-damage",
+        "to": "knockback",
+        "line": 52,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/void_lance-signature.yml",
+    "sha256": "841ed918e1161abf23fdc5f811c8dbb8698ea826b6f45f4fb1645970658fad3e",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Slash",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "void_lance-cast",
+        "line": 3
+      },
+      {
+        "id": "void_lance-exec",
+        "line": 12
+      },
+      {
+        "id": "void_lance-fire",
+        "line": 17
+      },
+      {
+        "id": "void_lance-tick",
+        "line": 27
+      },
+      {
+        "id": "void_lance-hit_entity",
+        "line": 46
+      },
+      {
+        "id": "void_lance-end",
+        "line": 55
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "void_lance-cast",
+        "to": "channel-tick_fx",
+        "line": 8,
+        "kind": "metaskill"
+      },
+      {
+        "from": "void_lance-fire",
+        "to": "setRandomID",
+        "line": 19,
+        "kind": "metaskill"
+      },
+      {
+        "from": "void_lance-fire",
+        "to": "void_lance-tick",
+        "line": 23,
+        "kind": "metaskill"
+      },
+      {
+        "from": "void_lance-fire",
+        "to": "void_lance-hit_entity",
+        "line": 24,
+        "kind": "metaskill"
+      },
+      {
+        "from": "void_lance-fire",
+        "to": "void_lance-end",
+        "line": 25,
+        "kind": "metaskill"
+      },
+      {
+        "from": "void_lance-hit_entity",
+        "to": "knockback",
+        "line": 52,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/spell-test_cases.yml",
+    "sha256": "f174596c80da7aed2a5d9e032bf5b1f2f67be97343a09b219d9e433bbf672d5c",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Deprecated Skills/burn_terrain-mechanic-skills.yml",
+    "sha256": "1479add2ae537d6c138daf305df239b1a7c9ae22a4ff54bd1550247eb0545f94",
+    "kind": "metaskill",
+    "categories": [
+      "Deprecated"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Deprecated Skills/channel-mechanic.yml",
+    "sha256": "12f88e930e4663a4f1dcb8b7761d3122eea606d852c14160bea23c30a6816ee1",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Deprecated"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Deprecated Skills/mob-aigoals-mechanic.yml",
+    "sha256": "e4c4bca51e6fe58e31ebe7cafaedc786f854da52cac574372e838454e1efc61c",
+    "kind": "metaskill",
+    "categories": [
+      "Deprecated"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Deprecated Skills/model_slash-skills.yml",
+    "sha256": "058e20908c4ea8c656a9103874532916022794dc58743327bc0861b6a0a54d70",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Slash",
+      "Deprecated"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Deprecated Skills/modelled_slash-mechanic-skills.yml",
+    "sha256": "2616966f3f758a8811509cafe15e7169d2074afce281927bdbb32cc7d2a892b9",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Slash",
+      "Deprecated"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Deprecated Skills/signature_spell_handler.yml",
+    "sha256": "4f415a18a94b2467f1cac3a0257ad7b7ad5aadb84ea531ec438e059ee6baadac",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Variables",
+      "Deprecated"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Deprecated Skills/slash-mechanic-skills.yml",
+    "sha256": "b1d583f985cafd4317aabd3d123aab5a00522862eb65dcbcb98b159dada34de5",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Slash",
+      "Deprecated"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Deprecated Skills/spell_handler_old.yml",
+    "sha256": "512b08da26d20c3fcda6e383b739a0bac1c32246cb0e4d57763899530253bd54",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Variables",
+      "Modifiers",
+      "Deprecated"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Deprecated Skills/vfx-shockwave-skills.yml",
+    "sha256": "5ad2146797ecd842dbe6e0c68e50933226d609e6d820425790f273ce3051f748",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "VFX",
+      "Deprecated"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/combo-mechanic-skills.yml",
+    "sha256": "430d78031fa8b634b8c7288ccc3326803a575760bf5886148f43f36ed33d4bec",
+    "kind": "metaskill",
+    "categories": [
+      "Input Handlers",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "combo-cast",
+        "line": 1
+      },
+      {
+        "id": "Combo",
+        "line": 5
+      },
+      {
+        "id": "combo-apply",
+        "line": 9
+      },
+      {
+        "id": "combo-init",
+        "line": 19
+      },
+      {
+        "id": "combo-hit",
+        "line": 32
+      },
+      {
+        "id": "combo-end",
+        "line": 40
+      },
+      {
+        "id": "combo-reset",
+        "line": 48
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "combo-cast",
+        "to": "combo-apply",
+        "line": 3,
+        "kind": "metaskill"
+      },
+      {
+        "from": "Combo",
+        "to": "combo-apply",
+        "line": 7,
+        "kind": "metaskill"
+      },
+      {
+        "from": "combo-apply",
+        "to": "combo-init",
+        "line": 11,
+        "kind": "metaskill"
+      },
+      {
+        "from": "combo-apply",
+        "to": "combo-reset",
+        "line": 14,
+        "kind": "metaskill"
+      },
+      {
+        "from": "combo-apply",
+        "to": "combo-reset",
+        "line": 15,
+        "kind": "metaskill"
+      },
+      {
+        "from": "combo-apply",
+        "to": "combo-end",
+        "line": 17,
+        "kind": "metaskill"
+      },
+      {
+        "from": "combo-hit",
+        "to": "combo-end",
+        "line": 38,
+        "kind": "metaskill"
+      },
+      {
+        "from": "combo-end",
+        "to": "combo-reset",
+        "line": 45,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "placeholderapi-string": [
+        30,
+        35,
+        52
+      ],
+      "dynamic_calls": [
+        36,
+        44
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/hit_evaluation-mechanic.yml",
+    "sha256": "86fc96631ba2b6565b6d9e4e12009ada33bb5e7162692a2d7302c8764faf50e7",
+    "kind": "metaskill",
+    "categories": [
+      "Input Handlers",
+      "Damage Systems",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "hit_evaluate",
+        "line": 4
+      },
+      {
+        "id": "eval-hit",
+        "line": 7
+      },
+      {
+        "id": "attack-weak",
+        "line": 17
+      },
+      {
+        "id": "attack-hit",
+        "line": 21
+      },
+      {
+        "id": "attack-sprint-hit",
+        "line": 25
+      },
+      {
+        "id": "attack-uppercut",
+        "line": 29
+      },
+      {
+        "id": "attack-aerial",
+        "line": 33
+      },
+      {
+        "id": "attack-crit",
+        "line": 38
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "hit_evaluate",
+        "to": "eval-hit",
+        "line": 5,
+        "kind": "metaskill"
+      },
+      {
+        "from": "eval-hit",
+        "to": "attack-weak",
+        "line": 9,
+        "kind": "metaskill"
+      },
+      {
+        "from": "eval-hit",
+        "to": "attack-aerial",
+        "line": 10,
+        "kind": "metaskill"
+      },
+      {
+        "from": "eval-hit",
+        "to": "attack-sprint-hit",
+        "line": 11,
+        "kind": "metaskill"
+      },
+      {
+        "from": "eval-hit",
+        "to": "attack-hit",
+        "line": 12,
+        "kind": "metaskill"
+      },
+      {
+        "from": "eval-hit",
+        "to": "attack-uppercut",
+        "line": 13,
+        "kind": "metaskill"
+      },
+      {
+        "from": "eval-hit",
+        "to": "attack-crit",
+        "line": 14,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/moveset-mechanic-skills.yml",
+    "sha256": "41711684b6f3416d12a14b2a68cf96dc8b59fe1da3a6b0d5442503e67da61099",
+    "kind": "metaskill",
+    "categories": [
+      "Input Handlers",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "moveset-test_exec",
+        "line": 1
+      },
+      {
+        "id": "Moveset",
+        "line": 11
+      },
+      {
+        "id": "moveset",
+        "line": 14
+      },
+      {
+        "id": "moveset-exec",
+        "line": 17
+      },
+      {
+        "id": "moveset-start",
+        "line": 28
+      },
+      {
+        "id": "moveset-end",
+        "line": 52
+      },
+      {
+        "id": "moveset-reset",
+        "line": 60
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "Moveset",
+        "to": "moveset-exec",
+        "line": 12,
+        "kind": "metaskill"
+      },
+      {
+        "from": "moveset",
+        "to": "moveset-exec",
+        "line": 15,
+        "kind": "metaskill"
+      },
+      {
+        "from": "moveset-exec",
+        "to": "setRandomID",
+        "line": 22,
+        "kind": "metaskill"
+      },
+      {
+        "from": "moveset-exec",
+        "to": "eval-hit",
+        "line": 23,
+        "kind": "metaskill"
+      },
+      {
+        "from": "moveset-exec",
+        "to": "moveset-start",
+        "line": 26,
+        "kind": "metaskill"
+      },
+      {
+        "from": "moveset-start",
+        "to": "moveset-reset",
+        "line": 36,
+        "kind": "metaskill"
+      },
+      {
+        "from": "moveset-start",
+        "to": "moveset-end",
+        "line": 50,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/select_target-mechanic.yml",
+    "sha256": "831dd70595937a93f2ff9c033235619692bdff4ad3c546fa765ab7f55d6a4d1c",
+    "kind": "metaskill",
+    "categories": [
+      "Input Handlers",
+      "Variables",
+      "Projectile"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "select_target-cast",
+        "line": 3
+      },
+      {
+        "id": "select_target-cast2",
+        "line": 11
+      },
+      {
+        "id": "select_target-cast3",
+        "line": 17
+      },
+      {
+        "id": "select_target",
+        "line": 23
+      },
+      {
+        "id": "select_target-summon_reticle",
+        "line": 49
+      },
+      {
+        "id": "select_target-location",
+        "line": 61
+      },
+      {
+        "id": "select_target-location-traceforward",
+        "line": 73
+      },
+      {
+        "id": "select_target-location-tracedown",
+        "line": 84
+      },
+      {
+        "id": "select_target-location-move_reticle",
+        "line": 97
+      },
+      {
+        "id": "select_target-location-skill",
+        "line": 104
+      },
+      {
+        "id": "select_target-entity",
+        "line": 114
+      },
+      {
+        "id": "select_target-entity-set_target",
+        "line": 126
+      },
+      {
+        "id": "select_target-entity-traceforward",
+        "line": 138
+      },
+      {
+        "id": "select_target-entity-move_reticle",
+        "line": 145
+      },
+      {
+        "id": "select_target-entity-skill",
+        "line": 152
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "select_target-cast",
+        "to": "select_target",
+        "line": 5,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-cast",
+        "to": "vfx-end_teleport-summon",
+        "line": 8,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-cast2",
+        "to": "select_target",
+        "line": 13,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-cast2",
+        "to": "mana_blast-fire",
+        "line": 14,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-cast3",
+        "to": "select_target",
+        "line": 19,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-cast3",
+        "to": "healbeam-fire",
+        "line": 20,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target",
+        "to": "select_target-location",
+        "line": 36,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target",
+        "to": "select_target-entity",
+        "line": 39,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target",
+        "to": "select_target-any",
+        "line": 42,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target",
+        "to": "select_target-location",
+        "line": 45,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-summon_reticle",
+        "to": "false",
+        "line": 52,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-location",
+        "to": "select_target-summon_reticle",
+        "line": 66,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-location",
+        "to": "select_target-location-traceforward",
+        "line": 69,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-location",
+        "to": "select_target-location-skill",
+        "line": 71,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-location-traceforward",
+        "to": "select_target-location-tracedown",
+        "line": 81,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-location-tracedown",
+        "to": "select_target-location-move_reticle",
+        "line": 86,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-location-tracedown",
+        "to": "select_target-location-move_reticle",
+        "line": 94,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-entity",
+        "to": "select_target-summon_reticle",
+        "line": 119,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-entity",
+        "to": "select_target-entity-set_target",
+        "line": 120,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-entity",
+        "to": "select_target-entity-set_target",
+        "line": 121,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-entity",
+        "to": "select_target-entity-traceforward",
+        "line": 123,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-entity-set_target",
+        "to": "select_target-entity-move_reticle",
+        "line": 135,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-entity-traceforward",
+        "to": "select_target-entity-set_target",
+        "line": 142,
+        "kind": "metaskill"
+      },
+      {
+        "from": "select_target-entity-move_reticle",
+        "to": "select_target-summon_reticle",
+        "line": 147,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        54,
+        109,
+        155
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/spell-cycle-skills.yml",
+    "sha256": "30735cc7217ca4d6023f731e2f9541ce422e4d3d4e782eb85afbdb1ee13e0b17",
+    "kind": "metaskill",
+    "categories": [
+      "Input Handlers",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "spell-cycle-cast",
+        "line": 2
+      },
+      {
+        "id": "spell-cycle-1",
+        "line": 23
+      },
+      {
+        "id": "spell-cycle-checkbounds",
+        "line": 28
+      },
+      {
+        "id": "spell-cycle-right",
+        "line": 36
+      },
+      {
+        "id": "spell-cycle-left",
+        "line": 43
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "spell-cycle-right",
+        "to": "spell-cycle-checkbounds",
+        "line": 40,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-cycle-left",
+        "to": "spell-cycle-checkbounds",
+        "line": 47,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        25
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/mana_charge.yml",
+    "sha256": "f18f45e8df09036f5c9cf6d87e3d82564280e144d062a6b10af8a9bb6535e4b6",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "mana_charge-test",
+        "line": 1
+      },
+      {
+        "id": "mana_charge-test2",
+        "line": 5
+      },
+      {
+        "id": "mana_charge-init",
+        "line": 10
+      },
+      {
+        "id": "mana_charge",
+        "line": 27
+      },
+      {
+        "id": "mana_charge-spell",
+        "line": 35
+      },
+      {
+        "id": "mana_charge-signature",
+        "line": 43
+      },
+      {
+        "id": "mana_charge-evaluate",
+        "line": 52
+      },
+      {
+        "id": "mana_charge-message",
+        "line": 64
+      },
+      {
+        "id": "mana_charge-spell_message",
+        "line": 68
+      },
+      {
+        "id": "mana_charge-signature_message",
+        "line": 74
+      },
+      {
+        "id": "mana_charge-decay",
+        "line": 85
+      },
+      {
+        "id": "mana_charge-none",
+        "line": 97
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "mana_charge",
+        "to": "mana_charge-init",
+        "line": 29,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge",
+        "to": "mana_charge-evaluate",
+        "line": 32,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge",
+        "to": "mana_charge-message",
+        "line": 33,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge-spell",
+        "to": "mana_charge-init",
+        "line": 37,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge-spell",
+        "to": "mana_charge-evaluate",
+        "line": 40,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge-spell",
+        "to": "mana_charge-spell_message",
+        "line": 41,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge-signature",
+        "to": "mana_charge-init",
+        "line": 45,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge-signature",
+        "to": "mana_charge-evaluate",
+        "line": 48,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge-signature",
+        "to": "mana_charge-signature_message",
+        "line": 49,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge-evaluate",
+        "to": "mana_charge-none",
+        "line": 57,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge-decay",
+        "to": "mana_charge-none",
+        "line": 87,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mana_charge-decay",
+        "to": "mana_charge-decay",
+        "line": 95,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/melee_core.yml",
+    "sha256": "a87d50dfea535193ac4889ccc7858235edf59ca71cffeb5e49ca8bf7e19a8016",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Damage Systems",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "Melee",
+        "line": 5
+      },
+      {
+        "id": "melee",
+        "line": 8
+      },
+      {
+        "id": "melee-start",
+        "line": 12
+      },
+      {
+        "id": "melee-sweep_damage",
+        "line": 28
+      },
+      {
+        "id": "melee-weak_damage",
+        "line": 33
+      },
+      {
+        "id": "melee-sprint_damage",
+        "line": 39
+      },
+      {
+        "id": "melee-critical_damage",
+        "line": 44
+      },
+      {
+        "id": "melee-uppercut_damage",
+        "line": 53
+      },
+      {
+        "id": "melee-aerial",
+        "line": 60
+      },
+      {
+        "id": "knockback-melee",
+        "line": 69
+      },
+      {
+        "id": "knockback-melee_weak",
+        "line": 82
+      },
+      {
+        "id": "knockback-melee_strong",
+        "line": 88
+      },
+      {
+        "id": "knockback-melee_critical",
+        "line": 95
+      },
+      {
+        "id": "knockback-melee_uppercut",
+        "line": 100
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "Melee",
+        "to": "melee",
+        "line": 6,
+        "kind": "metaskill"
+      },
+      {
+        "from": "melee-sweep_damage",
+        "to": "knockback-melee_weak",
+        "line": 31,
+        "kind": "metaskill"
+      },
+      {
+        "from": "melee-weak_damage",
+        "to": "knockback-melee_weak",
+        "line": 37,
+        "kind": "metaskill"
+      },
+      {
+        "from": "melee-sprint_damage",
+        "to": "knockback-melee_strong",
+        "line": 42,
+        "kind": "metaskill"
+      },
+      {
+        "from": "melee-critical_damage",
+        "to": "knockback-melee_critical",
+        "line": 49,
+        "kind": "metaskill"
+      },
+      {
+        "from": "melee-uppercut_damage",
+        "to": "knockback-melee_uppercut",
+        "line": 57,
+        "kind": "metaskill"
+      },
+      {
+        "from": "melee-aerial",
+        "to": "knockback-melee_critical",
+        "line": 65,
+        "kind": "metaskill"
+      },
+      {
+        "from": "melee-aerial",
+        "to": "air_chase",
+        "line": 67,
+        "kind": "metaskill"
+      },
+      {
+        "from": "knockback-melee",
+        "to": "knockback-melee_weak",
+        "line": 74,
+        "kind": "metaskill"
+      },
+      {
+        "from": "knockback-melee",
+        "to": "knockback-melee_critical",
+        "line": 75,
+        "kind": "metaskill"
+      },
+      {
+        "from": "knockback-melee",
+        "to": "knockback-melee_critical",
+        "line": 76,
+        "kind": "metaskill"
+      },
+      {
+        "from": "knockback-melee",
+        "to": "knockback-melee_strong",
+        "line": 77,
+        "kind": "metaskill"
+      },
+      {
+        "from": "knockback-melee",
+        "to": "knockback-melee_critical",
+        "line": 78,
+        "kind": "metaskill"
+      },
+      {
+        "from": "knockback-melee",
+        "to": "knockback-melee_strong",
+        "line": 79,
+        "kind": "metaskill"
+      },
+      {
+        "from": "knockback-melee_critical",
+        "to": "knockback-melee_weak",
+        "line": 97,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/summon_handler.yml",
+    "sha256": "5ec5c793ff5d217076e10f2caf14fd015d4861945879bccbfe9c564e72a5ef3c",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "summon-exec",
+        "line": 1
+      },
+      {
+        "id": "summon2-exec",
+        "line": 5
+      },
+      {
+        "id": "summon-init",
+        "line": 9
+      },
+      {
+        "id": "summon-tick",
+        "line": 28
+      },
+      {
+        "id": "summon-death",
+        "line": 36
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/heal-mechanic.yml",
+    "sha256": "65e37065ba7867d2ae6e141303fc95bf662da0ade2d00086ef4530701bdd6064",
+    "kind": "metaskill",
+    "categories": [
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "heal",
+        "line": 3
+      },
+      {
+        "id": "heal-apply",
+        "line": 7
+      },
+      {
+        "id": "heal-vfx",
+        "line": 31
+      },
+      {
+        "id": "heal-tick",
+        "line": 37
+      },
+      {
+        "id": "heal-onhit",
+        "line": 46
+      },
+      {
+        "id": "heal-interrupt",
+        "line": 59
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "heal",
+        "to": "heal-apply",
+        "line": 5,
+        "kind": "metaskill"
+      },
+      {
+        "from": "heal-apply",
+        "to": "heal-onhit",
+        "line": 28,
+        "kind": "metaskill"
+      },
+      {
+        "from": "heal-apply",
+        "to": "heal-tick",
+        "line": 29,
+        "kind": "metaskill"
+      },
+      {
+        "from": "heal-tick",
+        "to": "heal-vfx",
+        "line": 40,
+        "kind": "metaskill"
+      },
+      {
+        "from": "heal-onhit",
+        "to": "heal-interrupt",
+        "line": 57,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/mortar-mechanic.yml",
+    "sha256": "6a2ed40aacb08d9c8ae9b119e6eade07cf3f96af8c3d247a5f2f0b8307d94421",
+    "kind": "metaskill",
+    "categories": [
+      "Vector / Math",
+      "Variables",
+      "Projectile"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "mortar",
+        "line": 2
+      },
+      {
+        "id": "mortar-exec",
+        "line": 5
+      },
+      {
+        "id": "mortar-start",
+        "line": 9
+      },
+      {
+        "id": "mortar-calculate",
+        "line": 16
+      },
+      {
+        "id": "mortar-debug",
+        "line": 33
+      },
+      {
+        "id": "mortar-fire",
+        "line": 50
+      },
+      {
+        "id": "mortar-hit",
+        "line": 60
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "mortar",
+        "to": "mortar-exec",
+        "line": 3,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mortar-exec",
+        "to": "mortar-start",
+        "line": 7,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mortar-start",
+        "to": "mortar-calculate",
+        "line": 11,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mortar-start",
+        "to": "mortar-debug",
+        "line": 12,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mortar-start",
+        "to": "mortar-fire",
+        "line": 14,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mortar-calculate",
+        "to": "distance-horizontal",
+        "line": 18,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mortar-calculate",
+        "to": "distance-vertical",
+        "line": 19,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mortar-fire",
+        "to": "mortar-hit",
+        "line": 56,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/stun-mechanic.yml",
+    "sha256": "e916e1c11205ac3aef0738b71a772916cad429a6cfb894e2aef26170d7a8b609",
+    "kind": "metaskill",
+    "categories": [
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "stun-test_cast",
+        "line": 1
+      },
+      {
+        "id": "Stun",
+        "line": 6
+      },
+      {
+        "id": "stun",
+        "line": 9
+      },
+      {
+        "id": "stun-apply",
+        "line": 15
+      },
+      {
+        "id": "stun-start",
+        "line": 27
+      },
+      {
+        "id": "stun-tick",
+        "line": 36
+      },
+      {
+        "id": "stun-oncast",
+        "line": 47
+      },
+      {
+        "id": "stun-end",
+        "line": 54
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "stun-test_cast",
+        "to": "stun",
+        "line": 3,
+        "kind": "metaskill"
+      },
+      {
+        "from": "stun-test_cast",
+        "to": "stun",
+        "line": 4,
+        "kind": "metaskill"
+      },
+      {
+        "from": "Stun",
+        "to": "stun",
+        "line": 7,
+        "kind": "metaskill"
+      },
+      {
+        "from": "stun",
+        "to": "stun-apply",
+        "line": 13,
+        "kind": "metaskill"
+      },
+      {
+        "from": "stun-apply",
+        "to": "stun-start",
+        "line": 22,
+        "kind": "metaskill"
+      },
+      {
+        "from": "stun-apply",
+        "to": "stun-tick",
+        "line": 23,
+        "kind": "metaskill"
+      },
+      {
+        "from": "stun-apply",
+        "to": "stun-end",
+        "line": 24,
+        "kind": "metaskill"
+      },
+      {
+        "from": "stun-start",
+        "to": "crypt-status_bar-signal",
+        "line": 32,
+        "kind": "metaskill"
+      },
+      {
+        "from": "stun-end",
+        "to": "crypt-status_bar-signal",
+        "line": 56,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "placeholderapi-math": [
+        20,
+        40
+      ]
+    }
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "id": "windows-python-stdout",
+  "category": "corrections",
+  "title": "Lỗi Unicode khi trình kiểm tra YAML in tiếng Việt trên Windows",
+  "topic": "yaml-checker-encoding",
+  "summary": "Hồ sơ tái hiện UnicodeEncodeError với cp1252 và ghi cách chạy python -X utf8.",
+  "context": "Trình check_yaml.py trên Windows có stdout cp1252.",
+  "exceptions": "Bằng chứng chỉ thuộc công cụ parse YAML. Hành vi MythicMobs trên server cần bằng chứng riêng.",
+  "scope": "global",
+  "claim": "FACT",
+  "confidence": "CONFIRMED",
+  "status": "technical",
+  "verification": "syntax-checked",
+  "recorded": "2026-11-13",
+  "tags": ["windows", "unicodeencodeerror", "cp1252", "utf8", "yaml", "check-yaml"],
+  "sources": [{"type": "test", "ref": "feedback/corrections/MM-2026-001.md", "note": "Kết quả tái hiện và lệnh hồi quy đã ghi trong hồ sơ cũ."}]
+}

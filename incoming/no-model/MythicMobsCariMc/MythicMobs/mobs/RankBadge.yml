@@ -1,0 +1,162 @@
+template_rank_model:
+  Type: ARMOR_STAND
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Options:
+    Collidable: false
+    MovementSpeed: 0
+    Invincible: true
+    Invisible: true
+    Despawn: persistent
+    Silent: true
+    PreventOtherDrops: true
+  Skills:
+  - skill{s=[
+            - model{mid=<caster.mythic_type>;damagetint=false}
+            - delay 70
+            - remove @self
+            ]} @self ~onSpawn
+
+rank_lv1:
+  Template: template_rank_model
+rank_lv2:
+  Template: template_rank_model
+rank_lv3:
+  Template: template_rank_model
+rank_lv4:
+  Template: template_rank_model
+rank_lv5:
+  Template: template_rank_model
+rank_lv6:
+  Template: template_rank_model
+rank_lv7:
+  Template: template_rank_model
+rank_lv8:
+  Template: template_rank_model
+rank_lv9:
+  Template: template_rank_model
+rank_lv10:
+  Template: template_rank_model
+rank_lv11:
+  Template: template_rank_model
+rank_lv12:
+  Template: template_rank_model
+rank_lv13:
+  Template: template_rank_model
+rank_lv14:
+  Template: template_rank_model
+rank_lv15:
+  Template: template_rank_model
+rank_lv16:
+  Template: template_rank_model
+rank_lv17:
+  Template: template_rank_model
+rank_lv18:
+  Template: template_rank_model
+rank_lv19:
+  Template: template_rank_model
+rank_lv20:
+  Template: template_rank_model
+rank_lv21:
+  Template: template_rank_model
+rank_lv22:
+  Template: template_rank_model
+rank_lv23:
+  Template: template_rank_model
+rank_lv24:
+  Template: template_rank_model
+rank_lv25:
+  Template: template_rank_model
+rank_lv26:
+  Template: template_rank_model
+rank_lv27:
+  Template: template_rank_model
+rank_lv28:
+  Template: template_rank_model
+rank_lv29:
+  Template: template_rank_model
+rank_lv30:
+  Template: template_rank_model
+rank_lv31:
+  Template: template_rank_model
+rank_lv32:
+  Template: template_rank_model
+rank_lv33:
+  Template: template_rank_model
+rank_lv34:
+  Template: template_rank_model
+rank_lv35:
+  Template: template_rank_model
+rank_lv36:
+  Template: template_rank_model
+rank_lv37:
+  Template: template_rank_model
+rank_lv38:
+  Template: template_rank_model
+rank_lv39:
+  Template: template_rank_model
+rank_lv40:
+  Template: template_rank_model
+rank_lv41:
+  Template: template_rank_model
+rank_lv42:
+  Template: template_rank_model
+rank_lv43:
+  Template: template_rank_model
+rank_lv44:
+  Template: template_rank_model
+rank_lv45:
+  Template: template_rank_model
+rank_lv46:
+  Template: template_rank_model
+rank_lv47:
+  Template: template_rank_model
+rank_lv48:
+  Template: template_rank_model
+rank_lv49:
+  Template: template_rank_model
+rank_lv50:
+  Template: template_rank_model
+rank_lv51:
+  Template: template_rank_model
+rank_lv52:
+  Template: template_rank_model
+rank_lv53:
+  Template: template_rank_model
+rank_lv54:
+  Template: template_rank_model
+rank_lv55:
+  Template: template_rank_model
+rank_lv56:
+  Template: template_rank_model
+rank_lv57:
+  Template: template_rank_model
+rank_lv58:
+  Template: template_rank_model
+rank_lv59:
+  Template: template_rank_model
+rank_lv60:
+  Template: template_rank_model
+rank_lv61:
+  Template: template_rank_model
+rank_lv62:
+  Template: template_rank_model
+rank_lv63:
+  Template: template_rank_model
+rank_lv64:
+  Template: template_rank_model
+rank_lv65:
+  Template: template_rank_model
+rank_lv66:
+  Template: template_rank_model
+rank_lv67:
+  Template: template_rank_model
+rank_lv68:
+  Template: template_rank_model
+rank_lv69:
+  Template: template_rank_model
+rank_lv70:
+  Template: template_rank_model
+#805a567441e1648e120b69fb230da4f3

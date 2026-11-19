@@ -1,0 +1,254 @@
+xichhuyetthienthuong_Combo:
+  Conditions:
+  - hasAura{auraName=XHPTT_SPEAR_CHARGE} castinstead xichhuyetthienthuong_Combo_DASHPASSIVE
+  Skills:
+  - skill{s=xichhuyetthienthuong_Combo_SKILL}
+
+xichhuyetthienthuong_Combo_SKILL:
+  Skills:
+  - skill{s=xichhuyetthienthuong_Combo_CAST}
+
+xichhuyetthienthuong_Combo_CAST:
+  Cooldown: 0.3
+  Conditions:
+  - crouching false
+  - hasAura{aura=CASTING} false
+  Skills:
+  - skill{s=xichhuyetthienthuong_Combo_ST_1}
+  - skill{s=xichhuyetthienthuong_Combo_ST_2}
+  - skill{s=xichhuyetthienthuong_Combo_ST_3}
+
+
+xichhuyetthienthuong_Combo_ST_1:
+  Conditions:
+  - hasaurastacks{auraName=xichhuyetthienthuong_Combo_Stack;stacks=1} false
+  - hasaurastacks{auraName=xichhuyetthienthuong_Combo_Stack;stacks=2} false
+  Skills:
+  - Aura{auraName=xichhuyetthienthuong_Combo_Stack;duration=300;maxStacks=2;delay=1} @self
+  - aura{auraName=CASTING;duration=10} @self
+  - projectile{delay=1;onHit=xichhuyetthienthuong_Combo_ST_1_DAMAGE_D;i=1;v=30;hR=2;vR=2;mr=1.5;hnp=true;hO=0;sE=false;sB=false;hs=false;hfs=0;sfo=0;syo=0;tyo=0;sso=0;fo=false;hitConditions=[- isLiving true];byo=0;drawhitbox=false;ham=true} @forward{f=5;y=0;lockpitch=true}
+  - summon{type=VFX_XHPTT_COMBO_SWING_LEFT;amount=1;radius=0;yRadius=0;onSurface=false} @forward{f=0.2;y=1.4;sideOffset=0;lockpitch=true}
+
+
+xichhuyetthienthuong_Combo_ST_1_DAMAGE_D:
+  Skills:
+  - skill{s=xichhuyetthienthuong_Combo_ST_1_DAMAGE} @EntitiesNearOrigin{r=3;limit=6;sort=NEAREST;conditions=[- isLiving true - hasaura{aura=immunedelay} false]}
+
+xichhuyetthienthuong_Combo_ST_1_DAMAGE:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<modifier.damage> / 100)";pkb=false;hnp=true;hp=true;types=SKILL,PHYSICAL}
+  - projectile{targetisorigin=true;bulletType=MOB;mob=VFX_XHPTT_IMPACT;v=0;i=1;hR=0;vR=0;mr=2;hnp=false;hO=0;sE=false;sB=false;hs=false;hfs=0;sfo=0;syo=1.2;tyo=1.2;sso=0;fo=true;byo=0;ham=true}
+
+
+xichhuyetthienthuong_Combo_ST_2:
+  Conditions:
+  - hasaurastacks{auraName=xichhuyetthienthuong_Combo_Stack;stacks=1} true
+  - hasaurastacks{auraName=xichhuyetthienthuong_Combo_Stack;stacks=2} false
+  Skills:
+  - Aura{auraName=xichhuyetthienthuong_Combo_Stack;duration=300;maxStacks=2;delay=1} @self
+  - aura{auraName=CASTING;duration=10} @self
+  - projectile{delay=1;onHit=xichhuyetthienthuong_Combo_ST_2_DAMAGE_D;i=1;v=30;hR=2;vR=2;mr=1.5;hnp=true;hO=0;sE=false;sB=false;hs=false;hfs=0;sfo=0;syo=0;tyo=0;sso=0;fo=false;hitConditions=[- isLiving true];byo=0;drawhitbox=false;ham=true} @forward{f=5;y=0;lockpitch=true}
+  - summon{type=VFX_XHPTT_COMBO_SWING_RIGHT;amount=1;radius=0;yRadius=0;onSurface=false} @forward{f=0.2;y=1.4;sideOffset=0;lockpitch=true}
+
+
+xichhuyetthienthuong_Combo_ST_2_DAMAGE_D:
+  Skills:
+  - skill{s=xichhuyetthienthuong_Combo_ST_2_DAMAGE} @EntitiesNearOrigin{r=3;limit=6;sort=NEAREST;conditions=[- isLiving true - hasaura{aura=immunedelay} false]}
+
+xichhuyetthienthuong_Combo_ST_2_DAMAGE:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<modifier.damage> / 100)";pkb=false;hnp=true;hp=true;types=SKILL,PHYSICAL}
+  - projectile{targetisorigin=true;bulletType=MOB;mob=VFX_XHPTT_IMPACT;v=0;i=1;hR=0;vR=0;mr=2;hnp=false;hO=0;sE=false;sB=false;hs=false;hfs=0;sfo=0;syo=1.2;tyo=1.2;sso=0;fo=true;byo=0;ham=true}
+
+
+xichhuyetthienthuong_Combo_ST_3:
+  Conditions:
+  - hasaurastacks{auraName=xichhuyetthienthuong_Combo_Stack;stacks=1} false
+  - hasaurastacks{auraName=xichhuyetthienthuong_Combo_Stack;stacks=2} true
+  Skills:
+  - auraremove{aura=xichhuyetthienthuong_Combo_Stack;delay=1} @self
+  - aura{auraName=CASTING;duration=10} @self
+  - delay 3
+  - projectile{delay=1;onHit=xichhuyetthienthuong_Combo_ST_3_DAMAGE_D;i=1;v=30;hR=2;vR=2;mr=1.5;hnp=true;hO=0;sE=false;sB=false;hs=false;hfs=0;sfo=0;syo=0;tyo=0;sso=0;fo=false;hitConditions=[- isLiving true];byo=0;drawhitbox=false;ham=true} @forward{f=5;y=0;lockpitch=true}
+  - summon{type=VFX_XHPTT_COMBO_SWING_UPPER;amount=1;radius=0;yRadius=0;onSurface=false} @forward{f=0.2;y=1.4;sideOffset=0;lockpitch=true}
+
+
+xichhuyetthienthuong_Combo_ST_3_DAMAGE_D:
+  Skills:
+  - skill{s=xichhuyetthienthuong_Combo_ST_3_DAMAGE} @EntitiesNearOrigin{r=3;limit=6;sort=NEAREST;conditions=[- isLiving true - hasaura{aura=immunedelay} false]}
+
+xichhuyetthienthuong_Combo_ST_3_DAMAGE:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<modifier.damage> / 100)";pkb=false;hnp=true;hp=true;types=SKILL,PHYSICAL}
+  - projectile{targetisorigin=true;bulletType=MOB;mob=VFX_XHPTT_IMPACT;v=0;i=1;hR=0;vR=0;mr=2;hnp=false;hO=0;sE=false;sB=false;hs=false;hfs=0;sfo=0;syo=1.2;tyo=1.2;sso=0;fo=true;byo=0;ham=true}
+
+
+## PASSIVE DASH Lướt Thương
+
+xichhuyetthienthuong_Combo_DASHPASSIVE:
+  Cooldown: 0.3
+  Conditions:
+  - crouching false
+  - hasAura{auraName=CASTING} false
+  Skills:
+  - auraremove{aura=XHPTT_SPEAR_CHARGE;stacks=1} @self
+  - aura{auraName=CASTING;duration=8} @self
+  - summon{type=VFX_XHPTT_DASH;amount=1;radius=0;yRadius=0;onSurface=false} @selflocation
+  - lunge{velocity=3.2;velocityY=0} @forward{f=16;y=-1;lockpitch=true}
+  - projectile{oH=XHPTT_DASH_HIT;v=35;i=1;mr=8;hR=0.5;vR=1;hp=true;hnp=true;sE=false;sB=true;syo=0.8;tyo=0.8;sfo=0;ham=true;tickinterpolation=3;immuneDelay=20;hitConditions=[- isLiving true - mmoCanTarget{interaction=OFFENSE_ACTION} true]} @forward{f=8;y=0;lockpitch=true}
+
+
+XHPTT_DASH_HIT:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<modifier.damage> / 100)";pkb=false;hnp=true;hp=true;types=SKILL,PHYSICAL}
+  - projectile{targetisorigin=true;bulletType=MOB;mob=VFX_XHPTT_IMPACT;v=0;i=1;hR=0;vR=0;mr=2;hnp=false;sE=false;sB=false;hs=false;syo=1.2;tyo=1.2;fo=true;ham=true}
+
+
+## SKILL 1 Ném Thương
+
+xichhuyetthienthuong_Throw:
+  Skills:
+  - skill{s=xichhuyetthienthuong_Throw_PRO;damage=<modifier.damage>} @forward{f=10;y=0;lockpitch=true}
+
+
+xichhuyetthienthuong_Throw_PRO:
+  Skills:
+  - projectile{bulletType=MOB;mob=VFX_XHPTT_THROW_SPEAR;bmd=true;oT=xichhuyetthienthuong_Throw_TICK;oH=xichhuyetthienthuong_Throw_HIT;oE=xichhuyetthienthuong_Throw_END;v=15;i=1;hR=1;vR=1;mr=10;hp=true;hnp=true;sE=false;sB=true;hs=true;hfs=0.15;sfo=1.5;syo=0.3;tyo=0;byo=0;fo=false;drawhitbox=false;ham=true;hitConditions=[- isLiving true - hasaura{aura=immunedelay} false - mmoCanTarget{interaction=OFFENSE_ACTION} true]}
+
+
+xichhuyetthienthuong_Throw_TICK:
+  Skills:
+  - particles{p=dust_color_transition;color1=#8a0000;color2=#ff1a1a;amount=3;hS=0.1;vS=0.05;size=0.35;speed=0} @origin
+
+
+xichhuyetthienthuong_Throw_HIT:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<modifier.damage> / 100)";pkb=false;hp=true;hnp=true;types=SKILL,PHYSICAL}
+  - aura{auraName=immunedelay;duration=5}
+  - projectile{targetisorigin=true;bulletType=MOB;mob=VFX_XHPTT_IMPACT;v=0;i=1;hR=0;vR=0;mr=2;hnp=false;sE=false;sB=false;hs=false;syo=1.2;tyo=1.2;fo=true;ham=true}
+
+
+xichhuyetthienthuong_Throw_END:
+  Skills:
+  - summon{type=VFX_XHPTT_DROPPED_SPEAR;amount=1;radius=0;yRadius=0;onSurface=true;sio=true;sip=true} @origin
+
+
+## PICKUP
+
+XHPTT_Spear_Pickup_Hitbox:
+  Skills:
+  - projectile{onHit=XHPTT_Spear_Pickup;i=1;d=240;sB=false;hnp=false;hp=true;sE=false;mr=1;v=0;vR=1;hR=1.5;immuneDelay=1;hitConditions=[- owner{} true - hasaurastacks{auraName=XHPTT_SPEAR_CHARGE;stacks=2} false]} @self
+  - delay 240
+  - remove @self
+
+
+XHPTT_Spear_Pickup:
+  TargetConditions:
+  - owner{} true
+  - hasaurastacks{auraName=XHPTT_SPEAR_CHARGE;stacks=2} false
+  Skills:
+  - skill{s=XHPTT_Spear_Aura}
+  - sound{s=item.trident.return;p=0.7}
+  - remove @self
+
+XHPTT_Spear_Aura:
+  Skills:
+  - aura{auraName=XHPTT_SPEAR_CHARGE;ShowBarTimer=true;bartimerdisplay="Xích Huyết Xuyên Phá | Chuột Trái | +1";bartimercolor=RED;bartimerstyle=SOLID;duration=200;maxStacks=2}
+
+
+## SKILL 2 THIÊN THƯƠNG TRỤY
+
+xichhuyetthienthuong_SkyFall:
+  Skills:
+  - skill{s=xichhuyetthienthuong_SkyFall_PRO;damage=<modifier.damage>} @forward{f=6;y=0;lockpitch=true}
+
+
+xichhuyetthienthuong_SkyFall_PRO:
+  Skills:
+  - projectile{bulletType=MOB;mob=VFX_XHPTT_SKY_SPEAR;bmd=true;oT=xichhuyetthienthuong_SkyFall_TICK;oH=xichhuyetthienthuong_SkyFall_HIT;oE=xichhuyetthienthuong_SkyFall_END;v=24;i=1;mr=12;hR=0.8;vR=1;hp=true;hnp=true;sE=false;sB=true;syo=10;sfo=6;tyo=0;byo=0;ham=true;tickinterpolation=2;immuneDelay=20;hitConditions=[- isLiving true - mmoCanTarget{interaction=OFFENSE_ACTION} true]}
+
+
+xichhuyetthienthuong_SkyFall_TICK:
+  Skills:
+  - particles{p=dust_color_transition;color1=#8a0000;color2=#ff1a1a;amount=2;hS=0.08;vS=0.15;size=0.35;speed=0} @origin
+
+
+xichhuyetthienthuong_SkyFall_HIT:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<skill.damage> / 100)";pkb=false;hnp=true;hp=true;types=SKILL,PHYSICAL}
+  - projectile{targetisorigin=true;bulletType=MOB;mob=VFX_XHPTT_IMPACT;v=0;i=1;hR=0;vR=0;mr=2;hnp=false;sE=false;sB=false;hs=false;syo=1;tyo=1;fo=true;ham=true}
+
+
+xichhuyetthienthuong_SkyFall_END:
+  Skills:
+  - skill{s=xichhuyetthienthuong_SkyFall_IMPACT_DAMAGE} @EntitiesNearOrigin{r=2.25;limit=8;sort=NEAREST;conditions=[- isLiving true - mmoCanTarget{interaction=OFFENSE_ACTION} true]}
+  - summon{type=VFX_XHPTT_DROPPED_SPEAR;amount=1;radius=0;yRadius=0;onSurface=true;sio=true;sip=true} @origin
+
+
+xichhuyetthienthuong_SkyFall_IMPACT_DAMAGE:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<skill.damage> / 100)";pkb=false;hnp=true;hp=true;types=SKILL,PHYSICAL}
+  - projectile{targetisorigin=true;bulletType=MOB;mob=VFX_XHPTT_IMPACT;v=0;i=1;hR=0;vR=0;mr=2;hnp=false;sE=false;sB=false;hs=false;syo=1;tyo=1;fo=true;ham=true}
+
+
+## THU HỒI THƯƠNG
+
+xichhuyetthienthuong_Recall:
+  Cooldown: 0.3
+  Conditions:
+  - hasaurastacks{auraName=XHPTT_SPEAR_CHARGE;stacks=2} false
+  Skills:
+  - sudoskill{s=XHPTT_Spear_Return_CAST;setcasterastrigger=true} @Children{sort=NEAREST;limit=1;conditions=[- mythicmobtype{t=VFX_XHPTT_DROPPED_SPEAR} true - distance{d=<14} true]}
+
+
+XHPTT_Spear_Return_CAST:
+  TriggerConditions:
+  - owner true
+  - hasAura{auraName=XHPTT_RECALL_LOCK} false
+  Skills:
+
+  # Chỉ cho cây gần nhất của owner chạy Recall
+  - aura{auraName=XHPTT_RECALL_LOCK;duration=2} @Trigger
+
+  # Ẩn cây thương đang cắm dưới đất
+  # idle gốc của model = scale 0
+  - defaultstate{m=xichhuyetphathienthuong;t=idle;s=idle;li=0;lo=0} @self
+
+  - sound{s=item.trident.return;p=0.8} @Owner
+  - particles{p=dust_color_transition;color1=#8a0000;color2=#ff1a1a;amount=8;hS=0.2;vS=0.2;size=0.45;speed=0.03} @self
+
+  - delay 1
+
+  # Bắn chính cây thương về owner
+  - projectile{bulletType=MOB;mob=VFX_XHPTT_RETURN_SPEAR;bmd=true;oT=XHPTT_Spear_Return_TICK;oH=XHPTT_Spear_Return_HIT;v=32;i=1;mr=24;hR=0.8;vR=1;hp=true;hnp=false;sE=true;sB=false;hto=true;rlos=false;immuneDelay=20;ham=true} @Owner
+
+
+XHPTT_Spear_Return_TICK:
+  Skills:
+  - particles{p=dust_color_transition;color1=#5c0000;color2=#ff2020;amount=2;hS=0.08;vS=0.08;size=0.3;speed=0} @origin
+
+
+XHPTT_Spear_Return_HIT:
+  TargetConditions:
+  - owner true
+  - hasaurastacks{auraName=XHPTT_SPEAR_CHARGE;stacks=2} false
+  Skills:
+  - skill{s=XHPTT_Spear_Aura}
+  - sound{s=item.trident.return;p=1.2}
+  - particles{p=dust_color_transition;color1=#8a0000;color2=#ff3030;amount=12;hS=0.25;vS=0.4;size=0.4;speed=0.05}
+  - remove @self
+

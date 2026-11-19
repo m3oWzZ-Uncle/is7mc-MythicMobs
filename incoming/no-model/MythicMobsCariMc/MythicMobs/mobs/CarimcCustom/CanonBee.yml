@@ -1,0 +1,50 @@
+CANONBEE_MOBS:
+  MobType: Bee
+  Faction: DARK
+  Health: 10
+  Damage: 1
+#  Disguise: horse Unknown setSkin alexis_machin setAddEntityAnimations true setCapeEnabled false setDynamicName true
+  Options:
+    Tameable: false
+    Tamed: true
+    Silent: true
+    Despawn: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventLeashing: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    NoAI: false
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - sound{s=entity.bee.hurt;v=1.0;p=1.2} @self ~onDamaged 1
+  - sound{s=entity.bee.death;v=1.0;p=1.2} @self ~onDeath 1
+  - sound{s=entity.bee.loop;v=1.0;p=1.2} @EIR{r=3} ~onTimer:3 1
+
+  - remove{delay=300} @self ~onSpawn
+  - damage{a=30-40} @EIR{r=3} ~onTimer:5 1
+
+
+
+CANONBEE_MOBS_ENDS:
+  Type: ARMOR_STAND 
+  Health: 1000
+  Options.Silent: true
+  Options.Invisible: true
+  Skills:
+  - effect:particlering{p=reddust;a=1;color=#ff9e4e;points=32;y=0.2;s=0.1;r=4;vs=0.1} @self ~onTimer:5 1
+  - effect:particlering{p=reddust;a=1;color=#ff9e4e;points=32;y=0.2;s=0.1;r=3;vs=0.1} @self ~onTimer:5 1
+  - effect:particlering{p=reddust;a=1;color=#ff9e4e;points=32;y=0.2;s=0.1;r=2;vs=0.1} @self ~onTimer:5 1
+  - effect:particlering{p=reddust;a=1;color=#ff9e4e;points=32;y=0.2;s=0.1;r=1;vs=0.1} @self ~onTimer:5 1
+  - remove @self ~onTimer:200
+  - potion{type=POISON;duration=140;level=4;hasParticles=false} @EIR{r=4} ~onTimer:10 1

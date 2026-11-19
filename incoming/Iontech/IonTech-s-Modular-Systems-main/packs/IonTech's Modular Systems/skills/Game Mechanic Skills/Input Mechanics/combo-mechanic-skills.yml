@@ -1,0 +1,58 @@
+combo-cast:
+  Skills:
+  - skill{s=combo-apply;maxcombo=4;reset=2;name="Blood Slash"} @self
+
+Combo:
+  Skills:
+  - skill{s=combo-apply} @self
+
+combo-apply:
+  Skills:
+  - skill{s=combo-init}
+  - onDamaged{auraName=<skill.id>-combo;d="<skill.reset|1>*20";i=1;ma=true;
+    bt=false;bartimertext="<caster.var.<skill.id>-name> <caster.var.<skill.id>-currentcombo>";
+    oh=[ - skill{s=combo-reset} ?varequals{var=caster.<skill.id>-resetOnHit;val=true} ];
+    oe=combo-reset} ?!hasaura{auraname=<skill.id>-cd}
+    
+  - skill{s=combo-end}
+
+combo-init:
+  Skills:
+  - setvar{var=caster.<skill.id>-currentcombo;value=<caster.var.<skill.id>-currentcombo|0>} ?!variableisset{var=caster.<skill.id>-currentcombo} 
+  - setvar{var=caster.<skill.id>-maxcombo;value=<skill.maxcombo|3>} ?!variableisset{var=caster.<skill.id>-maxcombo} 
+  - setvar{var=caster.<skill.id>-name;value=<skill.name|Unknown>;type=STRING} 
+
+  - setvar{var=caster.<skill.id>-resetOnHit;val=<skill.resetOnHit|<skill.roh|true>>;type=STRING}
+  - setvar{var=caster.<skill.id>-resetOnLast;val=<skill.resetOnLast|<skill.rol|true>>;type=STRING}
+
+#  - message{m=<caster.var.<skill.id>-resetOnHit>, <caster.var.<skill.id>-resetOnLast>} @self
+
+  - am{m="<#53bcbd>%string_replaceCharacters_small-text_<caster.var.<skill.id>-name>% &r<#86d0d0>(<caster.var.<skill.id>-currentcombo>/<caster.var.<skill.id>-maxcombo>🗡)"} @self
+  
+combo-hit:
+  Skills:
+  - setvar{var=caster.<skill.id>-currentcombo;value="clamp(<caster.var.<skill.id>-currentcombo>+1, 0, <caster.var.<skill.id>-maxcombo>)"} @self ?!hasaura{auraname=<skill.id>-cd} 
+  - am{m="<#53bcbd>%string_replaceCharacters_small-text_<caster.var.<skill.id>-name>% &r<#86d0d0>(<caster.var.<skill.id>-currentcombo>/<caster.var.<skill.id>-maxcombo>🗡)"} @self ?!hasaura{auraname=<skill.id>-cd} 
+  - vskill{s=<skill.<caster.var.<skill.id>-currentcombo>|none>}
+#  - message{m="<skill.<caster.var.<skill.id>-currentcombo>|none>"} @self
+  - skill{s=combo-end}
+  
+combo-end:
+  Conditions:
+  - (variableEquals{var=caster.<skill.id>-currentcombo;value="<caster.var.<skill.id>-maxcombo>"} && varequals{var=caster.<skill.id>-resetOnLast;val=true})
+  Skills:
+  - vskill{s=<skill.id|none>;name=<caster.var.<skill.id>-name>}
+  - skill{s=combo-reset}
+  - removeaura{aura=<skill.id>-combo}
+
+combo-reset:
+#  Conditions:
+#  - variableisset{var=caster.<skill.id>-currentcombo} 
+  Skills:
+  - am{m="<#53bcbd>%string_replaceCharacters_small-text_<caster.var.<skill.id>-name|Combo> Reset%"} @self ?!variableEquals{var=caster.<skill.id>-currentcombo;value="<caster.var.<skill.id>-maxcombo>"} 
+  - variableUnset{var=caster.<skill.id>-currentcombo}
+  - variableUnset{var=caster.<skill.id>-maxcombo} 
+  - variableUnset{var=caster.<skill.id>-name} 
+
+  
+  

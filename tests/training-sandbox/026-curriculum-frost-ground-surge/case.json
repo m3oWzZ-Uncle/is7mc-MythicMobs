@@ -1,0 +1,19 @@
+{
+  "id": "026-curriculum-frost-ground-surge",
+  "kind": "practice",
+  "program": "40-challenge",
+  "challenge": 8,
+  "level": "rpg",
+  "mythicmobs_target": "5.14.0 Premium",
+  "dependencies": [],
+  "required_scenarios": [
+    "flat-speed-range-pitch",
+    "small-terrain-and-drop",
+    "wall-only-vs-expiry",
+    "pierce-and-dedup",
+    "stun-and-cage-size",
+    "thaw-and-death",
+    "mask-restoration",
+    "concurrency-and-budget"
+  ]
+}

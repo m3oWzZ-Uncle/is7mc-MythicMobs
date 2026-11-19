@@ -1,0 +1,15 @@
+armor_strim:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4189
+    type: IRON_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      PublicBukkitValues: |-
+        {
+            "enchantmentslots:enchantment_slots": 6
+        }
+      trim:
+        material: minecraft:gold
+        pattern: minecraft:coast

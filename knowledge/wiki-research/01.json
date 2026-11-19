@@ -1,0 +1,11 @@
+{
+  "checked_on": "2026-11-14",
+  "pages": [
+    {"path":"changelogs/Changelogs.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/changelogs/Changelogs#5140","status":"outdated","finding":"Bản chụp bắt đầu ở 5.13.0; wiki online có khối 5.14.0 với các mục PackOverrides, ?@ và tickRate.","note":"wiki-research/version-gaps.md"},
+    {"path":"Packs.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Packs#dependencies-and-overrides","status":"outdated","finding":"Trang local thiếu PackOverrides, FileOverrides và điều kiện tổ hợp được ghi trên wiki online.","note":"wiki-research/version-gaps.md"},
+    {"path":"Skills/Inline-Conditions.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/changelogs/Changelogs#conditions","status":"outdated","finding":"Bản chụp và trang hướng dẫn đã đọc chưa nêu tiền tố ?@. Changelog 5.14.0 xác nhận đây là inline target condition mới.","note":"wiki-research/version-gaps.md"},
+    {"path":"Skills/Mechanics/projectile.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/projectile","status":"aligned","finding":"Đối chiếu các cặp offset đầu/cuối, hitConditions, hitBlockConditions và callback hit block. Trang snapshot đã có hbcond; changelog online đặt bổ sung này trong 5.13.0.","note":"entries/mythicmobs--meta-mechanic--projectile.md"},
+    {"path":"Skills/Targeters/Forward.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Targeters/Forward","status":"aligned","finding":"Bốn thuộc tính forward, rotate, useeyelocation và lockpitch có cùng mô tả, alias và mặc định trong phạm vi đã đọc.","note":"entries/mythicmobs--targeter--forward.md"},
+    {"path":"Skills/Math.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Math","status":"aligned","finding":"Cả hai nguồn đều liệt kê random(min, max). Sự hiện diện của hàm không xác nhận từng vị trí YAML nhận phép tính.","note":"patterns/projectile-neo-caster.md"}
+  ]
+}

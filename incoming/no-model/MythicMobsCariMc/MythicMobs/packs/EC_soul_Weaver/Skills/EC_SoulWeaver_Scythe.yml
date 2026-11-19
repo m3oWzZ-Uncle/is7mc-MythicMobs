@@ -1,0 +1,224 @@
+
+
+SoulWeaver_Slash:
+  Cooldown: 0.3
+  Skills:
+  - potion{t=SLOW_DIGGING;l=5;d=7;p=false;i=false} @self
+  - summon{type=Soulweaver_Slash_FX_1;amount=1;radius=0} @Forward{f=1.75}
+  - skill{s=SoulWeaver_Slash_Damage} @EIC{a=135;r=3.5;rot=0} 
+  - randomskill{skills=[ - sound{s=soulweaver_set:custom.soulweaver_set.airslash1;sc=players;v=0.55;audience=WORLD} @selflocation],[ - sound{s=soulweaver_set:custom.soulweaver_set.airslash2;sc=players;v=0.75;audience=WORLD} @selflocation],[ - sound{s=soulweaver_set:custom.soulweaver_set.airslash3;sc=players;v=0.75;audience=WORLD} @selflocation]}
+
+SoulWeaver_Slash_Damage:
+  TargetConditions:
+  - mythicmobtype{t=Soulweaver_Spirit_Surge_Soul} castinstead SoulWeaver_Slash_SoulSlash_SFX
+  Skills:
+  - damage{a="<modifier.damage>"} 
+
+SoulWeaver_Slash_SoulSlash_SFX:
+  Conditions:
+  - offgcd
+  Skills:
+  - gcd{t=2} 
+  - damage{a="<modifier.damage>"} 
+  - randomskill{skills=[ - sound{s=soulweaver_set:custom.soulweaver_set.slash1;sc=players;v=0.65;audience=WORLD} @selflocation],[ - sound{s=soulweaver_set:custom.soulweaver_set.slash2;sc=players;v=0.65;audience=WORLD} @selflocation],[ - sound{s=soulweaver_set:custom.soulweaver_set.slash3;sc=players;v=0.65;audience=WORLD} @selflocation]}
+ #####
+ 
+SoulWeaver_Descension:
+  Skills: 
+  - Aura{auraName=Check_SoulWeaver_Scythe_Holding;oS=SoulWeaver_Apply_FXS;oT=SoulWeaver_Cosmetics_Equip;i=1;d=20;ma=true;rd=true;ms=1;cod=true} @self
+
+SoulWeaver_Apply_FXS:
+  Conditions:
+  - health{h=0} false
+  Skills:
+  - sound{s=soulweaver_set:custom.soulweaver_set.soulleave;sc=blocks;v=0.25;p=0.5} @selflocation 
+  - sound{s=minecraft:item.armor.equip_netherite;v=0.5} @selflocation 
+  - skill{s=SoulWeaver_Cosmetics_Particle} @self 
+
+SoulWeaver_Cosmetics_Equip:
+  Conditions:
+  - wearing{slot=HAND;m=SoulWeaver_Scythe} orElsecast SoulWeaver_Cosmetics_Unequip 
+  Skills:
+  - command{c="cosmetics <caster.name> add soulweaver_chestplate";asOp=true;asTarget=self} @self
+  - command{c="cosmetics <caster.name> add soulweaver_helmet";asOp=true;asTarget=self} @self
+
+SoulWeaver_Cosmetics_Particle: 
+  Cooldown: 1
+  Skills:
+  - effect:particles{p=reddust;color=#59cf93;a=60;size=2;hS=0.25;vS=0.5} @Forward{f=0.5;y=1.0}
+  - effect:particles{p=reddust;color=#b5e7cb;a=60;size=2;hS=0.25;vS=0.5} @Forward{f=0.5;y=1.0}
+
+SoulWeaver_Cosmetics_Unequip:
+  Skills:
+  - skill{s=SoulWeaver_Cosmetics_Particle}
+  - delay 3
+  - command{c="cosmetics <caster.name> remove soulweaver_chestplate";asOp=true;asTarget=self} @self
+  - command{c="cosmetics <caster.name> remove soulweaver_helmet";asOp=true;asTarget=self} @self
+
+
+######################################
+
+SoulWeaver_Nether_Grasp_Trap_Crucible:
+  Cooldown: 10
+  Conditions:
+  - crouching true
+  - mobsInRadius{types=Soulweaver_Nether_Grasp_Trap;amount=>0;radius=5} false
+  - onground true
+  Skills:
+  - setvariable{var=caster.nether_grasp_damage;type=FLOAT;v="<modifier.graspdamage>"} @Self
+  - sound{s=soulweaver_set:custom.soulweaver_set.circlecast;sc=blocks;v=1} @selflocation 
+  - summon{type=Soulweaver_Nether_Grasp_Trap;amount=1;radius=0;sio=true} @SelfLocation{y=0.2}
+
+SoulWeaver_Nether_Grasp_Trap:
+  Conditions:
+  - mobsInRadius{types=Soulweaver_Nether_Grasp_Trap;amount=>0;radius=5} false
+  - onground true
+  Skills:
+  - setvariable{var=caster.nether_grasp_damage;type=FLOAT;v="<modifier.graspdamage>"} @Self
+  - sound{s=soulweaver_set:custom.soulweaver_set.circlecast;sc=blocks;v=1} @selflocation 
+  - summon{type=Soulweaver_Nether_Grasp_Trap;amount=1;radius=0;sio=true} @SelfLocation{y=0.2}
+
+Check_SoulWeaver_Nether_Grasp:
+  Skills:
+  - skill{s=Check_SoulWeaver_Nether_Grasp_Check_Owner} @owner
+  - skill{s=Check_SoulWeaver_Nether_Grasp_Entities} @EIC{r=2.25}
+  - setrotation{relative=true;yaw=1} @self 
+
+Check_SoulWeaver_Nether_Grasp_Check_Owner:
+  TargetConditions:
+  - targetwithin{d=30} false
+  Skills:
+  - remove @self
+
+Check_SoulWeaver_Nether_Grasp_Entities:
+  TargetConditions:  
+  - mythicmobtype{t=Soulweaver_Spirit_Surge_Soul} castinstead Check_SoulWeaver_Nether_Hand
+  - hastag{t=EC_Skill} false
+  - owner false
+  Skills:
+  - skill{s=Check_SoulWeaver_Nether_Hand} @self
+
+Check_SoulWeaver_Nether_Hand:
+  Skills:
+  - remove{delay=50} @self
+  - sudoskill{s=Check_SoulWeaver_Summon_Hand;cat=true} @owner
+
+Check_SoulWeaver_Summon_Hand:
+  Skills:
+  - summon{type=Soulweaver_Nether_Grasp_Hand;amount=1;radius=0;sio=true;cooldown=4} @TriggerLocation
+
+Soulweaver_Nether_Grasp_Hand_DamageUP:
+  Skills:
+  - totem{ch=1;i=1;md=40;hR=2;vR=2;oH=Soulweaver_Nether_Grasp_Damage;hp=true;hnp=true} @TriggerLocation
+
+Soulweaver_Nether_Grasp_Damage:
+  Skills:
+  - potion{t=LEVITATION;l=24;d=5;p=false;i=false} 
+  - velocity{m=MULTIPLY;y=5;delay=20} 
+  - damage{a="<caster.var.nether_grasp_damage>"} 
+
+######################################
+
+Soulweaver_Spirit_Surge_Crucible: 
+  Cooldown: 1
+  Skills:
+  - sound{s=soulweaver_set:custom.soulweaver_set.scythethrow;sc=players;v=0.5} @selflocation 
+  - projectile{bulletType=MOB;mob=Soulweaver_Spirit_Surge;oH=Soulweaver_Spirit_Surge_Hit;oT=Soulweaver_Spirit_Surge_Tick;oE=Soulweaver_Spirit_Surge_Scythe_Back;v=10;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;mr=20;sE=false;sB=false} @Forward{f=20}
+
+Soulweaver_Spirit_Surge: 
+  Skills:
+  - sound{s=soulweaver_set:custom.soulweaver_set.scythethrow;sc=players;v=0.5} @selflocation 
+  - projectile{bulletType=MOB;mob=Soulweaver_Spirit_Surge;oH=Soulweaver_Spirit_Surge_Hit;oT=Soulweaver_Spirit_Surge_Tick;oE=Soulweaver_Spirit_Surge_Scythe_Back;v=10;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;mr=20;sE=false;sB=false} @Forward{f=20}
+
+Soulweaver_Spirit_Surge_Scythe_Back:
+  Skills:
+  - summon{type=Soulweaver_Spirit_Surge_Reverse;amount=1;radius=0;sio=true} @Origin
+
+Soulweaver_Spirit_Surge_Hit:
+  TargetConditions:
+  - hastag{t=EC_Skill} false
+  - entitytype{t=ARMOR_STAND} false 
+  - mythicmobtype{t=Soulweaver_Spirit_Surge_Soul} false 
+  Skills:
+  - Aura{auraName=Pulling_Soul;oT=Soulweaver_Spirit_Surge_Soul_Collecting;d=100;i=1;rd=true;ma=true;ms=1;delay=20} @self
+  - sudoskill{s=Soulweaver_Spirit_Surge_Soul_Pulling;cat=true} 
+  - damage{a="<modifier.damage>"} 
+
+Soulweaver_Spirit_Surge_Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#59cf93;a=3;size=1;hS=0.125;vS=0.125;y=-0.25} @Origin
+  
+Soulweaver_Spirit_Surge_Grab_Scythe:
+  TargetConditions:
+  - owner castinstead Soulweaver_Spirit_Surge_Scythe_Receive
+  Skills:
+  - Aura{auraName=Pulling_Soul;oT=Soulweaver_Spirit_Surge_Soul_Collecting;d=100;i=1;rd=true;ma=true;ms=1;delay=20} @self
+  - sudoskill{s=Soulweaver_Spirit_Surge_Soul_Pulling;cat=true}
+  - potion{t=SLOW;d=40;l=3;p=false} 
+
+Soulweaver_Spirit_Surge_Scythe_Receive:
+  Skills:
+  - sound{s=soulweaver_set:custom.soulweaver_set.scytheback;sc=players;v=0.5;p=1.2} @owner
+  - delay 3
+  - remove @self
+
+Soulweaver_Spirit_Surge_Soul_Pulling:
+  Conditions:
+  - entitytype{t=ARMOR_STAND} false 
+  - mythicmobtype{t=Soulweaver_Spirit_Surge_Soul} false 
+  Skills:
+  - summon{type=Soulweaver_Spirit_Surge_Soul;amount=1;radius=0;summonerIsParent=true;cooldown=10} @SelfLocation{y=0.75}
+  
+Soulweaver_Spirit_Surge_Soul_Collecting:
+  Skills:
+  - pull{v=4;to=true} @MIR{t=Soulweaver_Spirit_Surge_Soul;r=30}
+
+Soulweaver_Spirit_Surge_Soul_Damaging:
+  Skills:
+  - sudoskill{s=Soulweaver_Spirit_Surge_Soul_Damaging_Trigger;cat=true} @Trigger
+
+Soulweaver_Spirit_Surge_Soul_Damaging_Trigger:
+  Skills:
+  - damage{a="<skill.var.damage-amount>"} @Trigger
+
+######################################
+
+Soulweaver_Deprivation_Crucible: 
+  Cooldown: 10
+  Conditions:
+  - crouching true
+  Skills:
+  - sound{s=soulweaver_set:custom.soulweaver_set.eyecharge;sc=blocks;v=1} @selflocation 
+  - projectile{oT=[ - effect:particles{p=reddust;color=#2c3b39;a=12;size=2;hS=0.125;vS=0.125;y=-0.25} @Origin ];oE=Soulweaver_Deprivation_Eye_Summon;v=7.5;hR=1;vR=1;hp=false;hnp=false;sfo=1;syo=1.5;mr=4;sE=false;sB=false} @Forward{f=4}
+
+Soulweaver_Deprivation: 
+  Skills:
+  - sound{s=soulweaver_set:custom.soulweaver_set.eyecharge;sc=blocks;v=1} @selflocation 
+  - projectile{oT=[ - effect:particles{p=reddust;color=#2c3b39;a=12;size=2;hS=0.125;vS=0.125;y=-0.25} @Origin ];oE=Soulweaver_Deprivation_Eye_Summon;v=7.5;hR=1;vR=1;hp=false;hnp=false;sfo=1;syo=1.5;mr=4;sE=false;sB=false} @Forward{f=4}
+
+Soulweaver_Deprivation_Eye_Summon:
+  Skills:
+  - summon{type=Soulweaver_Deprivation_Eye;amount=1;radius=0;sio=true;yr=-1;yu=false} @Origin
+
+Soulweaver_Deprivation_Eye_Choose_Target:
+  TargetConditions:
+  - owner false
+  Skills:
+  - sudoskill{s=Soulweaver_Deprivation_Eye_Choose_Sudo} 
+
+Soulweaver_Deprivation_Eye_Choose_Sudo:
+  Skills:
+  - skill{s=Soulweaver_Deprivation_Eye_Looking} @EIC{a=45;r=30;rot=0}
+
+Soulweaver_Deprivation_Eye_Looking:
+  TargetConditions:
+  - inlineofsight true
+  - mythicmobtype{t=Soulweaver_Deprivation_Eye} true
+  Skills:
+  - sendtitle{title="&2";subtitle="&cLOOK AT ME";d=2} @self
+  - effect:particles{p=reddust;color=#2c3b39;a=5;size=2;hS=0.25;vS=0.35} @self
+  - potion{t=SLOW;l=3;d=25;p=false;i=true} @self
+  - potion{t=JUMP;l=249;d=5;p=false;i=true} @self
+  - potion{t=WITHER;l=1;d=20;p=false;i=true} @self
+
+# 996M6QDXMRE9GWWNVKK

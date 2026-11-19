@@ -1,0 +1,318 @@
+CR_TRIDENT_DRIFF:
+  Cooldown: 1
+  Skills:
+  - effect:particles{particle=SNOWFLAKE;amount=10;hS=0.5;vS=0.5;speed=0;y=1} @self
+  - sound{s=entity.evoker.prepare_summon;v=0.5;p=2.0} @self
+  - sound{s=block.amethyst_block.step;v=1.0;p=2.0} @self
+  - delay 5
+  - effect:particles{particle=SNOWFLAKE;amount=10;hS=0.5;vS=0.5;speed=0;y=1} @self
+  - sound{s=item.elytra.flying;v=0.5;p=1.0} @self
+  - sound{s=item.dye.use;v=1.0;p=0.5} @self
+  - projectile{bulletType=ARROW;arrowtype=TRIDENT;onstart=CR_TRIDENT_DRIFF-vstart;onTick=CR_TRIDENT_DRIFF-Tick;onHit=CR_TRIDENT_DRIFF-Hit;i=1;hR=1;mr="<modifier.range>";vR=1;syo=0;sfo=0;v="<modifier.speed>";vO=0;hO=0;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=25;so=-12;yoffset=1;uel=true}
+  - projectile{bulletType=ARROW;arrowtype=TRIDENT;onstart=CR_TRIDENT_DRIFF-vstart2;onTick=CR_TRIDENT_DRIFF-Tick;onHit=CR_TRIDENT_DRIFF-Hit;i=1;hR=1;mr="<modifier.range>";vR=1;syo=0;sfo=0;v="<modifier.speed>";vO=0;hO=0;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=25;so=12;yoffset=1;uel=true}
+#
+CR_TRIDENT_DRIFF-vstart:
+  Skills:
+  - delay 2
+  - skill{s=CR_TRIDENT_DRIFF-driftright;repeat=10;repeatInterval=2}
+  - delay 30
+  - skill{s=CR_TRIDENT_DRIFF-driftleft;repeat=50;repeatInterval=2}
+  
+CR_TRIDENT_DRIFF-driftright:
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=0.05;vy=0;vz=0} 
+
+CR_TRIDENT_DRIFF-vstart2:
+  Skills:
+  - delay 2
+  - skill{s=CR_TRIDENT_DRIFF-driftleft;repeat=10;repeatInterval=2}
+  - delay 30
+  - skill{s=CR_TRIDENT_DRIFF-driftright;repeat=50;repeatInterval=2}
+
+CR_TRIDENT_DRIFF-driftleft:
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=-0.05;vy=0;vz=0}
+
+
+CR_TRIDENT_DRIFF-Tick:
+  Skills:
+  - effect:particles{p=SNOWFLAKE;amount=1;speed=0;hS=0;vS=0} @origin
+CR_TRIDENT_DRIFF-Hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+  - throw{velocity=12;velocityY=2}
+  - freeze{ticks=200}
+
+
+
+
+
+
+
+
+
+
+######################################################################
+
+PROJECTILE_Driff:
+  Conditions:
+  - stance LIGHT_SPAWN false
+  Skills:
+  - sound{s=entity.evoker.prepare_summon;v=0.5;p=2.0} @self
+  - sound{s=block.amethyst_block.step;v=1.0;p=2.0} @self
+  - projectile{onTick=PROJECTILE_Driff-vtick;onstart=PROJECTILE_Driff-vstart;onHit=PROJECTILE_Driff-Hit;i=1;v=12;md=20} @forward{f=23;so=-8;yoffset=1}
+  - projectile{onTick=PROJECTILE_Driff-vtick2;onstart=PROJECTILE_Driff-vstart2;onHit=PROJECTILE_Driff-Hit;i=1;v=12;md=20} @forward{f=23;so=8;yoffset=1}
+
+PROJECTILE_Driff-vtick:
+  Skills:
+  - sound{s=block.amethyst_block.step;v=0.2;p=2.0} @origin
+  - effect:particles{p=reddust;color=#ffffff;amount=1;hS=0.0;vS=0.0;speed=0} @origin
+  - effect:particles{p=reddust;color=#fff200;amount=1;hS=0.0;vS=0.0;speed=0} @origin
+
+PROJECTILE_Driff-vtick2:
+  Skills:
+  - sound{s=block.amethyst_block.step;v=0.2;p=2.0} @origin
+  - effect:particles{p=reddust;color=#ffffff;amount=1;hS=0.0;vS=0.0;speed=0} @origin
+  - effect:particles{p=reddust;color=#fff200;amount=1;hS=0.0;vS=0.0;speed=0} @origin
+
+PROJECTILE_Driff-vstart:
+  Skills:
+  - delay 2
+  - skill{s=PROJECTILE_Driff-driftright;repeat=50;repeatInterval=2}
+
+PROJECTILE_Driff-driftright:
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=0.03;vy=0;vz=0} 
+
+PROJECTILE_Driff-vstart2:
+  Skills:
+  - delay 2
+  - skill{s=PROJECTILE_Driff-driftleft;repeat=50;repeatInterval=2}
+
+PROJECTILE_Driff-driftleft:
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=-0.03;vy=0;vz=0}
+
+PROJECTILE_Driff-Hit:
+  Skills:
+  - damage{a=200;i=true}
+
+
+
+
+
+CR_ELEMENT_AIR:
+  Cooldown: 1
+  Skills:
+  - effect:particlering{particle=reddust;color=#FFFFFF;a=30;p=128;hs=0.1;vs=0.1;s=0.1;sfo=1.5;y=0.1;r=1} @self
+  - lunge{velocity=2;velocityY=0.5} @self
+  - sound{s=item.dye.use;v=1.0;p=0.5} @self
+  - delay 5
+  - jump{velocity=-2}
+  - delay 5
+  - skill{s=CR_ELEMENT_AIR_DAMAGE}
+
+CR_ELEMENT_AIR_DAMAGE:
+  Skills:
+  - particles{particle=SWEEP_ATTACK;a=5;hs=0.4;vs=0.4;y=0.3;s=0.4;sfo=1.5;y=1.2} @self
+  - damage{a="<modifier.damage>";pkb=true} @EIR{r=3}
+  - particles{particle=SWEEP_ATTACK;a=5;hs=0.4;vs=0.4;y=0.3;s=0.4;sfo=-1.5;y=1.2} @self
+
+############################################################
+
+CR_ELEMENT_EARTH:
+  Cooldown: 1
+  Skills:
+  - Aura{auraName=CR_ELEMENT_EARTH;onStart=CR_ELEMENT_EARTH_START;onTick=CR_ELEMENT_EARTH_EFFECT;onEnd=CR_ELEMENT_EARTH_END;d=20} @self
+
+CR_ELEMENT_EARTH_START:
+  Conditions:
+  - hasaura{n=CR_ELEMENT_EARTH} true
+  Skills:
+  - jump{velocity=3} @self
+  - delay 10
+  - skill{s=CR_ELEMENT_EARTH_VFX} @self
+CR_ELEMENT_EARTH_VFX:
+  Conditions:
+  - hasaura{n=CR_ELEMENT_EARTH} true
+  Skills:
+  - effect:particles{particle=block;m=dirt;speed=0.1;hS=10;vS=0;a=10;y=1.0} @target ~onAttack
+  - delay 20
+  - effect:particles{particle=block;m=dirt;speed=0.1;hS=10;vS=0;a=10;y=1.0} @target ~onAttack
+
+
+CR_ELEMENT_EARTH_EFFECT:
+  Conditions:
+  - hasaura{n=CR_ELEMENT_EARTH} true
+  Skills:
+  - effect:particles{particle=block;m=dirt;speed=0.1;hS=10;vS=0;a=30;y=0.5} @self
+  - sound{s=item.hoe.till;v=1.0;p=1.0} @self
+
+CR_ELEMENT_EARTH_END:
+  Conditions:
+  - hasaura{n=CR_ELEMENT_EARTH} true
+  Skills:
+  - jump{velocity=-100} @self
+  - delay 10
+  - effect:explosion @self
+  - throw{velocity=10;velocityY=15} @EIR{r=6}
+  - damage{amount="<modifier.damage>"} @EIR{r=6}
+  - effect:particles{particle=block;m=dirt;speed=0.1;hS=10;vS=0;a=30;y=1.0} @self
+  - effect:particleorbital{particle=block;p=32;v=6;i=1;m=dirt;speed=0.1;hS=0;vS=0;a=30;y=1.0} @self
+
+######################################################################
+
+CR_ELEMENT_FIRE:
+  Cooldown: 1
+  Skills:
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=2.2} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=2.3} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=2.4} @self
+  - delay 2
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=2.5} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=2.6} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=2.7} @self
+  - delay 2
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=2.8} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=2.9} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3} @self
+  - delay 2
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3.1} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3.2} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3.3} @self
+  - delay 2
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3.4} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3.5} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3.6} @self
+  - delay 2
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3.7} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3.8} @self
+  - effect:particles{particle=flame;amount=1;hS=0;vS=0;speed=0;y=3.9} @self
+  - delay 2
+  - Aura{auraName=CR_ELEMENT_FIRE;onStart=CR_ELEMENT_FIRE_START;onTick=CR_ELEMENT_FIRE_EFFECT;onEnd=CR_ELEMENT_FIRE_END;interval=30;duration=180} @self
+
+CR_ELEMENT_FIRE_START:
+  Skills:
+  - effect:particlesphere{particle=flame;amount=25;radius=1.5;y=3;repeat=6;repeatInterval=5} @self
+CR_ELEMENT_FIRE_EFFECT:
+  Skills:
+  - effect:particlesphere{particle=flame;amount=25;radius=1.5;y=3;repeat=3;repeatInterval=5} @self
+  - skill{s=CR_ELEMENT_FIRE_PROJECTILE}
+CR_ELEMENT_FIRE_END:
+  Skills:
+  - potion{t=DAMAGE_RESISTANCE;d=1;l=1;force=true} @self
+
+CR_ELEMENT_FIRE_PROJECTILE:
+  Skills:
+  - delay 15
+  - projectile{onTick=CR_ELEMENT_FIRE_PROJECTILE-Tick;onHit=CR_ELEMENT_FIRE_PROJECTILE-Hit;onEnd=CR_ELEMENT_FIRE_PROJECTILE-End;v=8;i=1;sfo=0.3;g=0.0;tyo=0.5;syo=6.5;mr=25} @targetlocation
+  - sound{s=item.firecharge.use;v=1.0;p=1.0} @self
+CR_ELEMENT_FIRE_PROJECTILE-Tick:
+  Skills:
+  - effect:particlesphere{particle=FLAME;amount=5;radius=0.4;speed=0} @origin
+CR_ELEMENT_FIRE_PROJECTILE-Hit:
+  Skills:
+  - damage{amount="<modifier.damage>";ignoreArmor=true}
+  - ignite{ticks=120}
+CR_ELEMENT_FIRE_PROJECTILE-End:
+  Skills:
+  - effect:explosion
+  - damage{amount="<modifier.damage-Burn>";ignoreArmor=true} @ENO{r=5}
+  - ignite{ticks=120} @ENO{r=5}
+#
+#
+CR_ELEMENT_WATER:
+  Cooldown: 1
+  Skills:
+  - sound{s=item.trident.throw;v=1.0;p=1.0} @self
+  - sound{s=ambient.underwater.enter;v=0.6;p=1.2} @self
+  - projectile{onTick=CR_ELEMENT_WATER-Tick;onHit=CR_ELEMENT_WATER-Hit;onEnd=CR_ELEMENT_WATER-End;v=8;i=1;hR=1;vR=1;sfo=0} @PIR{r=30}
+  - delay 40
+  - sound{s=item.trident.throw;v=1.0;p=1.0} @self
+  - sound{s=ambient.underwater.enter;v=0.6;p=1.2} @self
+  - projectile{onTick=CR_ELEMENT_WATER-Tick;onHit=CR_ELEMENT_WATER-Hit;onEnd=CR_ELEMENT_WATER-End;v=8;i=1;hR=1;vR=1;mr=15;sfo=0} @Ring{r=6-10;p=4-6}
+  - delay 80
+CR_ELEMENT_WATER-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#4a53ff;amount=1;speed=0} @origin
+CR_ELEMENT_WATER-Hit:
+  Skills:
+  - sound{s=item.trident.hit;v=1.0;p=1.0}
+  - throw{velocity=3;velocityY=3}
+  - damage{a="<modifier.damage>";pkb=true}
+CR_ELEMENT_WATER-End:
+  Skills:
+  - sound{s=item.trident.hit_ground;v=1.0;p=1.0}
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:particlering{p=reddust;color=#4a53ff;radius=3;points=32;amount=1;hS=0;vS=0;y=0}
+  - sound{s=entity.creeper.primed;v=1.0;p=1.0}
+  - delay 10
+  - effect:lightning
+  - throw{velocity=10;velocityY=3} @ENO{r=3}
+  - damage{a="<modifier.damage>";pkb=true} @ENO{r=3}
+  - sound{s=entity.lightning_bolt.impact;v=1.0;p=0}
+############################################################################
+
+CR_ELEMENT_ICE:
+  Cooldown: 1
+  Skills:
+  - effect:particles{particle=SNOWFLAKE;amount=10;hS=0.5;vS=0.5;speed=0;y=1} @self
+  - delay 5
+  - effect:particles{particle=SNOWFLAKE;amount=10;hS=0.5;vS=0.5;speed=0;y=1} @self
+  - delay 5
+  - effect:particles{particle=SNOWFLAKE;amount=10;hS=0.5;vS=0.5;speed=0;y=1} @self
+  - delay 5
+  - effect:particles{particle=SNOWFLAKE;amount=10;hS=0.5;vS=0.5;speed=0;y=1} @self
+  - sound{s=item.elytra.flying;v=0.5;p=1.0} @self
+  - sound{s=item.dye.use;v=1.0;p=0.5} @self
+  - projectile{bulletType=ARROW;arrowtype=TRIDENT;onTick=CR_ELEMENT_ICE-Tick;onHit=CR_ELEMENT_ICE-Hit;i=1;hR=1;mr="<modifier.range>";vR=1;syo=0;sfo=0;v="<modifier.speed>";vO=0;hO=-10;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=15;uel=true}
+  - projectile{bulletType=ARROW;arrowtype=TRIDENT;onTick=CR_ELEMENT_ICE-Tick;onHit=CR_ELEMENT_ICE-Hit;i=1;hR=1;mr="<modifier.range>";vR=1;syo=0;sfo=0;v="<modifier.speed>";vO=0;hO=-5;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=15;uel=true}
+  - projectile{bulletType=ARROW;arrowtype=TRIDENT;onTick=CR_ELEMENT_ICE-Tick;onHit=CR_ELEMENT_ICE-Hit;i=1;hR=1;mr="<modifier.range>";vR=1;syo=0;sfo=0;v="<modifier.speed>";vO=0;hO=0;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=15;uel=true}
+  - projectile{bulletType=ARROW;arrowtype=TRIDENT;onTick=CR_ELEMENT_ICE-Tick;onHit=CR_ELEMENT_ICE-Hit;i=1;hR=1;mr="<modifier.range>";vR=1;syo=0;sfo=0;v="<modifier.speed>";vO=0;hO=5;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=15;uel=true}
+  - projectile{bulletType=ARROW;arrowtype=TRIDENT;onTick=CR_ELEMENT_ICE-Tick;onHit=CR_ELEMENT_ICE-Hit;i=1;hR=1;mr="<modifier.range>";vR=1;syo=0;sfo=0;v="<modifier.speed>";vO=0;hO=10;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=15;uel=true}
+
+#
+CR_ELEMENT_ICE-t2Tick:
+  Skills:
+  - effect:particles{p=SNOWFLAKE;amount=1;speed=0;hS=0;vS=0} @origin
+
+
+CR_ELEMENT_ICE-Tick:
+  Skills:
+  - effect:particles{p=SNOWFLAKE;amount=1;speed=0;hS=0;vS=0} @origin
+CR_ELEMENT_ICE-Hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+  - throw{velocity=12;velocityY=2}
+  - freeze{ticks=200}
+#
+
+
+
+

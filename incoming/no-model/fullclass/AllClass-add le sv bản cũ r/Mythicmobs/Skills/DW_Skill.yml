@@ -1,0 +1,90 @@
+# http://www.mythicmobs.net
+#
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+
+
+
+DW_SKILL_PASS:
+  Skills:
+  - effect:particlering{particle=reddust;color=#ff4343;radius=1;points=16;amount=1;hS=0;vS=0} @self
+  - effect:particlering{particle=reddust;color=#ff4343;radius=1;points=16;amount=2;hS=0;vS=0} @self
+  - delay 1
+  - effect:particlering{particle=reddust;color=#ff4343;radius=1;points=16;amount=3;hS=0;vS=0} @self
+  - potion{type=DARKNESS;duration=20;level=1;p=false} @EIR{r=4}
+  - effect:particlering{particle=reddust;color=#ff4343;radius=1;points=16;amount=4;hS=0;vS=0} @self
+  
+DW_SKILL_ONE:
+  Skills:
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=-1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=-0.5} @ring{r=1}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=0} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=0.5} @ring{r=1}
+  - sound{s=entity.breeze.idle_ground;v=1.0;p=1.2} @self
+  - potion{type=SPEED;duration="<modifier.duration> * 20";lvl=2} @self
+  - potion{type=INVISIBILITY;duration="<modifier.duration> * 20";lvl=100} @self
+  - skill{s=HACNGUYETANH_SKILL_tick;repeat="<modifier.duration> * 10";repeatInterval=2}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=1.5} @ring{r=1}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=2} @ring{r=1}
+  - skill{s=DW_SKILL_ONE_END;delay="<modifier.duration> * 20"} @self
+DW_SKILL_ONE_END:
+  Skills:
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=-1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=-0.5} @ring{r=1}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=0} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=0.5} @ring{r=1}
+  - sound{s=entity.breeze.idle_ground;v=1.0;p=1.2} @self
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=1.5} @ring{r=1}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=2} @ring{r=1}
+
+
+
+#########################################################################
+
+DW_SKILL_TWO:
+  Skills:
+  - projectile{onTick=DW_SKILL_TWO-Tick;onHit=DW_SKILL_TWO-Hit;i=1;hR=1;mr=20;vR=1;syo=0;sfo=0;v=8;vO=0;hO=-10;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=15;uel=true}
+  - projectile{onTick=DW_SKILL_TWO-Tick;onHit=DW_SKILL_TWO-Hit;i=1;hR=1;mr=20;vR=1;syo=0;sfo=0;v=8;vO=0;hO=0;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=15;uel=true}
+  - projectile{onTick=DW_SKILL_TWO-Tick;onHit=DW_SKILL_TWO-Hit;i=1;hR=1;mr=20;vR=1;syo=0;sfo=0;v=8;vO=0;hO=10;hnp=true;sE=false;sB=true;hs=true;hfs=0.5} @Forward{f=15;uel=true}
+  - sound{s=entity.shulker.death;v=1.0;p=1.0
+
+
+DW_SKILL_TWO-Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#270530;amount=1} @origin
+DW_SKILL_TWO-Hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+  - sound{s=block.glass.hit;v=1.0;p=1.0}
+  - sound{s=block.sculk_catalyst.step;v=1.0;p=1.0}
+  - effect:particlering{p=reddust;color=#6203CE;radius=2;points=15;amount=30;hS=1;vS=1;repeat=20;repeatInterval=1} @origin
+  - potion{type=DARKNESS;duration=5;level=1;p=false;repeat=20;repeatInterval=1} @ENO{r=2}
+  
+#########################################################################
+
+
+
+#########################################################################
+
+
+DW_SKILL_THREE:
+  Skills:
+  - potion{type=LEVITATION;duration=100;level=5;particles=false;icon=false;force=true} @self
+  - delay 50
+  - leap{velocity=250} @target
+  - delay 15
+  - potion{type=LEVITATION;duration=15;level=1;particles=false;icon=false;force=true} @self
+  - jump{velocity=-100}
+  - delay 10
+  - throw{velocity=20;velocityY=5} @EIR{r=6}
+  - sound{s=entity.dragon_fireball.explode;v=1.0;p=0.8} @self
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=6}
+  - effect:particles{p=reddust;color=#700058;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - effect:particles{p=reddust;color=#bb00ff;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - delay 5
+  - effect:particles{p=reddust;color=#700058;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - effect:particles{p=reddust;color=#bb00ff;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=1;level=1;particles=false;icon=false;force=true} @self

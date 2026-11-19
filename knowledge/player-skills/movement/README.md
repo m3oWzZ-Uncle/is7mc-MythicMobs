@@ -1,0 +1,6 @@
+# Movement
+
+- Với cú lướt theo hướng nhìn, `@Forward` cho một điểm trước caster. `lockpitch=true` bỏ góc dọc khi chọn điểm. Danh mục Mechanics mô tả `lunge` đưa caster về phía mục tiêu. Khoảng cách của điểm ngắm và quãng lướt thực tế cần đo riêng. [Forward](https://wiki.mythiccraft.io/mythicmobs/Skills/Targeters/Forward) · [Mechanics](https://wiki.mythiccraft.io/mythicmobs/Skills/Mechanics)
+- `velocity` chỉnh vectơ của entity được chọn. Dùng khi gameplay cần điều khiển vận tốc theo trục hoặc dừng tại một mốc cụ thể. Phản hồi chọn `lunge` cho Dash Cleave thuộc cú lướt nhắm người của boss trong ca đó. [Velocity](https://wiki.mythiccraft.io/mythicmobs/Skills/Mechanics/velocity) · [Hồ sơ Dash Cleave](../../../feedback/corrections/MM-2026-006.md)
+- Đo trên sàn phẳng rồi thử tường và góc nhìn lên/xuống. Nếu skill có hit, xác định điểm phát sinh damage độc lập với vị trí hiệu ứng. [Xích Huyết](../../patterns/movement-combat-ai.md) · [Bài lướt player](../../../tests/training-sandbox/004-player-forward-dash/README.md)
+- Với Ảnh Bộ mang cảm giác bước nhanh sát sàn, người dùng đề xuất thử `@Forward{y=-10}`. Offset dịch điểm ngắm. Tác động thực tế khi `velocityY=0` cần đo riêng trên build chạy. [Quyết định và ca A/B](../../../feedback/decisions/MM-D-2026-003.md)

@@ -1,0 +1,12 @@
+TV:
+  Id: NETHERITE_PICKAXE
+  Model: 1
+  Display: 'Ichor Staff'  
+  Skills:
+  # - summon{s=LR_blood_staff_sacrifice} @self ~onUse
+  - summon{type=tv1;amount=5;radius=4} ~onUse
+
+LarcticSpear:
+  Id: STONE_SWORD
+  Display: "&6"
+  Model: 102

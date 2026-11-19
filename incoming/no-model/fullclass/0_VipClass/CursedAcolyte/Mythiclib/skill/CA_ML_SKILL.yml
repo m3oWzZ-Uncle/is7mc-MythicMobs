@@ -1,0 +1,24 @@
+Curse:
+  mythicmobs-skill-id: CursedAcolyte_SKILL_1
+  modifiers:
+  - healpercent
+  - duration
+  - elv
+
+Dispel:
+  mythicmobs-skill-id: CursedAcolyte_SKILL_2
+  modifiers:
+  - duration
+  - elv
+  - damage
+
+Anti-Heal:
+  mythicmobs-skill-id: CursedAcolyte_SKILL_3_MMOCORE
+  modifiers:
+  - duration
+  - elv
+  - damage
+  
+CursedAcolyte:
+  mythicmobs-skill-id: CursedAcolyte_SKILL_PASS
+  modifiers: []

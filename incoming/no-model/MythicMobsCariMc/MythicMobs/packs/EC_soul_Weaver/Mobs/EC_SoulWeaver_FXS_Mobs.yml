@@ -1,0 +1,177 @@
+
+Soulweaver_Slash_FX_1:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true 
+    Marker: true
+    AlwaysShowName: false
+    Invisible: true
+    HasGravity: false
+    HasBasePlate: false
+    Small: false
+    ApplyInvisibility: true
+  Skills:
+  - addtag{t=EC_Skill} @self ~onSpawn
+  - equip{item=soulweaver_slash_1:4} @self ~onSpawn
+  - equip{item=soulweaver_slash_2:4;delay=1} @self ~onSpawn
+  - equip{item=soulweaver_slash_3:4;delay=2} @self ~onSpawn
+  - equip{item=soulweaver_slash_4:4;delay=3} @self ~onSpawn
+  - remove{delay=4} @self ~onSpawn
+
+Soulweaver_Nether_Grasp_Trap:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true 
+    Marker: true
+    AlwaysShowName: false
+    Invisible: true
+    HasGravity: false
+    HasBasePlate: false
+    Small: false
+    ApplyInvisibility: true
+  Skills:
+  - addtag{t=EC_Skill} @self ~onSpawn
+  ###
+  - effect:particleorbital{r=1.75;points=32;t=100;i=1;vy=81;particle=reddust;color=#b5e7cb} @self ~onSpawn
+  - effect:particlering{particle=reddust;color=#2c3b39;radius=0.25;points=32;amount=4;hS=0.125;vS=0;delay=39} @self ~onSpawn
+  - effect:particlering{particle=reddust;color=#486859;radius=0.7;points=32;amount=4;hS=0.125;vS=0;delay=40} @self ~onSpawn
+  - effect:particlering{particle=reddust;color=#5d9b79;radius=1.05;points=32;amount=4;hS=0.125;vS=0.1;delay=41} @self ~onSpawn
+  - effect:particlering{particle=reddust;color=#86c69a;radius=1.45;points=32;amount=4;hS=0.125;vS=0.2;delay=42} @self ~onSpawn
+  - effect:particlering{particle=reddust;color=#b5e7cb;radius=1.75;points=32;amount=4;hS=0.125;vS=0.3;delay=43} @self ~onSpawn
+  - equip{item=soulweaver_nether_grasp_circle:4;delay=40} @self ~onSpawn 
+  - sound{s=soulweaver_set:custom.soulweaver_set.circlefinish;sc=blocks;v=2;p=-1;delay=40} @selflocation ~onSpawn
+  - Aura{auraName=Check_SoulWeaver_Nether_Grasp;oT=Check_SoulWeaver_Nether_Grasp;i=1;d=99999;delay=40} @self ~onSpawn
+
+Soulweaver_Nether_Grasp_Hand:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true  
+    Marker: true
+    AlwaysShowName: false
+    Invisible: true
+    HasGravity: false
+    HasBasePlate: false minecraft:entity.witch.celebrate
+    Small: false
+    ApplyInvisibility: true
+  Skills:
+  - addtag{t=EC_Skill} @self ~onSpawn
+  - teleport @selflocation{y=-12} ~onSpawn
+  - equip{item=soulweaver_nether_grasp_hand_2:0;delay=24} @self ~onSpawn
+  - equip{item=soulweaver_nether_grasp_hand:0;delay=5} @self ~onSpawn
+  - effect:particleline{p=reddust;color=#24142C;amount=4;Size=1;zigzag=true;delay=18;repeat=2;repeatInterval=1} @Cone{angle=360;points=64;range=4;rotation=360;yoffset=0} ~onSpawn
+  - teleport{repeat=20;repeatInterval=1} @selflocation{y=0.625} ~onSpawn
+  - sudoskill{s=Soulweaver_Nether_Grasp_Hand_DamageUP;cat=true;delay=15} @owner ~onSpawn
+  - sound{s=soulweaver_set:custom.soulweaver_set.demonhand;sc=hostile;p=-0.5;v=1;delay=15} @selflocation ~onSpawn
+  - teleport{repeat=20;repeatInterval=1;delay=35} @selflocation{y=-0.625} ~onSpawn
+  - remove{delay=50} @self ~onSpawn
+  
+
+Soulweaver_Spirit_Surge:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true 
+    Marker: true
+    AlwaysShowName: false
+    Invisible: true
+    HasGravity: false
+    HasBasePlate: false
+    Small: false
+    ApplyInvisibility: true
+  Skills:
+  - addtag{t=EC_Skill} @self ~onSpawn
+  - equip{item=SoulWeaver_Scythe:4} @self ~onSpawn
+  - animatearmorstand{d=40;head=0,2520,0;ignoreempty=false} @self ~onSpawn
+  
+
+Soulweaver_Spirit_Surge_Reverse:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true 
+    Marker: true
+    AlwaysShowName: false
+    Invisible: true
+    HasGravity: false
+    HasBasePlate: false
+    Small: false
+    ApplyInvisibility: true
+  Skills:
+  - addtag{t=EC_Skill} @self ~onSpawn
+  - remove{delay=100} @self ~onSpawn 
+  - sound{s=soulweaver_set:custom.soulweaver_set.scytheback;sc=players;v=1;delay=90} @selflocation ~onSpawn 
+  - missile{bulletType=MOB;mob=Soulweaver_Spirit_Surge;oH=Soulweaver_Spirit_Surge_Grab_Scythe;oT=Soulweaver_Spirit_Surge_Tick;v=20;hR=1;vR=1;hp=true;hnp=true;sfo=-2;syo=-0.25;mr=100;delay=1;sB=false;sE=false} @owner ~onSpawn
+  - Aura{auraName=Pulling_Soul;oT=Soulweaver_Spirit_Surge_Soul_Collecting;d=100;i=1;rd=true;ma=true;ms=1} @owner ~onSpawn
+
+Soulweaver_Spirit_Surge_Soul:
+  Type: VEX
+  Health: 9999
+  Options:
+    Invincible: false 
+    AlwaysShowName: false
+    Invisible: true
+    Small: false
+    ApplyInvisibility: true
+    HasGravity: false
+    KnockbackResistance: 1
+    MovementSpeed: 0 
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  AITargetSelectors:
+  - clear
+  Skills:
+  - addtag{t=EC_Skill} @self ~onSpawn
+  - equip{item=soulweaver_soul:4} @self ~onSpawn
+  - equip{item=AIR:0} @self ~onSpawn
+  - sound{s=soulweaver_set:custom.soulweaver_set.soulleave;sc=blocks;v=0.5;p=1.2} @selflocation ~onSpawn
+  - sudoskill{s=Soulweaver_Spirit_Surge_Soul_Damaging} @Parent ~onDamaged
+  - potion{t=LEVITATION;l=-1;d=150;p=false;i=false} @self ~onSpawn
+  - effect:particles{p=reddust;color=#d39741;a=5;size=1;hS=0.125;vS=0.25;y=0.75;repeat=50;repeatInterval=2} @self ~onSpawn
+  - effect:particles{p=reddust;color=#f8f644;a=5;size=1;hS=0.05;vS=0.05;y=0.75;repeat=50;repeatInterval=2} @self ~onSpawn
+  - effect:particles{p=sculk_soul;a=1;size=1.3;hS=0.125;vS=0.25;y=0.75;repeat=10;repeatInterval=5} @self ~onSpawn
+  - remove{delay=100} @self ~onSpawn
+  - sound{s=soulweaver_set:custom.soulweaver_set.soulhit;sc=blocks;v=0.5;p=1.2;delay=98} @selflocation ~onSpawn
+   
+Soulweaver_Deprivation_Eye:
+  Type: VEX
+  Display: ''
+  Health: 10
+  Options:
+    Invincible: false 
+    AlwaysShowName: true
+    Invisible: true
+    Small: false
+    ApplyInvisibility: true
+    HasGravity: false
+    KnockbackResistance: 1
+    MovementSpeed: 0 
+    Silent: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - addtag{t=EC_Skill} @self ~onSpawn
+  ### SpawnParticles
+  - effect:particlering{particle=reddust;color=#2c3b39;radius=0.4;points=32;amount=10;hS=0.125;y=0.25;vS=0.3} @self ~onSpawn
+  - effect:particlering{particle=reddust;color=#486859;radius=0.8;points=32;amount=8;hS=0.125;y=0.25;vS=0.2;delay=1} @self ~onSpawn
+  - effect:particlering{particle=reddust;color=#5d9b79;radius=1.2;points=32;amount=6;hS=0.125;y=0.25;vS=0.1;delay=2} @self ~onSpawn
+  - effect:particlering{particle=reddust;color=#86c69a;radius=1.6;points=32;amount=4;hS=0.125;y=0.25;vS=0.0;delay=3} @self ~onSpawn
+  - effect:particlering{particle=reddust;color=#b5e7cb;radius=2;points=32;amount=2;hS=0.125;y=0.25;vS=0;delay=4} @self ~onSpawn
+  ###
+  - sound{s=soulweaver_set:custom.soulweaver_set.eyeappear;sc=hostile;v=2;p=0.75;delay=5} @selflocation ~onSpawn
+  - look{immediately=true;repeat=100;repeatInterval=1} @Owner ~onSpawn
+  - equip{item=AIR:0} @self ~onSpawn
+  - equip{item=soulweaver_deprivation_eye:4;delay=4} @self ~onSpawn
+  - remove{delay=100} @self ~onSpawn
+  - potion{t=LEVITATION;l=-1;d=150;p=false;i=false} @self ~onSpawn
+  - potion{t=GLOWING;l=1;d=150;p=false;i=false;delay=10} @self ~onSpawn
+  - effect:particleorbital{r=1;points=32;t=100;i=1;rz=90;oy=0.5;particle=reddust;color=#b5e7cb} @Forward{f=0} ~onSpawn
+  - effect:particleorbital{r=1;points=32;t=100;i=1;rz=-90;oy=0.5;particle=reddust;color=#b5e7cb} @Forward{f=0} ~onSpawn
+  - effect:particles{p=reddust;color=#afe9df;a=3;size=1.3;hS=0.5;vS=0.5;y=0.65;repeat=50;repeatInterval=2} @self ~onSpawn
+  - effect:particles{p=reddust;color=#afe9df;a=30;size=3;hS=0.5;vS=0.5;y=0.65;repeat=10;repeatInterval=} @self ~onDeath
+  - skill{s=Soulweaver_Deprivation_Eye_Choose_Target;repeat=100;repeatInterval=1} @EIC{a=46;r=30;rot=0} ~onSpawn
+  - skill{s=Soulweaver_Deprivation_Eye_Choose_Target;repeat=100;repeatInterval=1} @EIC{a=46;r=30;rot=180} ~onSpawn
+  - remove @self ~onDeath
+
+
+# 996M6QDXMRE9GWWNVKK

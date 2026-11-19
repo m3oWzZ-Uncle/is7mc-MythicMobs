@@ -1,0 +1,16 @@
+{
+  "id": "conductor-reference-open",
+  "category": "corrections",
+  "title": "Conductor_OceanRythme-TICK2 chưa tìm thấy ở đợt 01",
+  "topic": "conductor-callback-reference",
+  "summary": "Tìm định nghĩa ID và caller trước khi kết luận nhánh Conductor có lỗi runtime.",
+  "context": "CaRiMC, pack PixelBarrel's Hollow Woods Vol.2 ghi metadata 1.0.0, phạm vi 30 YAML đợt 01.",
+  "exceptions": "Các thư mục ngoài đợt 01 và log server vẫn cần kiểm tra khi xử lý case này.",
+  "scope": "project:carimc",
+  "claim": "FACT",
+  "confidence": "CONFIRMED",
+  "status": "open",
+  "recorded": "2026-11-13",
+  "tags": ["conductor", "callback", "summon", "reference"],
+  "sources": [{"type": "document", "ref": "feedback/corrections/MM-2026-002.md", "note": "Xác nhận phạm vi tìm kiếm tĩnh và việc hồ sơ chưa có bản sửa."}]
+}

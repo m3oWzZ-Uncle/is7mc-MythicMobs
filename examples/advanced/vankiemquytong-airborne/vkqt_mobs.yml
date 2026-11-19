@@ -1,0 +1,24 @@
+VFX_VKQT_SWORD:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+    Invincible: true
+    NoGravity: true
+  Skills:
+  - model{usestatemachine=true;mid=vkqt_projectile_sword;lockpitch=false} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn
+
+VFX_VKQT_MAGIC_CIRCLE:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+    Invincible: true
+    NoGravity: true
+  Skills:
+  - model{usestatemachine=true;mid=vkqt_projectile_start;lockpitch=true} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn
+  - state{mid=vkqt_projectile_start;s=idle;loop=LOOP;force=false;delay=20} @self ~onSpawn

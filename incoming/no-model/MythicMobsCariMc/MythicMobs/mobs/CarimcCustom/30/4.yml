@@ -1,0 +1,193 @@
+EVENT_THREE_FOUR:
+  MobType: SKELETON
+  Health: 30000
+  Damage: 700
+  Faction: BOSS_EVENT
+  Display: '<#FFB693>☠ &8[<#FF651B>Trùm&8] &fBạch Mã <#8A00FF>Hoảng Tử <#FFB693>☠'
+  BossBar:
+    Enabled: true
+    Title: '<#FFB693>☠ &8[<#FF651B>Trùm&8] &fBạch Mã <#8A00FF>Hoảng Tử <#FFB693>☠ &8[<#FF7E6C><mob.hp>&8]'
+    Range: 50
+    Color: WHITE
+    Style: SEGMENTED_20
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Options:
+    AlwaysShowName: true
+    FollowRange: 80
+    MaxCombatDistance: 60
+    Despawn: false
+    MovementSpeed: 0.23
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    Silent: true
+    Height: 3
+  Equipment:
+  - trim_item CHEST
+  - trim_item LEGS
+  - trim_item BOOTS
+  DamageModifiers:
+  - DROWNING 0
+  - BLOCK_EXPLOSION 0
+  - ENTITY_EXPLOSION 0
+  - POISON 0.1
+  - MAGIC 0.1
+  - DRAGON_BREATH 0
+  - WITHER -2
+  - FALLING_BLOCK 0
+  - THORNS 0
+  - LAVA 0
+  - MELTING 0
+  - FIRE_TICK 0
+  - FIRE 0
+  - HOT_FLOOR 0
+  - FALL 0
+  - SUFFOCATION 0
+  - PROJECTILE 0.8
+  - CONTACT 0
+  KillMessages:
+  - '&f<target.name> &7Bị giết bởi <caster.display>'
+  Drops:
+  - exp 1
+  Skills:
+  - sound{s=entity.armor_stand.hit;v=1.0;p=0.7} @self ~onDamaged 1
+  - sound{s=entity.armor_stand.fall;v=0.8;p=1.0} @self ~onDamaged 1
+  - sound{s=entity.wither_skeleton.hurt;v=0.8;p=0.4} @self ~onDamaged 1
+  - sound{s=entity.pillager.death;v=1.0;p=0.3} @self ~onDeath 1
+  - sound{s=entity.wither.break_block;v=0.5;p=0.4} @self ~onDeath 1
+  - sound{s=entity.wither_skeleton.ambient;v=0.5;p=0.6} @self ~onTimer:60
+  - effect:itemspray{item=GHAST_TEAR;amount=8;velocity=1;yvelocity=1;d=50} @self ~onDamaged 0.5
+  
+  - randomskill{skills=EVENT_THREE_FOUR_SKILL_2 0.3,EVENT_THREE_FOUR_SKILL_3 0.3} ~onAttack 0.6
+  - randomskill{skills=EVENT_THREE_FOUR_SKILL_1 0.3,EVENT_THREE_FOUR_SKILL_2 0.3,EVENT_THREE_FOUR_SKILL_3 0.3} <25% ~onAttack 0.6
+
+  - skill{s=EVENT_THREE_FOUR_HEAL} <25% ~onTimer:10 1
+
+  - skill{s=EVENT_THREE_FOUR_COMBATL_1} ~onAttack 0.3
+  - skill{s=EVENT_THREE_FOUR_COMBATL_2} ~onAttack 0.3
+  - skill{s=EVENT_THREE_FOUR_COMBATL_3} @target <25% ~onAttack 1
+  - effect:spin{d=5;v=-60} @self <25% ~onAttack
+
+  - skill{s=EVENT_THREE_FOUR_ONSPAWN} ~onSpawn 1
+  - skill{s=EVENT_THREE_FOUR_WIN} ~OnDeath 1
+  - sendtitle{title="<#FFB693>☠ &8[<#FF651B>Trùm&8] &fBạch Mã <#8A00FF>Hoảng Tử <#FFB693>☠";subtitle="&8○ &fđã hồi sinh &8○";d=100} @Server ~onSpawn
+  - sendtitle{title="<#FFB693>☠ &8[<#FF651B>Trùm&8] &fBạch Mã <#8A00FF>Hoảng Tử <#FFB693>☠";subtitle="&8○ &fđã bị giết bởi <#3DFFD0><trigger.name> &8○";d=100} @Server ~onDeath
+#  - command{c="voucher give <trigger.name> RubyCoin3 1"} ~onDeath
+#  - command{c="mi give DUNGEON LOIHACAM <trigger.name> 4"} ~onDeath
+#  - command{c="mi give DUNGEON LOIHACAM <target.name> 1"} @PIR{r=20}} ~onDeath 1
+#  - command{c="p give <target.name> 30"} @PIR{r=10} ~onDeath 1
+#  - command{c="eco give <target.name> 500000"} @PIR{r=30} ~onDeath 1
+
+
+
+
+
+EVENT_THREE_FOUR_HORSE:
+  MobType: HORSE
+  Health: 30
+  Display: '<#FFB693>☠ &8[<#FF651B>Trùm&8] &fNgựa <#8A00FF>Hoảng Tử <#FFB693>☠'
+  Damage: 7
+  Faction: BOSS_EVENT
+  Modules:
+    ThreatTable: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Options:
+    HorseArmor: diamond
+    HorseColor: WHITE
+    HorseStyle: WHITE_DOTS
+    
+    AlwaysShowName: true
+    FollowRange: 80
+    MaxCombatDistance: 60
+    Despawn: false
+    MovementSpeed: 0.42
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventSunburn: true
+    KnockbackResistance: 1
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+    Silent: true
+    Invincible: true
+  DamageModifiers:
+  - DROWNING 0
+  - BLOCK_EXPLOSION 0
+  - ENTITY_EXPLOSION 0
+  - POISON 0.1
+  - MAGIC 0.1
+  - DRAGON_BREATH 0
+  - WITHER -2
+  - FALLING_BLOCK 0
+  - THORNS 0
+  - LAVA 0
+  - MELTING 0
+  - FIRE_TICK 0
+  - FIRE 0
+  - HOT_FLOOR 0
+  - FALL 0
+  - SUFFOCATION 0
+  - PROJECTILE 0.8
+  - CONTACT 0
+  KillMessages:
+  - '&f<target.name> &7Bị giết bởi <caster.display>'
+  Drops:
+  - exp 1
+  Skills:
+  - sound{s=entity.horse.angry;v=1.0;p=0.7} @self ~onDamaged 1
+  - sound{s=entity.armor_stand.fall;v=0.8;p=1.0} @self ~onDamaged 1
+  - sound{s=entity.horse.hurt;v=0.8;p=0.4} @self ~onDamaged 1
+  - sound{s=entity.horse.death;v=1.0;p=0.3} @self ~onDeath 1
+  - sound{s=entity.wither.break_block;v=0.5;p=0.4} @self ~onDeath 1
+  - sound{s=entity.horse.ambient;v=0.5;p=0.6} @self ~onTimer:60
+
+
+
+######################################
+
+
+EVENT_THREE_FOUR_PILE: ## The secondary mob connected to the undying skeleton. Essentially waits for the signal from the necromancer before reviving, or else removes itself after a while ##
+  Type: SKELETON
+  Display: '<#FFB693>☠ &8[<#FF651B>Trùm&8] &fBạch Mã <#8A00FF>Hoảng Tử <#FFB693>☠'
+  Health: 10
+  Damage: 0
+  Faction: BOSS_EVENT
+  Disguise: Armor_Stand setYModifier -1.4 setInvisible true setCustomNameVisible false setNoBasePlate true setRightArm 300,180,290
+  Skills:
+  - effect:itemspray{item=BONE;amount=3;velocity=0.2;d=30;ap=false} @selfLocation ~onSpawn
+  - effect:particles{p=ash;a=<random.1to3>;hs=0.32;vs=0.8;y=0.3} @self ~onTimer:1
+  - effect:particles{p=soul;a=1;hs=0;vs=0.8;y=0.3} @self ~onDeath
+  - sound{s=block.lava.extinguish;p=0.61;sc=master;v=0.88} @self ~onDeath
+  - sound{s=entity.skeleton.death;p=0.81;sc=master;v=1.38} @self ~onDeath
+#  - skill{s=UndyingSkeletonResAni} @self ~onSignal:ResTrigger
+  - remove{delay=200} @self ~onSpawn
+  Equipment:
+  - EVENT_THREE_FOUR__HEAD_TW HEAD
+  - EVENT_THREE_FOUR__SWORD HAND
+  - AIR CHEST
+  - AIR LEGS
+  - AIR FEET
+  Options:
+    Silent: true
+    NoAI: true
+    Invincible: true
+    Collidable: false
+    ApplyInvisibility: true
+    KnockbackResistance: 1.0
+    PreventOtherDrops: true
+    Despawn: true
+    NoDamageTicks: 6
+    MovementSpeed: 0.00
+    PreventSunburn: true

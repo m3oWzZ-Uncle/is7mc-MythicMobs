@@ -1,0 +1,16 @@
+Geppo:
+  mythicmobs-skill-id: BUNNY_BUFF_JUMP
+  modifiers: []
+  
+Bunny_Bomb:
+  mythicmobs-skill-id: BUNNY_BOMBB
+  modifiers:
+  - damage
+  
+Bunny_Attack:
+  mythicmobs-skill-id: BUNNY_ATTACK
+  modifiers:
+  - damage
+  - damage-tick
+  - velocity
+  - velocity-y

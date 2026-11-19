@@ -1,0 +1,13 @@
+TrainingHoaCauThuat:
+  Cooldown: 3
+  Skills:
+    - projectile{onTick=TrainingHoaCauTrail;onHit=TrainingHoaCauImpact;onHitBlock=TrainingHoaCauImpact;v=16;i=1;mr=12;d=24;hR=0.4;vR=0.6;sfo=0;syo=1;sE=true;sB=true;hp=false;hnp=true} @Forward{f=12;y=1}
+
+TrainingHoaCauTrail:
+  Skills:
+    - particle{p=flame;a=4;hs=0.08;vs=0.08;s=0} @origin
+
+TrainingHoaCauImpact:
+  Skills:
+    - particle{p=explosion;a=1} @origin
+    - damage{a=6} @EntitiesNearOrigin{r=2;targetplayers=false;targetarmorstands=false;conditions=[  - lineofsightfromorigin true ]}

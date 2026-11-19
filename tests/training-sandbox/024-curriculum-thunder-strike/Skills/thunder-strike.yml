@@ -1,0 +1,15 @@
+TrainingThunderStrike:
+  Cooldown: 5
+  Skills:
+    - skill{s=TrainingThunderStrikeAimedBlock} @TargetBlock{maxdistance=16;blockcentered=true;blockignores=AIR,CAVE_AIR,VOID_AIR}
+
+TrainingThunderStrikeAimedBlock:
+  Skills:
+    - skill{s=TrainingThunderStrikeAtPoint;origin=@TargetedLocation{y=0.6}} @TargetedLocation
+
+TrainingThunderStrikeAtPoint:
+  Skills:
+    - particlering{p=end_rod;r=2;points=20;a=1;hs=0;vs=0;s=0} @origin
+    - delay 20
+    - fakelightning @origin
+    - damage{a=6} @EntitiesNearOrigin{r=2;shape=SPHERE;targetplayers=false;targetarmorstands=false;conditions=[  - lineofsightfromorigin true ]}

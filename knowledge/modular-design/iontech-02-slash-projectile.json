@@ -1,0 +1,871 @@
+[
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/chain_missile.yml",
+    "sha256": "32391daea751784f05b07c8e9a1608f9be8201d0461c03b8a44ccd48457de817",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "test-chainmissile-cast",
+        "line": 1
+      },
+      {
+        "id": "test-chainmissile-exec",
+        "line": 5
+      },
+      {
+        "id": "test-chainmissile-targettype",
+        "line": 17
+      },
+      {
+        "id": "test-chainmissile-fire",
+        "line": 30
+      },
+      {
+        "id": "test-chainmissile-start",
+        "line": 41
+      },
+      {
+        "id": "test-chainmissile-tick",
+        "line": 46
+      },
+      {
+        "id": "test-chainmissile-hit",
+        "line": 51
+      },
+      {
+        "id": "test-chainmissile-hit-entity",
+        "line": 56
+      },
+      {
+        "id": "test-chainmissile-hit-sfx",
+        "line": 62
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "test-chainmissile-cast",
+        "to": "test-chainmissile-exec",
+        "line": 3,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-chainmissile-exec",
+        "to": "test-chainmissile-targettype",
+        "line": 7,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-chainmissile-exec",
+        "to": "test-chainmissile-fire",
+        "line": 10,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-chainmissile-exec",
+        "to": "test-chainmissile-fire",
+        "line": 13,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-chainmissile-fire",
+        "to": "test-chainmissile-start",
+        "line": 35,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-chainmissile-fire",
+        "to": "test-chainmissile-tick",
+        "line": 36,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-chainmissile-fire",
+        "to": "test-chainmissile-hit-entity",
+        "line": 37,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-chainmissile-fire",
+        "to": "test-chainmissile-hit",
+        "line": 38,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-chainmissile-hit-entity",
+        "to": "test-chainmissile-hit-sfx",
+        "line": 59,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-chainmissile-hit-entity",
+        "to": "test-chainmissile-hit-sfx",
+        "line": 60,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/fractal.yml",
+    "sha256": "0acd240824a8fd9c5ae1d1a4bad9fd5178baff5303cf77885d4f03d18db75348",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "test-fractal-cast",
+        "line": 1
+      },
+      {
+        "id": "test-fractal-fire",
+        "line": 5
+      },
+      {
+        "id": "test-fractal-start",
+        "line": 17
+      },
+      {
+        "id": "test-fractal-tick",
+        "line": 24
+      },
+      {
+        "id": "test-fractal-end",
+        "line": 31
+      },
+      {
+        "id": "test-fractal-target",
+        "line": 42
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "test-fractal-cast",
+        "to": "test-fractal-fire",
+        "line": 3,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-fractal-fire",
+        "to": "test-fractal-start",
+        "line": 12,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-fractal-fire",
+        "to": "test-fractal-tick",
+        "line": 13,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-fractal-fire",
+        "to": "test-fractal-end",
+        "line": 14,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-fractal-end",
+        "to": "test-fractal-target",
+        "line": 35,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-fractal-target",
+        "to": "test-fractal-fire",
+        "line": 44,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/shot.yml",
+    "sha256": "33d7bc43f12a750d0147ac0d0fabea9eede7d2642d90dc30fad0d6159a953803",
+    "kind": "metaskill",
+    "categories": [
+      "Projectile",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "test-shot-cast",
+        "line": 1
+      },
+      {
+        "id": "test-shot-fire",
+        "line": 6
+      },
+      {
+        "id": "test-shot-start",
+        "line": 16
+      },
+      {
+        "id": "test-shot-tick",
+        "line": 21
+      },
+      {
+        "id": "test-shot-hit",
+        "line": 25
+      },
+      {
+        "id": "test-shot-hit-entity",
+        "line": 30
+      },
+      {
+        "id": "test-shot-hit-sfx",
+        "line": 36
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "test-shot-cast",
+        "to": "test-shot-fire",
+        "line": 3,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-shot-fire",
+        "to": "test-shot-start",
+        "line": 10,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-shot-fire",
+        "to": "test-shot-tick",
+        "line": 11,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-shot-fire",
+        "to": "test-shot-hit-entity",
+        "line": 12,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-shot-fire",
+        "to": "test-shot-hit",
+        "line": 13,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-shot-hit-entity",
+        "to": "test-shot-hit-sfx",
+        "line": 33,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-shot-hit-entity",
+        "to": "test-shot-hit-sfx",
+        "line": 34,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/spiral_shot.yml",
+    "sha256": "364fc6d78271dd24a90f4a57b28e2af4c6eea73c1f0274c282724cff5134c9f9",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Slash",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "test-spiralshot-exec",
+        "line": 1
+      },
+      {
+        "id": "test-spiralshot-fire",
+        "line": 5
+      },
+      {
+        "id": "test-spiralshot-tick",
+        "line": 15
+      },
+      {
+        "id": "test-spiralshot-hit",
+        "line": 26
+      },
+      {
+        "id": "test-spiralshot-hit-entity",
+        "line": 31
+      },
+      {
+        "id": "test-spiralshot-hit-sfx",
+        "line": 37
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "test-spiralshot-exec",
+        "to": "test-spiralshot-fire",
+        "line": 3,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-spiralshot-fire",
+        "to": "test-spiralshot-tick",
+        "line": 10,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-spiralshot-fire",
+        "to": "test-spiralshot-hit-entity",
+        "line": 11,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-spiralshot-fire",
+        "to": "test-spiralshot-hit",
+        "line": 12,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-spiralshot-hit-entity",
+        "to": "test-spiralshot-hit-sfx",
+        "line": 34,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-spiralshot-hit-entity",
+        "to": "test-spiralshot-hit-sfx",
+        "line": 35,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/advanced_slash-mechanic.yml",
+    "sha256": "911c5da147a2e1e66cf6feaadac49225b8bf594fa401e7e3fb6ad1485cf79937",
+    "kind": "metaskill",
+    "categories": [
+      "Vector / Math",
+      "Variables",
+      "Slash"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "advanced_slash_test",
+        "line": 2
+      },
+      {
+        "id": "advanced_slash_test-exec",
+        "line": 7
+      },
+      {
+        "id": "advanced_slash_test2",
+        "line": 17
+      },
+      {
+        "id": "advanced_slash_test2-exec",
+        "line": 22
+      },
+      {
+        "id": "Advanced_Slash",
+        "line": 33
+      },
+      {
+        "id": "advanced_slash",
+        "line": 36
+      },
+      {
+        "id": "Slash",
+        "line": 39
+      },
+      {
+        "id": "slash",
+        "line": 42
+      },
+      {
+        "id": "advanced_slash-exec",
+        "line": 47
+      },
+      {
+        "id": "advanced_slash-init",
+        "line": 51
+      },
+      {
+        "id": "advanced_slash-start",
+        "line": 94
+      },
+      {
+        "id": "advanced_slash-scale_taper",
+        "line": 119
+      },
+      {
+        "id": "advanced_slash-point",
+        "line": 125
+      },
+      {
+        "id": "advanced_slash-vfx_logic",
+        "line": 143
+      },
+      {
+        "id": "advanced_slash-default_vfx",
+        "line": 149
+      },
+      {
+        "id": "advanced_slash-hitbox",
+        "line": 166
+      },
+      {
+        "id": "advanced_slash-hitbox_point",
+        "line": 173
+      },
+      {
+        "id": "advanced_slash-hit_entity",
+        "line": 194
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "advanced_slash_test-exec",
+        "to": "damage-ability",
+        "line": 14,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash_test2-exec",
+        "to": "damage-ability",
+        "line": 28,
+        "kind": "metaskill"
+      },
+      {
+        "from": "Advanced_Slash",
+        "to": "advanced_slash-exec",
+        "line": 34,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash",
+        "to": "advanced_slash-exec",
+        "line": 37,
+        "kind": "metaskill"
+      },
+      {
+        "from": "Slash",
+        "to": "advanced_slash-exec",
+        "line": 40,
+        "kind": "metaskill"
+      },
+      {
+        "from": "slash",
+        "to": "advanced_slash-exec",
+        "line": 43,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-exec",
+        "to": "advanced_slash-start",
+        "line": 49,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-init",
+        "to": "setRandomID",
+        "line": 84,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-start",
+        "to": "advanced_slash-init",
+        "line": 96,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-start",
+        "to": "advanced_slash-hit_entity",
+        "line": 97,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-start",
+        "to": "advanced_slash-point",
+        "line": 104,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-start",
+        "to": "advanced_slash-hitbox",
+        "line": 112,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-start",
+        "to": "advanced_slash-hitbox",
+        "line": 117,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-point",
+        "to": "advanced_slash-vfx_logic",
+        "line": 135,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-vfx_logic",
+        "to": "advanced_slash-scale_taper",
+        "line": 146,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-default_vfx",
+        "to": "advanced_slash-scale_taper",
+        "line": 155,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-default_vfx",
+        "to": "advanced_slash-scale_taper",
+        "line": 157,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-hitbox",
+        "to": "advanced_slash-hitbox_point",
+        "line": 170,
+        "kind": "metaskill"
+      },
+      {
+        "from": "advanced_slash-hitbox_point",
+        "to": "advanced_slash-hit_entity",
+        "line": 178,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        147,
+        202
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/particle_shockwave-vfx.yml",
+    "sha256": "5900bbd50fd1f9e5846ee642b79cd8954157b427a2af4c1dbb264b7c4f416e80",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Slash",
+      "VFX"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "vfx-particle_shockwave-init",
+        "line": 1
+      },
+      {
+        "id": "vfx-particle_shockwave-test",
+        "line": 23
+      },
+      {
+        "id": "particle_shockwave",
+        "line": 28
+      },
+      {
+        "id": "vfx-particle_shockwave",
+        "line": 31
+      },
+      {
+        "id": "vfx-particle_shockwave-point",
+        "line": 49
+      },
+      {
+        "id": "vfx-particle_shockwave-default",
+        "line": 53
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "vfx-particle_shockwave-test",
+        "to": "vfx-particle_shockwave",
+        "line": 25,
+        "kind": "metaskill"
+      },
+      {
+        "from": "particle_shockwave",
+        "to": "vfx-particle_shockwave",
+        "line": 29,
+        "kind": "metaskill"
+      },
+      {
+        "from": "vfx-particle_shockwave",
+        "to": "vfx-particle_shockwave-init",
+        "line": 33,
+        "kind": "metaskill"
+      },
+      {
+        "from": "vfx-particle_shockwave",
+        "to": "vfx-particle_shockwave-point",
+        "line": 45,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        46,
+        51,
+        55
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/particle_spiral-vfx.yml",
+    "sha256": "217d89034d97e31521f0c2e0a8f1548761eba6ec1ef461807cf42e99a1265fea",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Slash",
+      "VFX"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "vfx-particle_spiral-projectile",
+        "line": 1
+      },
+      {
+        "id": "vfx-particle_spiral-projectile-tick",
+        "line": 7
+      },
+      {
+        "id": "vfx-particle_spiral-test",
+        "line": 12
+      },
+      {
+        "id": "particle_shockwave",
+        "line": 19
+      },
+      {
+        "id": "vfx-particle_spiral",
+        "line": 22
+      },
+      {
+        "id": "vfx-particle_spiral-init",
+        "line": 26
+      },
+      {
+        "id": "vfx-particle_spiral-exec",
+        "line": 48
+      },
+      {
+        "id": "vfx-particle_spiral-point",
+        "line": 56
+      },
+      {
+        "id": "vfx-particle_spiral-default",
+        "line": 62
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "vfx-particle_spiral-projectile",
+        "to": "vfx-particle_spiral-projectile-tick",
+        "line": 5,
+        "kind": "metaskill"
+      },
+      {
+        "from": "vfx-particle_spiral-projectile-tick",
+        "to": "vfx-particle_spiral",
+        "line": 9,
+        "kind": "metaskill"
+      },
+      {
+        "from": "vfx-particle_spiral-test",
+        "to": "vfx-particle_spiral",
+        "line": 16,
+        "kind": "metaskill"
+      },
+      {
+        "from": "particle_shockwave",
+        "to": "particle_spiral",
+        "line": 20,
+        "kind": "metaskill"
+      },
+      {
+        "from": "vfx-particle_spiral",
+        "to": "vfx-particle_spiral-exec",
+        "line": 24,
+        "kind": "metaskill"
+      },
+      {
+        "from": "vfx-particle_spiral-exec",
+        "to": "vfx-particle_spiral-init",
+        "line": 50,
+        "kind": "metaskill"
+      },
+      {
+        "from": "vfx-particle_spiral-exec",
+        "to": "vfx-particle_spiral-point",
+        "line": 54,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        59,
+        64
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/projectile-skills.yml",
+    "sha256": "a8acda9d4ea601bdbdd6a1bca3652c8b1aa6a06f655dcdc738323139237c6378",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Slash",
+      "Incomplete"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "spread",
+        "line": 2
+      },
+      {
+        "id": "arrow_spread",
+        "line": 5
+      },
+      {
+        "id": "projectile_spread",
+        "line": 8
+      },
+      {
+        "id": "projectile_spread-exec",
+        "line": 11
+      },
+      {
+        "id": "projectile-fire_logic",
+        "line": 36
+      },
+      {
+        "id": "projectile_barrage-test",
+        "line": 42
+      },
+      {
+        "id": "projectile_barrage",
+        "line": 46
+      },
+      {
+        "id": "projectile_barrage-exec",
+        "line": 49
+      },
+      {
+        "id": "projectile_barrage-fire",
+        "line": 59
+      },
+      {
+        "id": "projectile_scatter-test",
+        "line": 83
+      },
+      {
+        "id": "pierce-init",
+        "line": 92
+      },
+      {
+        "id": "pierce-hit",
+        "line": 98
+      },
+      {
+        "id": "pierce-end_projectile",
+        "line": 105
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "spread",
+        "to": "projectile_spread-exec",
+        "line": 3,
+        "kind": "metaskill"
+      },
+      {
+        "from": "arrow_spread",
+        "to": "projectile_spread-exec",
+        "line": 6,
+        "kind": "metaskill"
+      },
+      {
+        "from": "projectile_spread",
+        "to": "projectile_spread-exec",
+        "line": 9,
+        "kind": "metaskill"
+      },
+      {
+        "from": "projectile_spread-exec",
+        "to": "projectile-fire_logic",
+        "line": 29,
+        "kind": "metaskill"
+      },
+      {
+        "from": "projectile_spread-exec",
+        "to": "projectile-fire_logic",
+        "line": 34,
+        "kind": "metaskill"
+      },
+      {
+        "from": "projectile_barrage",
+        "to": "projectile_barrage-exec",
+        "line": 47,
+        "kind": "metaskill"
+      },
+      {
+        "from": "projectile_barrage-exec",
+        "to": "projectile-fire_logic",
+        "line": 56,
+        "kind": "metaskill"
+      },
+      {
+        "from": "projectile_barrage-fire",
+        "to": "projectile-fire_logic",
+        "line": 78,
+        "kind": "metaskill"
+      },
+      {
+        "from": "pierce-hit",
+        "to": "pierce-end_projectile",
+        "line": 103,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        38
+      ]
+    }
+  }
+]

@@ -1,0 +1,440 @@
+VFX_EARTH:
+  Conditions:
+  - crouching false
+  Skills:
+  - skill{s=VFX_EARTH_1}
+  - skill{s=VFX_EARTH_2}
+  - skill{s=VFX_EARTH_3}
+  - skill{s=VFX_EARTH_4}
+  
+VFX_EARTH_1:
+  Conditions:
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=1} false
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=2} false
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=3} false
+  Skills:
+  - Aura{auraName=VFX_EARTH_Stack;duration=120;maxStacks=3;delay=1} @self
+  - effect:sound{s=entity.ghast.shoot;volume=0.7;pitch=1.3} @self
+#  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+#  - totem{md=2;c=1;oH=VFX_EARTH_DAMAGE_D;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=1;lockpitch=true}
+  - summon{type=VFX_EARTH_ATTACK_MOBS_V1;amount=1;radius=0;yRadius=0;onSurface=true} @self
+
+
+
+VFX_EARTH_2:
+  Conditions:
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=1} true
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=2} false
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=3} false
+  Skills:
+  - Aura{auraName=VFX_EARTH_Stack;duration=120;maxStacks=3;delay=1} @self
+  - effect:sound{s=entity.ghast.shoot;volume=0.7;pitch=1.3} @self
+#  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+#  - totem{md=2;c=1;oH=VFX_EARTH_DAMAGE_D;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=1;lockpitch=true}
+  - summon{type=VFX_EARTH_ATTACK_MOBS_V2;amount=1;radius=0;yRadius=0;onSurface=true} @self
+  
+
+VFX_EARTH_3:
+  Conditions:
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=1} false
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=2} true
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=3} false
+  Skills:
+  - Aura{auraName=VFX_EARTH_Stack;duration=120;maxStacks=3;delay=1} @self
+  - effect:sound{s=entity.ghast.shoot;volume=0.7;pitch=1.3} @self
+#  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+#  - totem{md=2;c=1;oH=VFX_EARTH_DAMAGE_D;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=1;lockpitch=true}
+  - summon{type=VFX_EARTH_ATTACK_MOBS_V3;amount=1;radius=0;yRadius=0;onSurface=true} @self
+
+
+VFX_EARTH_4:
+  Conditions:
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=1} false
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=2} false
+  - hasaurastacks{auraName=VFX_EARTH_Stack;stacks=3} true
+  Skills:
+  - auraremove{aura=VFX_EARTH_Stack;delay=1} @self
+  - effect:sound{s=entity.ghast.shoot;volume=0.7;pitch=1.3} @self
+#  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+#  - totem{md=2;c=1;oH=VFX_EARTH_DAMAGE_D2;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=2.5;lockpitch=true}
+  - summon{type=VFX_EARTH_ATTACK_MOBS_V4;amount=1;radius=0;yRadius=0;onSurface=true} @self
+
+
+VFX_EARTH_DAMAGE_D:
+  Skills:
+  - skill{s=VFX_EARTH_DAMAGE} @EntitiesNearOrigin{r=3}
+  
+VFX_EARTH_DAMAGE:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true;hnp=true;hp=true;delay=1}
+  - skill{s=VFX_EARTH_EFFECT} 0.2
+
+VFX_EARTH_DAMAGE_D2:
+  Skills:
+  - skill{s=VFX_EARTH_DAMAGE2;delay=3} @EntitiesNearOrigin{r=4}
+  
+VFX_EARTH_DAMAGE2:
+  Skills: 
+  - damage{a="<modifier.damage> * 1.5";pkb=true;hnp=true;hp=true;delay=1}
+  - skill{s=VFX_EARTH_EFFECT} 0.2
+  
+  
+
+VFX_EARTH_EFFECT:
+  Skills:
+  - Aura{auraName=VFX_EARTH_AURA;duration=80}
+#  - orbital{bulletType=MOB;mob=Frostbite_FX;hr=1;vr=1;hp=false;hnp=false;r=0;points=1;i=1;duration=80;oy=2;rx=0;ry=0;rz=0;avx=0;avy=0;avz=0}
+  - 
+  - damage{a="<modifier.damage> * 0.2";pkb=true;hnp=true;hp=true;repeat=3;repeati=20}
+  
+
+
+
+#####################################################################################################################################
+
+
+# HIEU UNG
+
+VFX_EARTH_HIEUUNG_TICK:
+  Skills:
+  - effect:particles{p=block;m=dirt;a=1;vs=0.05;hs=0.1;v=0;size=2}
+
+VFX_EARTH_HIEUUNG_HIT:
+  Skills:
+
+
+VFX_EARTH_HIEUUNG_V1:
+  Skills:
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=1.3;sso=2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.7;syo=1.3;sso=2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=1.3;sso=1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.9;syo=1.3;sso=1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=1.3;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=1.3;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=1.3;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=1.3;sso=1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=1.3;sso=1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=1.3;sso=1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=1.3;sso=1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=1.3;sso=1.55} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=1.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=1.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.3;sso=1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.3;sso=1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=1.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=0.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=0.85} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.05} @Self
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.85} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=-0.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=-0.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=-1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=-1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=-1.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=-1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.3;sso=-1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.3;sso=-1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=-1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=-1.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=-1.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=1.3;sso=-1.55} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=1.3;sso=-1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=1.3;sso=-1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=1.3;sso=-1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=1.3;sso=-1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=1.3;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=1.3;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=1.3;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.9;syo=1.3;sso=-1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=1.3;sso=-1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=1.3;sso=-2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.7;syo=1.3;sso=-2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=1.3;sso=-2.05} @Self
+
+
+VFX_EARTH_HIEUUNG_V2:
+  Skills:
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=0.3;sso=2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.7;syo=0.35;sso=2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=0.4;sso=1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.9;syo=0.45;sso=1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=0.5;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=0.55;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=0.6;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=0.65;sso=1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=0.7;sso=1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=0.75;sso=1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=0.8;sso=1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=0.85;sso=1.55} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=0.9;sso=1.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=0.95;sso=1.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.0;sso=1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.05;sso=1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.1;sso=1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.15;sso=1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.2;sso=1.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.25;sso=1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.35;sso=0.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.4;sso=0.85} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.45;sso=0.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.5;sso=0.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.55;sso=0.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.6;sso=0.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.65;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.7;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.75;sso=0.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.8;sso=0.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.85;sso=0.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.9;sso=0.05} @Self
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.95;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.0;sso=-0.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.05;sso=-0.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.1;sso=-0.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.15;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.2;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.25;sso=-0.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.3;sso=-0.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.35;sso=-0.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.4;sso=-0.85} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=2.45;sso=-0.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=2.5;sso=-0.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=2.55;sso=-1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=2.6;sso=-1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=2.65;sso=-1.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=2.7;sso=-1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=2.75;sso=-1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=2.8;sso=-1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=2.85;sso=-1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=2.9;sso=-1.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=2.95;sso=-1.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=3.0;sso=-1.55} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=3.05;sso=-1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=3.1;sso=-1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=3.15;sso=-1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=3.2;sso=-1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=3.25;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=3.3;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=3.35;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.9;syo=3.4;sso=-1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=3.45;sso=-1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=3.5;sso=-2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.7;syo=3.55;sso=-2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=3.6;sso=-2.05} @Self
+
+
+VFX_EARTH_HIEUUNG_V3:
+  Skills:
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=1.3;sso=-2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.7;syo=1.3;sso=-2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=1.3;sso=-1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.9;syo=1.3;sso=-1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=1.3;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=1.3;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=1.3;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=1.3;sso=-1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=1.3;sso=-1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=1.3;sso=-1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=1.3;sso=-1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=1.3;sso=-1.55} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=-1.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=-1.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=-1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.3;sso=-1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.3;sso=-1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=-1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=-1.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=-1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=-1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=-0.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=-0.85} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.05} @Self
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.3;sso=0.85} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=0.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=0.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=1.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.3;sso=1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.3;sso=1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.3;sso=1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=1.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.3;sso=1.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=1.3;sso=1.55} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=1.3;sso=1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=1.3;sso=1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=1.3;sso=1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=1.3;sso=1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=1.3;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=1.3;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=1.3;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.9;syo=1.3;sso=1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=1.3;sso=1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=1.3;sso=2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.7;syo=1.3;sso=2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=1.3;sso=2.05} @Self
+
+
+
+VFX_EARTH_HIEUUNG_V4:
+  Skills:
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=0.3;sso=-2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.7;syo=0.35;sso=-2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=0.4;sso=-1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.9;syo=0.45;sso=-1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=0.5;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=0.55;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=0.6;sso=-1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=0.65;sso=-1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=0.7;sso=-1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=0.75;sso=-1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=0.8;sso=-1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=0.85;sso=-1.55} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=0.9;sso=-1.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=0.95;sso=-1.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=1.0;sso=-1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.05;sso=-1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.1;sso=-1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.15;sso=-1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.2;sso=-1.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.25;sso=-1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.3;sso=-1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.35;sso=-0.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.4;sso=-0.85} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.45;sso=-0.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.5;sso=-0.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.55;sso=-0.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.6;sso=-0.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.65;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.7;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.75;sso=-0.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.8;sso=-0.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.85;sso=-0.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.9;sso=-0.05} @Self
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.95;sso=-0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.0;sso=0.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.05;sso=0.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.1;sso=0.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.15;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.2;sso=0.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.25;sso=0.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.3;sso=0.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.35;sso=0.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=2.4;sso=0.85} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=2.45;sso=0.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=2.5;sso=0.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=2.55;sso=1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=2.6;sso=1.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=2.65;sso=1.15} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=2.7;sso=1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=2.75;sso=1.25} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=2.8;sso=1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=2.85;sso=1.35} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=2.9;sso=1.45} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=2.95;sso=1.55} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=3.0;sso=1.55} @Self
+
+  - delay 1
+
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=3.05;sso=1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=3.1;sso=1.65} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=3.15;sso=1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=3.2;sso=1.75} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=3.25;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=3.3;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=3.35;sso=1.85} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.9;syo=3.4;sso=1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=3.45;sso=1.95} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=3.5;sso=2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.7;syo=3.55;sso=2.05} @Self
+  - projectile{oT=VFX_EARTH_HIEUUNG_TICK;oH=VFX_EARTH_HIEUUNG_HIT;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=3.6;sso=2.05} @Self

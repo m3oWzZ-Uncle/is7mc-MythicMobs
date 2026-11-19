@@ -1,0 +1,428 @@
+Training_Dummy_Fixed:
+  Type: ZOMBIE
+  Health: 99999
+  Damage: 1
+  Options:
+    MovementSpeed: 0.01
+    Collidable: false
+    ShowHealth: false
+    NoDamageTicks: 1
+    Invincible: false
+    PreventRandomEquipment: true
+    AlwaysShowName: false
+    Persistent: true
+    Despawn: false
+    PreventOtherDrops: true
+    FollowRange: 1
+    Silent: true
+    KnockbackResistance: 1
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - model{mid=dummy;n=false} @self ~onSpawn
+  - effect:sound{s=entity.player.hurt;volume=1;pitch=1.2} @self ~onDamaged
+  - state{s=hit} @self ~onDamaged
+  - heal{a=99999} @self ~onDamaged
+  
+Training_Dummy:
+  Type: ZOMBIE
+  Health: 99999
+  Damage: 1
+  Options:
+    MovementSpeed: 0.01
+    Collidable: false
+    ShowHealth: false
+    NoDamageTicks: 1
+    Invincible: false
+    PreventRandomEquipment: true
+    AlwaysShowName: false
+    Persistent: true
+    Despawn: false
+    PreventOtherDrops: true
+    FollowRange: 1
+    Silent: true
+    KnockbackResistance: 1
+    PreventSunburn: true
+  AIGoalSelectors:
+  - clear
+  AITargetSelectors:
+  - clear
+  Skills:
+  - model{mid=dummy;n=false} @self ~onSpawn
+  - effect:sound{s=entity.player.hurt;volume=1;pitch=1.2} @self ~onDamaged
+  - state{s=hit} @self ~onDamaged
+  - skill{s=Training_Dummy_Look} @trigger ~onInteract
+  - heal{a=99999} @self ~onDamaged
+Zom1_1:
+  Type: ZOMBIE
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#83FF29>Zombie &r&8[&c<caster.hp{round=0}><&heart>&8]'
+  Health: 75
+  Damage: 5
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  - cmd{c="ss give <target.name> zombie 1"} ~onDeath 0.01
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.1
+  - iron_ingot 1-3 0.5
+
+  LevelModifiers:
+    Health: 25
+    Damage: 5
+  Equipment:
+  - WOODEN_SWORD HAND
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+Zom1_2:
+  Type: SKELETON
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#83FF29>Skelton &r&8[&c<caster.hp{round=0}><&heart>&8]'
+  Health: 75
+  Damage: 5
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Equipment:
+  - LEATHER_BOOTS FEET
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.1
+  - iron_ingot 1-3 0.5
+
+  LevelModifiers:
+    Health: 25
+    Damage: 5
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+
+
+Zom2_1:
+  Type: ZOMBIE_VILLAGER
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#83FF29>Zombie Villager &r&8[&c<caster.hp{round=0}><&heart>&8]'
+  Health: 100
+  Damage: 10
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.1
+  - gold_ingot 1-3 0.5
+
+  LevelModifiers:
+    Health: 25
+    Damage: 10
+  Equipment:
+  - STONE_SWORD HAND
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+Zom2_2:
+  Type: BOGGED
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#83FF29>Bogged &r&8[&c<caster.hp{round=0}><&heart>&8]'
+  Health: 100
+  Damage: 10
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Drops:
+  - rotten_flesh 1-3 1
+  LevelModifiers:
+    Health: 25
+    Damage: 10
+  Equipment:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.01
+  - gold_ingot 1-3 0.5
+
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+
+Zom3_1:
+  Type: VINDICATOR
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#83FF29>Vindicator &r&8[&c<caster.hp{round=0}><&heart>&8]'
+  Health: 125
+  Damage: 15
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.02
+  - diamond 1-3 0.5
+
+  LevelModifiers:
+    Health: 25
+    Damage: 15
+  Equipment:
+  - IRON_SWORD HAND
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+Zom3_2:
+  Type: PILLAGER
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#ABFD23>Pillager &8[&c<caster.hp{round=0}> <&heart>&8]'
+  Health: 125
+  Damage: 15
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.02
+  - diamond 1-3 0.5
+
+  LevelModifiers:
+    Health: 25
+    Damage: 15
+  Equipment:
+  - GOLDEN_BOOTS FEET
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+
+Zom4_1:
+  Type: PIGLIN_BRUTE
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#83FF29>Piglin Brute &r&8[&c<caster.hp{round=0}><&heart>&8]'
+  Health: 150
+  Damage: 20
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.03
+  - emerald 1-3 0.5
+
+  LevelModifiers:
+    Health: 25
+    Damage: 20
+  Equipment:
+  - IRON_SWORD HAND
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+Zom4_2:
+  Type: PIGLIN
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#83FF29>Piglin &r&8[&c<caster.hp{round=0}><&heart>&8]'
+  Health: 150
+  Damage: 20
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.03
+  - emerald 1-3 0.5
+
+  LevelModifiers:
+    Health: 25
+    Damage: 20
+  Equipment:
+  - CROSS_BOW HAND
+  - GOLDEN_BOOTS FEET
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+
+Zom5_1:
+  Type: WITHER_SKELETON
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#83FF29>Wither Skeleton &r&8[&c<caster.hp{round=0}><&heart>&8]'
+  Health: 200
+  Damage: 25
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+
+  - cmd{c="soul add max <target.name> 1"} ~onDeath 0.2
+  - cmd{c="ss give <target.name> zombie 1"} ~onDeath 0.01
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.04
+  - diamond 1-3 0.5
+  - emerald 1-3 0.5
+  - gold_ingot 1-3 0.5
+
+  Equipment:
+  - NETHERITE_SWORD HAND
+  LevelModifiers:
+    Health: 50
+    Damage: 25
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+Zom5_2:
+  Type: WITHER_SKELETON
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#83FF29>Wither Skeleton &r&8[&c<caster.hp{round=0}><&heart>&8]'
+  Health: 200
+  Damage: 25
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.04
+  - diamond 1-3 0.5
+  - emerald 1-3 0.5
+  - gold_ingot 1-3 0.5
+
+  LevelModifiers:
+    Health: 50
+    Damage: 25
+  Equipment:
+  - BOW HAND
+  - NETHERITE_BOOTS FEET
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+Zom5_3:
+  Type: BLAZE
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#ABFD23>Blaze &8[&c<caster.hp{round=0}> <&heart>&8]'
+  Health: 250
+  Damage: 25
+  Skills:
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.05
+  - diamond 1-3 0.5
+  - emerald 1-3 0.5
+  - gold_ingot 1-3 0.5
+
+  LevelModifiers:
+    Health: 50
+    Damage: 25
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+
+
+Boss_1:
+  Type: ZOMBIE
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#ABFD23>Thây Ma &8[&c<caster.hp{round=0}> <&heart>&8]'
+  Health: 250
+  Damage: 25
+  Skills:
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.09
+  - diamond 1-3 0.5
+  - emerald 1-3 0.5
+  - gold_ingot 1-3 0.5
+
+  LevelModifiers:
+    Health: 50
+    Damage: 25
+  Equipment:
+  - WOODEN_SWORD HAND
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+Boss_2:
+  Type: SKELETON
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#ABFD23>Người Xương &8[&c<caster.hp{round=0}> <&heart>&8]'
+  Health: 275
+  Damage: 25
+  Skills:
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Equipment:
+  - LEATHER_BOOTS FEET
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.09
+  - diamond 1-3 0.5
+  - emerald 1-3 0.5
+  - gold_ingot 1-3 0.5
+
+  LevelModifiers:
+    Health: 75
+    Damage: 25
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+Boss_3:
+  Type: PHANTOM
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Quái&8] <#ABFD23>PhanTom &8[&c<caster.hp{round=0}> <&heart>&8]'
+  Health: 300
+  Damage: 25
+  Skills:
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  Equipment:
+  - LEATHER_BOOTS FEET
+  Drops:
+  - mmoitems{type=MATERIAL;id=LINHHON} 1 0.09
+  - diamond 1-3 0.5
+  - emerald 1-3 0.5
+  - gold_ingot 1-3 0.5
+
+  LevelModifiers:
+    Health: 50
+    Damage: 25
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: persistent
+    MovementSpeed: 0.175
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true

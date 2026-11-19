@@ -1,0 +1,128 @@
+EVENT_THREE_FOUR__HEAD:
+  Id: PLAYER_HEAD
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmM1Yzg2Y2Y2YzdhOGNhNmFkNzkzMzNlMGE4ZGI1ZmUyNGJmZTEwMTY1MzQ4ZGJiOGIxY2ZhMmM1ZDY2ODNmIn19fQ==
+    HideFlags: false
+  Attributes:
+    Head:
+      Armor: '-3to3 ADD'
+      ArmorToughness: '-0.5to0.5 ADD'
+      Health: '-5to-20 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:5
+
+EVENT_THREE_FOUR__HEAD_TW:
+  Id: PLAYER_HEAD
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGUzYjE1ZTVlYjBhZGExNmUyZTE3NTE2NDRiZGMyOGUwY2VhZThkMzk4NDM5YTZiODAzN2Q0ZGEwOTdiOWMzNyJ9fX0=
+    HideFlags: false
+  Attributes:
+    Head:
+      Armor: '-3to3 ADD'
+      ArmorToughness: '-0.5to0.5 ADD'
+      Health: '-5to-20 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:5
+
+
+EVENT_THREE_FOUR__CHESTPLATE:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4189
+    type: IRON_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      PublicBukkitValues: |-
+        {
+            "enchantmentslots:enchantment_slots": 6
+        }
+      trim:
+        material: minecraft:gold
+        pattern: minecraft:coast
+  Options:
+    HideFlags: false
+  Attributes:
+    Chest:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:5
+EVENT_THREE_FOUR__LEGGINGS:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4189
+    type: IRON_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      PublicBukkitValues: |-
+        {
+            "enchantmentslots:enchantment_slots": 6
+        }
+      trim:
+        material: minecraft:gold
+        pattern: minecraft:coast
+  Options:
+    HideFlags: false
+  Attributes:
+    Legs:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:5
+EVENT_THREE_FOUR__BOOTS:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4189
+    type: IRON_BOOTS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      PublicBukkitValues: |-
+        {
+            "enchantmentslots:enchantment_slots": 6
+        }
+      trim:
+        material: minecraft:gold
+        pattern: minecraft:coast
+  Options:
+    HideFlags: false
+  Attributes:
+    Feet:
+      Armor: '-2.0to3.0 ADD'
+      ArmorToughness: '-0.1to0.5 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+  - PROTECTION_FIRE:5
+  - PROTECTION_EXPLOSIONS:5
+  - PROTECTION_PROJECTILE:5
+  - PROTECTION_FALL:1
+EVENT_THREE_FOUR__SWORD:
+  Id: IRON_SWORD
+  Options:
+    HideFlags: false
+  Attributes:
+    MainHand:
+      AttackSpeed: '-0.1to0.5 ADD'
+      Damage: '-0.1to50 ADD'
+      Health: '-5to25 ADD'
+  Enchantments:
+  - DAMAGE_ALL:5
+  - FIRE_ASPECT:2
+  - KNOCKBACK:3

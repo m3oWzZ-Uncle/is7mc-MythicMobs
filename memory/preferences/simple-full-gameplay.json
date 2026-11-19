@@ -1,0 +1,17 @@
+{
+  "id": "simple-full-gameplay",
+  "category": "preferences",
+  "title": "Chọn kiến trúc đơn giản nhất đáp ứng gameplay",
+  "topic": "architecture-complexity",
+  "summary": "Chọn giải pháp đơn giản nhất trong các phương án đáp ứng đầy đủ hành vi yêu cầu.",
+  "context": "Dùng khi đã xác định hành vi yêu cầu và biết các phương án đang so sánh đều giữ được gameplay.",
+  "exceptions": "Khi phương án đơn giản làm mất hành vi cần có, đánh giá phương án đủ hành vi. Áp dụng yêu cầu cụ thể của project và nhiệm vụ.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-13",
+  "answer": "simplest-complete-design",
+  "requires": ["gameplay-requirements-known", "equivalent-gameplay"],
+  "tags": ["simple", "kien-truc", "don-gian", "gameplay", "logic"],
+  "sources": [{"type": "user", "ref": "AGENTS.md", "note": "Quy tắc do người dùng cung cấp về kiến trúc đơn giản nhất đáp ứng đầy đủ hành vi."}]
+}

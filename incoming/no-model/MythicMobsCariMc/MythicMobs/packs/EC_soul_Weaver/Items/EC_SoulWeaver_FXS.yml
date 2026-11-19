@@ -1,0 +1,92 @@
+
+SoulWeaver_Scythe:
+  Id: BONE
+  Model: 10003
+  Skills:
+  - skill{s=SoulWeaver_Slash} @self ~onSwing
+  - skill{s=SoulWeaver_Descension} @self ~onHold
+  - skill{s=SoulWeaver_Descension} @self ~onPickup
+  - skill{s=SoulWeaver_Cosmetics_Unequip;delay=2} @self ~onUnHeld
+  - skill{s=SoulWeaver_Cosmetics_Unequip;delay=2} @self ~onPressQ
+  ##
+  - skill{s=SoulWeaver_Nether_Grasp_Trap_Crucible} @self ~onUse
+  ##
+  - skill{s=Soulweaver_Spirit_Surge_Crucible} @self ~onUse
+  ##
+  - skill{s=Soulweaver_Deprivation_Crucible} @self ~onSwingz
+
+soulweaver_slash_1:
+  Id: BOWL
+  Model: 10101
+
+soulweaver_slash_2:
+  Id: BOWL
+  Model: 10102
+
+soulweaver_slash_3:
+  Id: BOWL
+  Model: 10103
+
+soulweaver_slash_4:
+  Id: BOWL
+  Model: 10104
+
+soulweaver_nether_grasp_circle:
+  Id: BOWL
+  Model: 10105
+
+soulweaver_nether_grasp_hand:
+  Id: BOWL
+  Model: 10106
+
+soulweaver_nether_grasp_hand_2:
+  Id: BOWL
+  Model: 10107
+
+soulweaver_deprivation_eye:
+  Id: BOWL
+  Model: 10108
+
+soulweaver_marionette_full:
+  Id: BOWL
+  Model: 10116
+
+soulweaver_marionette_skill:
+  Id: BOWL
+  Model: 10115
+
+soulweaver_marionette_1:
+  Id: BOWL
+  Model: 10109
+
+soulweaver_marionette_2:
+  Id: BOWL
+  Model: 10110
+
+soulweaver_marionette_3:
+  Id: BOWL
+  Model: 10111
+
+soulweaver_marionette_4:
+  Id: BOWL
+  Model: 10112
+
+soulweaver_marionette_5:
+  Id: BOWL
+  Model: 10113
+
+soulweaver_marionette_6:
+  Id: BOWL
+  Model: 10114
+
+
+soulweaver_soul:
+  Id: player_head
+  Options:
+    SkinTexture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjE0NjljZTY3ZGZjMjg0MzNhZWE4YTQ1YWI4MTZlNTFiZDM5YmE5ZWI4MTVkMjI1NzllNzc2OThkYTBiZjI5NSJ9fX0=
+
+
+
+
+
+# 996M6QDXMRE9GWWNVKK

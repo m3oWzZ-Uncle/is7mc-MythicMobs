@@ -1,0 +1,18 @@
+{
+  "id": "023-foundation-assessment-decoy",
+  "kind": "assessment",
+  "program": "40-challenge",
+  "after_completed": 5,
+  "benchmark": "CT-BM-04",
+  "level": "foundation",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "warning-then-hit",
+    "turn-and-step",
+    "early-target-swap",
+    "late-target-swap",
+    "empty-swing",
+    "multiplayer-and-cooldown"
+  ]
+}

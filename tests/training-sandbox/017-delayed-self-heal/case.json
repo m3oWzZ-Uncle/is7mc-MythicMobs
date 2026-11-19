@@ -1,0 +1,13 @@
+{
+  "id": "017-delayed-self-heal",
+  "kind": "practice",
+  "level": "basic",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "timing",
+    "movement",
+    "caster-only",
+    "natural-cap"
+  ]
+}

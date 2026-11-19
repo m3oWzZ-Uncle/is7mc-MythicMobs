@@ -1,0 +1,16 @@
+{
+  "checked_on": "2026-11-14",
+  "pages": [
+    {"path":"Skills/Mechanics/orbital.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/orbital","status":"aligned","finding":"Các thuộc tính radius, points, offsety, rotate, bullet và kế thừa Aura khớp trong phạm vi đã đọc. Cả hai nguồn cùng ghi alias hs cho hai tùy chọn.","note":"wiki-research/orbital.md"},
+    {"path":"Skills/Mechanics/teleport.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/teleport","status":"aligned","finding":"Đối chiếu spread, unsafe và giữ pitch/yaw. Điều kiện va chạm YAML Vạn Kiếm vẫn cần thử.","note":"wiki-research/teleport.md"},
+    {"path":"Skills/Mechanics/velocity.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/velocity","status":"aligned","finding":"Khớp mode, mặc định các trục và hệ trục tương đối.","note":"wiki-research/velocity.md"},
+    {"path":"Skills/Mechanics/setvariablelocation.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/setvariablelocation","status":"aligned","finding":"Khớp thuộc tính value và ví dụ setvarloc. Cách phối hợp với offset động cần thử.","note":"wiki-research/setvariablelocation.md"},
+    {"path":"Skills/Targeters/VariableLocation.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Targeters/VariableLocation","status":"aligned","finding":"Khớp variable/scope và nội dung lấy điểm qua SetVariableLocation.","note":"wiki-research/variablelocation.md"},
+    {"path":"Skills/Conditions/blocktype.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/conditions/blocktype","status":"differs","finding":"Bảng thuộc tính khớp. Changelog 5.14.0 bổ sung khớp block state một phần, cần phân biệt theo build.","note":"wiki-research/blocktype.md"},
+    {"path":"Skills/Conditions/variableinrange.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Conditions/variableinrange","status":"aligned","finding":"Khớp trường var/value/scope và cách xét biến số.","note":"wiki-research/variableinrange.md"},
+    {"path":"Skills/Mechanics/totem.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Mechanics/totem?version_id=1f8283a3389908f340de3fcb5bc030ebbd4ae456","status":"aligned","finding":"Khớp hitbox cố định, charges, yOffset và kế thừa Projectile.","note":"wiki-research/totem.md"},
+    {"path":"Skills/Mechanics/endprojectile.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/endprojectile","status":"aligned","finding":"Khớp ngữ cảnh projectile và việc gọi onEnd khi kết thúc.","note":"wiki-research/endprojectile.md"},
+    {"path":"Skills/Mechanics/AuraComponents/OnDamaged.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Mechanics/AuraComponents/OnDamaged","status":"differs","finding":"Snapshot thiếu điều kiện riêng của cancelEvent được changelog 5.14.0 xác nhận. Ghi chú phụ thuộc thành công của onHit đã có ở cả hai nguồn.","note":"wiki-research/ondamaged.md"},
+    {"path":"Skills/Mechanics/ondamaged.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/ondamaged","status":"aligned","finding":"Cả snapshot và trang online đánh dấu mechanic riêng deprecated, dẫn tới aura component.","note":"wiki-research/ondamaged.md"}
+  ]
+}

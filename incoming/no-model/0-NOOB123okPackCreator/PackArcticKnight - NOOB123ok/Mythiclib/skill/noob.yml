@@ -1,0 +1,95 @@
+Zombie-Ability:
+  mythicmobs-skill-id: Zombie-Ability
+  modifiers: []
+Creeper-Ability:
+  mythicmobs-skill-id: Creeper-Ability
+  modifiers: []
+Skeleton-Ability:
+  mythicmobs-skill-id: Skeleton-Ability
+  modifiers: []
+Spider-Ability:
+  mythicmobs-skill-id: Spider-Ability
+  modifiers: []
+Zomske-Ability:
+  mythicmobs-skill-id: Zomske-Abl-Skills
+  modifiers: []
+
+Tiger-Aura:
+  mythicmobs-skill-id: HoAura
+  modifiers: []
+
+Tiger-Roaring:
+  mythicmobs-skill-id: HoDanhthuongAura
+  modifiers: []
+
+Tiger-Dash:
+  mythicmobs-skill-id: HoDash
+  modifiers: []
+
+Tiger-Attack:
+  mythicmobs-skill-id: HoAura
+  modifiers: []
+
+Phoenix-PushBack:
+  mythicmobs-skill-id: PHPushBack
+  modifiers: []
+  
+Phoenix-Aura:
+  mythicmobs-skill-id: PhuonghoangAura
+  modifiers: []
+
+Phoenix-Flame:
+  mythicmobs-skill-id: FlamethrowerAura
+  modifiers: []
+
+
+XPhoenix-PushBack:
+  mythicmobs-skill-id: PHXPushBack
+  modifiers: []
+  
+XPhoenix-Aura:
+  mythicmobs-skill-id: PhuonghoangAuraXANH
+  modifiers: []
+
+XPhoenix-Flame:
+  mythicmobs-skill-id: FlamethrowerAura_X
+  modifiers: []
+
+Earth-Break:
+  mythicmobs-skill-id: EARTH_SKILL_3N
+  modifiers: []
+
+Earth-Quake:
+  mythicmobs-skill-id: EARTH_SKILL_4N
+  modifiers: []
+
+########################
+
+Arctic_Knight_Aura:
+  mythicmobs-skill-id: ArcticKnightAura
+  modifiers: []
+
+Arctic_Knight_Attack:
+  mythicmobs-skill-id: ArcticKnight_SKILL_1
+  modifiers:
+  - damage
+
+Arctic_Knight_Ice_thrower:
+  mythicmobs-skill-id: ARCTIC_KNIGHT_Icethrower
+  modifiers:
+  - damage
+
+Arctic_Knight_Break_Down:
+  mythicmobs-skill-id: ARCTIC_KNIGHT_BreakDown
+  modifiers:
+  - damage 
+
+Arctic_Knight_Ice_Rain:
+  mythicmobs-skill-id: ARCTIC_KNIGHT_ICE_RAIN
+  modifiers:
+  - damage
+
+Arctic_Knight_Clone:
+  mythicmobs-skill-id: ARCTIC_KNIGHT_CLONE
+  modifiers:
+  - damage

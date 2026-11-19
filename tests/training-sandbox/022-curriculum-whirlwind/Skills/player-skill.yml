@@ -1,0 +1,8 @@
+TrainingToanPhongTram:
+  Cooldown: 4
+  Skills:
+    - particlering{p=flame;r=3;points=24;a=1;hs=0;vs=0;s=0;y=0.15} @self
+    - delay 12
+    - playanimation{a=0} @self
+    - particlering{p=sweep_attack;r=3;points=16;a=1;hs=0;vs=0;s=0;y=0.8} @self
+    - damage{a=6} @EntitiesInRadius{r=3;shape=SPHERE;targetplayers=false;targetarmorstands=false;conditions=[  - ydiff{diff=-1to1} true ]}

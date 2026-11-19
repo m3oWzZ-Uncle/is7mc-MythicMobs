@@ -1,0 +1,3 @@
+TrainingSelectiveCleanse:
+  Skills:
+    - potionclear{type=POISON} @self

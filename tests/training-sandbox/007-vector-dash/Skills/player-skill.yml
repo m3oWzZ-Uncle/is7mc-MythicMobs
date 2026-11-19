@@ -1,0 +1,14 @@
+TrainingVectorDash:
+  Cooldown: 3
+  Skills:
+    - skill{s=TrainingVectorDashPoint} @TargetBlock{maxdistance=8}
+
+TrainingVectorDashPoint:
+  Skills:
+    - setvarloc{var=skill.start;val=@SelfLocation}
+    - setvarloc{var=skill.goal;val=@TargetedLocation}
+    - setvariable{var=skill.startvec;type=VECTOR;val=<skill.var.start.coords>}
+    - setvariable{var=skill.goalvec;type=VECTOR;val=<skill.var.goal.coords>}
+    - setvariable{var=skill.delta;type=VECTOR;val=<skill.var.goalvec.sub.<skill.var.startvec>>}
+    - message{m="Delta=<skill.var.delta>"} @self
+    - lunge{velocity=0.85;velocityY=0} @TargetedLocation

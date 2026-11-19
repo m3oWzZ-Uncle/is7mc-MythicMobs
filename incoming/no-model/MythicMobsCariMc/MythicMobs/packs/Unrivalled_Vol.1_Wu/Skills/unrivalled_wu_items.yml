@@ -1,0 +1,32 @@
+
+##======[ Left Click attack ]======= 
+ink_brush_attack:
+  Cooldown: 1 #Adjust cooldown here
+  Skills:
+  - Aura{auraName=ink_brush_cooldown;interval=10;duration=10} @self
+  - summon{t=ink[VFX]ink_circle_initial_item;a=1} @selflocation{forwardoffset=-1.5}
+  - totem{ch=1;onStart=ink_brush_attack-2;int=1;hR=3;md=1;delay=2} @selflocation{forwardoffset=-2}
+  - sound{s=entity.dolphin.swim;p=0.8;v=0.6} @self
+  - sound{s=entity.player.attack.sweep;p=0.7;v=1.3} @self
+
+ink_brush_attack-2:
+  Skills:
+  - damage{a=5;pi=true} @EntitiesNearOrigin{r=4} #Adjust damage here
+
+
+##======[ Right Click attack ]======= 
+ink_brush_slash:
+  Cooldown: 1 #Adjust cooldown here
+  Skills:
+  - projectile{bulletType=MOB;mob=ink[VFX]ink_ranged_slash_initial_item;oE=ink_brush_slash-1;i=1;md=55;v=20;sE=true;sB=false;hR=1.5;hp=true;hnp=true;sfo=1;ha=false} @targetlocation
+
+
+ink_brush_slash-1:
+  Skills:
+  - damage{a=5;pi=true;pk=true} @EntitiesNearOrigin{r=4} #Adjust damage here
+  - summon{t=ink[VFX]vfx_ink_explode_initial;a=1} @origin{yoffset=0.3}
+  - effect:sound{s=entity.generic.explode;v=0.8;p=1.1} @origin
+
+#oWRUlzaiV1NEx0ZNZ2UwZ3aJZkUwcGRPhXU65UeVRUT61kbNVEV0BVeqdHaXJVWRZjS2YkN
+
+# 25533BBKGBJOXRO9

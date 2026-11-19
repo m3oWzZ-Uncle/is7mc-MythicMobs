@@ -1,0 +1,9 @@
+TrainingCurvingBolt:
+  Cooldown: 2
+  Skills:
+    - projectile{v=10;i=2;d=24;mr=12;sE=false;sB=true;hp=false;hnp=false;onTick=TrainingCurvingBoltTick} @Forward{f=12;y=1}
+
+TrainingCurvingBoltTick:
+  Skills:
+    - particle{p=crit;a=1;s=0} @origin
+    - setprojectiledirection @ProjectileForward{f=5;rot=12}

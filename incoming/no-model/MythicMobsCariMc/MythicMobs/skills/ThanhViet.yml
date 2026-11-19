@@ -1,0 +1,36 @@
+spirit_sword:
+  itemname: Spirit Sword
+  material: NETHERITE_SWORD
+  Pack:
+    model: item/custom_gear/spirit_gear/spirit_sword
+    custom_model_data: 100
+spirit_sword_0:
+  itemname: Spirit Sword
+  material: NETHERITE_SWORD
+  Pack:
+    model: item/custom_gear/spirit_gear/spirit_sword_0
+    custom_model_data: 101
+spirit_sword_1:
+  itemname: Spirit Sword
+  material: NETHERITE_SWORD
+  Pack:
+    model: item/custom_gear/spirit_gear/spirit_sword_1
+    custom_model_data: 102
+spirit_sword_2:
+  itemname: Spirit Sword
+  material: NETHERITE_SWORD
+  Pack:
+    model: item/custom_gear/spirit_gear/spirit_sword_2
+    custom_model_data: 103
+spirit_sword_3:
+  itemname: Spirit Sword
+  material: NETHERITE_SWORD
+  Pack:
+    model: item/custom_gear/spirit_gear/spirit_sword_3
+    custom_model_data: 104
+spirit_sword_4:
+  itemname: Spirit Sword
+  material: NETHERITE_SWORD
+  Pack:
+    model: item/custom_gear/spirit_gear/spirit_sword_4
+    custom_model_data: 105

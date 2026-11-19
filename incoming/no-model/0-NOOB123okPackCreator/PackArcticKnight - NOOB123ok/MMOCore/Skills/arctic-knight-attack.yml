@@ -1,0 +1,42 @@
+name: Arctic Knight Attack
+lore:
+- Nhắm vào mục tiêu và bắn một tia lạnh
+- về phía kẻ địch, gây sát thương và làm
+- kẻ địch bị đông cứng trong 1s
+- ''
+- '&8[&c!&8] &7Yêu cầu Mở lãnh địa Băng (Arctic Aura)'
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Damage &7▸ <#FF8E6A>{damage}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: TRIDENT
+damage:
+  base: 20
+  per-level: 0.2
+  min: 1
+  max: 30
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 10
+  per-level: -0.067
+  min: 8
+  max: 10

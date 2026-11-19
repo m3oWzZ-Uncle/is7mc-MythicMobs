@@ -1,0 +1,18 @@
+{
+  "id": "curriculum-fireball-r1",
+  "category": "patterns",
+  "title": "Hỏa Cầu Thuật r1 được người dùng thử và chấp nhận",
+  "topic": "player-fireball-impact",
+  "summary": "Người dùng báo Hỏa Cầu Thuật r1 hoạt động đúng trong Minecraft. Cấu hình PvE gom va chạm entity và block vào impact có AoE và đường nhìn từ tâm nổ.",
+  "context": "Bài 03 của chương trình 40 bài, player caster trong arena thử. Mốc tài liệu MythicMobs 5.14.0.",
+  "exceptions": "Chấp nhận tổng thể trên r1. Build, log nạp và kết quả từng ca chưa cung cấp. Xét lại khi gameplay cần xuyên, nổ khi hết tầm, PvP hoặc luật đồng minh khác.",
+  "scope": "global",
+  "claim": "FACT",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-15",
+  "tags": ["player-skill", "projectile", "fireball", "collision", "pve", "curriculum"],
+  "sources": [
+    {"type": "user", "ref": "tests/training-sandbox/020-curriculum-fireball/evidence/user-confirmation-r1.md", "note": "Xác nhận trực tiếp kết quả chung và chấp nhận r1."},
+    {"type": "yaml", "ref": "tests/training-sandbox/020-curriculum-fireball/Skills/player-skill.yml", "note": "Bản được chấp nhận. Hash có trong biên bản."}
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "owner-return-projectile",
+  "category": "patterns",
+  "topic": "returning-projectile",
+  "title": "Projectile khứ hồi và owner",
+  "summary": "Tách hit lượt đi, callback kết thúc và missile lượt về; kiểm tra quy thuộc owner khi có nhiều caster.",
+  "context": "Skill cần hành vi khác nhau ở lượt đi và về, như Spirit Surge trong Soul Weaver.",
+  "exceptions": "Nếu chỉ cần VFX quay lại, cân nhắc một hitbox ở lượt đi. Kiểm thử context, cleanup và sát thương thực trên build mục tiêu.",
+  "scope": "global",
+  "claim": "INFERENCE",
+  "confidence": "INFERRED",
+  "recorded": "2026-11-14",
+  "tags": [
+    "projectile",
+    "missile",
+    "owner",
+    "soul-weaver",
+    "cleanup"
+  ],
+  "sources": [
+    {
+      "type": "document",
+      "ref": "knowledge/patterns/projectile-khu-hoi-owner.md",
+      "note": "Cấu hình đã parse; suy luận thiết kế cần kiểm thử gameplay."
+    }
+  ]
+}

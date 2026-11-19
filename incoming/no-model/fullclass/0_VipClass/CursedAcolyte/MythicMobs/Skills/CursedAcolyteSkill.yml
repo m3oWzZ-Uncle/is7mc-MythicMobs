@@ -1,0 +1,253 @@
+# http://www.mythicmobs.net
+#
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+
+CursedAcolyte_SKILL_PASS:
+  Skills:
+  - Aura{auraName=CursedAcolyte_SKILL_PASS_aura;interval=1;duration=60;oT=CursedAcolyte_SKILL_PASS_tick;oE=CursedAcolyte_SKILL_PASS_end} @EIR{r=3}
+
+CursedAcolyte_SKILL_PASS_tick:
+  Skills:
+  - potion{type=HUNGER;duration=60;level=20;hasParticles=false} @EIR{r=3}
+  - damage{a=1} @EIR{r=3}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=10;speed=0;hS=1;vS=1} @EIR{r=3}
+CursedAcolyte_SKILL_PASS_end:
+  Skills:
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=10;speed=0;hS=1;vS=1} @self
+
+CursedAcolyte_SKILL_1:
+  Skills:
+  - missile{onTick=CursedAcolyte_SKILL_1-Tick;onHit=CursedAcolyte_SKILL_1-Hit;v=8;i=1;hR=1;vR=1;hnp=false;bounce=true;bv=1.9;ham=false}
+CursedAcolyte_SKILL_1-Tick:
+  Skills:
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+CursedAcolyte_SKILL_1-Hit:
+  Skills:
+  - healpercent{m="<modifier.healpercent> / -100"}
+  - potion{type=HUNGER;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false}
+  - potion{type=WEAKNESS;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false} 0.5
+  - healpercent{m="(<modifier.healpercent> / 100) - 0.1"} @self
+  - potion{type=DAMAGE_RESISTANCE;duration="(<modifier.duration> * 20) - 40";level="<modifier.elv> - 1";hasParticles=false} @self
+  - potion{type=NAUSEA;duration="(<modifier.duration> * 20) / 2";level="<modifier.elv> - 1";hasParticles=false} @self 0.05
+  
+
+#######################################################################################################################################
+
+CursedAcolyte_SKILL_2:
+  Skills:
+ # - projectile{onTick=CursedAcolyte_SKILL_2-Tick;onHit=CursedAcolyte_SKILL_2-Hit;onEnd=CursedAcolyte_SKILL_2-End;v=8;i=1;hR=1;vR=1;sfo=0} @PIR{r=30}
+  - projectile{onTick=CursedAcolyte_SKILL_2-Tick;onHit=CursedAcolyte_SKILL_2-Hit;onEnd=CursedAcolyte_SKILL_2-End;v=8;i=1;hR=1;vR=1;mr=15;sfo=0} @Ring{r=6-10;p=1-3}
+CursedAcolyte_SKILL_2-Tick:
+  Skills:
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+CursedAcolyte_SKILL_2-Hit:
+  Skills:
+
+
+
+CursedAcolyte_SKILL_2-End:
+  Skills:
+  - skill{s=CursedAcolyte_SKILL_2-End_tick;repeat="<modifier.duration> * 4";repeati=5} @Forward{f=0;y=0;sideOffset=0;lockpitch=true} @origin
+  - skill{s=CursedAcolyte_SKILL_2-End_D;repeat="<modifier.duration>";repeatinterval=20} @PNO{r=3}
+  
+CursedAcolyte_SKILL_2-End_D:
+  Skills:
+  - damage{a="<modifier.damage>"}
+  - potion{type=HUNGER;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false}
+  - potion{type=WEAKNESS;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false}
+  - potionclear{type=SPEED,STRENGTH,REGENERATION,FIRE_RESISTANCE,ABSORPTION,HERO_OF_THE_VILLAGE,RESISTANCE}
+CursedAcolyte_SKILL_2-End_tick:
+  Skills:
+  - effect:particlering{p=reddust;color=#BD4AFF;radius=3;points=64;amount=1;hS=0;vS=0;y=0} @origin
+
+
+########################################################################################################################################
+
+CursedAcolyte_SKILL_3:
+  Conditions:
+  - hasaurastacks{auraName=CursedAcolyte_SKILL_3_aura} castinstead CursedAcolyte_SKILL_3_SKILL
+  Skills:
+  - Aura{auraName=CursedAcolyte_SKILL_3_aura;interval=1;duration=5} @self
+
+CursedAcolyte_SKILL_3_MMOCORE:
+  Skills:
+  - skill{s=CursedAcolyte_SKILL_3_SKILL} @self
+
+CursedAcolyte_SKILL_3_T:
+  Skills:
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.4;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.4;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.2;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.2;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.8;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.8;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.6;y=0.1;sideOffset=-3.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.6;y=0.1;sideOffset=3.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.4;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.4;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.2;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.2;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.8;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.8;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.6;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.6;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.4;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.4;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.2;y=0.1;sideOffset=-4.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.2;y=0.1;sideOffset=4.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.8;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.8;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.6;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.6;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.4;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.4;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.2;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.2;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.8;y=0.1;sideOffset=-5}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.8;y=0.1;sideOffset=5}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.6;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.6;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.4;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.4;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.2;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.2;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.2;y=0.1;sideOffset=-5.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.2;y=0.1;sideOffset=5.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.4;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.4;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.6;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.6;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.8;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.8;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.2;y=0.1;sideOffset=-5}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.2;y=0.1;sideOffset=5}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.4;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.4;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.6;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.6;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.8;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.8;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.2;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.2;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.4;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.4;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.6;y=0.1;sideOffset=-4.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.6;y=0.1;sideOffset=4.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.8;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.8;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.2;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.2;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.4;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.4;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.6;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.6;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.8;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.8;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4;y=0.1;sideOffset=-3.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4;y=0.1;sideOffset=3.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.2;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.2;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.4;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.4;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.6;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.6;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.8;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.8;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.8}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.2}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.4}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.6}
+  - effect:particles{particle=dust_color_transition;color=#FF1A72;color2=#CD1AFF;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.8}
+
+CursedAcolyte_SKILL_3_SKILL:
+  Cooldown: 9
+  Skills:
+  - skill{s=CursedAcolyte_SKILL_3_D;repeat="<modifier.duration>";repeatinterval=20} @PIR{r=6}
+  - potion{type=DAMAGE_RESISTANCE;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false} @self
+  - potion{type=absorption;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false} @self
+  - potion{type=regeneration;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false} @self
+
+  - skill{s=CursedAcolyte_SKILL_3_T;repeat="<modifier.duration> * 4";repeati=5} @Forward{f=0;y=0;sideOffset=0;lockpitch=true}
+  
+
+CursedAcolyte_SKILL_3_D:
+  TargetConditions:
+  - mmoCanTarget{interaction=SUPPORT_ACTION} true
+  Skills:
+  - potion{type=HUNGER;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false}
+  - potion{type=WEAKNESS;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false}
+  - potion{type=BLINDNESS;duration="<modifier.duration> * 20";level="<modifier.elv> - 1";hasParticles=false}
+  - damage{a="<modifier.damage>"}
+
+

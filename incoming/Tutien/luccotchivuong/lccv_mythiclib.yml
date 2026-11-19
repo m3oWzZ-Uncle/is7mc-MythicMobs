@@ -1,0 +1,152 @@
+LCCV_SUMMONED:
+  parameters:
+    timer:
+      player:
+        base: 10
+        per-level: 0
+        min: 10
+        max: 10
+      name: Tự Động
+      item: 0
+    mana:
+      player:
+        base: 0
+        per-level: 0
+        min: 0
+        max: 0
+    stamina:
+      player:
+        base: 0
+        per-level: 0
+        min: 0
+        max: 0
+    cooldown:
+      player:
+        base: 0
+        per-level: 0
+        min: 0
+        max: 0
+  name: Lục Cốt Chi Vương
+  lore:
+  - '&8Mở khóa từ Sách Kỹ Năng'
+  - ''
+  - '&fLoại: &7Bị động'
+  - ''
+  - '&8Hiệu ứng & mô tả:'
+  - '&7Triệu hồi Lục chi của Cốt Vương'
+  - '&7mỗi cánh tay nắm giữ sức mạnh riêng'
+  icon:
+    item: BONE
+#    custom_model_data: 2371
+  source: mythicmobs:luccotchivuong
+  trigger: TIMER
+
+LCCV_COMBO:
+  parameters:
+    damage:
+      player:
+        base: 40
+        per-level: 4
+        min: 40
+        max: 120
+      name: Sát Thương %
+      item: 0
+    timer:
+      player:
+        base: 0
+        per-level: 0
+        min: 0
+        max: 0
+    mana:
+      player:
+        base: 0
+        per-level: 0
+        min: 0
+        max: 0
+    stamina:
+      player:
+        base: 2
+        per-level: 0
+        min: 0
+        max: 0
+      name: Thể Lực
+      item: 0
+    cooldown:
+      player:
+        base: 0.5
+        per-level: 0
+        min: 0
+        max: 0
+      name: Hồi Chiêu
+      item: 0
+  name: Lục Cốt · Lục Tý Sát Thức
+  lore:
+  - '&8Mở khóa từ Cây Kỹ Năng'
+  - ''
+  - '&fLoại: &7Chủ động'
+  - '&fTiêu hao: &e{stamina} Thể lực &8| &fHồi chiêu: &c{cooldown}s'
+  - ''
+  - '&8Hiệu ứng & mô tả:'
+  - '&7Thi triển các cánh tay tấn công'
+  - '&7các cánh tay có sức mạnh riêng'
+  - ''
+  - '&7Sát thương cơ sở: &f{damage}% ATK &8(Vật Lý)'
+  - '&8Các thế đánh có hệ số sát thương riêng.'
+  icon:
+    item: BONE
+  source: mythicmobs:lccv_danhthuong
+
+LCCV_XOAYTAY:
+  parameters:
+    damage:
+      player:
+        base: 40
+        per-level: 4
+        min: 40
+        max: 120
+      name: Sát Thương %
+      item: 0
+    timer:
+      player:
+        base: 0
+        per-level: 0
+        min: 0
+        max: 0
+    mana:
+      player:
+        base: 0
+        per-level: 0
+        min: 0
+        max: 0
+    stamina:
+      player:
+        base: 2
+        per-level: 0
+        min: 0
+        max: 0
+      name: Thể Lực
+      item: 0
+    cooldown:
+      player:
+        base: 0.5
+        per-level: 0
+        min: 0
+        max: 0
+      name: Hồi Chiêu
+      item: 0
+  name: Lục Cốt · Cốt Luân Toái Sát
+  lore:
+  - '&8Mở khóa từ Cây Kỹ Năng'
+  - ''
+  - '&fLoại: &7Chủ động'
+  - '&fTiêu hao: &e{stamina} Thể lực &8| &fHồi chiêu: &c{cooldown}s'
+  - ''
+  - '&8Hiệu ứng & mô tả:'
+  - '&7Thi triển các cánh tay tấn công'
+  - '&7các cánh tay có sức mạnh riêng'
+  - ''
+  - '&7Sát thương cơ sở: &f{damage}% ATK &8(Vật Lý)'
+  - '&8Các thế đánh có hệ số sát thương riêng.'
+  icon:
+    item: BONE
+  source: mythicmobs:lccv_xoay_tay

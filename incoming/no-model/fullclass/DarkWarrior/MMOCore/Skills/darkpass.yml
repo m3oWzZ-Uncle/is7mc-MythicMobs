@@ -1,0 +1,35 @@
+name: DarkAura
+lore:
+- Cứ <#FF8E6A>{cooldown} giây sẽ tạo ra
+- một làn sóng khiến kẻ địch trong bán
+- kính 4 block bị hiệu ứng mù lòa
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: SPIDER_EYE
+passive-type: TIMER
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 14
+  per-level: 0
+  min: 0
+  max: 0

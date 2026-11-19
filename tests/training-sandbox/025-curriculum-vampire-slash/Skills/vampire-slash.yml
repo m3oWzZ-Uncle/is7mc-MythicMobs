@@ -1,0 +1,24 @@
+TrainingVampireSlash:
+  Cooldown: 3
+  Skills:
+    - playanimation{a=0} @self
+    - particle{p=sweep_attack;a=1;y=1.05} @Forward{f=1.55;lockpitch=true}
+    - slash{a=55;w=2.6;h=2.1;yo=1.05;fo=0.55;roll=-18;mpd=true;p=16;d=0;onPoint=TrainingVampireSlashArcPoint} @self
+    - skill{s=TrainingVampireSlashStrike} @LivingInCone{a=45;r=3;sort=NEAREST;limit=1;targetplayers=false;targetarmorstands=false} ?@lineofsight
+
+TrainingVampireSlashArcPoint:
+  Skills:
+    - particle{p=dust_color_transition;color=#8C1038;color2=#FF5275;size=0.9;a=1} @TargetedLocation
+
+TrainingVampireSlashStrike:
+  Skills:
+    - setvariable{var=skill.vampire_hp_before;type=FLOAT;value="<target.hp{round=6}>"} @TargetedTarget
+    - damage{a=8;then=TrainingVampireSlashHeal} @TargetedTarget
+
+TrainingVampireSlashHeal:
+  CancelIfNoTargets: false
+  Conditions:
+    - comparevalues{v1="<skill.var.damage-dealt>";op=GT;v2=0;type=DOUBLE} true
+  Skills:
+    - particle{p=heart;a=2;hs=0.2;vs=0.12;y=1.85} @self ?comparevalues{v1="<caster.hp>";op=LT;v2="<caster.mhp>";type=DOUBLE}
+    - heal{a="min(3, 0.5 * min(<skill.var.damage-dealt>, <skill.var.vampire_hp_before>))"} @self

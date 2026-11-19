@@ -1,0 +1,4 @@
+TrainingPersonalGuard:
+  Cooldown: 8
+  Skills:
+    - potion{type=ABSORPTION;duration=100;level=0} @self

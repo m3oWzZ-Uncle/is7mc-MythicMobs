@@ -1,0 +1,11 @@
+{
+  "id": "010-saved-anchor",
+  "kind": "practice",
+  "level": "intermediate",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "move",
+    "two-casters"
+  ]
+}

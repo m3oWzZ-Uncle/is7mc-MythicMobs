@@ -1,0 +1,661 @@
+
+##==========================================[ Summoner ]===========================================
+
+ink[Main]Wu_summoner:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_spawn_main} @self ~onSpawn
+  - bodyclamp{m=ink_spawn_main;mh=0;md=0} @self ~onSpawn
+  - skill{s=ink_spawn_main} @self ~onInteract
+
+##==========================================[Adjustable Mobs]===========================================
+
+ink[Main]Wu:
+  Type: husk
+  Display: '&6Wu' #Change the name of the mob here
+  Health: 1000 #Adjust Boss Health here
+  Damage: 1  #Adjust damage here
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - players
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventOtherDrops: true
+    Silent: true
+    FollowRange: 50
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.21
+    KnockbackResistance: 1
+    PreventJockeyMounts: true
+    NoAI: true
+  BossBar:
+    Enabled: true
+    Title: '&6Wu'
+    Range: 40
+    Color: RED
+    Style: SEGMENTED_10
+  Skills:
+  ##======[Internal Setup]======= 
+  - model{mid=ink_panda} @self ~onSpawn
+  - bodyclamp{m=ink_panda;mh=30;mb=0} @self ~onSpawn
+  - partvisibility{m=ink_panda;p=brush_summon;v=false;delay=1} @self ~onSpawn
+  - CancelEvent{sync=true} @self ~onAttack
+  - gcd{ticks=80} @self ~onSpawn
+  - setAI{ai=true;delay=60} @self ~onSpawn
+  - addtag{t=walk;delay=1} @self ~onSpawn
+  - setstance{stance=normal;delay=1} @self ~onSpawn
+  - skill{s=ink_panda_animation} @target ~onTimer:20
+  
+  ##======[Mob Abilities]=======
+  - skill{s=ink_panda_dodge;sync=true} @self ~onDamaged 0.8 #dodge skill
+  - randomskill{s=ink_panda_slash,ink_panda_uppercut,ink_panda_kick2,ink_panda_kick,ink_panda_slash2} @target ~onTimer:20 #random attack
+  - skill{s=ink_panda_summon_phase1} @self =80% #ultimate skill phase 1 in 80% health
+  - skill{s=ink_panda_summon_phase2} @self =50% #ultimate skill phase 2 in 50% health
+  - skill{s=ink_panda_summon_phase3} @self =20% #ultimate skill phase 3 in 20% health
+  - skill{s=ink_dragon_summon_dying} @RingAroundOrigin{yoffset=0;points=12;radius=5;sort=random;limit=1} ~onTimer:80 #keeping summon ink dragon after ultimate skill phase 3
+  
+  ##======[Cosmetic Effects]=======
+  - skill{s=ink_panda_vfx} @self ~onTimer:1 #Ambient effect
+  - skill{s=ink_panda_hurt} @self ~onDamaged 0.7  #Hurt effect
+  - skill{s=ink_panda_death} @self ~onDeath  #Death effect
+  - sound{s=item.armor.equip_leather;v=2.6;p=0.9} @self ~onDamaged #Hurt sound effect
+
+ink[Main]Ink_Tiger: # summon in Wu's ultimate skill phase 3
+  Type: husk
+  Display: '&6Ink Tiger' #Change the name of the mob here
+  Health: 10 #Adjust health here
+  Damage: 1 #Adjust damage here
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 randomstroll
+  AITargetSelectors:
+  - players
+  Modules:
+    ThreatTable: true
+  Options:
+    PreventOtherDrops: true
+    Silent: true
+    FollowRange: 50
+    PreventItemPickup: true
+    PreventRandomEquipment: true
+    MovementSpeed: 0.36
+    KnockbackResistance: 1
+    PreventJockeyMounts: true
+    NoAI: true
+  Skills:
+   ##======[Internal Setup]======= 
+  - setAI{ai=true;delay=10} @self ~onSpawn
+  - gcd{ticks=10} @self ~onSpawn
+  - model{mid=ink_tiger_mob} @self ~onSpawn
+  - bodyclamp{m=ink_tiger_mob;mh=30;mb=0} @self ~onSpawn
+  - CancelEvent{sync=true} @self ~onAttack
+  
+  ##======[Mob Abilities]=======
+  - skill{s=ink_tiger_mob} @target ~onTimer:10
+  
+  ##======[Cosmetic Effects]=======
+  - summon{t=ink[VFX]vfx_ink_pop_initial} @self ~onDeath
+  - effect:particles{particle=reddust;color=#000000;amount=40;hs=1.4;vs=0.4;y=0.4;size=2;s=0.1} @self ~onDeath
+  - effect:sound{s=entity.player.splash;v=0.7;p=1.1} @self ~onDeath
+  - summon{t=ink[VFX]ink_circle_initial} @Self ~onDeath
+
+
+##==========================================[Adjustable VFX]===========================================
+
+
+ink[VFX]ink_raven:  
+  Type: ARMOR_STAND
+  Display: '&6Ink Raven' #Change the name of the mob here
+  Damage: 1  #Adjust Wu's dodge skills damage
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  ##======[Internal Setup]======= 
+  - model{mid=ink_bird} @self ~onSpawn
+  - bodyclamp{m=ink_bird;mh=0;md=0} @self ~onSpawn
+  - summon{t=ink[VFX]vfx_ink_swirl;a=1} @self ~onSpawn
+  - remove{delay=200} @self ~onSpawn
+  
+  ##======[VFX Abilities]=======
+  - basedamage{m=1;pk=true} @PlayersInRadius{r=3} ~onTimer:20 #the percentage of damage to deal
+  - potion{t=slow;l=1;d=20;p=false;i=false} @PlayersInRadius{r=3} ~onTimer:10 #slow effect
+  - pull{v=3} @PlayersInRadius{r=4} ~onTimer:5  #pulling player
+  
+  ##======[Cosmetic Effects]=======
+  - effect:sound{s=block.sand.break;v=0.7;p=1.2} @self ~onTimer:3 #Ambient sound effect
+
+
+ink[VFX]ink_dragon:
+  Type: ARMOR_STAND 
+  Display: '&6Ink Dragon' #Change the name of the mob here
+  Damage: 1 #Adjust Wu's dragon damage
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  ##======[Internal Setup]======= 
+  - model{mid=ink_dragon} @self ~onSpawn
+  - bodyclamp{m=ink_dragon;mh=0;md=0} @self ~onSpawn
+  - summon{t=ink[VFX]vfx_ink_explode_initial;a=1;delay=6} @self ~onSpawn
+  - summon{t=ink[VFX]vfx_ink_explode_initial;a=1;delay=49} @ModelPart{m=ink_dragon;p=vfx} ~onSpawn
+  - remove{delay=103} @self ~onSpawn
+  - effect:spin{duration=1;velocity=30} @self ~onSpawn 0.3
+  - effect:spin{duration=1;velocity=90} @self ~onSpawn 0.3
+  - effect:spin{duration=1;velocity=50} @self ~onSpawn 0.3
+  - skill{s=ink_dragon} @self ~onSpawn
+
+ink[VFX]ink_pond:
+  Type: ARMOR_STAND
+  Display: '&6Ink Pond' #Change the name of the mob here
+  Damage: 1 #Adjust Wu's ultimate skill's pond damage
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  ##======[Internal Setup]======= 
+  - summon{t=ink[VFX]ink_stone} @self ~onSpawn
+  - summon{t=ink[VFX]ink_lotus1} @selflocation{forwardoffset=-1;sideoffset=1} ~onSpawn
+  - summon{t=ink[VFX]ink_lotus2} @selflocation{forwardoffset=-2;sideoffset=-2} ~onSpawn
+  - summon{t=ink[VFX]ink_lotus3} @selflocation{forwardoffset=2;sideoffset=-2} ~onSpawn
+  - summon{t=ink[VFX]ink_lotus3} @selflocation{forwardoffset=1;sideoffset=2} ~onSpawn
+  - summon{t=ink[VFX]ink_circle_initial;a=1;delay=412} @Self ~onSpawn
+  - remove{delay=413} @self ~onSpawn
+  
+   ##======[VFX Abilities]=======
+  - potion{t=slow;l=3;d=60;p=false;i=false} @PIR{r=4} ~onTimer:5 #slow effect
+  - potion{t=darkness;l=0;d=60;p=false;i=false} @PIR{r=4} ~onTimer:5 #darkness effect
+  - potion{t=blindness;l=0;d=60;p=false;i=false} @PIR{r=4} ~onTimer:5 #blindness effect
+  - basedamage{m=1;pk=true} @PIR{r=4} ~onTimer:30 #the percentage of damage to deal
+  - skill{s=vfx_ink_blob} ~onTimer:25 0.7 # ink pond's projectile
+  
+  ##======[Cosmetic Effects]=======
+  - effect:particles{particle=reddust;color=#000000;amount=150;hs=1.5;vs=0.1;y=0;size=2;s=0.1} @self ~onTimer:1
+
+
+##=================================================================================================
+
+ink[VFX]ink_spawn_effect1:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_spawn_effect1} @self ~onSpawn
+  - bodyclamp{m=ink_spawn_effect1;mh=0;md=0} @self ~onSpawn
+  - remove{delay=180} @self ~onSpawn
+
+ink[VFX]ink_spawn_effect2:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_spawn_effect2} @self ~onSpawn
+  - bodyclamp{m=ink_spawn_effect2;mh=0;md=0} @self ~onSpawn
+  - remove{delay=15} @self ~onSpawn
+  - randomskill{s=ink_spin-1,ink_spin-2,ink_spin-3} @self ~onSpawn
+
+ink[VFX]ink_tiger_summon:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - skill{s=ink_tiger_summon} @self ~onSpawn
+
+ink[VFX]vfx_ink_blob:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=vfx_ink_blob} @self ~onSpawn
+  - bodyclamp{m=vfx_ink_blob;mh=0;md=0} @self ~onSpawn
+
+ink[VFX]vfx_ink_summon:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=vfx_ink_summon} @self ~onSpawn
+  - bodyclamp{m=vfx_ink_summon;mh=0;md=0} @self ~onSpawn
+  - partvisibility{m=vfx_ink_summon;p=screen1;v=false;delay=1} @self ~onSpawn
+  - partvisibility{m=vfx_ink_summon;p=screen2;v=false;delay=1} @self ~onSpawn
+  - partvisibility{m=vfx_ink_summon;p=screen3;v=false;delay=1} @self ~onSpawn
+  - partvisibility{m=vfx_ink_summon;p=screen4;v=false;delay=1} @self ~onSpawn
+  - partvisibility{m=vfx_ink_summon;p=screen3;v=true;delay=16} @self ~onSpawn
+  - partvisibility{m=vfx_ink_summon;p=screen2;v=true;delay=32} @self ~onSpawn
+  - partvisibility{m=vfx_ink_summon;p=screen4;v=true;delay=48} @self ~onSpawn
+  - partvisibility{m=vfx_ink_summon;p=screen1;v=true;delay=64} @self ~onSpawn
+  - summon{t=ink[VFX]ink_impact_initial;a=1;delay=12} @ModelPart{m=vfx_ink_summon;p=s3} ~onSpawn
+  - summon{t=ink[VFX]ink_impact_initial;a=1;delay=28} @ModelPart{m=vfx_ink_summon;p=s2} ~onSpawn
+  - summon{t=ink[VFX]ink_impact_initial;a=1;delay=46} @ModelPart{m=vfx_ink_summon;p=s4} ~onSpawn
+  - summon{t=ink[VFX]ink_impact_initial;a=1;delay=60} @ModelPart{m=vfx_ink_summon;p=s1} ~onSpawn
+  - remove{delay=493} @self ~onSpawn
+
+ink[VFX]ink_dragon_summon:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - summon{t=ink[VFX]ink_dragon;a=1} @RingAroundOrigin{yoffset=0;points=12;radius=4;sort=random;limit=1} ~onSpawn
+  - summon{t=ink[VFX]ink_dragon;a=1;delay=103} @RingAroundOrigin{yoffset=0;points=12;radius=5;sort=random;limit=1} ~onSpawn
+  - summon{t=ink[VFX]ink_dragon;a=1;delay=206} @RingAroundOrigin{yoffset=0;points=12;radius=6;sort=random;limit=1} ~onSpawn
+  - summon{t=ink[VFX]ink_dragon;a=1;delay=309} @RingAroundOrigin{yoffset=0;points=12;radius=6;sort=random;limit=1} ~onSpawn
+  - remove{delay=311} @self ~onSpawn
+
+ink[VFX]ink_pond_summon:
+  Type: ARMOR_STAND
+  Display: '&6ink_panda'
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - summon{t=ink[VFX]ink_pond;delay=10;a=1} @RingAroundOrigin{yoffset=0;points=3;radius=12;sort=random;limit=3} ~onSpawn
+  
+  
+ink[VFX]ink_transition:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_transition} @self ~onSpawn
+  - bodyclamp{m=ink_transition;mh=0;md=0} @self ~onSpawn
+  - remove{delay=46} @self ~onSpawn
+
+
+ink[VFX]ink_lotus1:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_lotus1} @self ~onSpawn
+  - bodyclamp{m=ink_lotus1;mh=0;md=0} @self ~onSpawn
+  - randomskill{s=ink_spin-1,ink_spin-2,ink_spin-3} @self ~onSpawn
+  - remove{delay=413} @self ~onSpawn
+  
+ink[VFX]ink_lotus2:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_lotus2} @self ~onSpawn
+  - bodyclamp{m=ink_lotus2;mh=0;md=0} @self ~onSpawn
+  - randomskill{s=ink_spin-1,ink_spin-2,ink_spin-3} @self ~onSpawn
+  - remove{delay=413} @self ~onSpawn
+  
+ink[VFX]ink_lotus3:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_lotus3} @self ~onSpawn
+  - bodyclamp{m=ink_lotus3;mh=0;md=0} @self ~onSpawn
+  - randomskill{s=ink_spin-1,ink_spin-2,ink_spin-3} @self ~onSpawn
+  - remove{delay=413} @self ~onSpawn
+  
+ink[VFX]ink_stone:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_stone} @self ~onSpawn
+  - bodyclamp{m=ink_stone;mh=0;md=0} @self ~onSpawn
+  - remove{delay=413} @self ~onSpawn
+
+ink[VFX]ink_brush:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_brush} @self ~onSpawn
+  - bodyclamp{m=ink_brush;mh=0;md=0} @self ~onSpawn
+  - summon{t=ink[VFX]ink_raven;delay=7} @self ~onSpawn
+  - effect:sound{s=entity.arrow.hit;v=2;p=0.6;delay=6} @self ~onSpawn
+  - effect:sound{s=entity.generic.explode;v=1.4;p=1.7;delay=7} @self ~onSpawn
+  - sound{s=entity.dolphin.swim;p=0.8;v=0.6;delay=7} @self ~onSpawn
+  - pull{v=8;delay=7} @PlayersInRadius{r=8} ~onSpawn
+  - remove{delay=207} @self ~onSpawn
+
+
+ink[VFX]vfx_ink_swirl:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=vfx_ink_swirl} @self ~onSpawn
+  - bodyclamp{m=vfx_ink_swirl;mh=0;md=0} @self ~onSpawn
+  - remove{delay=207} @self ~onSpawn
+
+ink[VFX]ink_ranged_slash_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_ranged_slash_initial} @self ~onSpawn
+  - bodyclamp{m=ink_ranged_slash_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f2;delay=1} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f3;delay=2} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f4;delay=3} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f5;delay=4} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f6;delay=5} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f7;delay=30} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f8;delay=32} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f9;delay=34} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f10;delay=36} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f11;delay=38} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f12;delay=40} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f13;delay=42} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=f1;nm=ink_ranged_slash;npid=f14;delay=44} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a2;delay=1} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a3;delay=2} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a4;delay=3} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a5;delay=4} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a6;delay=5} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a7;delay=30} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a8;delay=32} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a9;delay=34} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a10;delay=36} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a11;delay=38} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a12;delay=40} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a13;delay=42} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial;pid=a1;nm=ink_ranged_slash;npid=a14;delay=44} @self ~onSpawn
+
+
+
+ink[VFX]vfx_ink_pop_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=vfx_ink_pop_initial} @self ~onSpawn
+  - bodyclamp{m=vfx_ink_pop_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=vfx_ink_pop_initial;pid=f1;nm=vfx_ink_pop;npid=f2;delay=1} @self ~onSpawn
+  - changepart{m=vfx_ink_pop_initial;pid=f1;nm=vfx_ink_pop;npid=f3;delay=2} @self ~onSpawn
+  - changepart{m=vfx_ink_pop_initial;pid=f1;nm=vfx_ink_pop;npid=f4;delay=3} @self ~onSpawn
+  - changepart{m=vfx_ink_pop_initial;pid=f1;nm=vfx_ink_pop;npid=f5;delay=4} @self ~onSpawn
+  - changepart{m=vfx_ink_pop_initial;pid=f1;nm=vfx_ink_pop;npid=f6;delay=5} @self ~onSpawn
+  - changepart{m=vfx_ink_pop_initial;pid=f1;nm=vfx_ink_pop;npid=f7;delay=6} @self ~onSpawn
+  - changepart{m=vfx_ink_pop_initial;pid=f1;nm=vfx_ink_pop;npid=f8;delay=7} @self ~onSpawn
+  - remove{delay=8} @self ~onSpawn
+
+ink[VFX]vfx_kick_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=vfx_kick_initial} @self ~onSpawn
+  - bodyclamp{m=vfx_kick_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=vfx_kick_initial;pid=f1;nm=vfx_kick;npid=f2;delay=1} @self ~onSpawn
+  - changepart{m=vfx_kick_initial;pid=f1;nm=vfx_kick;npid=f3;delay=2} @self ~onSpawn
+  - changepart{m=vfx_kick_initial;pid=f1;nm=vfx_kick;npid=f4;delay=3} @self ~onSpawn
+  - changepart{m=vfx_kick_initial;pid=f1;nm=vfx_kick;npid=f5;delay=4} @self ~onSpawn
+  - changepart{m=vfx_kick_initial;pid=f1;nm=vfx_kick;npid=f6;delay=5} @self ~onSpawn
+  - changepart{m=vfx_kick_initial;pid=f1;nm=vfx_kick;npid=f7;delay=6} @self ~onSpawn
+  - changepart{m=vfx_kick_initial;pid=f1;nm=vfx_kick;npid=f8;delay=7} @self ~onSpawn
+  - changepart{m=vfx_kick_initial;pid=f1;nm=vfx_kick;npid=f9;delay=8} @self ~onSpawn
+  - changepart{m=vfx_kick_initial;pid=f1;nm=vfx_kick;npid=f10;delay=9} @self ~onSpawn
+  - remove{delay=10} @self ~onSpawn
+
+
+ink[VFX]ink_impact_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_impact_initial} @self ~onSpawn
+  - bodyclamp{m=ink_impact_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b1;delay=1} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b2;delay=2} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b3;delay=3} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b4;delay=4} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b5;delay=5} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b6;delay=6} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b7;delay=7} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b8;delay=8} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b9;delay=9} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b10;delay=10} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b11;delay=11} @self ~onSpawn
+  - changepart{m=ink_impact_initial;pid=b1;nm=ink_impact;npid=b12;delay=12} @self ~onSpawn
+  - remove{delay=13} @self ~onSpawn
+
+ink[VFX]vfx_ink_explode_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=vfx_ink_explode_initial} @self ~onSpawn
+  - bodyclamp{m=vfx_ink_explode_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f1;delay=1} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f2;delay=2} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f3;delay=3} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f4;delay=4} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f5;delay=5} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f6;delay=6} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f7;delay=7} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f8;delay=8} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f9;delay=9} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f10;delay=10} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f11;delay=11} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f12;delay=12} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f13;delay=13} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f14;delay=14} @self ~onSpawn
+  - changepart{m=vfx_ink_explode_initial;pid=f1;nm=vfx_ink_explode;npid=f15;delay=14} @self ~onSpawn
+  - remove{delay=16} @self ~onSpawn
+
+ink[VFX]vfx_ink_tiger_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+  Skills:
+  - model{mid=vfx_ink_tiger_initial} @self ~onSpawn
+  - bodyclamp{m=vfx_ink_tiger_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f1;delay=1} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f2;delay=2} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f3;delay=3} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f4;delay=4} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f5;delay=5} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f6;delay=6} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f7;delay=7} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f8;delay=8} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f9;delay=9} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f10;delay=10} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f11;delay=11} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f12;delay=12} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f13;delay=13} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f14;delay=14} @self ~onSpawn
+  - changepart{m=vfx_ink_tiger_initial;pid=f1;nm=vfx_ink_tiger;npid=f15;delay=15} @self ~onSpawn
+  - remove{delay=18} @self ~onSpawn
+
+ink[VFX]ink_circle_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_circle_initial} @self ~onSpawn
+  - bodyclamp{m=ink_circle_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f1;delay=1} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f2;delay=2} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f3;delay=3} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f4;delay=4} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f5;delay=5} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f6;delay=6} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f7;delay=7} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f8;delay=8} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f9;delay=9} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f10;delay=10} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f11;delay=11} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f12;delay=12} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f13;delay=13} @self ~onSpawn
+  - changepart{m=ink_circle_initial;pid=f1;nm=ink_circle;npid=f14;delay=14} @self ~onSpawn
+  - remove{delay=15} @self ~onSpawn
+  
+ink[VFX]ink_dot1_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_dot1_initial} @self ~onSpawn
+  - bodyclamp{m=ink_dot1_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f1;delay=1} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f2;delay=2} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f3;delay=3} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f4;delay=4} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f5;delay=5} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f6;delay=6} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f7;delay=7} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f8;delay=8} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f9;delay=9} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f10;delay=10} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f11;delay=11} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f12;delay=12} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f13;delay=13} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f14;delay=14} @self ~onSpawn
+  - changepart{m=ink_dot1_initial;pid=f1;nm=ink_dot1;npid=f15;delay=15} @self ~onSpawn
+  - remove{delay=16} @self ~onSpawn
+  
+ink[VFX]ink_dot2_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_dot2_initial} @self ~onSpawn
+  - bodyclamp{m=ink_dot2_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f1;delay=1} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f2;delay=2} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f3;delay=3} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f4;delay=4} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f5;delay=5} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f6;delay=6} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f7;delay=7} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f8;delay=8} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f9;delay=9} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f10;delay=10} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f11;delay=11} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f12;delay=12} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f13;delay=13} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f14;delay=14} @self ~onSpawn
+  - changepart{m=ink_dot2_initial;pid=f1;nm=ink_dot2;npid=f15;delay=15} @self ~onSpawn
+  - remove{delay=16} @self ~onSpawn
+  
+ink[VFX]ink_dot3_initial:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+  Skills:
+  - model{mid=ink_dot3_initial} @self ~onSpawn
+  - bodyclamp{m=ink_dot3_initial;mh=0;md=0} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f1;delay=1} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f2;delay=2} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f3;delay=3} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f4;delay=4} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f5;delay=5} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f6;delay=6} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f7;delay=7} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f8;delay=8} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f9;delay=9} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f10;delay=10} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f11;delay=11} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f12;delay=12} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f13;delay=13} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f14;delay=14} @self ~onSpawn
+  - changepart{m=ink_dot3_initial;pid=f1;nm=ink_dot3;npid=f15;delay=15} @self ~onSpawn
+  - remove{delay=16} @self ~onSpawn
+  
+#--------------------------------- item
+
+ink[VFX]ink_circle_initial_item:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Invincible: true
+    Collidable: false
+  Skills:
+  - model{mid=ink_circle_initial_item} @self ~onSpawn
+  - bodyclamp{m=ink_circle_initial_item;mh=0;md=0} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f1;delay=1} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f2;delay=2} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f3;delay=3} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f4;delay=4} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f5;delay=5} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f6;delay=6} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f7;delay=7} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f8;delay=8} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f9;delay=9} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f10;delay=10} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f11;delay=11} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f12;delay=12} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f13;delay=13} @self ~onSpawn
+  - changepart{m=ink_circle_initial_item;pid=f1;nm=ink_circle_item;npid=f14;delay=14} @self ~onSpawn
+  - remove{delay=15} @self ~onSpawn
+  
+ink[VFX]ink_ranged_slash_initial_item:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Invincible: true
+    Collidable: false
+  Skills:
+  - model{mid=ink_ranged_slash_initial_item} @self ~onSpawn
+  - bodyclamp{m=ink_ranged_slash_initial_item;mh=0;md=0} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f2;delay=1} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f3;delay=2} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f4;delay=3} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f5;delay=4} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f6;delay=5} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f7;delay=30} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f8;delay=32} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f9;delay=34} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f10;delay=36} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f11;delay=38} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f12;delay=40} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f13;delay=42} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=f1;nm=ink_ranged_slash_item;npid=f14;delay=44} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a2;delay=1} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a3;delay=2} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a4;delay=3} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a5;delay=4} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a6;delay=5} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a7;delay=30} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a8;delay=32} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a9;delay=34} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a10;delay=36} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a11;delay=38} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a12;delay=40} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a13;delay=42} @self ~onSpawn
+  - changepart{m=ink_ranged_slash_initial_item;pid=a1;nm=ink_ranged_slash_item;npid=a14;delay=44} @self ~onSpawn
+#oWRUlzaiV1NEx0ZNZ2UwZ3aJZkUwcGRPhXU65UeVRUT61kbNVEV0BVeqdHaXJVWRZjS2YkN
+
+# 25533BBKGBJOXRO9

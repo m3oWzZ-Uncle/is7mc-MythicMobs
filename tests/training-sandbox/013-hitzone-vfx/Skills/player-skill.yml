@@ -1,0 +1,14 @@
+TrainingHitzoneVfx:
+  Cooldown: 3
+  Skills:
+    - slash{a=110;w=3;h=3;p=20;d=8;mpd=true;yo=1;r=0.6;oP=TrainingHitzoneVfxPoint;oHE=TrainingHitzoneVfxHit} @self
+
+TrainingHitzoneVfxPoint:
+  Skills:
+    - particle{p=crit;a=2;hs=0;vs=0;s=0} @targetedlocation
+
+TrainingHitzoneVfxHit:
+  TargetConditions:
+    - lineofsight true
+  Skills:
+    - damage{a=4}

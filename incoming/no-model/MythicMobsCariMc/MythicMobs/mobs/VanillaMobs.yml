@@ -1,0 +1,5 @@
+SmokeMonster:
+  Type: ZOMBIE
+  Skills:
+  - smoke @target ~onTimer:10
+  - smoke{direction=2} @self ~onAttack

@@ -1,0 +1,22 @@
+Ray_of_Vitalis:
+  mythicmobs-skill-id: Assistant_SKILL_1
+  modifiers:
+  - healpercent
+  - duration
+  - elv
+
+Circle_of_Might:
+  mythicmobs-skill-id: Assistant_SKILL_2
+  modifiers:
+  - duration
+  - elv
+
+Sacred_Ward:
+  mythicmobs-skill-id: Assistant_SKILL_3_MMOCORE
+  modifiers:
+  - duration
+  - elv
+  
+Holy_Cry:
+  mythicmobs-skill-id: Assistant_SKILL_Pass
+  modifiers: []

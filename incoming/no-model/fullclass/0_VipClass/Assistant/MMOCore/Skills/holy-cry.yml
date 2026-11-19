@@ -1,0 +1,36 @@
+name: Holy Cry
+lore:
+- 'Nước mắt thần'
+- 'Bảo vệ trc đòn tán công xấu'
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Eff-Level &7▸ <#FF8E6A>{level}'
+- '&3 <#78FFEF>◆ &7duration &7▸ <#FF8E6A>{duration}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: BOOK
+passive-type: TIMER
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 10
+  per-level: 0
+  min: 0
+  max: 0

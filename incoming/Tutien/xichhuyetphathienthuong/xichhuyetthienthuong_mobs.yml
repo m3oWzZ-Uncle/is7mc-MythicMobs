@@ -1,0 +1,150 @@
+VFX_XHPTT_COMBO_SWING_LEFT:
+  Type: block_display
+  DisplayOptions:
+    Block: AIR
+    Billboard: FIXED
+  Options:
+    Invincible: true
+    Collidable: false
+  Skills:
+  - model{usestatemachine=true;mid=xichhuyetphathienthuong_slash;lockpitch=true} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - state{s=l_slash;speed=1} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+VFX_XHPTT_COMBO_SWING_RIGHT:
+  Type: block_display
+  DisplayOptions:
+    Block: AIR
+    Billboard: FIXED
+  Options:
+    Invincible: true
+    Collidable: false
+  Skills:
+  - model{usestatemachine=true;mid=xichhuyetphathienthuong_slash;lockpitch=true} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - state{s=r_slash;speed=1} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+VFX_XHPTT_COMBO_SWING_UPPER:
+  Type: block_display
+  DisplayOptions:
+    Block: AIR
+    Billboard: FIXED
+  Options:
+    Invincible: true
+    Collidable: false
+  Skills:
+  - model{usestatemachine=true;mid=xichhuyetphathienthuong_slash;lockpitch=true} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - state{s=u_slash;speed=1} @self ~onSpawn
+  - remove{delay=20} @self ~onSpawn
+
+##
+
+VFX_XHPTT_IMPACT:
+  Type: block_display
+  DisplayOptions:
+    Block: AIR
+    Billboard: FIXED
+  Options:
+    Invincible: true
+    Collidable: false
+  Skills:
+  - model{usestatemachine=true;mid=xichhuyetphathienthuong_hitvfx;lockpitch=true} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - remove{delay=15} @self ~onSpawn
+  - randomskill{skills=
+    [- state{s=hit_1;speed=1}],
+    [- state{s=hit_2;speed=1}],
+    [- state{s=hit_3;speed=1}],
+    [- state{s=hit_4;speed=1}],
+    [- state{s=hit_5;speed=1}],
+    [- state{s=hit_6;speed=1}],
+    [- state{s=hit_7;speed=1}]} @self ~onSpawn
+ 
+
+##
+
+VFX_XHPTT_DASH:
+  Type: block_display
+  DisplayOptions:
+    Block: AIR
+    Billboard: FIXED
+  Options:
+    Invincible: true
+    Collidable: false
+  Skills:
+  - model{
+      usestatemachine=true;
+      mid=xichhuyetphathienthuong_dash;
+      lockpitch=true
+    } @self ~onSpawn
+
+  - brightness{b=15;s=15} @self ~onSpawn
+  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+
+  - remove{delay=20} @self ~onSpawn
+
+##
+
+VFX_XHPTT_THROW_SPEAR:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+    Interactable: false
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=xichhuyetphathienthuong;lockpitch=true} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn
+  - defaultstate{m=xichhuyetphathienthuong;t=idle;s=idle_projecticle_1;li=0;lo=0} @self ~onSpawn
+
+
+VFX_XHPTT_DROPPED_SPEAR:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+    Interactable: false
+    Invincible: true
+    HasGravity: false
+    NoAI: true
+  Skills:
+  - model{usestatemachine=true;mid=xichhuyetphathienthuong;lockpitch=true} @self ~onSpawn
+  - defaultstate{m=xichhuyetphathienthuong;t=idle;s=idle_mobs;li=0;lo=0} @self ~onSpawn
+  - skill{s=XHPTT_Spear_Pickup_Hitbox} @self ~onSpawn
+  
+VFX_XHPTT_SKY_SPEAR:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+    Interactable: false
+    Invincible: true
+    HasGravity: false
+    NoAI: true
+  Skills:
+  - model{usestatemachine=true;mid=xichhuyetphathienthuong;lockpitch=true} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn
+  - defaultstate{m=xichhuyetphathienthuong;t=idle;s=idle_projecticle_2;li=0;lo=0} @self ~onSpawn
+
+
+VFX_XHPTT_RETURN_SPEAR:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+    Interactable: false
+    Invincible: true
+    HasGravity: false
+    NoAI: true
+  Skills:
+  - model{usestatemachine=true;mid=xichhuyetphathienthuong;lockpitch=true} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn
+  - defaultstate{m=xichhuyetphathienthuong;t=idle;s=idle_projecticle_1;li=0;lo=0} @self ~onSpawn

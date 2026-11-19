@@ -1,0 +1,19 @@
+LarcticChestplate:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: CHAINMAIL_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      item-name: '"Chestplate"'
+      custom-model-data: 8
+      ItemFlags:
+      - HIDE_ARMOR_TRIM
+      PublicBukkitValues: |-
+        {
+            "nexo:id": "conqueror_chestplate"
+        }
+      trim:
+        material: minecraft:redstone
+        pattern: nexo:conqueror

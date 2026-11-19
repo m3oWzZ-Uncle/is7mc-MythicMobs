@@ -1,0 +1,14 @@
+Spirit-Vfx:
+  mythicmobs-skill-id: SoulMage_Spirit_VFX
+  modifiers: []
+
+Sp-Surge:
+  mythicmobs-skill-id: SoulMage_Spirit_Surge
+  modifiers:
+  - damage
+
+SM_Summon:
+  mythicmobs-skill-id: SoulMage_Summoner
+  modifiers:
+  - damage
+  

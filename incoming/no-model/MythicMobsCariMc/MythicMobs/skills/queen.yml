@@ -1,0 +1,988 @@
+################# ----+ QUEEN'S TUTORIAL MOB PACK +---- ########################
+#                                                                              #
+#   Welcome to the skills.yml for Queen's Tutorial Mob Pack!                   #
+#                                                                              #
+#   Everything is marked up for your learning experience, but double check the #
+#   wiki or check the official MythicCraft Discord server if you need more     #
+#   help. I encourage you to play around with values, combine skills, change   #
+#   visual and audio effects, etc.                                             #
+#                                                                              #
+#   Make sure to cross-reference with the mob yml file to make sure everything #
+#   matches up properly (double check spelling and capitalization).            #
+#                                                                              #
+#                                 Enjoy!                                       #
+#                                                                              #
+################################################################################
+
+
+
+#                         ----+ STAPLE MOBS +----                              #
+
+
+
+#                      --+ Zombie Knight Skills +--                            #
+
+############################# SWORD SWIPE #######################################
+# Remember, this pack is designed to be at the intermediate level, and so for   #
+# absolute beginners I recommend playing with simple mobs and the wiki, or      #
+# following up-to-date YouTube tutorials. This skill creates an effect that     #
+# looks like the slash of a sword, while also damaging anything in its path.    #
+# Here you'll learn about randomization, using variables to make an orbital     #
+# relative to position, and fundamental enemy design that makes fights both     #
+# hard and fair.                                                                #
+#################################################################################
+
+WarningParticles: ## This skill makes the eyes of a mob "glow red" to signify an attack incoming ##
+  Skills:
+  - effect:particles{p=redstone;a=1;hs=0;vs=0;uel=true;s=0;forwardOffset=0.23;sideOffset=0.18} ## These values are meant for mobs around the player's body type! (Skeletons, zombies, drowned, etc.) #
+  - effect:particles{p=redstone;a=1;hs=0;vs=0;uel=true;s=0;forwardOffset=0.23;sideOffset=-0.18} # p = particle name, a = amount of particles, hs = horizontal spread, vs = vertical spread, #
+  # uel = useEyeLocation for the starting point, forwardOffset puts it slightly in front of the target location, side offset moves it to the side, the two combined match with eye locations ##
+
+ZombieSwing: ## This is the basic sword swing which checks to make sure all the conditions line up ##
+  Conditions:
+  - incombat{} true ## Makes sure the mob is in combat ##
+  - stance{s=Shield} false ## Makes sure the mob isn't in shield mode that will be defined later ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/setstance ##
+  - haspotioneffect{t=SLOW_DiGGING;l=>0;d=>0} false ## Checks if the mob has any level of mining fatigue ##
+  - targetwithin{d=10} true ## Only does the skill if the player is within 10 blocks ##
+  Skills:
+  - delay <random.1to10> ## Waits 1 to 10 ticks before continuing, which helps make the attack seem more random and organic ##
+  - sound{s=entity.zombie.ambient;p=1.25;v=1.25;sc=master} @self ## A warning sound effect for the player to know an attack is coming #
+  - skill{s=WarningParticles;repeat=10;repeatInterval=1} @self # paired with particles for both visual and audio cues ##
+  - delay 10
+  - randomskill{s=ZombieSwingL,ZombieSwingR} @self ## Simply chooses between a left or a right swing defined below ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/randomskill ##
+
+ZombieSwingInstant: ## This is what replaces the mob's default vanilla attack ##
+  Conditions:
+  - incombat{} true
+  - haspotioneffect{t=SLOW_DiGGING;l=>0;d=>0} false
+  Cooldown: 0.5 ## Stops the mob from spamming the attack instantly ##
+  Skills:
+  - CancelEvent ## Stops the actual attack event that triggers this skill from happening ##
+  - randomskill{s=ZombieSwingL,ZombieSwingR} @self ## Chooses between a left or a right swing defined below ##
+
+ZombieSwingL:
+  Skills:
+  - damage{a=<random.4to6>} @EntitiesInCone{angle=90;range=1.95;rotation=0;ignore=samefaction} ## Damages anything not from the Undead faction in a cone with a 90 degree angle and 1.95 blocks long ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Skills/Targeters ##
+  - potion{t=SLOW;d=15;l=10;p=false} ## Makes the mob stop moving for 15 ticks through slowness, giving the player a window to attack ##
+  - effect:spin{duration=5;velocity=-25} @self ## Slightly turns the mob, coupled with the        #
+  - playanimation{a=0;audience=World} @self # left hand swing animation to look like a heavy slash ##
+       ## A bunch of sounds layered together for a slice effect ##
+  - sound{s=entity.phantom.flap;p=2.0;sc=master;v=0.2} @self
+  - sound{s=item.bundle.remove_one;p=1.75;v=1.15} @self
+  - sound{s=entity.witch.throw;p=1.51;v=0.65} @self
+  - sound{s=block.candle.extinguish;p=2.0;v=0.3} @self
+  - sound{s=item.bundle.insert;p=1.65;v=1.15} @self
+           ## This section is for the actual orbital swing itself ##
+  - setvar{var=skill.swingyaw;type=FLOAT;val="<caster.l.yaw>*-3.14/180+3.14"} ## This variable tries to match where the mob is looking so that the swing happens in front of the mob ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Skills/Variables ##
+      ## The orbital here is the arc of the sword's swing, damaging anything it hits ##
+  - orbital{oT=ZombieSwingT;oH=ZombieSwingH;p=12;hr=1.25;i=1;d=9;hnp=true;radius=<random.float.1.9to2.1>;oy=1.45;rotx=<random.float.3.12to3.16>;roty=<skill.var.swingyaw>;rz<random.float.0.08to0.28>;StopAtBlock=true} @self ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/orbital ##
+      ## oT = skill to execute on tick, oH = skill to execute when the orbital hits something, p = number of points in the arc, higher = slower but more fine, hr = hit radius, #
+      # i = interval in ticks that the oT skill activates, d = max duration the orbital will last for, hnp = hitNonPlayers (other mobs and entities). The radius of the orbital #
+      # is anywhere from 1.9 blocks to 2.1 blocks, starting at a Y offset of 1.35 (around chest height), where the rotx determines the orbital's rotation on the x axis, and    #       Radians!
+      # the roty is defined to match where the mob is looking, with the rotz being random to give variation to the sword's swing arc. It also stops when it hits a block.      ##
+
+ZombieSwingR: ## The skill above is repeated but mirrored in the opposite direction.
+  Skills:
+  - damage{a=<random.4to6>} @EntitiesInCone{angle=90;range=1.95;rotation=0;ignore=samefaction}
+  - potion{type=SLOW;duration=15;level=10;p=false}
+  - effect:spin{duration=5;velocity=25} @self ## Opposite spin velocity of ZombieSwingL ##
+  - playanimation{a=0;audience=World} @self
+  - sound{s=entity.phantom.flap;p=2.0;sc=master;v=0.2} @self
+  - sound{s=item.bundle.remove_one;p=1.75;v=1.15} @self
+  - sound{s=entity.witch.throw;p=1.51;v=0.65} @self
+  - sound{s=block.candle.extinguish;p=2.0;v=0.3} @self
+  - sound{s=item.bundle.insert;p=1.65;v=1.15} @self
+  - setvar{var=skill.swingyaw;type=FLOAT;val="<caster.l.yaw>*-3.14/180+3.14"}
+           ## The values here are meant to make the orbital come from the opposite side of the left swing ##
+  - orbital{oT=ZombieSwingT;oH=ZombieSwingH;p=12;hr=1.25;i=1;d=9;hnp=true;radius=<random.float.1.9to2.1>;oy=1.45;rotx=<random.float.3.12to3.16>;roty="-1(<skill.var.swingyaw>)";rz=<random.float.3.28to3.78>;StopAtBlock=true} @self
+
+ZombieSwingT:
+  Skills:
+  - effect:particles{p=endRod;a=<random.6to8>;s=0.15;hs=0.33;vs=0.06} @origin ## The visuals so you know an orbital is there ##
+  - modifyProjectile{trait=RADIUS;action=MULTIPLY;value=0.975} 0.45 ## The sword swing might taper off at the end, making the arc less circular and more like a slash ##
+
+ZombieSwingH: ## This is the skill that activates when the sword's swing orbital hits something ##
+  Skills:
+  - damage{a=<random.4to6>}
+          ## Layering all these sounds make a good slash effect ##
+  - sound{s=item.flintandsteel.use;p=1.54;v=0.35}
+  - sound{s=block.spore_blossom.break;p=0.84;v=0.8}
+  - sound{s=block.pumpkin.carve;p=1.14;v=0.15}
+  - sound{s=entity.phantom.flap;p=1.91;v=0.11}
+  - sound{s=entity.player.attack.sweep;p=0.81;v=0.27}
+  - sound{s=entity.player.attack.strong;p=0.81;v=0.42}
+  - sound{s=block.copper.break;p=1.67;v=0.68}
+  - sound{s=block.wart_block.break;p=0.88;v=0.64}
+  - sound{s=entity.zombie.attack_iron_door;p=1.77;v=0.06}
+  - sound{s=entity.hoglin.step;p=0.82;v=0.24}
+  - sound{s=block.lantern.step;p=1.22;v=0.94}
+
+############################# LUNGES AND MOVEMENT ###############################
+# This next set of skills plays around with the movement of the zombie knight,  #
+# giving more dimensions to the fight and making the player pick when to attack #
+# and when to defend, prolonging the fight. What makes a good mob is it's fun   #
+# value, and if it accomplishes its goal. High HP and high damage makes mobs    #
+# harder superficially, but gameplay strategy is what makes it both more        #
+# difficult and more fun. Instead of HP to prolong combat, "self-preservation"  #
+# skills can be used, instead of higher damage, varied attacks with different   #
+# ways to defend against them can be used                                       #
+#################################################################################
+
+ZombieLungeRandomizer: ## A randomizer can help when more than 1 of the same mob is being fought, so the mobs aren't executing the skills in sync with each other ##
+  Conditions: ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Skills/conditions ##
+  - incombat{} true ## Makes sure the mob is currently in combat ##
+  - onGround{} true ## Makes sure the mob is standing on solid ground (no mid-air lunges) ##
+  Skills:
+  - delay <random.1to10> ## Waits anywhere from 1 to 10 ticks before doing the next skill ##
+  - skill{s=ZombieLunge} @self 0.5 ## Executes the skill ZombieLunge at itself 50% of the time ##
+
+ZombieLunge:
+  # Conditions:
+  # - incombat{} true
+  # - onGround{} true
+  Skills:
+  - sound{s=entity.zombie.ambient;p=1.25;v=1.25;sc=master} ## A warning sound effect for the player to know an attack is coming #
+  - skill{s=WarningParticles;repeat=15;repeatInterval=1} # paired with particles for both visual and audio cues ##
+  - delay 15
+  - potion{t=speed;d=<random.15to18>;l=1;p=false} ## t = type (spigot name for potion), d = duration in ticks, l = level of effect ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/potion ##
+  - sound{s=entity.zombie.step;p=1.2;sc=master;repeat=<random.2to4>;repeatInterval=<random.4to6>} ## This sound effect pairs well with the speed to give the illusion of faster steps ##
+  - delay <random.14to16> ## This delay lets the speed boost play out a bit before the leap ##
+  - jump{v=0.15} @self ## The mob jumps up slightly just before being shot at its target for more velocity ##
+  - sound{s=entity.goat.long_jump;p=1.25;v=1.2;sc=master} ## A little jump sound effect ##
+  - delay 2
+  - leap{velocity=80} @target ## Higher values = more added velocity, you can use negative to leap away from the target ##
+  - delay 5
+  - randomskill{s=ZombieSwingL,ZombieSwingR} ## Simply chooses between a left or a right swing ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/randomskill ##
+  - delay 5
+  - randomskill{s=ZombieSwingL,ZombieSwingR} ## Using it twice with a delay makes it look like a double slash attack ##
+
+BackstepRandomizer:
+  Cooldown: 1
+  Conditions:
+  - incombat{} true
+  - onGround{} true ## This makes sure the mob doesn't backstep while mid-air ##
+  Skills:
+  - delay <random.1to10> ## Another layer of randomness to make fighting multiple mobs less predictable ##
+  - skill{s=Backstep} @self 0.67
+Backstep:
+  Conditions:
+  - incombat{} true
+  - onGround{} true ## Makes sure the mob is still on the ground ##
+  Skills:
+  - leap{velocity=-155} @targetLocation ## Makes the mob jump away from what it's looking at with a velocity of 155 ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/leap ##
+  - jump{v=0.25} ## Makes the mob jump up slightly to give the leap a bit more range ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/jump ##
+  - sound{s=item.armor.equip_leather;sc=master;p=1.7} @self ## Sound effects for the jump ##
+  - sound{s=entity.goat.long_jump;p=1.35;sc=master} @self
+  - effect:particles{particle=smoke_normal;a=5;hs=0.1;vs=0.1;y=0.2} ## A little bit of smoke for visual flair ##
+
+MiniStrafeRandomizer: ## A randomizer can help when more than 1 of the same mob is being fought, so the mobs aren't executing the skills in sync with each other ##
+  Cooldown: 0.1
+  Conditions:
+  - incombat{} true
+  - onGround{} true ## No mid-air strafing ##
+  Skills:
+  - delay <random.1to10>
+  - skill{s=MiniStrafe} @self 0.67
+
+MiniStrafe: ## This skill is slightly more complex as it randomizes the direction through variables ##
+  Conditions:
+  - incombat{} true
+  - onGround{} true
+  Skills:
+  - randomskill{skills=Binary0,Binary1} @self
+  - randomskill{skills=Binary0b,Binary1b} @self
+  - velocity{m=add;x="(<random.float.0.05to0.10>)*<skill.var.binval>";y=0.0;z="(<random.float.0.05to0.10>)*<skill.var.binvalb>"} @self 0.75 ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/velocity ##
+      ## This set of skills is used to determine positive and negative directions ##
+Binary0:
+  Skills:
+  - setvar{var=skill.binval;type=FLOAT;val="-1.0"}
+Binary1:
+  Skills:
+  - setvar{var=skill.binval;type=FLOAT;val="1.0"}
+Binary0b:
+  Skills:
+  - setvar{var=skill.binvalb;type=FLOAT;val="-1.0"}
+Binary1b:
+  Skills:
+  - setvar{var=skill.binvalb;type=FLOAT;val="1.0"}
+
+FastStepsRandomizer:
+  Cooldown: 1
+  Conditions:
+  - incombat{} true
+  - onGround{} true
+  Skills:
+  - delay <random.1to15>
+  - skill{s=FastSteps} @self 0.67
+
+FastSteps: ## What this does is make the mob slightly faster for a very brief moment, catching players off guard ##
+  Skills:
+  - potion{t=speed;d=<random.15to20>;l=2;p=false}
+  - sound{s=entity.armor.equip_leather;p=0.82;sc=master;v=2} @origin
+  - delay <random.14to18>
+  - potion{t=slow;d=<random.20to30>;l=5;p=false} ## Greatly slows the mob down at the end to give players the chance to counter attack ##
+
+BackupRandomizer:
+  Cooldown: 5
+  Conditions:
+  - incombat{} true
+  - onGround{} true
+  - targetwithin{d=10} true ## Makes sure the target is within 10 blocks ##
+  Skills:
+  - delay <random.1to10> ## Another layer of randomization ##
+  - skill{s=Backup} @self 0.67
+
+Backup: ## The mob backs away from its target slowly, not as aggressive as the leaping backstep ##
+  Conditions:
+  - incombat{} true
+  - onGround{} true
+  Skills:
+  - leap{velocity=-25;repeat=<random.15to25>;repeatInterval=1} @target ## Very small negative leap values repeated a random number of times ##
+
+ShieldStance:
+  Conditions: ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Skills/conditions ##
+  - inCombat{} true ## Makes sure the mob is still in combat ##
+  - onGround{} true ## Makes sure the mob is standing on solid ground ##
+  - stance{s=Shield} false ## Makes sure the mob isn't already in the shield stance ##
+  Skills:
+  - sound{s=block.anvil.land;p=1.9;v=0.52} @self ## Audio cue for players to know the shield stance activated ##
+  - sound{s=item.crossbow.loading_start;p=0.85;v=1.25} @self
+  - potion{type=slow;duration=125;level=100;i=false;p=false} @self ## Stops the mob from moving for a while ##
+  - effect:particles{particle=electricspark;amount=<random.0to1>;uel=true;hs=0.65;vs=0.65;s=0;repeat=125;repeatInterval=1} @self ## Visual cue for the shield stance ##
+  - setstance{stance=Shield} @self ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/setstance ##
+  - delay 125 ## This matches up with how long the particles and potion effect lasts ##
+  - setstance{stance=Sword} @self ## Reverts back to the standard sword stance after a while ##
+
+ShieldBlock:
+  Conditions:
+  - inCombat{} true
+  - onGround{} true
+  - stance{s=Shield} true ## Now we want this skill to only execute if the mob is in the shield stance ##
+  Skills:
+  - CancelEvent ## Stops the damage event from occuring, this must be in sync ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/cancelevent ##
+  - effect:particles{particle=waxOn;amount=<random.1to5>;uel=true;hs=0.65;vs=0.65;s=0} @self ## Visual cues ##
+      ## These sounds put together sound like a shield blocking things ##
+  - sound{s=item.shield.block;p=0.9;sc=master;v=2.0} @self
+  - sound{s=block.copper.break;p=2.0;sc=master;v=0.21} @self
+  - sound{s=item.axe.strip;p=2.0;sc=master;v=0.85} @self
+  - sound{s=item.trident.return;p=2.0;sc=master;v=0.15} @self
+  - sound{s=block.lantern.break;v=1.15;p=0.15;sc=master} @self
+  - playanimation{a=3;audience=World} @self ## Makes the mob swing its offhand for visual flair ##
+
+
+
+
+
+#                      --+ Skeleton Archer Skills +--                          #
+
+############################# ARROW VOLLEY ######################################
+# This skill makes the mob jump up and shoot arrows consecutively. The arrow    #
+# projectiles have custom sound and visual effects for a more interesting       #
+# experience than vanilla arrows being shot. The only unique skill for the      #
+# skeleton archer, as the other skills are reused from the zombie knight.       #
+#################################################################################
+
+########################################## TIP ##############################################
+# By using randomizers paired with random delays, mobs are less likely to do skills at the  #
+# same time, making large groups of enemies less organized and more organic                 #
+#############################################################################################
+
+ArrowVolleyRandomizer:
+  # Conditions:
+  # - incombat{} true
+  Skills:
+  - delay <random.1to10> ## Another layer of randomization ##
+  - skill{s=ArrowVolley} @self 0.67
+
+ArrowVolley:
+  # Conditions:
+  # - incombat{} true
+  Skills:
+  - sound{s=item.crossbow.quick_charge_1;p=1.2;sc=master} ## A warning sound effect to let the player know an attack is coming ##
+  - skill{s=WarningParticles;repeat=15;repeatInterval=1} @self ## Visual cues to get the point across ##
+  - potion{type=slow;duration=60;level=10;p=false}
+  - delay 20
+  - jump{v=0.85} ## Jumps high into the air ##
+  - sound{s=entity.goat.long_jump;p=1.25;sc=master}
+  - potion{type=slow_falling;duration=20;level=0;p=false} ## This will stop the mob from hurting itself when it lands ##
+  - delay 10
+  - skill{s=HardArrow} @self                            ## Timing the delays with the firing of arrows to make it look good ##
+  - delay 3
+  - skill{s=HardArrow} @self
+  - delay 3
+  - skill{s=HardArrow} @self 0.5 ## By putting a "0.5", the last arrow is not guaranteed to be shot, meaning the skill can shoot 2-3 arrows ##
+HardArrow:
+  Skills:
+  - sound{s=entity.arrow.shoot;p=1.2;sc=master}
+  - sound{s=entity.firework_rocket.launch;p=1.8;sc=master}
+  - shoot{type=arrow;ot=HardArrowTick;oh=HardArrowHit;oe=HardArrowEnd;i=1;md=100;v=0.55} @target ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/shoot ##
+HardArrowShot: ## This is what replaces the vanilla arrow, just copying the skill above for now ##
+  Skills:
+  - CancelEvent ## Stops the initial shot that triggered the skill ##
+  - sound{s=entity.arrow.shoot;p=1.2;sc=master}
+  - sound{s=entity.firework_rocket.launch;p=1.8;sc=master}
+  - shoot{type=arrow;ot=HardArrowTick;oh=HardArrowHit;oe=HardArrowEnd;i=1;md=100;v=0.55} @target
+  - delay <random.3to6> ## Randomizing the delay helps keep the players on their toes by throwing their rhythm and timing off ##
+  - skill{s=HardArrow} @self 0.5 ## This follow up shot has a 50% chance of occuring ##
+HardArrowTick:  ## This gives a nice woosh sound as the arrow flies by ##
+  Skills:
+  - effect:particles{particle=crit;a=1;hs=0.1;vs=0.1} @origin ~onTimer:1
+  - sound{s=block.candle.extinguish;p=2.0;sc=master} @origin ~onTimer:1
+HardArrowHit: ## This is where the actual damage of the arrow can be changed ##
+  - damage{a=6;pi=true} ## pi = PreventImmunity, which prevents the cooldown between damage ticks (useful for quick consecutive attacks) ##
+  - sound{s=entity.arrow.hit;p=2;sc=master} @origin
+  - sound{s=entity.player.attack.crit;p=1.7;sc=master} @origin
+HardArrowEnd: ## What happens when the arrow lands somewhere? ##
+  - sound{s=entity.arrow.hit;p=2;sc=master} @origin
+  - sound{s=entity.player.attack.crit;p=1.7;sc=master} @origin
+  - sound{s=item.armor.equip_netherite;p=2.0;sc=master} @origin
+
+
+
+
+
+
+#                      --+ Skeleton Rogue Skills +--                           #
+
+############################# LUNGES AND MOVEMENT ###############################
+# Just like the other melee mob so far, the Zombie Knight, the Skeleton Rogue   #
+# utliizes complex movement patterns to prolong the battle. In this case, the   #
+# rogue is even faster, more agile, and has a custom random dodge.              #
+#################################################################################
+
+RogueStrafes:
+  Conditions:
+  - incombat{} true
+  - onGround{} true ## Makes sure the mob isn't strafing mid-air ##
+  Skills:
+  - randomskill{skills=Binary0,Binary1} @self ## Calling the binary skill we defined above which basically sets a value of 1 or -1 for the parameters ##
+  - randomskill{skills=Binary0b,Binary1b} @self
+  - velocity{m=add;x="(<random.float.0.0to0.05>+0.08)*<skill.var.binval>";y=0.0;z="(<random.float.0.0to0.05>+0.08)*<skill.var.binvalb>"} @self 0.9 ## The math basically takes a random value between 0.08 and 0.13 and multiplies that #
+  # by 1 or -1, giving a random direction. The 0.9 at the end gives the skill more randomization ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/velocity ##
+
+RandomDodgeRandomizer:
+  Cooldown: 0.15
+  Conditions:
+  - incombat{} true
+  - onGround{} true ## Stops mid-air dodging ##
+  Skills:
+  - delay <random.1to20>
+  - skill{s=RandomDodge} @self 0.67
+
+RandomDodge:
+  Cooldown: 1.0
+  Conditions:
+  - incombat{} true
+  - onGround{} true
+  Skills:
+  - jump{v=0.35} @self
+                ## This section is all sound effects ##
+  - sound{s=item.armor.equip_chain;p=1.62;sc=master;v=0.5}
+  - sound{s=item.armor.equip_leather;p=0.62;sc=master;v=0.5}
+  - sound{s=item.bundle.insert;p=1.72;sc=master;v=0.5}
+  - sound{s=entity.skeleton_horse.step_water;p=0.58;sc=master;v=0.7}
+  - sound{s=entity.iron_golem.attack;p=0.55;sc=master;v=0.44}
+  - sound{s=entity.phantom.flap;p=0.78;sc=master;v=0.22}
+  - sound{s=entity.horse.breathe;p=1.5;sc=master;v=0.8}
+  ## The dodge mechanic works like a bigger and more powerful strafe ##
+  - randomskill{skills=Binary0,Binary1} @self
+  - randomskill{skills=Binary0b,Binary1b} @self
+  - velocity{m=add;x="(<random.float.0.0to0.1>+0.6)*<skill.var.binval>";y=<random.float.0.00to0.05>;z="(<random.float.0.0to0.1>+0.6)*<skill.var.binvalb>"} @self ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/velocity ##
+  - effect:particles{particle=ash;a=<random.8to12>;hs=0.25;vs=0.60;s=0.0;y=1.0;repeat=12;repeatInterval=1} ## A repeating particle effect that leaves a trail of wispy smoke ##
+  - effect:particles{particle=smoke_large;a=5;hs=0.3;vs=0.01;s=0.05}
+  - delay 5
+  - potion{type=slow_falling;duration=10;lvl=1;p=false} ## Helps prevent the mob from hurting itself on landing ##
+
+############################# DAGGER THROW ######################################
+# This is a method the mob uses to combat ranged player strats. The daggers     #
+# inflict weakness and mining fatigue upon hitting the target, and fly in a     #
+# relatively straight line. Pairing this skill with the high mobility makes     #
+# ranged combat more difficult against this mob.                                #
+#################################################################################
+
+DaggerThrow:
+  # Conditions:
+  # - onGround{} true
+  # - incombat{} true
+  # - targetnotwithin{d=5} true ## The skill only activates if the target isn't within 5 blocks, for example someone shooting from afar. ##
+  Skills:
+  - delay <random.0to20>
+  - sound{s=item.crossbow.quick_charge_1;p=1.84;sc=master;v=2} ## Warning sound ##
+  - potion{type=slow;duration=<random.45to60>;lvl=10;p=false}
+  - delay <random.25to35>
+  - leap{velocity=-125} @target
+  - jump{v=0.25} @self
+  - sound{s=item.armor.equip_leather;sc=master;p=1.7}
+  - sound{s=entity.goat.long_jump;p=1.35;sc=master}
+  - effect:particles{particle=smoke_normal;a=5;hs=0.1;vs=0.1;y=0.2} @origin
+  - delay <random.3to8>
+  - sound{s=entity.iron_golem.attack;p=2.0;sc=master;v=2} @origin
+  - projectile{bulletType=item;material=stone_sword;i=1;oT=DaggerTick;oH=DaggerHit;oE=DaggerEnd;v=16;tyo=2;hnp=true;hn=3.15;vn=0.55;ac=0.55;g=0.09;syo=1.65;hr=0.25} @targetLocation ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/projectile ##
+  - delay <random.4to8>
+  - sound{s=entity.iron_golem.attack;p=2.0;sc=master;v=2} @origin
+  - projectile{bulletType=item;material=stone_sword;i=1;oT=DaggerTick;oH=DaggerHit;oE=DaggerEnd;v=16;tyo=2;hnp=true;hn=3.15;vn=0.55;ac=0.55;g=0.09;syo=1.65;hr=0.25} @targetLocation
+
+DaggerTick: ## Special effects for the dagger in flight ##
+  Skills:
+  - sound{s=item.spyglass.stop_using;p=2.0;v=0.5;sc=master} @origin
+  - effect:particles{particle=ash;a=<random.1to3>;hs=0.03;vs=0.03;s=0.01} @origin
+DaggerHit: ## What the dagger does when it hits something ##
+  Skills:
+  - damage{a=2;pi=true;pkb=true;type=PROJECTILE}
+  - potion{t=WEAKNESS;d=<random.25to40>;l=5;p=false}          ## The dagger inflicts weakness and mining         #
+  - potion{t=SLOW_DIGGING;d=<random.20to35>;l=5;p=false}      # fatigue at level 5 for a random amount of ticks ##
+  - sound{s=item.trident.hit;p=1.51;sc=master;v=2}
+  - sound{s=entity.player.attack.crit;p=1.7;sc=master}
+DaggerEnd: ## Just some special effects ##
+  Skills:
+  - effect:particles{particle=smoke_normal;a=5;hs=0.1;vs=0.1;s=0.05} @origin
+  - sound{s=item.trident.hit;p=1.51;sc=master;v=2} @origin
+
+ExtraStrike: ## Basically feels like being hit multiple times, although the damage is minimal ##
+  Skills:
+  - delay 2
+  - playanimation{a=0;audience=World} @self
+  - damage{a=1;pk=true;pi=true}
+  - sound{s=entity.player.attack.crit;p=1.7;sc=master}
+  - sound{s=entity.mooshroom.shear;p=1.8;sc=master}
+  - delay 3
+  - playanimation{a=1;audience=World} @self
+  - damage{a=1;pk=true;pi=true}
+  - sound{s=entity.player.attack.crit;p=1.7;sc=master}
+  - sound{s=entity.mooshroom.shear;p=1.8;sc=master}
+  - potion{type=weakness;duration=20;level=10;p=false}
+
+
+
+
+
+#                        --+ Witch Summoner Skills +--                         #
+
+############################# SELF-PRESERVATION #################################
+# Along with the mobility skills we've already defined, our witch will try to   #
+# periodically teleport around, similar to an enderman, making it harder to hit #
+# and having the battle last longer without raising the mob's hp, as high hp    #
+# would feel weird on a magic/summoner archetype mob.                           #
+#################################################################################
+
+WitchTeleport:
+  Conditions:
+  - incombat{} true
+  Skills:
+  - delay <random.1to10>
+  - effect:particlesphere{particle=squid_ink;r=1.2;a=100;hs=0.1;vs=0.1;y=0.75}
+  - teleport{sh=4;sv=1} @target ## Teleports near the target within 4 blocks horizontally and 1 block vertically ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/teleport ##
+  - sound{s=block.conduit.ambient.short;p=2.0;v=3;sc=master}
+
+########################## OFFENSE AND SUMMONING ################################
+# The witch uses minions that it summons to do its bidding. These summons are   #
+# also unique in that they continually resurrect so long as the witch is around #
+# to provide the signal to do so. The minions on their own aren't powerful, but #
+# paired with the shadow missile that gives weakness and mining fatigue upon    #
+# hit, the witch summoner can end up being a pretty tough opponent for players. #
+#################################################################################
+
+ShadowMissileRandomizer: ## You can probably tell by now that I love making the mobs more random and organic ##
+  Conditions:
+  - incombat{} true
+  - targetnotwithin{d=5} true ## Tries not to do this skill if the player is too close. Keeps it slightly more fair. ##
+  Skills:
+  - delay <random.1to10>
+  - skill{s=ShadowMissile} @self 0.55
+ShadowMissile:
+  Conditions:
+  - incombat{} true
+  Cooldown: 1
+  Skills:
+  - delay <random.1to10>
+  - sound{s=item.dye.use;p=0.5;sc=master} @self
+  - sound{s=entity.phantom.flap;p=1.2;sc=master} @self
+  - missile{ot=ShadowTentacleTick;oh=ShadowTentacleHit;oe=ShadowTentacleEnd;hnp=true;in=14;i=1;md=50;v=5} @target ## Shoots a homing projectile ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/missile ##
+
+ShadowTentacleTick: ## Visual and sound effects of the missile in flight ##
+  Skills:
+  - effect:particles{particle=smoke_normal;a=6;hs=0.15;vs=0.15} @origin
+  - sound{s=block.azalea.step;p=2;sc=master} @origin
+ShadowTentacleHit: ## What happens when the tentacle hits something ##
+  Skills:
+  - consume{h=3;d=3;pk=true;pi=true;ia=true} ## This will both damage the target and heal the caster ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/consume ##
+  - effect:particlesphere{particle=smoke_normal;r=0.5;a=20;hs=0.1;vs=0.1;uel=true} @origin
+  - sound{s=entity.shulker_bullet.hurt;p=1.2;sc=master}
+  - potion{t=SLOW_DIGGING;d=120;l=10} ## Remember that these are the spigot internal names for potions effects ##
+  - potion{t=WEAKNESS;d=120;l=10} ## https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html ##
+ShadowTentacleEnd: ## Did it miss or did it run out of time? ##
+  Skills:
+  - effect:particles{particle=smoke_large;a=20;hs=0.5;vs=0.5} @origin
+  - sound{s=block.fire.extinguish;p=2;sc=master} @origin
+
+WitchSummonRandomizer:
+  Conditions:
+  - incombat{} true
+  - onGround{} true
+  Skills:
+  - delay <random.1to10>
+  - skill{s=WitchSummon} @self 0.65
+
+WitchSummon:
+  Skills:
+  - sound{s=entity.evoker.prepare_summon;p=1.11;sc=master;v=1.88} @self ## Lets the player know that a summon is about to happen through audio cues ##
+  - effect:itemspray{item=propbone;amount=1;velocity=0.2;d=10;ap=false;repeat=30;repeatInterval=2} @selfLocation ## Visual effects to do the same thing ##
+  - effect:particles{particle=item;m=bone;y=1;a=<random.1to2>;hs=0.25;vs=0.55;s=0.01;repeat=13;repeatInterval=5} @selfLocation
+  - sound{s=entity.skeleton.ambient;p=0.61;sc=master;v=1.88;repeat=3;repeatInterval=22}
+  - delay 65
+  - summon{type=undyingSkeleton;a=1;r=3} @selfLocation ## Summons a single undying skeleton mob within a 3 block radius ##
+  - sound{s=entity.illusioner.cast_spell;p=0.97;sc=master;v=1.88} @self
+  - sound{s=item.armor.equip_iron;p=0.77;sc=master;v=1.49} @self
+
+
+
+
+
+#                         --+ Timber Wolf Skills +--                           #
+
+############################# LUNGES AND MOVEMENT ###############################
+# The wolf pretty much reuses the skills we've already defined, but in a way    #
+# that doesn't feel like it. All we really do is change sound effects and the   #
+# values of the skills.                                                         #
+#################################################################################
+
+WolfStrafes:
+  Conditions:
+  - incombat{} true
+  - onGround{} true
+  Skills:
+  - randomskill{skills=Binary0,Binary1} @self
+  - randomskill{skills=Binary0b,Binary1b} @self
+  - velocity{m=add;x="(<random.float.0.0to0.04>+0.18)*<skill.var.binval>";y=0.0;z="(<random.float.0.0to0.04>+0.18)*<skill.var.binvalb>"} @self 0.65
+
+WolfBackstep:
+  # Conditions:
+  # - incombat{} true
+  # - onGround{} true
+  Cooldown: 1
+  Skills:
+  - delay <random.1to10>
+  - leap{velocity=<random.float.-100.0to-120.0>} @targetLocation
+  - jump{v=0.15} @self
+  - sound{s=item.bundle.drop_contents;p=1.32;sc=master;v=0.15}
+  - sound{s=entity.iron_golem.attack;p=0.65;sc=master;v=0.14}
+  - sound{s=entity.iron_golem.attack;p=1.55;sc=master;v=0.08}
+  - sound{s=entity.goat.long_jump;p=1.55;sc=master;v=0.5}
+  - effect:particles{particle=ash;a=5;hs=0.1;vs=0.1;y=0.2} @origin
+
+WolfLeap:
+  Conditions:
+  - incombat{} true
+  - onGround{} true
+  Skills:
+  - jump{v=0.15} @self
+  - sound{s=item.bundle.drop_contents;p=1.32;sc=master;v=0.15}
+  - sound{s=entity.iron_golem.attack;p=0.65;sc=master;v=0.14}
+  - sound{s=entity.iron_golem.attack;p=1.55;sc=master;v=0.08}
+  - sound{s=entity.goat.long_jump;p=1.55;sc=master;v=0.5}
+  - effect:particles{particle=ash;a=5;hs=0.1;vs=0.1;y=0.2} @origin
+  - delay 5
+  - leap{velocity=<random.float.120.0to140.0>} @targetlocation
+
+
+
+
+
+#                       --+ Undying Skeleton Skills +--                        #
+
+############################# SELF RESURRECTION #################################
+# You can count this as a self-preservation skill, or more of a gimmick that's  #
+# been borrowed from the souls games. Basically, the mob will continuously come #
+# back to life until the summoner stops giving out the signal to resurrect.     #
+#################################################################################
+
+UndyingSkeletonRes:
+  Skills:
+  - summon{type=undyingSkeletonPile;a=1} @selfLocation
+  - sound{s=entity.skeleton.death;p=1.91;sc=master;v=0.88} @self
+  - sound{s=block.chain.break;p=1.31;sc=master;v=0.39} @self
+UndyingSkeletonResAni:
+  Skills:
+  - effect:itemspray{item=BONE;amount=1;velocity=0.2;d=10;ap=false;repeat=30;repeatInterval=2} @selfLocation ## Sprays out fake bone items as a visual indicator ##
+  - sound{s=entity.skeleton.ambient;p=0.61;sc=master;v=1.88;repeat=3;repeatInterval=22} ## Audio indicator that the skill is executing ##
+  - effect:particles{particle=item;m=bone;y=1;a=<random.1to2>;hs=0.25;vs=0.55;s=0.01;repeat=13;repeatInterval=5} @selfLocation ## More particle effects ##
+  - delay 65
+  - summon{type=undyingSkeleton;a=1} @selfLocation ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/summon ##
+  - sound{s=item.bundle.drop_contents;p=0.67;sc=master;v=1.88}
+  - sound{s=item.armor.equip_iron;p=0.77;sc=master;v=1.49}
+  - remove @self
+
+
+
+
+
+#                            --+ Mimic Skills +--                              #
+
+############################# MIMIC ACTIVATION ##################################
+# As defined in the mob's config yml, this skill will activate if the mimic is  #
+# either right clicked by a foolish player, or preemptively smacked by a        #
+# cautious one. Meant to be a little jumpscare, making looting dungeons a bit   #
+# more anxiety inducing than running around and collecting all the treasure.    #
+#################################################################################
+
+MimicSpawn:
+  # Conditions:
+  # - incombat{} false
+  Skills:
+  - setAI{ai=true} @self ## Gives the mob ai once again ##
+  - jump{v=0.48} @self ## A little jump effect ##
+  - effect:particles{particle=block;m=chest;amount=100;hs=0.5;vs=0.5} @origin
+  - sound{s=entity.zombie.break_wooden_door;p=1.5;sc=master} @self ## Jumpscare sound effect ##
+  - sound{s=entity.shulker.death;p=0.88;sc=master} @self
+  - sound{s=block.chest.open;p=0.88;sc=master} @self
+  - effect:bloodyScreen{d=10} @pir{r=4} ## A quick flash of red on screen # https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/effects/bloodyscreen ##
+  - undisguise{} @self ## Removes the blocky disguise and reveals the mob's true form ##
+  - equip{item=BARREL:HEAD} ## Puts a vanilla barrel on the mob's head ##
+
+MimicSounds: ## We use a separate skill because we don't want barrels to growl at people ##
+  Conditions:
+  - incombat{} true
+  Skills:
+  - sound{s=entity.shulker.ambient;p=0.88;sc=master} @self
+
+
+
+#                      ----+ ELEMENTAL MOBS +----                              #
+
+
+
+#                       --+ Ice Spirit Skills +--                              #
+
+########################## "FREEZE" STATUS EFFECT ###############################
+# Here we have a custom status effect which is essentially an aura applied      #
+# for a random amount of time based on the variable, which gives slowness       #
+# and a visual effect along with chip damage to the target.                     #
+# If you get creative, you can have different things happen on the aura's tick, #
+# think of a bleed or electrocution effect.                                     #
+#################################################################################
+
+FreezeProcShort: ## "Short" Version of the status effect ##
+  Skills:
+  - setvar{var=skill.freezetimer;type=INTEGER;val="<random.110to190>"} ## Sets the variable to use throughout the skill, in this case how many ticks in integer format ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/setvariable ##
+  - aura{auraName=Freeze;oT=FreezeTick;i=18;d=<skill.var.freezetimer>} ## Applies an aura on the target with the name "Freeze", executing "FreezeTick" onTick (oT) every 18 ticks, lasting for the variable's length in ticks ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/aura ##
+  - potion{t=SLOW;d=<skill.var.freezetimer>;l=1} ## Applies the slowness effect with a level of 1 for the variable's length in ticks ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/potion ##
+  - freeze{duration="<skill.var.freezetimer>+20"} ## Applies a "freeze" effect like stepping in powdered snow ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/freeze ##
+  - holo{text="&b&l❄";stay=30} @selfLocation{y=2.25} ## Spawns a hologram for 30 ticks 2.25 blocks above the target with the text "❄" in bold aqua ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/hologram ##
+
+FreezeProcMid: ## "Medium" Version of the status effect ##
+  Skills:
+  - setvar{var=skill.freezetimer;type=INTEGER;val="<random.440to610>"}
+  - aura{auraName=Freeze;oT=FreezeTick;i=18;d=<skill.var.freezetimer>}
+  - potion{t=SLOW;d=<skill.var.freezetimer>;l=1}
+  - freeze{"<skill.var.freezetimer>+20"}
+  - holo{text="&b&l❄";stay=30} @selfLocation{y=2.25}
+
+FreezeProcLong: ## "Long" Version of the status effect ##
+  Skills:
+  - setvar{var=skill.freezetimer;type=INTEGER;val="<random.870to1130>"}
+  - aura{auraName=Freeze;oT=FreezeTick;i=18;d=<skill.var.freezetimer>}
+  - potion{t=SLOW;d=<skill.var.freezetimer>;l=2}
+  - freeze{duration="<skill.var.freezetimer>+20"}
+  - holo{text="&b&l❄";stay=30} @selfLocation{y=2.25}
+
+FreezeTick: ## Skill executed every time the aura's tick activates ##
+  Skills:
+  - damage{a=1;pi=true;pkb=true;element=ICE} ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/damage ## a = amount, pi = preventImmunity, pkb = preventKnockBack, element = type of damage (can be custom) to inflict ##
+  - sound{s=entity.player.hurt_freeze;p=1.5;v=1.1;sc=master} ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/effects/sound ## s = name of sound (same names as /playsound), p = pitch from 0.01 to 2.0, v = volume (how far away players can hear), sc = soundCategory ##
+  - effect:particles{p=snowballpoof;a=3;hs=0.1;vs=0.1;y=1} ## Decorative Particles ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/effects/particles ## p = particle name, a = amount of particles, hs = horizontal spread, vs = vertical spread, y = Y offset from target ##
+
+############################# FROST BOLT ########################################
+# Frost Bolt shoots a set of 3 ice projectiles which applies the "freeze"       #
+# custom status effect to whatever it hits.                                     #
+#################################################################################
+
+FrostBoltRandomizer: ## A randomizer can help when more than 1 of the same mob is being fought, so the mobs aren't executing the skills in sync with each other ##
+  Conditions: ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Skills/conditions ##
+  - incombat{} true ## Makes sure the mob is currently in combat ##
+  Skills:
+  - delay <random.1to10> ## Waits anywhere from 1 to 10 ticks before doing the next skill ##
+  - skill{s=FrostBolt} @targetLocation 0.55 ## Shoots the skill FrostBolt towards the mob's target location 55% of the time ##
+
+FrostBolt: ## The actual skill which shoots the projectile
+  Conditions:
+  - incombat{} true
+  - targetnotwithin{d=3} true ## Tries not to execute the skill if the player is too close ##
+  Skills:
+  - delay <random.1to20>
+
+########################################## TIP #################################################
+# This next block is an audio cue to let the players know an attack is coming, since we aren't #
+# using any special animations to get the point across. Helps make the mob more fair.          #
+################################################################################################
+
+  - sound{s=block.powder_snow.fall;p=1.0;sc=master} #
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=1.1;sc=master}
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=1.2;sc=master}
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=1.3;sc=master}
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=1.4;sc=master}
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=1.5;sc=master} # Gives the effect of rising pitch #
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=1.6;sc=master}
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=1.7;sc=master}
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=1.8;sc=master}
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=1.9;sc=master}
+  - delay 2
+  - sound{s=block.powder_snow.fall;p=2.0;sc=master} #
+  - delay 5
+  - sound{s=block.glass.break;p=1.8;sc=master;v=1.55} ## Shoot sound ##
+  - sound{s=entity.llama.spit;p=1.65;sc=master;v=1.55}
+  - projectile{bulletType=ITEM;bulletSpin=8;material=BLUE_ICE;oT=FrostBoltTick;oH=FrostBoltHit;oE=FrostBoltEnd;i=1;v=14;d=60;mr=30;hnp=true;syo=0.75;g=0.15;tyo=1.75} @targetLocation ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/projectile ##
+## Shoots a projectile that looks like a small block of ice at the target location, doing skill "FrostBoltHit" when it hits something ## bulletType = the type of projectile shot, in this case a blue ice item with a small spin, ##
+#  v = velocity , d = max duration of the projectile in ticks, mr = maximum range of the projectile in blocks, hnp = hits non players (e.g. mobs), syo = starting Y offset, g = gravity of the projectile (higher is heavier), tyo= target y offset #
+  - delay 5
+  - sound{s=block.glass.break;p=1.8;sc=master} ## Skill repeats twice more to shoot a volley of 3 ice projectiles ##
+  - sound{s=entity.llama.spit;p=1.65;sc=master;v=1.55}
+  - projectile{bulletType=ITEM;bulletSpin=8;material=BLUE_ICE;oT=FrostBoltTick;oH=FrostBoltHit;oE=FrostBoltEnd;i=1;v=14;d=60;mr=30;hnp=true;syo=0.75;g=0.15;tyo=1.75} @targetLocation
+  - delay 5
+  - sound{s=block.glass.break;p=1.8;sc=master}
+  - sound{s=entity.llama.spit;p=1.65;sc=master;v=1.55}
+  - projectile{bulletType=ITEM;bulletSpin=8;material=BLUE_ICE;oT=FrostBoltTick;oH=FrostBoltHit;oE=FrostBoltEnd;i=1;v=14;d=60;mr=30;hnp=true;syo=0.75;g=0.15;tyo=1.75} @targetLocation
+
+FrostBoltTick: ## Skill executed every tick on the projectile ##
+  Skills:
+  - sound{s=block.powder_snow.break;p=2.0;sc=master;v=0.5} @origin ## Ambient swoosh sound ##
+  - sound{s=block.flowering_azalea_leaves.step;p=2.0;sc=master;v=0.35} @origin
+  - effect:particles{p=block_crack;m=ice;a=1;hs=0.07;vs=0.07} @origin 0.8 ## Ambient decoration particles ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/effects/particles ##
+  - effect:particles{p=snowflake;a=<random.0to1>;hs=0.07;vs=0.07} @origin ## Chance to not even show up because of <random.0to1> ##
+  - effect:particles{p=reddust;color=#d1f4ff;a=<random.1to3>;hs=0.1;vs=0.07} @origin ## c = color in hex format, p = particle name, a = amount of particles, hs = horizontal spread, vs = vertical spread, y = Y offset from target ##
+
+FrostBoltHit: ## Skill executed when the projectile hits something ##
+  Skills:
+  - sudoskill{s=FreezeProcShort} ## Forces whatever is hit to execute this skill ##
+
+FrostBoltEnd: ## Skill executed when the projectile ends (runs out of time, range, etc.) ##
+  Skills:
+  - sound{s=block.snow.hit;p=1.0;sc=master;v=1} @origin
+  - effect:particles{p=block_crack;m=ice;a=20;hs=0.5;vs=0.5} @origin
+  - effect:particles{p=reddust;color=#d1f4ff;a=50;hs=0.5;vs=0.5} @origin
+
+
+
+
+
+#                       --+ Fire Demon Skills +--                              #
+
+FireDemonFlee: ## Makes the Fire Demon fly around like a scared bat ##
+  Skills:
+  - delay <random.5to12> ## Waits 5 to 12 ticks before doing the next mechanic ##
+  - velocity{m=add;x=<random.float.-0.5to0.5>;y=<random.float.-0.5to0.5>;z=<random.float.-0.5to0.5>;repeat=10;repeatInterval=5} ## Adds a random velocity from -0.18 to 0.18 on the x, y, and z axis 10 times every 5 ticks ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/velocity ##
+
+
+########################## Flamethrower #########################################
+# Shoots a nasty area-of-effect projectile that burns things. Slow moving, and  #
+# telegraphed, but can deal a lot of damage if you get caught in its path.      #               (A dragon might like this skill o,o)
+# The skill actually shoots a bunch of projectiles which when together give the #
+# illusion of a widespreading flamethrower.                                     #
+#################################################################################
+
+FlamethrowerRandomizer: ## A randomizer can help when more than 1 of the same mob is being fought, so the mobs aren't executing the skills in sync with each other ##
+  Conditions: ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Skills/conditions ##
+  - incombat{} true ## Makes sure the mob is currently in combat ##
+  Skills:
+  - delay <random.1to10> ## Waits anywhere from 1 to 10 ticks before doing the next skill ##
+  - skill{s=Flamethrower} @self 0.45 ## Shoots the skill Flamethrower towards the mob's target location 45% of the time ##
+
+Flamethrower:
+  Conditions:
+  - incombat{} true
+  Skills:
+  - sound{s=entity.player.breath;p=0.66;sc=master;v=2} ## This is a warning that the mob is about to shoot a flamethrower ##
+  - delay 15
+  - sound{s=entity.blaze.burn;p=2;sc=master;v=2}
+  - sound{s=block.campfire.crackle;p=2;sc=master;v=2}
+  - sound{s=block.blastfurnace.fire_crackle;p=2;sc=master;v=2}
+  - delay 20
+  - aura{i=1;d=50;oT=FTProjectile;oE=FTProjectileEnd} @self ## Puts an aura on itself to make it continuously shoot individual "flamethrower" projectiles while active ##
+  - sound{s=entity.zombie.infect;p=0.71;sc=master;v=2} @self
+
+FTProjectile: ## The aura activates this skill every tick and shoots individual "streams" of fire which together look like a wide spread of fire ##
+  Skills:
+  - effect:blockmask{m=light;r=0;d=5;s=cube;onlyair=true;na=false;sync=true} @selflocation{y=1} ## A special effect that makes the flamethrower "give off light" ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/effects/blockmask ##
+  - projectile{i=1;oT=FTTick;oH=FTHit;oE=FTEnd;mr=13.5;sE=false;v=5.5;tyo=3.15;hnp=true;hn=0.55;vn=0.55;ac=0.8;g=0.09;syo=1.15} @targetLocation ## sE (stopAtEntity) is used here to simulate a flamethrower going through targets ##
+  - sound{s=block.candle.extinguish;p=0.5;sc=master;v=3}
+  - sound{s=block.blastfurnace.fire_crackle;p=2;sc=master;v=2}
+
+FTTick: ## Decorative particle effects ##
+  Skills:
+  - effect:particlesphere{p=flame;r=0.25;a=1;hs=0.16;vs=0.02;s=0.05} @origin
+  - effect:particlesphere{p=lava;r=0.1;a=1;hs=0.1;vs=0.06;s=0.05} @origin 0.1
+  - effect:particlesphere{p=reddust;r=0.1;color=#c48e3d;a=1;hs=0.2;vs=0.06;s=0.05} @origin 0.5
+
+FTHit: ## Skill executed when the projectile (streams of fire) hits something ##
+  Skills:
+  - damage{a=0.3;pkb=true;pi=true;ia=true;type=FIRE} ## pkb = preventKnockBack, ia = ignoreArmor, pi = preventImmunity which gives the damage a "jittery effect"
+  - ignite{t=110} ## The target is now on fire for 110 ticks ##
+
+FTEnd: ## Visual effects for when the projectiles end ##
+  Skills:
+  - effect:particles{p=lava;a=3;hs=0.3;vs=0.22;s=0.05} @origin
+  - effect:particles{p=smoke_large;a=5;hs=0.3;vs=0.22;s=0.05} @origin
+  - effect:particlesphere{p=drip_lava;r=0.1;a=1;hs=0.2;vs=0.06;s=0.05} @origin
+  - effect:particlesphere{p=falling_lava;r=0.1;a=1;hs=0.2;vs=0.06;s=0.05} @origin
+
+FTProjectileEnd: ## Visual effects for when the aura ends ##
+  Skills:
+  - effect:particles{p=smoke_large;r=0.1;a=20;hs=1.1;vs=1.1}
+  - sound{s=block.fire.extinguish;p=0.88;v=2;sc=master} @origin
+
+
+
+
+
+#                       --+ Wind Mage Skills +--                               #
+
+
+
+########################### WIND BLAST ##########################################
+# This skill is a kind of skill used for "self preservation", which prolongs    #
+# the lifespan of a mob by stopping players from attacking too often.           #
+# These kinds of skills can be utilized to great effect when making a mob       #
+# more challenging, for example running away from damage sources, dodging,      #
+# self-healing, turning invisible, etc. You don't need to rely on more health   #
+# to make the combat with a mob last longer. Keep that in mind.                 #
+#################################################################################
+
+WindBlastRandomizer: ## A randomizer can help when more than 1 of the same mob is being fought, so the mobs aren't executing the skills in sync with each other ##
+  Conditions: ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Skills/conditions ##
+  - incombat{} true ## Makes sure the mob is currently in combat ##
+  Skills:
+  - delay <random.1to10> ## Waits anywhere from 1 to 10 ticks before doing the next skill ##
+  - skill{s=WindBlast} @self 0.55 ## Execute the skill WindBall at itself 55% of the time ##
+
+WindBlast:
+  Skills:
+  - delay <random.1to10>
+  - playanimation{a=0;audience=World} @self ## Gives the effect of the mob swinging its left arm ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/effects/playanimation ##
+  - effect:particlesphere{p=cloud;s=0.1;a=200;r=4.5;hs=0;vs=0} ## Visual effects ##
+  - effect:particlesphere{p=spit;a=10;r=4.5;hs=0;vs=0}
+  - sound{s=entity.iron_golem.attack;p=0.8;sc=master;v=0.4} ## Sound effects ##
+  - sound{s=entity.witch.throw;p=0.5;sc=master;v=1.5}
+  - sound{s=entity.phantom.flap;p=2.0;sc=master}
+  - sound{s=item.trident.riptide_3;p=2.0;sc=master;v=0.3}
+  - throw{v=9;vy=6} @eir{r=5} ## Pushes mobs and players away from itself, with the strength of the push scaling to how close the target is to the mob ##
+
+
+
+############################ WIND Ball ##########################################
+# This skill is a kind of skill used for "self preservation", which prolongs    #
+# the lifespan of a mob by stopping players from attacking too often.           #
+# These kinds of skills can be utilized to great effect when making a mob       #
+# more challenging, for example running away from damage sources, dodging,      #
+# self-healing, turning invisible, etc. You don't need to rely on more health   #
+# to make the combat with a mob last longer. Keep that in mind.                 #
+#################################################################################
+
+WindBallRandomizer:
+  Conditions:
+  - incombat{} true
+  Cooldown: 0.1
+  Skills:
+  - delay <random.1to6>
+  - skill{s=WindBallCast} @self 0.67
+
+WindBallCast:
+  Conditions:
+  - incombat{} true
+  Skills:
+  - delay <random.1to3>
+  - sound{s=block.candle.extinguish;p=1.2;v=1.6}
+  - delay 2
+  - sound{s=block.candle.extinguish;p=1.3;v=1.6}
+  - delay 2
+  - sound{s=block.candle.extinguish;p=1.4;v=1.6}
+  - delay 2
+  - sound{s=block.candle.extinguish;p=1.5;v=1.6}
+  - delay 2
+  - sound{s=block.candle.extinguish;p=1.6;v=1.6}
+  - delay 2
+  - sound{s=block.candle.extinguish;p=1.7;v=1.6}
+  - delay 2
+  - sound{s=block.candle.extinguish;p=1.8;v=1.6}
+  - delay 2
+  - sound{s=block.candle.extinguish;p=1.9;v=1.6}
+  - delay 2
+  - sound{s=block.candle.extinguish;p=2.0;v=1.6}
+  - delay 2
+  - skill{s=WindBall;repeat=<random.0to2>;repeatInterval=<random.5to8>} @self ## Shoots anywhere from 1 to 3 individual wind balls total, with anywhere from 5 to 8 ticks in between each shot ##
+
+WindBall:
+  Conditions:
+  - incombat{} true
+  Skills:
+  - delay <random.1to3>
+  - skill{s=WindBallSound} @self ## Calling a separate skill because of how many individual sounds there are ##
+  - playanimation{a=0;audience=World} @self ## Gives the effect of the mob swinging its left arm ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/effects/playanimation ##
+  - projectile{i=1;oT=WindBallTick;oH=WindBallHit;oE=WindBallEnd;mr=40;sE=true;v=20;d=44;tyo=0.55;hnp=true;hn=0.55;vn=0.55;ac=0.8;g=0.01;syo=1.55} @targetLocation ## hn = horizontal noise randomness, vn = vertical noise randomness, ac = accuracy of the projectile ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/effects/particles ##
+
+WindBallSound: ## All together makes a pleasant woosh sound ##
+  Skills:
+  - sound{s=item.dye.use;p=0.5;sc=master}
+  - sound{s=entity.phantom.flap;p=1.2;sc=master}
+  - sound{s=block.sand.place;p=1.55;v=0.48}
+  - sound{s=block.candle.extinguish;p=2.0;v=0.48}
+  - sound{s=block.candle.extinguish;p=0.78;v=0.78}
+  - sound{s=item.armor.equip_chain;p=1.82;sc=master;v=0.15}
+  - sound{s=entity.squid.squirt;p=1.52;sc=master;v=0.18}
+  - sound{s=entity.iron_golem.attack;p=0.65;sc=master;v=0.24}
+  - sound{s=entity.iron_golem.attack;p=1.55;sc=master;v=0.08}
+  - sound{s=entity.phantom.flap;p=2.0;sc=master;v=0.18}
+  - sound{s=entity.horse.breathe;p=1.55;sc=master;v=0.26}
+
+WindBallTick:
+  Skills:
+  - modifyProjectile{trait=VELOCITY;action=MULTIPLY;value=<random.float.0.95to0.99>} 0.66 ## This slows the projectile down from 95% to 99% every tick 66% of the time, giving a nice effect to the wind ball ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/skills/mechanics/modifyprojectile ##
+  - effect:particlesphere{p=ash;r=0.08;a=<random.2to5>;hs=0.01;vs=0.01;y=0} @origin ## Visual effects ##
+  - effect:particlesphere{p=cloud;r=0.08;a=<random.2to5>;hs=0.01;vs=0.01} @origin #
+  - effect:particlesphere{p=white_ash;r=0.08;a=<random.2to5>;hs=0.01;vs=0.01;y=0} @origin
+  - sound{s=block.azalea.step;p=0;sc=master;v=0.25} @origin ## Audio effects ##
+  - sound{s=block.candle.extinguish;p=0.5;v=0.18} @origin #
+
+WindBallHit:
+  Skills:
+  - sound{s=block.wart_block.break;p=0.88;v=0.64}
+  - sound{s=block.candle.extinguish;p=0.82;v=0.91}
+  - sound{s=block.candle.extinguish;p=1.89;v=1.21}
+  - sound{s=block.sand.place;p=0.66;v=0.71}
+  - sound{s=block.lantern.break;p=1.22;v=0.38}
+  - sound{s=item.dye.use;p=1.82;v=0.52}
+  - sound{s=entity.vex.hurt;p=<random.float.0.72to0.82>;sc=master}
+  - damage{a=<random.4to6>;pi=true;pkb=true;element=MAGIC} ## Deals anywhere from 4 to 6 damage, ignoring immunity and knockback and dealing magic (potion and status effect) damage ##
+
+WindBallEnd:
+  Skills:
+  - effect:particles{p=campfire_cosy_smoke;a=<random.3to5>;hs=0.15;vs=0.15;s=0.0;repeat=4;repeatInterval=5}
+  - sound{s=entity.horse.breathe;p=0.77;v=0.58} @origin
+  - sound{s=block.sand.place;p=1.55;v=0.68} @origin
+  - sound{s=block.candle.extinguish;p=2.0;v=1.48} @origin
+  - sound{s=block.candle.extinguish;p=0.78;v=1.78} @origin
+
+
+
+
+
+#                       ----+ EXAMPLE BOSS +----                               #
+
+
+
+#                         --+ Boss Skills +--                                  #
+
+############################### PHASE 1 #########################################
+#                                                                               #
+#################################################################################
+
+############################### PHASE 2 #########################################
+#                                                                               #
+#################################################################################

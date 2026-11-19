@@ -1,0 +1,39 @@
+name: Breakthrough
+lore:
+- Bay lên từ từ và khi đến một khoảng
+- nhất định dập xuống gây một lượng
+- sát thương &c{damage}&fdmg
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: SPIDER_EYE
+damage:
+  base: 36
+  per-level: 0.2
+  min: 0
+  max: 30
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 32
+  per-level: -0.2
+  min: 0
+  max: 30

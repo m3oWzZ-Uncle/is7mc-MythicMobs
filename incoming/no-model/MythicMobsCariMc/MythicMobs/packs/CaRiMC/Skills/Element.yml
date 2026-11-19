@@ -1,0 +1,719 @@
+#
+# Skill Spawn
+#
+DARK_ON_SPAWN:
+  Skills:
+  - delay 1
+  - setstance{stance=DARK_SPAWN} @self
+  - potion{t=DAMAGE_RESISTANCE;d=9999;l=10;force=true} @self
+  - sendtitle{title="<#AFFF8D>☠ §8[<#80FF6C>Trùm§8] <#842BFF>Hắc &fVương <#AFFF8D>☠";subtitle="&8○ &fđã được hồi sinh &8○";d=100} @PIR{r=25}
+
+  - effect:spin{duration=140;velocity=50} @self
+  - effect:particleline{p=reddust;color=#700058;amount=1;hS=0;vS=0;speed=0;y=3;repeat=15;repeatInterval=5} @MobsInRadius{r=15;types=DARK_DOPPLEGANGER_SPAWN}
+  - summon{type=DARK_DOPPLEGANGER_SPAWN;amount=1;radius=10;s=true;repeat=15;repeatInterval=5} @self
+  - effect:particles{p=reddust;color=#700058;amount=10;hS=0;vS=3;speed=0;y=0.2;repeat=15;repeatInterval=5} @self
+  - sound{s=block.wart_block.break;v=1.0;p=0.6;repeat=15;repeatInterval=5} @self
+  - throw{velocity=20;velocityY=2;repeat=20;repeatInterval=5} @PIR{r=4}
+  - delay 90
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=1;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=1;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=1;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=1}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=2;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=2;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=2;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=2}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=3;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=3;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=3;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=3}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=4;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=4;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=4;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=4}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=5;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=5;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=5;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=5}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=6;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=6;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=6;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=6}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=7;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=7;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=7;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=7}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=8;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=8;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=8;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=8}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=9;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=9;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=9;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=9}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=1.0;p=1.5} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=10;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=10;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=10;y=0.5} @self
+  - - damage{amount=300;ignoreArmor=true} @PIR{r=10}
+  - delay 5
+  - throw{velocity=20;velocityY=2} @PIR{r=25}
+  - sound{s=entity.allay.death;v=1.0;p=0.6} @self
+  - sound{s=entity.ender_dragon.growl;v=1.0;p=1.5} @self
+  - sound{s=entity.wither.spawn;v=1.0;p=0.6} @self
+
+  - runaigoalselector{goal=float} @self
+  - runaigoalselector{goal=meleeattack} @self
+  - runaitargetselector{target=players} @self
+
+  - potion{t=DAMAGE_RESISTANCE;d=1;l=1;force=true} @self
+  - setstance{stance=DARK_NORMAL} @self
+DARK_ON_SPAWN_DOPPLEGANGER_SPAWN:
+  Conditions:
+  - hasparent true
+  - mobsInRadius{types=DARK;amount=>0;radius=2.7}
+  Skills:
+  - delay 1
+  - effect:itemspray{item=ENDER_PEARL;amount=1;velocity=0.5;d=30} @self
+  - effect:itemspray{item=ENDER_EYE;amount=1;velocity=0.5;d=30} @self
+  - effect:itemspray{item=ECHO_SHARD;amount=1;velocity=0.5;d=30} @self
+  - remove @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Random Skill
+#
+DARK_RANDOM_SKILL:
+  Cooldown: 10
+  Conditions:
+  - stance DARK_SPAWN false
+  Skills:
+  - randomskill{skills=DARK_SKILL_1,DARK_SKILL_2,DARK_SKILL_3,DARK_SKILL_4,DARK_SKILL_5;fbskill=DARK_PROJECTILE} @self
+DARK_RANDOM_SKILL_HARDCORE:
+  Cooldown: 5
+  Conditions:
+  - stance DARK_SPAWN false
+  Skills:
+  - randomskill{skills=DARK_SKILL_1,DARK_SKILL_2,DARK_SKILL_3,DARK_SKILL_4,DARK_SKILL_5;fbskill=DARK_PROJECTILE} @self
+  - randomskill{skills=DARK_SKILL_1,DARK_SKILL_2,DARK_SKILL_3,DARK_SKILL_4,DARK_SKILL_5;fbskill=DARK_PROJECTILE} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Skill 1
+#
+DARK_SKILL_1:
+  Cooldown: 20
+  Conditions:
+  - stance DARK_SPAWN false
+  Skills:
+  - setstance{stance=DARK_SKILL_1} @self
+  - disguisemodify{d="setGlowing true setGlowColor DARK_PURPLE"} @self
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 20
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 20
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 20
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 20
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 20
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 20
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 5
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 5
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 5
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 5
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 5
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - delay 5
+  - sound{s=entity.wither.shoot;v=1.0;p=1.2} @self
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - effect:particlering{p=reddust;color=#700058;radius=1;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - effect:particlering{p=reddust;color=#000000;radius=1;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - - damage{amount=280;ignoreArmor=true;pk=true} @PIR{r=1}
+  - delay 10
+  - sound{s=entity.wither.shoot;v=1.0;p=1.2} @self
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - effect:particlering{p=reddust;color=#700058;radius=2;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - effect:particlering{p=reddust;color=#000000;radius=2;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - - damage{amount=280;ignoreArmor=true;pk=true} @PIR{r=2}
+  - delay 10
+  - sound{s=entity.wither.shoot;v=1.0;p=1.2} @self
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - effect:particlering{p=reddust;color=#700058;radius=3;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - effect:particlering{p=reddust;color=#000000;radius=3;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - - damage{amount=280;ignoreArmor=true;pk=true} @PIR{r=3}
+  - delay 10
+  - sound{s=entity.wither.shoot;v=1.0;p=1.2} @self
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - effect:particlering{p=reddust;color=#700058;radius=4;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - effect:particlering{p=reddust;color=#000000;radius=4;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - - damage{amount=280;ignoreArmor=true;pk=true} @PIR{r=4}
+  - delay 10
+  - sound{s=entity.wither.shoot;v=1.0;p=1.2} @self
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - effect:particlering{p=reddust;color=#700058;radius=5;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - effect:particlering{p=reddust;color=#000000;radius=5;points=32;amount=1;hS=1;vS=0;y=0.2} @self
+  - - damage{amount=280;ignoreArmor=true;pk=true} @PIR{r=5}
+  - delay 10
+  - sound{s=entity.wither.shoot;v=1.0;p=1.2} @self
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - effect:particlering{p=reddust;color=#700058;radius=6;points=64;amount=1;hS=1;vS=0;y=0.2} @self
+  - effect:particlering{p=reddust;color=#000000;radius=6;points=64;amount=1;hS=1;vS=0;y=0.2} @self
+  - - damage{amount=280;ignoreArmor=true;pk=true} @PIR{r=6}
+  - delay 10
+  - sound{s=entity.wither.shoot;v=1.0;p=1.2} @self
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self
+  - effect:particlering{p=reddust;color=#700058;radius=7;points=64;amount=1;hS=1;vS=0;y=0.2} @self
+  - effect:particlering{p=reddust;color=#000000;radius=7;points=64;amount=1;hS=1;vS=0;y=0.2} @self
+  - - damage{amount=70;ignoreArmor=true;pk=true} @PIR{r=7}
+  - disguisemodify{d="setGlowing false"} @self
+  - setstance{stance=DARK_NORMAL} @self
+#
+#
+#
+#
+#
+#
+#
+#
+CR_ELEMENT_DARK:
+  Cooldown: 2
+  Skills:
+  - delay 1
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=2;p=10}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=2}
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=2}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=3;p=15}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=3}
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=3}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=4;p=15}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=4}
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=4}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=5;p=20}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=5}
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=5}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=6;p=20}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=6}
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=6}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=7;p=25}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=7}
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=7}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=8;p=25}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=8}
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=8}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=9;p=30}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=9}
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=9}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=10;p=30}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=10}
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=10}
+  - delay 20
+  - potion{type=LEVITATION;duration=100;level=5;particles=false;icon=false;force=true} @self
+  - delay 50
+  - leap{velocity=250} @ENO{r=7}
+  - delay 15
+  - potion{type=LEVITATION;duration=15;level=1;particles=false;icon=false;force=true} @self
+  - jump{velocity=-100}
+  - delay 10
+  - throw{velocity=20;velocityY=5} @PIR{r=6}
+  - sound{s=entity.dragon_fireball.explode;v=1.0;p=0.8} @self
+  - damage{amount="<modifier.damage-throw>";ignoreArmor=true} @EIR{r=6}
+  - effect:particles{p=reddust;color=#700058;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - effect:particles{p=reddust;color=#bb00ff;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - delay 5
+  - effect:particles{p=reddust;color=#700058;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - effect:particles{p=reddust;color=#bb00ff;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+#
+#
+#
+#
+#
+#
+# Skill 2
+#
+DARK_SKILL_2:
+  Cooldown: 20
+  Conditions:
+  - stance DARK_SPAWN false
+  Skills:
+  - delay 1
+  - setstance{stance=DARK_SKILL_2} @self
+  - disguisemodify{d="setGlowing true setGlowColor DARK_PURPLE"} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=99999;level=10;particles=false;icon=false;force=true} @self
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=2;p=10}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=2}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=2}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=3;p=15}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=3}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=3}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=4;p=15}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=4}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=4}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=5;p=20}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=5}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=5}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=6;p=20}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=6}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=6}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=7;p=25}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=7}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=7}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=8;p=25}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=8}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=8}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=9;p=30}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=9}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=9}
+  - delay 8
+  - sound{s=entity.warden.attack_impact;v=1.0;p=0.2} @self
+  - playanimation{a=0;audience=World} @self
+  - effect:particles{particle=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.0} @Ring{r=10;p=30}
+  - potion{type=DARKNESS;duration=300;level=1;particles=false;icon=false;force=true} @PIR{r=10}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=10}
+  - delay 20
+  - potion{type=LEVITATION;duration=100;level=5;particles=false;icon=false;force=true} @self
+  - delay 50
+  - leap{velocity=250} @target
+  - delay 15
+  - potion{type=LEVITATION;duration=15;level=1;particles=false;icon=false;force=true} @self
+  - jump{velocity=-100}
+  - delay 10
+  - throw{velocity=20;velocityY=5} @PIR{r=6}
+  - sound{s=entity.dragon_fireball.explode;v=1.0;p=0.8} @self
+  - damage{amount=250;ignoreArmor=true} @PIR{r=6}
+  - effect:particles{p=reddust;color=#700058;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - effect:particles{p=reddust;color=#bb00ff;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - delay 5
+  - effect:particles{p=reddust;color=#700058;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - effect:particles{p=reddust;color=#bb00ff;amount=50;hS=6;vS=0.2;speed=0;y=0.2} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=1;level=1;particles=false;icon=false;force=true} @self
+  - disguisemodify{d="setGlowing false"} @self
+  - setstance{stance=DARK_NORMAL} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Skill 3
+#
+DARK_SKILL_3:
+  Cooldown: 20
+  Conditions:
+  - stance DARK_SPAWN false
+  Skills:
+  - delay 1
+  - setstance{stance=DARK_SKILL_3} @self
+  - disguisemodify{d="setGlowing true setGlowColor DARK_PURPLE"} @self
+  - potion{type=LEVITATION;duration=9999;level=3;particles=false;icon=false;force=true} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=9999;level=10;particles=false;icon=false;force=true} @self
+  - delay 200
+  - potion{type=LEVITATION;duration=1;level=1;particles=false;icon=false;force=true} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=1;level=1;particles=false;icon=false;force=true} @self
+  - disguisemodify{d="setGlowing false"} @self
+  - setstance{stance=DARK_NORMAL} @self
+DARK_SKILL_3_FLY:
+  Conditions:
+  - stance DARK_SPAWN false
+  - haspotioneffect{type=LEVITATION;level=>0;duration=>0} true
+  - altitude{h=>4} true
+  Skills:
+  - delay 1
+  - sound{s=entity.wither.ambient;v=0.6;p=1.4} @self
+  - sound{s=entity.wither.shoot;v=0.6;p=1.4} @self
+  - projectile{onTick=DARK_PROJECTILE-Tick;onEnd=DARK_PROJECTILE-End;v=8;i=1;hR=1;vR=1;sfo=0;syo=3} @RandomLocationsNearCaster{a=4;r=2;minr=1;s=1}
+  - leap{velocity=250} @target
+  - jump{velocity=-1.15}
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Skill 4
+#
+DARK_SKILL_4:
+  Cooldown: 20
+  Conditions:
+  - stance DARK_SPAWN false
+  Skills:
+  - delay 1
+  - setstance{stance=DARK_SKILL_4} @self
+  - disguisemodify{d="setGlowing true setGlowColor DARK_PURPLE"} @self
+  - effect:particleline{p=reddust;color=#700058;amount=1;fromOrigin=true;syo=1;tyo=1} @NearestPlayer{r=10}
+  - delay 10
+  - cast{skillName="DARK_SWAP";onCast=DARK_SKILL_4_EFFECT;onTick=DARK_SKILL_4_SWAP;onInterrupted=DARK_SHIELD;onNoTargets=DARK_SKILL_4_NOTARGETS;cotd=true;cb=false;i=20;d=100} @NearestPlayer{r=10}
+  - disguisemodify{d="setGlowing false"} @self
+  - setstance{stance=DARK_NORMAL} @self	
+
+DARK_SKILL_4_EFFECT:
+  Skills:
+  - delay 1
+  - effect:particles{p=reddust;color=#700058;amount=25;hS=0;vS=4;speed=0} @NearestPlayer{r=10}
+
+DARK_SKILL_4_SWAP:
+  Skills:
+  - delay 1
+  - swap @NearestPlayer{r=10}
+
+DARK_SKILL_4_NOTARGETS:
+  Skills:
+  - delay 1
+  - summon{type=DARK_DOPPLEGANGER;amount=3;radius=10;s=true} @self
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Skill 5
+#
+DARK_SKILL_5:
+  Conditions:
+  - stance DARK_SPAWN false
+  Skills:
+  - setstance{stance=DARK_SKILL_5} @self
+  - disguisemodify{d="setGlowing true setGlowColor DARK_PURPLE"} @self
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=2}
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=45}
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=90}
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=135}
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=180}
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=225}
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=270}
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=315}
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - disguisemodify{d="setGlowing false"} @self
+  - setstance{stance=DARK_NORMAL} @self
+DARK_SKILL_5-Tick:
+  Skills:
+  - effect:particles{p=SWEEP_ATTACK;amount=5;speed=0;hS=1;vS=1} @origin
+  - effect:particles{p=reddust;color=#700058;amount=5;speed=0;hS=1;vS=1} @origin
+DARK_SKILL_5-Hit:
+  Skills:
+  - damage{a=200-400;i=true}
+  - effect:itemspray{item=ENDER_PEARL;amount=1;velocity=0.5;d=30}
+  - effect:itemspray{item=ENDER_EYE;amount=1;velocity=0.5;d=30}
+  - effect:itemspray{item=ECHO_SHARD;amount=1;velocity=0.5;d=30}
+DARK_SKILL_5-End:
+  Skills:
+  - damage{a=350;i=true} @PlayersNearOrigin{r=2}
+  - effect:itemspray{item=ENDER_PEARL;amount=1;velocity=0.5;d=30} @origin
+  - effect:itemspray{item=ENDER_EYE;amount=1;velocity=0.5;d=30} @origin
+  - effect:itemspray{item=ECHO_SHARD;amount=1;velocity=0.5;d=30} @origin
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Skill Damage
+#
+DARK_DAMAGE:
+  Conditions:
+  - playerwithin 2
+  Skills:
+  - delay 1
+  - damage{amount=350;ignoreArmor=true} @target
+  - throw{velocity=3} @target
+  - sound{s=block.shulker_box.open;v=0.8;p=0.8} @self
+  - sound{s=entity.wither.break_block;v=0.4;p=0.4} @self
+  - effect:particles{p=block;m=OBSIDIAN;amount=5;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+  - effect:particles{p=PORTAL;amount=5;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+  - effect:particles{p=DRIPPING_OBSIDIAN_TEAR;amount=5;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+  - effect:particles{p=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+DARK_HEAVY_DAMAGE:
+  Conditions:
+  - playerwithin 2
+  TriggerConditions:
+  - score{objective=DARK_HEAVY;value=>10} true
+  Skills:
+  - delay 1
+  - settargetscore{objective=DARK_HEAVY;value=1} @trigger
+  - damage{amount=400;ignoreArmor=true} @target
+  - potion{type=DARK;duration=200;level=1} @target
+  - throw{velocity=3} @target
+  - sound{s=block.shulker_box.open;v=0.8;p=0.8} @self
+  - sound{s=entity.wither.break_block;v=0.4;p=0.4} @self
+  - effect:particles{p=block;m=OBSIDIAN;amount=5;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+  - effect:particles{p=PORTAL;amount=5;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+  - effect:particles{p=DRIPPING_OBSIDIAN_TEAR;amount=5;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+  - effect:particles{p=SWEEP_ATTACK;amount=2;hS=0.5;vS=0.5;speed=0;y=1.2} @target
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+# Misc Skill
+#
+DARK_PROJECTILE:
+  Conditions:
+  - stance DARK_SPAWN false
+  Skills:
+  - projectile{onTick=DARK_PROJECTILE-Tick;onHit=DARK_PROJECTILE-Hit;v=8;i=1;hR=1;vR=1;sfo=0;syo=3} @target
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.6} @self
+DARK_PROJECTILE-Tick:
+  Skills:
+  - effect:particles{p=SWEEP_ATTACK;amount=2;speed=0;hS=0;vS=0} @origin
+  - effect:particles{p=reddust;color=#700058;amount=5;speed=0;hS=0;vS=0} @origin
+DARK_PROJECTILE-Hit:
+  Skills:
+  - damage{a=200-400;i=true}
+DARK_PROJECTILE-End:
+  Skills:
+  - summon{type=DARK_DUMMY;amount=1;radius=0;s=true}
+#
+#
+#
+DARK_DUMMY_PROJECTILE:
+  Skills:
+  - projectile{onTick=DARK_PROJECTILE-Tick;onHit=DARK_PROJECTILE-Hit;v=8;i=1;hR=1;vR=1;mr=15;sfo=0;syo=1.5} @Ring{r=3;p=3}
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.6} @self
+#
+#
+#
+DARK_SHIELD:
+  Conditions:
+  - stance FIRE_SPAWN false
+  Skills:
+  - Aura{auraName=DARK_SHIELD;onTick=DARK_SHIELD_TICK;interval=45;duration=225} @self
+
+DARK_SHIELD_TICK:
+  Conditions:
+  - stance FIRE_SPAWN false
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=9999;level=10;particles=false;icon=false;force=true} @self
+  - sound{s=entity.elder_guardian.curse;v=0.2;p=1.6} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=1;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=1;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=1;y=0.5} @self
+  - throw{velocity=15;velocityY=3} @PlayersInRadius{r=1}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=1}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=0.2;p=1.6} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=2;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=2;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=2;y=0.5} @self
+  - throw{velocity=15;velocityY=3} @PlayersInRadius{r=2}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=2}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=0.2;p=1.6} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=3;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=3;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=3;y=0.5} @self
+  - throw{velocity=15;velocityY=3} @PlayersInRadius{r=3}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=3}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=0.2;p=1.6} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=4;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=4;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=4;y=0.5} @self
+  - throw{velocity=15;velocityY=3} @PlayersInRadius{r=4}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=4}
+  - delay 5
+  - sound{s=entity.elder_guardian.curse;v=0.2;p=1.6} @self
+  - effect:particlesphere{p=reddust;color=#700058;amount=25;radius=5;y=0.5} @self
+  - effect:particlesphere{particle=SWEEP_ATTACK;amount=10;radius=5;y=0.5} @self
+  - effect:particlesphere{particle=DAMAGE_INDICATOR;amount=25;radius=5;y=0.5} @self
+  - throw{velocity=15;velocityY=3} @PlayersInRadius{r=5}
+  - - damage{amount=320;ignoreArmor=true} @PIR{r=5}
+  - potion{type=DAMAGE_RESISTANCE;duration=1;level=1;particles=false;icon=false;force=true} @self
+  - delay 5
+  - skill{s=DARK_PROJECTILE} @Forward{f=25;uel=true;rot=0} ?!playerwithin{d=10} 0.5
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target ?!playerwithin{d=10} 0.5
+  - delay 10
+  - skill{s=DARK_PROJECTILE} @Forward{f=25;uel=true;rot=0} ?!playerwithin{d=10} 0.5
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target ?!playerwithin{d=10} 0.5
+  - delay 10
+  - skill{s=DARK_PROJECTILE} @Forward{f=25;uel=true;rot=0} ?!playerwithin{d=10} 0.5
+  - projectile{bulletType=MOB;mob=DARK_DOPPLEGANGER;onTick=DARK_SKILL_5-Tick;onHit=DARK_SKILL_5-Hit;v=14;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target ?!playerwithin{d=10} 0.5
+#
+#
+#
+DARK_NAME_SELECTOR:
+  Skills:
+  - randomskill{skills=D_NAME_1,D_NAME_2,D_NAME_3,D_NAME_4,D_NAME_5,D_NAME_6} @self
+D_NAME_1:
+  Skills:
+  - setname{name=<gradient:#000000:#b800ab>Raan</gradient>;delay=2} @self
+D_NAME_2:
+  Skills:
+  - setname{name=<gradient:#000000:#b800ab>Xoala</gradient>;delay=2} @self
+D_NAME_3:
+  Skills:
+  - setname{name=<gradient:#000000:#b800ab>Zaasha</gradient>;delay=2} @self
+D_NAME_4:
+  Skills:
+  - setname{name=<gradient:#000000:#b800ab>Voato</gradient>;delay=2} @self
+D_NAME_5:
+  Skills:
+  - setname{name=<gradient:#000000:#b800ab>Beivu</gradient>;delay=2} @self
+D_NAME_6:
+  Skills:
+  - setname{name=<gradient:#000000:#b800ab>Mara</gradient>;delay=2} @self

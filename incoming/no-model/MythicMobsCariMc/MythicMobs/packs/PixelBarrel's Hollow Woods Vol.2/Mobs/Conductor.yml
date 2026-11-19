@@ -1,0 +1,133 @@
+HOL2[MAIN]_Conductor:
+  Type: HUSK
+  Display: '&fConductor' #Change the name of the mob here
+  Health: 2500
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  - 2 attacker
+  AIGoalSelectors:
+  - 0 clear
+  - 1 lookatplayers
+  Skills:
+  - model{mid=the_conductor;nametag=false} @Self ~onSpawn  #Toggle nametag display here
+  - submodel{mid=the_conductor;pid=master;smid=the_conductor;spid=whale;remove=true} @Self ~onSpawn
+  - summon{type=HOL2[SYS]_Conductor-OriginMarker;amount=1;r=0;yr=3;os=true} @Self ~onSpawn
+  - modifytargetscore{objective=drama;action=set;value=0} @Self ~onSpawn
+  - remove @Children ~onDeath
+  - skill{s=Conductor_CancelMelee;sync=true} ~onAttack
+  - skill{s=Conductor_UltResistance} ~onTimer:20
+  - skill{s=Conductor_VioarSummon} ~onSpawn
+  - skill{s=Conductor_DramaMeter_Buildup} ~onTimer:20
+  - skill{s=Conductor_DramaMeter_Lift} ~onSignal:Lift
+  - skill{s=Conductor_DramaMeter_Signal} ~onTimer:20
+  - skill{s=Conductor_CoralSummon} ~onTimer:100
+  - skill{s=Conductor_FishballBarrage_Regular} ~onTimer:60
+  - skill{s=Conductor_FishballBarrage_Patterned} ~onTimer:20 0.4
+  - skill{s=Conductor_RippleMarkerSummon} ~onTimer:40 0.3
+  - skill{s=Conductor_Teleport} ~onTimer:40 0.2
+  - skill{s=Conductor_OceanRythme} ~onTimer:20
+  - randomskill{skills=Conductor_Ambient1,Conductor_Ambient2;cd=40} ~onTimer:21 0.6  #Artificial ambient sound effect
+  - sound{s=entity.polar_bear.hurt;p=0.5;v=1;cd=0.5} @SelfLocation ~onDamaged  #Artificial hurt sound effect
+  - sound{s=entity.polar_bear.death;p=0.5;v=1} @SelfLocation ~onDeath  #Artificial death sound effect
+  - skill{s=HOL2_DeathEffect} ~onDeath  #Artificial death effect
+  Options:
+    Silent: true
+    FollowRange: 36
+    MovementSpeed: 0.000000000000001
+    KnockbackResistance: 10
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+HOL2[SUB]_Conductor-Vioar:
+  Type: HUSK
+  Display: '&fVioar' #Change the name displayed here
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  - 1 gotoparent
+  Skills:
+  - model{mid=vioar;nametag=false} @Self ~onSpawn  #Toggle nametag display here
+  - modifytargetscore{objective=violin;action=subtract;value=1} @Parent ~onDeath
+  - setstance{s=Low} @Self ~onSignal:Low
+  - setstance{s=Mid} @Self ~onSignal:Mid
+  - setstance{s=High} @Self ~onSignal:High
+  - setstance{s=Rythme} @Self ~onSignal:Rythme
+  - skill{s=Vioar_Aura} ~onTimer:5
+  - skill{s=Vioar_Pulse} ~onTimer:160
+  - sound{s=pixelbarrel_hol2:violin_background;p=1;v=3} @Self ~onTimer:420
+  Options:
+    Silent: true
+    Invincible: true
+    MovementSpeed: 0.26
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+HOL2[SUB]_Conductor-BashfulCoral:
+  Type: ARMOR_STAND
+  Skills:
+  - model{mid=bashful_coral;nametag=false} @Self ~onSpawn  #Toggle nametag display here
+  - skill{s=BashfulCoral-SPAWN} ~onSpawn
+  - skill{s=BashfulCoral_Trigger;repeat=1;repeatInterval=2} ~onTimer:5
+  - skill{s=BashfulCoral_Trigger-Rythme} ~onSignal:Rythme
+  Options:
+    Marker: true
+
+HOL2[SYS]_Conductor-Ripples:
+  Type: ARMOR_STAND
+  Skills:
+  - model{mid=ripples;nametag=false} @Self ~onSpawn
+  - skill{s=Ripples-SPAWN} ~onSpawn
+  Options:
+    Marker: true
+
+HOL2[SYS]_Conductor-RipplesLite:
+  Type: ARMOR_STAND
+  Skills:
+  - model{mid=ripples;nametag=false} @Self ~onSpawn
+  - skill{s=RipplesLite-SPAWN} ~onSpawn
+  Options:
+    Marker: true
+
+HOL2[SYS]_Conductor-GrippingTeeth:
+  Type: ARMOR_STAND
+  Skills:
+  - model{mid=gripping_teeth;nametag=false} @Self ~onSpawn
+  - skill{s=GrippingTeeth-TICK} ~onTimer:20
+  - skill{s=HOL2_SelfRemove} ~onSpawn
+  Options:
+    Marker: true
+
+HOL2[SYS]_Conductor-Fishball:
+  Type: ARMOR_STAND
+  Skills:
+  - model{mid=fishball;nametag=false} @Self ~onSpawn
+
+HOL2[SYS]_Conductor-OriginMarker:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+
+HOL2[SYS]_Conductor-RippleMarkerMarker:
+  Type: ARMOR_STAND
+  Skills:
+  - summon{type=HOL2[SYS]_Conductor-Ripples;amount=1;r=4;yr=4;os=true;repeat=2;repeatInterval=8} @Self ~onSpawn
+  - sound{s=entity.wither.break_block;p=0.5;v=1;delay=40} @Self ~onSpawn
+  - summon{type=HOL2[SYS]_Conductor-GrippingTeeth;amount=1;r=0;yr=3;os=true;delay=40} @Self ~onSpawn
+  - signal{s=Lift} @Parent ~onSignal:Lift
+  - skill{s=HOL2_SelfRemove} ~onSpawn
+  Options:
+    Marker: true
+    Invisible: true
+
+# 8885TJ6C71AWBKEYR5WZL9QQ

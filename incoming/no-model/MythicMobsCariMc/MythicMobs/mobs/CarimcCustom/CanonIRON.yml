@@ -1,0 +1,37 @@
+CANONIRON_MOBS:
+  MobType: IRON_GOLEM
+  Faction: DARK
+  Health: 10
+  Damage: 1
+#  Disguise: horse Unknown setSkin alexis_machin setAddEntityAnimations true setCapeEnabled false setDynamicName true
+  Options:
+    Tameable: false
+    Tamed: true
+    Silent: true
+    Despawn: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventLeashing: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    NoAI: false
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - sound{s=entity.iron_golem.hurt;v=1.0;p=1.2} @self ~onDamaged 1
+  - sound{s=entity.iron_golem.death;v=1.0;p=1.2} @self ~onDeath 1
+  - sound{s=entity.iron_golem.step;v=1.0;p=1.2} @EIR{r=3} ~onTimer:3 1
+
+  - remove{delay=300} @self ~onSpawn
+#  - damage{a=30-40} @EIR{r=3} ~onTimer:5 1
+
+

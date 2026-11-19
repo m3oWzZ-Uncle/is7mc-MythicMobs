@@ -1,0 +1,15 @@
+{
+  "id": "animation-impact-timing",
+  "category": "patterns",
+  "title": "Đặt mốc chạm của animation cạnh mốc hitbox",
+  "topic": "animation-damage-sync",
+  "summary": "Mẫu Lục Cốt cho thấy animation và damage có các bước riêng. So sánh mốc hit, recovery và hướng sau khi đổi target khi kiểm thử.",
+  "context": "Mẫu tham khảo cho combat có animation và hitbox tách bước.",
+  "exceptions": "Mốc 18 tick thuộc YAML ví dụ. Cần đo theo animation, build và tốc độ thực tế trước khi dùng cho đòn khác.",
+  "scope": "global",
+  "claim": "INFERENCE",
+  "confidence": "INFERRED",
+  "recorded": "2026-11-13",
+  "tags": ["animation", "damage", "hitbox", "timing", "telegraph", "luc-cot"],
+  "sources": [{"type": "document", "ref": "knowledge/patterns/dong-bo-animation-damage.md", "note": "Mẫu phân tích YAML, đã parse và đối chiếu tham chiếu, chưa đo mốc chạm trong game."}]
+}

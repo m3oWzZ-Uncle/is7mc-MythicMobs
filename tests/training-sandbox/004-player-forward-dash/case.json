@@ -1,0 +1,13 @@
+{
+  "id": "004-player-forward-dash",
+  "kind": "practice",
+  "level": "basic",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "caster-only",
+    "heading-and-pitch",
+    "wall",
+    "independent-cooldown"
+  ]
+}

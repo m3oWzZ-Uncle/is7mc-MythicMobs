@@ -1,0 +1,23 @@
+{
+  "id": "anh-bo-grounded-step",
+  "category": "decisions",
+  "title": "Ảnh Bộ đi bộ ưu tiên cảm giác sát nền",
+  "topic": "dash-ground-feel",
+  "summary": "Người dùng đánh giá Ảnh Bộ r1 đúng cho cú lướt chung. Với biến thể đi bộ sát đất, người dùng đề xuất thử hạ điểm ngắm @Forward bằng y=-10 để tạo cảm giác bám sàn.",
+  "context": "Bài 02, Player Skill chuyển động ngang với thiết kế bước bộ tăng tốc trên nền.",
+  "exceptions": "Đây là tiêu chí gameplay trong bối cảnh đi bộ. y=-10 là offset điểm ngắm thử, không phải lực dọc. Kiểm tra A/B theo build và địa hình trước khi đưa vào YAML chính. Với dash ngang thông thường, dùng cấu hình không hạ điểm ngắm.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-15",
+  "answer": "test-lower-aim-for-grounded-step",
+  "requires": ["player-skill", "grounded-footwork"],
+  "tags": ["forward", "lunge", "anh-bo", "movement", "grounded-footwork"],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "feedback/decisions/MM-D-2026-003.md",
+      "note": "Người dùng phân biệt dash tổng quát và cảm giác Ảnh Bộ đi sát đất. Chưa có số liệu so sánh hai biến thể."
+    }
+  ]
+}

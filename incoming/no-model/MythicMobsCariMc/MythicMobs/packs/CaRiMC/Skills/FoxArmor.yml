@@ -1,0 +1,89 @@
+EnderSkill:
+  Skills:
+  - ender @self
+
+EnderBeamSkill:
+  Skills:
+  - effect:enderbeam{d=100;y=10} @target
+###########################################################################################################################
+CR_FoxArmorSoul:
+  Skills:
+  - spin{d=20} @self
+  - orbital{i=1;radius=20;points=128;oS=CR_FoxArmorSoulSound;oT=FoxArmorSoul;oE=CR_FoxArmorSoul_end;duration=20;oy=1} @self
+CR_FoxArmorSoulSound:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0.3;p=1} @self
+CR_FoxArmorSoul_end:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0.3;p=1} @self
+
+FoxArmorSoul:
+  Skills:
+  - projectile{oT=FoxArmorSoul_Tick;oH=FoxArmorSoul_hit;v=10;mr=20;i=1;hR=1;vR=1;hp=true;hnp=false;sE=false;sB=false;StartFOffset=3} @targetlocation
+FoxArmorSoul_Tick:
+  Skills:
+#  - sound{s=entity.shulker.shoot;v=1;sc=hostile;p=1.3}
+  - effect:particles{p=block_crack;material=ice;amount=10;hs=0} @origin
+  - effect:particles{p=snowflake;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+ # - effect:particles{p=reddust;a=200;color=#e0e5e8;y=0.5;s=1} @origin
+FoxArmorSoul_hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+  - stun{d=20}
+  - aura{d=100;i=1;onTick=[  - freeze{ticks=280} - damage{a=1;cd=2;damagecause=FREEZE} ]}
+
+
+
+
+######################################################################
+Ga:
+  Skills:
+  - potion{type=SLOW;duration=20;level=4;hasParticles=false} @self
+  - delay 15
+  - effect:particles{p=sonic_boom;amount=2;y=1.8} @self
+  - delay 7
+  - leap{velocity=120} @forward{f=-4;lockpitch=true}
+  - projectile{bulletType=TEXT;text=Gà;bulletCullingDistance=100;scale=10;onTick=ga-Tick;onHit=ga-Hit;v=12;i=1;hR=1;vR=1;mr=50;hnp=true} @targetlocation
+ga-Tick:
+  Skills:
+#  - effect:particles{p=snowballpoof;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+ga-Hit:
+  Skills:
+  - damage{a=10}
+  - potion{type=SLOW;duration=100;lvl=2}
+  - blackscreen{d=40}
+
+
+Non:
+  Skills:
+  - potion{type=SLOW;duration=20;level=4;hasParticles=false} @self
+  - delay 15
+  - effect:particles{p=sonic_boom;amount=2;y=1.8} @self
+  - delay 7
+  - leap{velocity=120} @forward{f=-4;lockpitch=true}
+  - projectile{bulletType=TEXT;text=Hơi Non;bulletCullingDistance=100;scale=10;onTick=Non-Tick;onHit=Non-Hit;v=12;i=1;hR=1;vR=1;mr=50;hnp=true} @targetlocation
+Non-Tick:
+  Skills:
+#  - effect:particles{p=snowballpoof;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+Non-Hit:
+  Skills:
+  - damage{a=10}
+  - potion{type=SLOW;duration=100;lvl=2}
+  - blackscreen{d=40}
+
+doanhbatdcem:
+  Skills:
+  - potion{type=SLOW;duration=20;level=4;hasParticles=false} @self
+  - delay 15
+  - effect:particles{p=sonic_boom;amount=2;y=1.8} @self
+  - delay 7
+  - leap{velocity=120} @forward{f=-4;lockpitch=true}
+  - projectile{bulletType=TEXT;text=Đố anh bắt được em;bulletCullingDistance=100;scale=10;backgroundcolor=0,255,78,94;onTick=doanhbatdcem-Tick;onHit=doanhbatdcem-Hit;v=12;i=1;hR=1;vR=1;mr=50;hnp=true} @targetlocation
+doanhbatdcem-Tick:
+  Skills:
+#  - effect:particles{p=snowballpoof;amount=20;speed=0;hS=0.2;vS=0.2} @origin
+doanhbatdcem-Hit:
+  Skills:
+  - damage{a=1}
+  - potion{type=SLOW;duration=100;lvl=2}
+  - blackscreen{d=40}

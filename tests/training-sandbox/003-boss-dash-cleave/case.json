@@ -1,0 +1,17 @@
+{
+  "id": "003-boss-dash-cleave",
+  "kind": "practice",
+  "level": "intermediate",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "no-early-damage",
+    "multi-target-cone",
+    "dodge-during-windup",
+    "dash-to-trigger",
+    "dodge-during-dash",
+    "blocked-dash",
+    "recovery-and-cooldown",
+    "interrupted-cast"
+  ]
+}

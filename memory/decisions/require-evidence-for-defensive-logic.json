@@ -1,0 +1,27 @@
+{
+  "id": "require-evidence-for-defensive-logic",
+  "category": "decisions",
+  "title": "Chỉ thêm bảo vệ khi có lý do cụ thể",
+  "topic": "defensive-logic",
+  "summary": "Chỉ thêm condition, variable, timer hoặc cơ chế bảo vệ khi có yêu cầu gameplay, tình huống lỗi thực tế hoặc lý do kỹ thuật đã xác minh.",
+  "context": "Quy tắc áp dụng khi thiết kế hoặc sửa MythicMobs. Hai health guard ở Dash Cleave là ví dụ người dùng chỉ ra.",
+  "exceptions": "Giữ bảo vệ có mục đích cụ thể. Nếu có lỗi đã tái hiện, bổ sung guard hẹp theo nguyên nhân.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-14",
+  "answer": "require-concrete-justification",
+  "requires": [],
+  "tags": [
+    "conditions",
+    "variables",
+    "timing"
+  ],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "feedback/corrections/MM-2026-006.md",
+      "note": "Nguyên tắc được người dùng nêu trực tiếp trong phản hồi 2."
+    }
+  ]
+}

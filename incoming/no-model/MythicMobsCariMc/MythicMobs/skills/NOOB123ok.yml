@@ -1,0 +1,1626 @@
+HEALAOE:
+  Conditions:
+  - hasaurastacks{auraName=HEALAOE_aura} castinstead HEALAOE_SKILL
+  Skills:
+  - Aura{auraName=HEALAOE_aura;interval=1;duration=5} @self
+  
+HEALAOE_T:
+  Skills:
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.4;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.4;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.2;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.2;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.8;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.8;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.6;y=0.1;sideOffset=-3.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.6;y=0.1;sideOffset=3.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.4;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.4;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.2;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.2;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.8;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.8;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.6;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.6;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.4;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.4;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.2;y=0.1;sideOffset=-4.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.2;y=0.1;sideOffset=4.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.8;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.8;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.6;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.6;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.4;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.4;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.2;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.2;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.8;y=0.1;sideOffset=-5}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.8;y=0.1;sideOffset=5}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.6;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.6;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.4;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.4;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.2;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.2;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.2;y=0.1;sideOffset=-5.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.2;y=0.1;sideOffset=5.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.4;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.4;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.6;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.6;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.8;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.8;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.2;y=0.1;sideOffset=-5}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.2;y=0.1;sideOffset=5}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.4;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.4;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.6;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.6;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.8;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.8;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.2;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.2;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.4;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.4;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.6;y=0.1;sideOffset=-4.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.6;y=0.1;sideOffset=4.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.8;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.8;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.2;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.2;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.4;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.4;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.6;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.6;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.8;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.8;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4;y=0.1;sideOffset=-3.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4;y=0.1;sideOffset=3.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.2;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.2;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.4;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.4;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.6;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.6;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.8;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.8;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.8}
+
+HEALAOE_SKILL:
+  Cooldown: 9
+#  Conditions:
+#  - hasaura{n=Divine_Punishment_ACTIVATED} false
+  Skills:
+    # - effect:sound{s=cleric_sounds:samus.summon_lantern;volume=0.7;pitch=1} @self
+#  - orbital{bulletType=MOB;mob=HEALAOE;hr=1;vr=1;hp=false;hnp=false;r=0;points=1;i=1;duration="<modifier.duration> * 20";oy=-0.3;rx=0;ry=0;rz=0;avx=0;avy=0;avz=0} @self
+  - skill{s=HEALAOE_D;repeat="<modifier.duration>";repeatinterval=20} @PIR{r=6}
+  - skill{s=HEALAOE_A;repeat="<modifier.duration>";repeatinterval=20} @EIR{r=6}
+  - potion{type=DAMAGE_RESISTANCE;duration="<modifier.duration> * 20";level=1;hasParticles=false} @self
+  - potion{type=absorption;duration="<modifier.duration> * 20";level=1;hasParticles=false} @self
+  - potion{type=regeneration;duration="<modifier.duration> * 20";level=1;hasParticles=false} @self
+
+  - skill{s=HEALAOE_T;repeat="<modifier.duration> * 4";repeati=5} @Forward{f=0;y=0;sideOffset=0;lockpitch=true}
+  
+  - delay 20
+  
+   #  - effect:sound{s=cleric_sounds:samus.lantern_aura;volume=0.4;pitch=1;repeat="<modifier.duration> * 0.3";repeatinterval=40} @self
+  
+
+HEALAOE_D:
+  TargetConditions:
+  - mmoCanTarget{interaction=SUPPORT_ACTION} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=40;level=1;hasParticles=false}
+  - potion{type=absorption;duration=40;level=1;hasParticles=false}
+  - potion{type=regeneration;duration=40;level=1;hasParticles=false}
+
+HEALAOE_A:
+  TargetConditions:
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - potion{type=WEAKNESS;duration=40;level=1;hasParticles=false}
+
+
+
+
+Kurama_Skill:
+  Skills:
+  - potion{type=SLOWNESS;duration=10;level=0} @self
+  - effect:particlering{p=reddust;a=70;color=#590261;y=0.5;s=1;points=16;radius=4} @self
+  - delay 10
+  - potion{type=SLOWNESS;duration=10;level=1} @self
+  - effect:particlering{p=reddust;a=70;color=#590261;y=0.5;s=1;points=16;radius=3} @self
+  - delay 10
+  - potion{type=SLOWNESS;duration=5;level=2} @self
+  - effect:particlering{p=reddust;a=70;color=#590261;y=0.5;s=1;points=16;radius=2} @self
+  - delay 5
+  - potion{type=SLOWNESS;duration=5;level=3} @self
+  - effect:particlering{p=reddust;a=70;color=#31013d;y=0.5;s=1;points=16;radius=1} @self
+  - delay 5
+  - potion{type=SPEED;duration=2;level=10} @self
+  - skill{skill=Kurama} @self
+
+Kurama:
+  cooldown: 1
+  Skills:
+  - projectile{oT=Kurama_Tick;oH=Kurama_Hit;oE=Kurama_end;i=1;mr=30;v=10;syo=0;sfo=3;sso=0;sE=True;hR=2.25;vR=2.25;hnp=true;sB=false} @targetlocation
+
+Kurama_Tick:
+  Skills:
+  - effect:particlesphere{p=reddust;a=70;color=#590261;y=0.5;s=1;r=2} @origin
+  - effect:particlesphere{p=reddust;a=70;color=#31013d;y=0.5;s=1;r=2} @origin
+  - effect:particles{p=reddust;a=70;color=#17022e;y=0.5;s=1;r=2} @origin
+  - sound{s=block.amethyst_cluster.hit;v=2;p=2} @origin
+Kurama_Hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+Kurama_end:
+  Skills:
+  - throw{velocity=15;velocityY=15} @ENO{r=4}
+  - damage{a="<modifier.damage-end>";i=true} @ENO{r=4}
+  - sound{s=block.amethyst_cluster.hit;v=2;p=2} @self
+  - effect:particlesphere{p=reddust;a=70;color=#590261;y=0.5;s=1;r=1} @origin
+  - explode @origin
+  - delay 3
+  - effect:particlesphere{p=reddust;a=70;color=#590261;y=0.5;s=1;r=2} @origin
+  - delay 3
+  - effect:particlesphere{p=reddust;a=70;color=#590261;y=0.5;s=1;r=3} @origin
+  - delay 3
+  - effect:particlesphere{p=reddust;a=70;color=#590261;y=0.5;s=1;r=4} @origin
+BUNNY_JUMPHAHA:
+  Cooldown: 1
+  Skills:
+  - skill{s=BUNNY_JUMPHAHAtick;repeat=12;repeatInterval=1}
+  - leap{velocity=250} @forward{f=2;y=3;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - delay 20
+  - leap{velocity=400} @forward{f=4;y=-5;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - skill{s=BUNNY_JUMPHAHAtickTW;repeat=12;repeatInterval=1}
+  - delay 10
+  - skill{s=BUNNY_JUMPHAHAPushBack} @self
+
+BUNNY_JUMPHAHAtick:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#ff9494;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ffd294;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ffff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#e0ff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#a3ff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ffbb;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ffe2;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ddff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94b8ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#9494ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#c094ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#da94ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ff94e7;amount=1;radius=1} @self
+  - damage{a="<modifier.damagetick>";i=true} @EIR{r=2}
+
+
+
+
+
+
+
+
+KR_sword:
+  Skills:
+  - projectile{bullettype=MOB;mob=KR_NHA_KHUYEN;onstart=KR_sword_start;oT=KR_sword_tick;oH=KR_sword_Hit;i=1;v=9;mr=12;g=0.3;vO=0.6;hs=true;hnp=true;sB=false} @Forward{f=25;so=-17;yoffset=1;uel=true}
+  - projectile{bullettype=MOB;mob=KR_NHA_KHUYEN;onstart=KR_sword_start2;oT=KR_sword_tick;oH=KR_sword_Hit;i=1;v=9;mr=12;g=0.3;vO=0.6;hs=true;hnp=true;sB=false} @Forward{f=25;so=17;yoffset=1;uel=true}
+
+#  - projectile{bullettype=MOB;mob=KR_NHA_KHUYEN;onstart=KR_sword_start;oT=KR_sword_tick;oH=KR_sword_Hit;i=1;v=9;mr=8;g=0.3;vO=0.6;sB=false} @Forward{f=25;so=-17;yoffset=1;uel=true}
+#  - projectile{bullettype=MOB;mob=KR_NHA_KHUYEN;onstart=KR_sword_start2;oT=KR_sword_tick;oH=KR_sword_Hit;i=1;v=9;mr=8;g=0.3;vO=0.6;sB=false} @Forward{f=25;so=17;yoffset=1;uel=true}
+KR_sword_start:
+  Skills:
+  - delay 2
+  - skill{s=KR_sword_DRIFF-driftright;repeat=10;repeatInterval=2}
+  - delay 30
+  - skill{s=KR_sword_DRIFF-driftleft;repeat=50;repeatInterval=2}
+
+KR_sword_DRIFF-driftright:
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=0.05;vy=0;vz=0} 
+
+
+
+
+
+KR_TSword_X3:
+  Skills:
+  - projectile{onstart=KR_Tsword_start;oT=KR_Tsword_tick;oH=KR_Tsword_Hit;i=1;v=7;mr=40;hs=false;hnp=true;sB=false} @Forward{f=25;yoffset=1;uel=true}
+  - projectile{onstart=KR_Tsword_start_X3_1;oT=KR_Tsword_tick;oH=KR_Tsword_Hit;i=1;v=7;mr=40;hs=false;hnp=true;sB=false} @Forward{f=25;so=-17;yoffset=1;uel=true}
+  - projectile{onstart=KR_Tsword_start_X3_2;oT=KR_Tsword_tick;oH=KR_Tsword_Hit;i=1;v=7;mr=40;hs=false;hnp=true;sB=false} @Forward{f=25;so=17;yoffset=1;uel=true}
+KR_TSword:
+  Skills:
+  - projectile{onstart=KR_Tsword_start;oT=KR_Tsword_tick;oH=KR_Tsword_Hit;i=1;v=7;mr=40;hs=false;hnp=true;sB=false} @Forward{f=25;yoffset=1;uel=true}
+
+KR_Tsword_start:
+  Skills:
+  - delay 2
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=2;repeatInterval=1}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+
+KR_Tsword_start_X3_1:
+  Skills:
+  - delay 2
+  - skill{s=KR_Tsword_DRIFF-driftright;repeat=10;repeatInterval=2}
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=2;repeatInterval=1}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - skill{s=KR_Tsword_DRIFF-driftleft;repeat=50;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+
+KR_Tsword_start_X3_2:
+  Skills:
+  - delay 2
+  - skill{s=KR_sword_DRIFF-driftleft;repeat=10;repeatInterval=2}
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=2;repeatInterval=1}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - skill{s=KR_Tsword_DRIFF-driftright;repeat=50;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftUp;repeat=6;repeatInterval=2}
+  - delay 20
+  - skill{s=KR_Tsword_DRIFF-driftDown;repeat=6;repeatInterval=2}
+
+KR_Tsword_DRIFF-driftUp:
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=0;vy=0.05;vz=0}
+
+
+KR_Tsword_DRIFF-driftDown:
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=0;vy=-0.05;vz=0}
+
+KR_Tsword_DRIFF-driftleft: 
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=-0.05;vy=0;vz=0}
+
+KR_Tsword_DRIFF-driftright:
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=0.05;vy=0;vz=0} 
+
+KR_Tsword_tick:
+  Skills:
+  - effect:particles{p=reddust;a=20;color=#17022e;y=0.5;s=1;r=2;y=-0.7} @origin
+KR_Tsword_Hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+  - damage{a="<modifier.damage-radius>";i=true} @ENO{r=4}
+  - potion{type=BLINDNESS;level=10;duration=40}
+  - effect:particlesphere{p=reddust;a=70;color=#590261;s=1;r=1} @origin
+  - delay 3
+  - effect:particlesphere{p=reddust;a=70;color=#590261;s=1;r=2} @origin
+  - delay 3
+  - effect:particlesphere{p=reddust;a=70;color=#590261;s=1;r=3} @origin
+  - delay 3
+  - effect:particlesphere{p=reddust;a=70;color=#590261;s=1;r=4} @origin
+
+
+
+KR_sword_start2:
+  Skills:
+  - delay 2
+  - skill{s=KR_sword_DRIFF-driftleft;repeat=10;repeatInterval=2}
+  - delay 30
+  - skill{s=KR_sword_DRIFF-driftright;repeat=50;repeatInterval=2}
+
+KR_sword_DRIFF-driftleft:
+  Skills:
+  - projectileVelocity{m=ADD;relative=true;vx=-0.05;vy=0;vz=0}
+
+KR_sword_tick:
+  Skills:
+  - effect:particles{p=reddust;a=20;color=#17022e;y=0.5;s=1;r=2;y=-0.7} @origin
+KR_sword_Hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+  - potion{type=BLINDNESS;level=10;duration=40}
+  - effect:particlesphere{p=reddust;a=70;color=#590261;s=1;r=1} @origin
+  - delay 3
+  - effect:particlesphere{p=reddust;a=70;color=#590261;s=1;r=2} @origin
+  - delay 3
+  - effect:particlesphere{p=reddust;a=70;color=#590261;s=1;r=3} @origin
+  - delay 3
+  - effect:particlesphere{p=reddust;a=70;color=#590261;s=1;r=4} @origin
+
+
+
+
+
+
+
+
+
+
+
+
+
+BUNNY_JUMPHAHAtickTW:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#ff9494;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ffd294;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ffff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#e0ff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#a3ff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ffbb;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ffe2;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ddff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94b8ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#9494ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#c094ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#da94ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ff94e7;amount=1;radius=1} @self
+
+BUNNY_JUMPHAHAPushBack:
+  Skills:
+  - effect:particlering{p=reddust;color=#ff9494;radius=1;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=RED_WOOL;r=1;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#ffff94;radius=2;points=15;amount=30;hS=1;vS=21} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=YELLOW_WOOL;r=2;d=2} @self
+  - throw{velocity="<modifier.velocity>";velocityY="<modifier.velocity-Y>"} @EIR{r=8}
+  - damage{a="<modifier.damage>";ignoreArmor=false} @EIR{r=8}
+  - delay 2
+  - effect:particlering{p=reddust;color=#a3ff94;radius=3;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=LIME_WOOL;r=3;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#94ffe2;radius=4;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=LIGHT_BLUE_WOOL;r=4;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#c094ff;radius=5;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=PINK_WOOL;r=5;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#da94ff;radius=6;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=MAGENTA_WOOL;r=6;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#ff94e7;radius=7;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=PURPLE_WOOL;r=7;d=100} @self
+  - effect:particlesphere{p=wax_off;r=0.1;a=1;hs=0.2;vs=0.06;s=0.05} @origin
+  - delay 2
+  - effect:particlering{p=reddust;color=#da94ff;radius=6;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=MAGENTA_WOOL;r=6;d=98} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#c094ff;radius=5;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=PINK_WOOL;r=5;d=96} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#94ffe2;radius=4;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=LIGHT_BLUE_WOOL;r=4;d=94} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#a3ff94;radius=3;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=LIME_WOOL;r=3;d=92} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#ffff94;radius=2;points=15;amount=30;hS=1;vS=21} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=YELLOW_WOOL;r=2;d=90} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#ff9494;radius=1;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=RED_WOOL;r=1;d=288} @self
+
+
+
+
+
+##########################################################
+
+HOAKYLAN_SKILL:
+  Skills:
+  - sound{s=block.lava.extinguish;v=1.0;p=1.2} @self
+  - projectile{bulletType=MOB;mob=HOAKYLAN_MOBS;onTick=HOAKYLAN_SKILL-Tick;onHit=HOAKYLAN_SKILL-Hit;v="<modifier.speed>";i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr="<modifier.range>";hs=true;hfs=0.9} @Forward{f=25;rot=2}
+HOAKYLAN_SKILL-Tick:
+  Skills:
+#  - sound{s=entity.horse.gallop;v=1.0;p=1.2} @origin
+  - sound{s=block.lava.extinguish;v=1.0;p=2} @origin
+  - effect:particles{p=flame;amount=2;speed=0;hS=1;vS=1} @origin
+  - effect:particles{p=small_flame;amount=2;speed=0.2;hS=1;vS=1} @origin
+  - effect:blockmask{m=MAGMA_BLOCK;r=3;d=60} @origin
+HOAKYLAN_SKILL-Hit:
+  Skills:
+  - damage{a="<modifier.damage>"}
+  - ignite{t=110}
+  - effect:itemspray{item=MAGMA;amount=5;velocity=0.5;d=30}
+  - effect:particles{p=flame;amount=2;speed=0;hS=1;vS=1}
+  - effect:particles{p=small_flame;amount=2;speed=0.2;hS=1;vS=1}
+  - sound{s=block.lava.extinguish;v=1.0;p=1.2}
+HOAKYLAN_SKILL-End:
+  Skills:
+  - damage{a="<modifier.damage>"} @EIR{r=3}
+  - ignite{t=110}
+  - effect:itemspray{item=MAGMA;amount=5;velocity=0.5;d=30} @origin
+  - effect:particles{p=flame;amount=2;speed=0;hS=1;vS=1} @origin
+  - effect:particles{p=small_flame;amount=2;speed=0.2;hS=1;vS=1} @origin
+  - sound{s=block.lava.extinguish;v=1.0;p=1.2}
+##########################################################################
+
+HACNGUYETANH_SKILL:
+  Skills:
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=-1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=-0.5} @ring{r=1}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=0} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=0.5} @ring{r=1}
+  - sound{s=entity.breeze.idle_ground;v=1.0;p=1.2} @self
+  - potion{type=SPEED;duration=160;lvl=2} @self
+  - potion{type=INVISIBLE;duration=160;lvl=100} @self
+  - potion{type=STRENGTH;duration=160;lvl=2} @self
+  - skill{s=HACNGUYETANH_SKILL_tick;repeat=80;repeatInterval=2}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=1.5} @ring{r=1}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=2} @ring{r=1}
+  - delay 156
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=-1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=-0.5} @ring{r=1}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=0} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=0.5} @ring{r=1}
+  - sound{s=entity.breeze.idle_ground;v=1.0;p=1.2} @self
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=1.5} @ring{r=1}
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=2} @ring{r=1}
+  
+HACNGUYETANH_SKILL_tick:
+  Skills:
+  - effect:particles{p=cloud;a=1-5;y=1;hs=0.3;vs=0.3;s=0.1} @self
+  - effect:particles{p=reddust;a=5-10;color=#000000;y=1;hs=0.8;vs=0.8;s=0.8;size=2} @self
+#########################################################################################################################################
+
+VOANHVUC_SKILLS:
+  Skills:
+  - effect:particles{p=reddust;color=#ff4343;amount=10;y=2} @ring{r=1}
+  - healpercent{m=-0.2} @Self
+  - command{c="ml tempstat add %player_name% CRITICAL_STRIKE_CHANCE 100 200"} @self
+  - command{c="ml tempstat add %player_name% CRITICAL_STRIKE_POWER 200 200"} @self
+
+
+DARK_SKILL_4_SWAP:
+  Skills:
+  - delay 1
+  - swap @target
+  - delay 5
+  - swap @target
+  - delay 5
+  - swap @target
+
+VOANHVUC_XSKILL:
+  Skills:
+  - summon{type=VUANHVUC_MOBS;amount=1} @ring{radius=8;points=4}
+
+VOANHVUC_XSKILL_2:
+  Skills:
+  - leap{velocity=800} @targetlocation
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - skill{s=VOANHVUC_XSKILL_2tick;repeat=7;repeatInterval=1}
+  - delay 5
+  - skill{s=VOANHVUC_XSKILL_2tickT} @self
+  
+VOANHVUC_XSKILL_2tick:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#2c2a15;amount=40;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ffeb57;amount=40;radius=1} @self
+  - damage{a=30;i=true} @EIR{r=2}
+  - velocity{m=add;x=0;y=-1;z=0} @self
+
+VOANHVUC_XSKILL_2tickT:
+  Skills:
+  - delay 2
+  - setAI{ai=false} @self
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=9} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=10} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=11} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=12} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=13} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=14} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=15} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=16} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=17} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=18} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=19} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=20} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=21} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=22} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=23} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=24} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=25} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=26} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=27} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=28} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=29} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=30} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=31} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=32} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=33} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=34} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=35} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=36} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=37} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=38} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=39} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=40} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=41} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=42} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=43} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=44} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=45} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=46} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=47} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=48} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=49} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=40} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=41} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=42} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=43} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=44} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=45} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=46} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=47} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=48} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=49} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=50} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=51} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=52} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=53} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=54} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=55} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=56} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=57} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=58} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=59} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=60} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=61} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=62} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=63} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=62} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=63} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=64} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=65} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=66} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=67} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=66} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=67} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=68} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=69} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=70} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=71} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=73} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=74} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=75} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=76} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=77} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=78} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=79} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=80} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=81} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=82} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=83} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=84} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=85} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=86} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=88} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=89} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=90} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=91} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=92} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=93} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=94} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=95} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=96} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=97} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=99} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=100} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=101} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=102} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=103} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=104} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=105} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=106} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=107} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=108} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=109} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=110} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=111} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=112} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=113} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=114} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=115} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=116} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=117} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=118} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=119} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=120} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=121} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=122} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=123} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=124} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=125} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=126} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=127} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=128} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=129} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=130} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=131} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=132} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=133} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=134 @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=135} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=136} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=137} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=138} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=139} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=140} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=141} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=142} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=143} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=144} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=145} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=146} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=147} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=148} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=149} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=150} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=151} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=152} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=153} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=154} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=155} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=156} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=157} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=158} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=159} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=160} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=161} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=162} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=163} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=164} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=165} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=166} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=167} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=168} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=169} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=170} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=171} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=172} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=173} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=174} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=175} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=176} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=177} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=178} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=179} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=180} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=181} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=182} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=183} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=184} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=185} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=186} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=187} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=188} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=189} @Forward{f=5}
+  - sound{s=entity.wither.shoot;v=1;p=1.3;repeat=2;repeatInterval=1} @self
+  - delay 2
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=189} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=188} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=187} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=186} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=185} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=184} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=183} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=182} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=181} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=180} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=179} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=178} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=177} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=176} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=175} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=174} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=173} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=172} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=171} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=170} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=169} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=168} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=167} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=166} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=165} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=164} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=163} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=162} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=161} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=160} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=159} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=158} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=157} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=156} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=155} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=154} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=153} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=152} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=151} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=150} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=149} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=148} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=147} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=146} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=145} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=144} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=143} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=142} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=141} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=140} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=139} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=137} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=136} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=135} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=134} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=133} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=132} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=131} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=130} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=129} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=128} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=127} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=126} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=125} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=124} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=123} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=122} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=121} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=120} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=119} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=118} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=117} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=116} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=115} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=114} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=113} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=112} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=111} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=110} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=109} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=108} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=107} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=106} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=105} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=104} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=103} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=102} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=101} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=100} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=99} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=98} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=97} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=96} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=95} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=94} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=93} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=92} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=91} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=90} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=89} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=88} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=87} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=86} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=85} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=84} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=83} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=82} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=83} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=82} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=81} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=80} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=79} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=78} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=77} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=76} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=75} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=74} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=73} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=72} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=71} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=70} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=69} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=68} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=67} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=66} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.2;hO=65} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=64} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=63} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=62} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=61} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=60} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=59} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=58} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=57} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=56} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=55} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=54} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=53} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=52} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=51} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=50} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=49} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=48} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=47} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=46} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=45} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=44} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=43} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=42} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.21;hO=41} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=40} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=39} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=38} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=37} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=36} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=35} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=34} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=33} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=32} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=31} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=30} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=29} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=28} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=27} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=26} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=25} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=24} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=23} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=22} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=21} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=20} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=19} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=18} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.22;hO=17} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=16} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=15} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=14} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=13} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=12} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=11} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=10} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=9} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=8} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=7} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=6} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=5} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=4} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=3} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=2} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=1} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=0} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-1} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-2} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-3} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-4} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-5} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-5} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-6} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-7} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-8} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-9} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-10} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-11} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-12} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-13} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-14} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-15} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-16} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-17} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-18} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-19} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-20} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-21} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-22} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-23} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-24} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-25} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-26} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-27} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-28} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-29} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.23;hO=-30} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-31} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-32} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-33} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-34} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-35} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-36} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-37} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-38} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-39} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-40} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-41} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-42} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-43} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-44} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-45} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-46} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-47} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-48} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-49} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-50} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-51} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-52} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-53} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-54} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-56} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-57} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-57} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-58} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-59} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-61} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-62} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-63} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-64} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-65} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-66} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-67} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-68} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-69} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-70} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-71} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-72} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-73} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-74} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-75} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-74} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-73} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-72} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-71} @Forward{f=5}
+  - delay 1
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-72} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-73} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-74} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-75} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-76} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-77} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-78} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-79} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-80} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-81} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-82} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-83} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-84} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-85} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-86} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-87} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-88} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-89} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-90} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-91} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-92} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-93} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-94} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-95} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-96} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-97} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-98} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-99} @Forward{f=5}
+  - projectile{oT=ClawsSlashT;oH=ClawsSlashH;oE=ClawsSlashE;i=1;v=40;;hR=1;vR=1;mr=7;syo=1;sso=0;sfo=0;sE=false;vO=0.24;hO=-100} @Forward{f=5}
+  - sound{s=entity.wither.shoot;v=1;p=1.3;repeat=2;repeatInterval=1} @self
+  - setAI{ai=true} @self
+  
+ClawsSlashT:
+  Skills:
+  - effect:particles{p=reddust;color=#ffeb57;a=1;vs=0;hs=0}
+  - effect:particles{p=reddust;color=#2c2a15;a=1;vs=0;hs=0}
+
+
+ClawsSlashH:
+  Skills:
+  - damage{a="<modifier.damage>"}
+  - throw{velocity="<modifier.velocity>";velocityY="<modifier.velocity-Y>"} 
+  - potion{type=SLOW;duration=60;level=1;p=false}
+
+ClawsSlashE:
+  Skills:
+  - effect:particles{p=reddust;color=#ffeb57;a=1;vs=0.5;hs=0.5;speed=0;size=1.5}
+  - effect:particles{p=reddust;color=#2c2a15;a=1;vs=0.5;hs=0.5;speed=0;size=1.5}
+
+
+################################################################################
+
+LightSpikes:
+  Skills:
+  - potion{type=SLOW;duration=40;level=3} @self
+  - delay 5
+  - jump{v=1.5} @self
+  - delay 10
+  - effect:particlesphere{p=end_rod;a=50;r=5;size=1.5;y=0.5} @self
+  - effect:particlesphere{p=reddust;a=50;r=5;color=#ffef46;size=1.5;y=0.5} @self
+  - sound{s=item.totem.use;v=0.4;p=2} @EIR{r=40}
+  - delay 2
+  - effect:particlesphere{p=end_rod;a=50;r=5;size=1.5;y=0.5} @self
+  - effect:particlesphere{p=reddust;a=50;r=4;color=#ffef46;size=1.5;y=0.5} @self
+  - sound{s=item.totem.use;v=0.4;p=2} @EIR{r=40}
+  - delay 2
+  - effect:particlesphere{p=end_rod;a=50;r=5;size=1.5;y=0.5} @self
+  - effect:particlesphere{p=reddust;a=50;r=3;color=#ffef46;size=1.5;y=0.5} @self
+  - sound{s=item.totem.use;v=0.4;p=2} @EIR{r=40}
+  - delay 2
+  - effect:particlesphere{p=end_rod;a=50;r=5;size=1.5;y=0.5} @self
+  - effect:particlesphere{p=reddust;a=50;r=2;color=#ffef46;size=1.5;y=0.5} @self
+  - sound{s=item.totem.use;v=0.4;p=2} @EIR{r=40}
+  - delay 2
+  - effect:particlesphere{p=end_rod;a=50;r=1;size=1.5;y=0.5;repeat=5;repeatInterval=1} @self
+  - effect:particlesphere{p=reddust;a=50;r=1;color=#ffef46;size=1.5;y=0.5;repeat=5;repeatInterval=1} @self
+  - delay 2
+  - skill{s=LightSpikesEx}
+  - delay 3
+  - jump{v=-1.5} @self
+  - delay 10
+  - skill{s=LightSpikesEx2}
+  - delay 5
+
+
+
+
+
+LightSpikesEx:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0.3;p=0.4} @EIR{r=100}
+  - projectile{oT=LSexT;oH=LSexH;oE=LSexE;i=1;mr=20;v=30;syo=1;sfo=0;sso=0;sE=false} @Cone{angle=360;points=120;range=50} 
+LSexT: 
+  Skills:
+  - effect:particles{p=end_rod;a=1;vs=0.1;hs=0.1}
+  - effect:particles{p=reddust;a=1;color=#ffef46;vs=0.1;hs=0.1}
+LSexH:
+  Skills:
+  - damage{a="<modifier.damage>"}
+#  - damage{a=5;i=true}
+ 
+
+LightSpikesEx2:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0.3;p=0.4} @EIR{r=100}
+  - projectile{oT=LSexT2;oH=LSexH2;oE=LSexE2;i=1;mr=20;v=20;syo=0;sfo=0;sso=0;sE=false} @Ring{radius=360;points=36}
+  - damage{a="<modifier.damage>"} @EIR{r=15}
+  
+LSexT2:
+  Skills:
+  - effect:particles{p=end_rod;a=1;vs=0.1;hs=0.1}
+  - effect:particles{p=reddust;a=1;color=#ffef46;vs=0.1;hs=0.1}
+LSexH2:
+  Skills:
+  - damage{a="<modifier.damage>"}
+#  - damage{a=15}
+
+THANHVUC_SKILL:
+  Skills:
+  - summon{type=THANHVUC_MOBS;amount=1} @targetlocation
+
+THANHVUC:
+  Skills:
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=10;points=128}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=9;points=128}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=8;points=128}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=7;points=128}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=6;points=128}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=5;points=128}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=4;points=128}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=3;points=64}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=2;points=32}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=1;points=16}
+  - delay 2
+  - effect:particles{p=reddust;color=#ffeb57;a=10;vs=0;hs=0} @Ring{radius=0.2;points=4}
+  - delay 5
+  - skill{s=ThrowUltimateSpiritBomb} @self
+ThrowUltimateSpiritBomb:
+  Conditions:
+#  - incombat true
+#  - stance{stance=DistanceOver10}
+  Skills:
+  - projectile{onTick=UltimateSpiritBomb-Tick;onEnd=UltimateSpiritBomb-End;v=5;i=1;hR=1;vR=1;g=0.1;hp=false;syo=20} @self #@targetlocation
+#  - delay 20
+#  - projectile{onTick=UltimateSpiritBomb-Tick;onEnd=UltimateSpiritBomb-End;v=5;i=1;hR=1;vR=1;g=0.1;hp=false;syo=20} @self
+#  - delay 20
+#  - projectile{onTick=UltimateSpiritBomb-Tick;onEnd=UltimateSpiritBomb-End;v=5;i=1;hR=1;vR=1;g=0.1;hp=false;syo=20} @self
+#  - delay 20
+#  - damage{a="<modifier.damage>"} @EIR{r=11}
+UltimateSpiritBomb-Tick:
+  Skills:
+  - effect:particlesphere{p=hugeexplosion;amount=3;radius=3;yOffset=2} @origin
+#  - effect:particlesphere{particle=end_rod;amount=50;radius=10;yOffset=2} @origin
+#  - effect:particlesphere{p=reddust;color=#ffeb57;a=50;radius=10;yOffset=2} @origin
+  - effect:particles{particle=end_rod;amount=10;radius=10;yOffset=2} @Ring{radius=10;points=128}
+  - effect:blockmask{m=barrier;r=3;d=40} @origin
+UltimateSpiritBomb-End:
+  Skills:
+  - effect:particlesphere{p=hugeexplosion;amount=10;hSpread=4;vSpread=2;speed=2;yOffset=0} @origin
+  - effect:blockmask{m=barrier;r=6;d=40} @origin
+  - effect:explosion @origin
+  - delay 1
+  - effect:explosion @origin
+  - delay 1
+  - effect:explosion @origin
+  - delay 1
+  - effect:explosion @origin
+  - delay 1
+  - effect:explosion @origin
+  - damage{a=30-60} @EIR{r=11}
+  
+
+#######################################################################################################################
+
+LArctic_Charge:
+  # Conditions:
+  # - onground true
+  Skills:
+  - Aura{auraName=LArctic_Charge;duration=30} @self
+  - potion{type=SLOW;duration=8;level=55;hasParticles=false} @self
+  - effect:sound{s=block.beacon.activate;volume=1.5;pitch=0.6} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=8.5;amount=400} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=8;amount=360;delay=1} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=7.5;amount=340;delay=2} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=7;amount=280;delay=3} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=6;amount=240;delay=4} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=5;amount=200;delay=5} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=4;amount=160;delay=6} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=3;amount=120;delay=7} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=2;amount=80;delay=8} @self
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=1;amount=40;delay=9} @self
+  - effect:sound{s=entity.ender_dragon.growl;volume=0.8;pitch=0.7;delay=2} @self
+  - effect:sound{s=entity.skeleton_horse.death;volume=0.7;pitch=0.5;delay=3} @self
+
+  - delay 15
+  
+  - totem{md=60;oT=LArctic_Charge_Path_FX;oH=LArctic_Charge_Path_SLOW2;hnp=true;hp=true;hR=1.2;vR=0.6;i=10;repeat=6;repeati=3} @self{y=-0.1}
+  - effect:sound{s=entity.wither.shoot;volume=0.45;pitch=0.5} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.45;pitch=0.5;delay=5} @self
+  - effect:sound{s=entity.ender_dragon.growl;volume=0.8;pitch=0.7;delay=2} @self
+  - effect:sound{s=entity.skeleton_horse.death;volume=0.7;pitch=0.5;delay=3} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.45;pitch=0.5;delay=10} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.45;pitch=0.5;delay=15} @self
+  - onDamaged{auraName=landresist2;d=20;cE=true} @self
+  - lunge{velocity=1;velocityY=0.02;repeat=20;repeatinterval=1} @forward{f=12;y=0.05;lockpitch=true}
+  - effect:particles{particle=redstone;color=#0d4d2a;amount=50;hS=0.6;vS=0.6;y=0.8;speed=0;forwardOffset=0;sideOffset=0;repeat=9;repeati=2} @forward{f=-1;y=0}
+  - delay 2
+  - orbital{bulletType=MOB;mob=LARC_MOBS;hr=1;vr=1;hp=false;hnp=false;r=0;points=1;i=1;duration=30;oy=1.35;rx=0;ry=0;rz=0;avx=0;avy=0;avz=0} @self
+  - totem{md=2;c=1;oH=LArctic_Charge_HIT_D;hnp=true;hp=true;hR=2;vR=1;i=1;repeat=9;repeatinterval=2} @forward{f=1;lockpitch=true}
+  - delay 20
+  - skill{s=LArctic_jump} @self
+LArctic_Charge_Path_FX:
+  Skills:
+  - effect:particles{particle=redstone;color=#94ffa9;amount=50;hS=1.5;vS=0.15;y=-1.2;speed=0;forwardOffset=0;sideOffset=0}
+  
+LArctic_Charge_Path_SLOW2:
+  Skills:
+  - skill{s=LArctic_Charge_Path_SLOW} @EntitiesNearOrigin{r=3}
+  
+LArctic_Charge_Path_SLOW:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  - hasaura{n=LArctic_Charge_HIT2} false
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - Aura{auraName=LArctic_Charge_HIT2;duration=10}
+  - effect:particles{particle=redstone;color=#8affa6;amount=15;hS=0.35;vS=0.15;y=-1.5;speed=0;forwardOffset=0;sideOffset=0;repeat=11;repeatinterval=5}
+  - potion{type=POISON;duration=60;level=1;hasParticles=false}
+  - damage{a="<modifier.damage> * 0.2";pkb=true;hnp=true;hp=true;delay=1}
+  - skill{s=Frost_Strike_FROSTBITE}
+  
+LArctic_Charge_HIT_D:
+  Skills:
+  - skill{s=LArctic_Charge_HIT} @EntitiesNearOrigin{r=4}
+  
+LArctic_Charge_HIT:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  - hasaura{n=LArctic_Charge_HIT} false
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - Aura{auraName=LArctic_Charge_HIT;duration=4}
+  - damage{a="<modifier.damage>";pkb=true;hnp=true;hp=true;delay=1}
+  - skill{s=LFrost_Strike_FROSTBITE}
+  - throw{velocity=-10;velocityY=6}
+
+LFrost_Strike_FROSTBITE:
+  TargetConditions:
+  - hasaura{n=Frostbite_HAS} false
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - Aura{auraName=Frostbite_HAS;duration=80}
+  - orbital{bulletType=MOB;mob=LARC_MOBS;hr=1;vr=1;hp=false;hnp=false;r=0;points=1;i=1;duration=80;oy=2;rx=0;ry=0;rz=0;avx=0;avy=0;avz=0}
+  - potion{type=POISON;duration=80;level=1;hasParticles=false}
+  - damage{a="<modifier.damage> * 0.2";pkb=true;hnp=true;hp=true;repeat=3;repeati=20}
+
+
+
+
+
+
+LFrost_Strike:
+  # Conditions:
+  # - crouching false
+  Skills:
+  - skill{s=LFrost_Strike_1}
+  - skill{s=LFrost_Strike_2}
+  - skill{s=LFrost_Strike_3}
+  
+LFrost_Strike_1:
+  Conditions:
+  - hasaurastacks{auraName=LFrost_Strike_Stack;stacks=1} false
+  - hasaurastacks{auraName=LFrost_Strike_Stack;stacks=2} false
+  Skills:
+  - Aura{auraName=LFrost_Strike_Stack;duration=120;maxStacks=2;delay=1} @self
+  - effect:sound{s=entity.player.attack.sweep;volume=0.7;pitch=1.3} @self
+  - effect:sound{s=entity.vex.hurt;volume=0.8;pitch=1.4} @self
+  - effect:sound{s=entity.vex.hurt;volume=0.8;pitch=0.6} @self
+  - effect:sound{s=entity.allay.hurt;volume=0.5;pitch=1.4} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+  - totem{md=2;c=1;oH=LFrost_Strike_DAMAGE_D;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=1;lockpitch=true}
+
+
+LFrost_Strike_2:
+  Conditions:
+  - hasaurastacks{auraName=LFrost_Strike_Stack;stacks=1} true
+  - hasaurastacks{auraName=LFrost_Strike_Stack;stacks=2} false
+  Skills:
+  - Aura{auraName=LFrost_Strike_Stack;duration=120;maxStacks=2;delay=1} @self
+  - effect:sound{s=entity.player.attack.sweep;volume=0.7;pitch=1.3} @self
+  - effect:sound{s=entity.vex.hurt;volume=0.8;pitch=1.4} @self
+  - effect:sound{s=entity.vex.hurt;volume=0.8;pitch=0.6} @self
+  - effect:sound{s=entity.allay.hurt;volume=0.5;pitch=1.4} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+  - totem{md=2;c=1;oH=LFrost_Strike_DAMAGE_D;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=1;lockpitch=true}
+
+
+LFrost_Strike_3:
+  Conditions:
+  - hasaurastacks{auraName=LFrost_Strike_Stack;stacks=1} false
+  - hasaurastacks{auraName=LFrost_Strike_Stack;stacks=2} true
+  Skills:
+  - auraremove{aura=LFrost_Strike_Stack;delay=1} @self
+  - effect:sound{s=entity.player.attack.sweep;volume=0.7;pitch=1.3} @self
+  - effect:sound{s=entity.vex.hurt;volume=0.8;pitch=1.4} @self
+  - effect:sound{s=entity.vex.hurt;volume=0.8;pitch=0.6} @self
+  - effect:sound{s=entity.allay.hurt;volume=0.5;pitch=1.4} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+
+  
+  - totem{md=2;c=1;oH=LFrost_Strike_DAMAGE_D2;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=2.5;lockpitch=true}
+
+  
+  - delay 3
+  
+  - effect:sound{s=entity.zombie.break_wooden_door;volume=0.65;pitch=1.3} @self
+  - effect:sound{s=block.glass.break;volume=0.6;pitch=0.6} @self
+  - effect:sound{s=entity.warden.attack_impact;volume=0.6;pitch=0.6} @self
+  - effect:sound{s=entity.dragon_fireball.explode;volume=0.3;pitch=1.4} @self
+  
+LFrost_Strike_DAMAGE_D:
+  Skills:
+  - skill{s=LFrost_Strike_DAMAGE} @EntitiesNearOrigin{r=3}
+  
+LFrost_Strike_DAMAGE:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true;hnp=true;hp=true;delay=1}
+  - skill{s=LFrost_Strike_FROSTBITE} 0.7
+
+LFrost_Strike_DAMAGE_D2:
+  Skills:
+  - skill{s=LFrost_Strike_DAMAGE2;delay=3} @EntitiesNearOrigin{r=4}
+  
+LFrost_Strike_DAMAGE2:
+  TargetConditions:
+  - entitytype{t=ARMOR_STAND} false
+  - mmoCanTarget{interaction=OFFENSE_ACTION} true
+  Skills:
+  - damage{a="<modifier.damage> * 1.5";pkb=true;hnp=true;hp=true;delay=1}
+  - skill{s=LFrost_Strike_FROSTBITE} 0.8
+  - throw{velocity=8;velocityY=8}
+##
+LArctic_jump:
+  Cooldown: 1
+  Skills:
+  - skill{s=LArcticPushBackT2} @self
+  - skill{s=LArctictick;repeat=12;repeatInterval=1}
+  - leap{velocity=250} @forward{f=2;y=3;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - delay 20
+  - leap{velocity=400} @forward{f=4;y=-5;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - skill{s=LArctictickTW;repeat=12;repeatInterval=1}
+  - delay 13
+  - skill{s=LArcticPushBack} @self
+
+LArctictick:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+
+LArctictickTW:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#8affa6;amount=1;radius=1} @self
+
+LArcticPushBack:
+  Skills:
+  - effect:particlering{p=reddust;color=#94ffa9;radius=6;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:sound{s=entity.zombie.break_wooden_door;volume=0.65;pitch=1.3} @self
+  - effect:sound{s=block.glass.break;volume=0.6;pitch=0.6} @self
+  - effect:sound{s=entity.warden.attack_impact;volume=0.6;pitch=0.6} @self
+  - effect:sound{s=entity.dragon_fireball.explode;volume=0.3;pitch=1.4} @self
+  - blockwave{duration=40;material=dirt;radius=4;radiusY=10;velocity=3} @selflocation
+#  - blockphysics @selflocation{y=-1}
+  - throw{velocity=8;velocityY=10} @EIR{r=5}
+  - damage{a="<modifier.damage>";ignoreArmor=false} @EIR{r=8}
+
+LArcticPushBackT2:
+  Skills:
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:sound{s=entity.zombie.break_wooden_door;volume=0.65;pitch=1.3} @self
+  - effect:sound{s=block.glass.break;volume=0.6;pitch=0.6} @self
+  - effect:sound{s=entity.warden.attack_impact;volume=0.6;pitch=0.6} @self
+  - effect:sound{s=entity.dragon_fireball.explode;volume=0.3;pitch=1.4} @self
+  - blockwave{duration=40;material=dirt;radius=2;radiusY=7;velocity=3} @selflocation
+#  - blockphysics @selflocation{y=-1}
+  - throw{velocity=8;velocityY=10} @EIR{r=2}
+  - damage{a="<modifier.damage>";ignoreArmor=false} @EIR{r=2}
+
+
+LArcticSummon:
+  Skills:
+  - projectile{bulletType=BLOCK;material=SNOW_BLOCK;bulletSpin=1;onTick=LArcticSummon-Tick;onEnd=LArcticSummon-Hit;i=1;hR=1;vR=1;type=meteor;hfs=12;g=0.6} @self
+  
+LArcticSummon-Tick:
+  Skills:
+  - effect:particles{p=redstone;color=#8affa6;amount=3;speed=0;hS=0.7;vS=0.7} @origin
+  - effect:particles{p=redstone;color=#8affa6;amount=3;speed=0;hS=0.7;vS=0.7} @origin
+  - effect:particles{p=redstone;color=#8affa6;amount=3;speed=0;hS=0.7;vS=0.7} @origin
+  - effect:particles{p=redstone;color=#8affa6;amount=3;speed=0;hS=0.7;vS=0.7} @origin
+  - effect:particles{p=redstone;color=#8affa6;amount=3;speed=0;hS=0.7;vS=0.7} @origin
+  - effect:particles{p=redstone;color=#94ffa9;amount=3;speed=0;hS=0.7;vS=0.7} @origin
+  - effect:particles{p=redstone;color=#94ffa9;amount=3;speed=0;hS=0.7;vS=0.7} @origin
+LArcticSummon-Hit:
+  Skills:
+  - effect:particle{p=redstone;color=#94ffa9;amount=1;hS=0;vS=0} @origin
+  - effect:particle{p=redstone;color=#8affa6;amount=200;hS=1;vS=1} @origin
+  - mmodamage{amount="<modifier.damage>";types=SKILL} @EntitiesNearOrigin{r=3;ignore=players}
+  - sound{s=entity.generic.explode} @origin
+  - summon{type=LArctic_Arise;amount=2} @origin
+
+LArcticSummon-Heal:
+  Skills:
+  - effect:particles{p=happy_villager;amount=1;speed=0;hS=0.3;vS=0} @Owner
+  - healpercent{m=0.01} @Owner
+LArcticSummon-Death:
+  Skills:
+  - effect:particles{p=redstone;color=#8affa6;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#8affa6;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#8affa6;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#8affa6;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#8affa6;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#94ffa9;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#94ffa9;amount=30;speed=0;hS=0.3;vS=0} @self
+  - remove @self
+
+#################################
+
+SSLightSkillSTAFF:
+  Skills:
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - command{c="mi take SWORD KIEM_BBBBBB_1 %player_name% 1"} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - command{c="mi give WAND KIEM_BBBBBB_1 %player_name% 1"} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+SSLightSkillSword:
+  Skills:
+  - command{c="mi take WAND KIEM_BBBBBB_1 %player_name% 1"} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - command{c="mi give SWORD KIEM_BBBBBB_1 %player_name% 1"} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self
+  - delay 2
+  - effect:particlesphere{particle=flame;amount=40;radius=3} @self 

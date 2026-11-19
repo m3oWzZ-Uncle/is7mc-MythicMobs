@@ -1,0 +1,567 @@
+Conductor_CancelMelee:
+  Skills:
+  - CancelEvent
+
+Conductor_Ambient1:
+  Skills:
+  - sound{s=pixelbarrel_hol2:random_background;p=1;v=3} @SelfLocation
+
+Conductor_Ambient2:
+  Skills:
+  - sound{s=pixelbarrel_hol2:random_background2;p=1;v=3} @SelfLocation
+
+Conductor_UltResistance:
+  Conditions:
+  - hastag{t=Drama}
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=40;level=4}
+
+HOL2_SelfRemove:
+  Skills:
+  - delay 200
+  - remove @Self
+  
+HOL2_ArtificialLighting:
+  Skills:
+  - effect:blockmask{m=LIGHT;r=0;d=20;oa=true;s=cube} @Forward{f=0;y=5}
+
+HOL2_DeathEffect:
+  Skills:
+  - effect:particles{p=reddust;color=#78b5b8;amount=10;speed=0.01;hS=0.5;vS=0.2;sfo=0;y=0.1;repeat=27;repeatInterval=5} @SelfLocation
+  - effect:particles{p=glow_squid_ink;amount=3;speed=0.01;hS=0.5;vS=0.2;sfo=0;y=0.1;repeat=27;repeatInterval=5} @SelfLocation
+  
+Conductor_DramaMeter_Buildup:
+  Conditions:
+  - hastag{t=Drama} cancel
+  - targetwithin{d=24}
+  Skills:
+  - modifytargetscore{objective=drama;action=add;value=2} @Self
+
+Conductor_DramaMeter_Lift:
+  Cooldown: 0.5
+  Conditions:
+  - hastag{t=Drama} cancel
+  - targetwithin{d=24}
+  Skills:
+  - modifytargetscore{objective=drama;action=add;value=1} @Self
+
+Conductor_DramaMeter_Signal:
+  Skills:
+  - skill{s=Conductor_DramaMeter_Signal-Low}
+  - skill{s=Conductor_DramaMeter_Signal-Mid}
+  - skill{s=Conductor_DramaMeter_Signal-High}
+
+Conductor_DramaMeter_Signal-Low:
+  Conditions:
+  - score{objective=drama;value=0to30}
+  - stance{s=Low} cancel
+  Skills:
+  - signal{s=Low} @Children
+  - setstance{s=Low} @Self
+
+Conductor_DramaMeter_Signal-Mid:
+  Conditions:
+  - score{objective=drama;value=31to90}
+  - stance{s=Mid} cancel
+  Skills:
+  - signal{s=Mid} @Children
+  - setstance{s=Mid} @Self
+
+Conductor_DramaMeter_Signal-High:
+  Conditions:
+  - score{objective=drama;value=>91}
+  - stance{s=High} cancel
+  Skills:
+  - signal{s=High} @Children
+  - setstance{s=High} @Self
+  
+Conductor_Teleport:
+  Cooldown: 20
+  Conditions:
+  - offgcd
+  - targetwithin{d=6}
+  - hastag{t=Drama} cancel
+  Skills:
+  - gcd{ticks=90}
+  - state{s=tp_start;li=0;lo=3} @Self
+  - sound{s=entity.player.splash;p=0.5;v=2.5} @Self
+  - submodel{mid=the_conductor;pid=master;smid=the_conductor;spid=whale;remove=false} @Self
+  - delay 10
+  - submodel{mid=the_conductor;pid=master;smid=the_conductor;spid=conductor;remove=true} @Self
+  - delay 35
+  - teleport{spreadh=12;spreadv=3} @Self  #Modify teleport range here
+  - state{s=tp_end;li=0;lo=3} @Self
+  - sound{s=entity.player.splash;p=0.5;v=2.5} @Self
+  - submodel{mid=the_conductor;pid=master;smid=the_conductor;spid=conductor;remove=false} @Self
+  - delay 35
+  - submodel{mid=the_conductor;pid=master;smid=the_conductor;spid=whale;remove=true} @Self
+  
+Conductor_FishballBarrage_Regular:
+  Conditions:
+  - offgcd
+  - hastag{t=Drama} cancel
+  - targetwithin{d=24}
+  Skills:
+  - gcd{ticks=20}
+  - sound{s=entity.creeper.death;p=0.7;v=1.5} @Self
+  - randomskill{skills=Fishball_RAND-Ring1,Fishball_RAND-Ring2,Fishball_RAND-Ring3,Fishball_RAND-Ring4,Fishball_RAND-Ring5}
+
+Conductor_FishballBarrage_Patterned:
+  Cooldown: 5
+  Conditions:
+  - offgcd
+  - score{objective=drama;value=>40}
+  - hastag{t=Drama} cancel
+  - targetwithin{d=24}
+  Skills:
+  - randomskill{skills=Fishball_RapidRing,Fishball_RapidFan}
+
+Fishball-HIT:
+  Skills:
+  - damage{a=2;pkb=true}  #Modify damage here
+  - sound{s=item.trident.return;p=0.5;v=1.5}
+  - effect:particles{p=end_rod;amount=4;hS=0.4;vS=0.3;y=1} 
+  - signal{s=Lift} @Self
+
+Fishball_RAND-Ring1:
+  Skills:
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=1.5;mr=24;i=1;hR=0.5;vR=0.5;hO=0;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=4}
+
+Fishball_RAND-Ring2:
+  Skills:
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=1.5;mr=24;i=1;hR=0.5;vR=0.5;hO=10;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=5}
+
+Fishball_RAND-Ring3:
+  Skills:
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=1.5;mr=24;i=1;hR=0.5;vR=0.5;hO=65;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=6}
+
+Fishball_RAND-Ring4:
+  Skills:
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=1.5;mr=24;i=1;hR=0.5;vR=0.5;hO=245;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=7}
+
+Fishball_RAND-Ring5:
+  Skills:
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=1.5;mr=24;i=1;hR=0.5;vR=0.5;hO=115;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=8}
+
+Fishball_RapidRing:
+  Skills:
+  - gcd{ticks=60}
+  - sound{s=entity.creeper.death;p=0.7;v=1.5;repeat=5;repeatInterval=6} @Self
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2.5;mr=24;i=1;hR=0.5;vR=1;hO=0;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=6}
+  - delay 6
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2.5;mr=24;i=1;hR=0.5;vR=1;hO=15;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=6}
+  - delay 6
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2.5;mr=24;i=1;hR=0.5;vR=1;hO=30;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=6}
+  - delay 6
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2.5;mr=24;i=1;hR=0.5;vR=1;hO=45;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=6}
+  - delay 6
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2.5;mr=24;i=1;hR=0.5;vR=1;hO=60;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=6}
+  - delay 6
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2.5;mr=24;i=1;hR=0.5;vR=1;hO=75;sfo=0;syo=1;tyo=1;hp=true} @Ring{radius=8;points=6}
+  - delay 6
+
+Fishball_RapidFan:
+  Skills:
+  - gcd{ticks=60}
+  - sound{s=entity.creeper.death;p=0.7;v=1.5;repeat=6;repeatInterval=3} @Self
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=315;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=330;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=345;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=0;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=15;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=30;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=45;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 7
+  - sound{s=entity.creeper.death;p=0.7;v=1.5;repeat=6;repeatInterval=3} @Self
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=45;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=30;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=15;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=0;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=345;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=330;sfo=0;syo=1;tyo=0;hp=true} @Target
+  - delay 3
+  - projectile{bulletType=MOB;mob=HOL2[SYS]_Conductor-Fishball;oH=Fishball-HIT;v=2;mr=24;i=1;hR=0.5;vR=1;hO=315;sfo=0;syo=1;tyo=0;hp=true} @Target
+
+Conductor_OceanRythme:
+  Cooldown: 40
+  Conditions:
+  - score{objective=drama;value=>119}  #Modify when should the ult be casted here
+  - targetwithin{d=24}
+  Skills:
+  - addtag{t=Drama} @Self
+  - gcd{ticks=650}
+  - signal{s=Rythme} @Children
+  - state{s=tp_start;li=0;lo=3} @Self
+  - sound{s=entity.player.splash;p=0.5;v=1.5} @Self
+  - sound{s=pixelbarrel_hol2:whale_teleport;p=1;v=3} @SelfLocation
+  - submodel{mid=the_conductor;pid=master;smid=the_conductor;spid=whale;remove=false} @Self
+  - delay 45
+  - teleport{spreadh=0;spreadv=0} @MobsInRadius{r=36;types=HOL2[SYS]_Conductor-OriginMarker}
+  - state{s=ult_tp_end;li=3;lo=3} @Self
+  - state{s=ult_idle;li=3;lo=3;delay=38} @Self
+  - defaultstate{mid=the_conductor;t=IDLE;s=ult_idle;delay=157} @Self
+  - sound{s=entity.player.splash;p=0.5;v=1.5} @Self
+  - delay 10
+  - defaultstate{mid=the_conductor;t=IDLE;s=ult_idle} @Self
+  - sound{s=pixelbarrel_hol2:rhythm_of_the_ocean;p=1;v=3} @SelfLocation
+  - summon{type=HOL2[SYS]_Conductor-RipplesLite;amount=3;r=10;yr=4;os=true;repeat=5;repeatInterval=40} @Self
+  - summon{type=HOL2[SYS]_Conductor-ChevaliersWaveSummonMarker;amount=1;r=10;yr=4;os=true;repeat=4;repeatInterval=36} @Self
+  - summon{type=HOL2[SYS]_Conductor-RipplesLite;amount=2;r=10;yr=4;os=true;repeat=5;repeatInterval=40;delay=20} @Self
+  - summon{type=HOL2[SYS]_Conductor-ChevaliersRingSummonMarker;amount=1;r=0;yr=4;os=true;repeat=2;repeatInterval=48;delay=140} @Self
+  - skill{s=Ripples_Pattern_Ring;delay=240}
+  - delay 300
+  - summon{type=HOL2[SYS]_Conductor-RipplesLite;amount=3;r=10;yr=4;os=true;repeat=5;repeatInterval=40} @Self
+  - summon{type=HOL2[SYS]_Conductor-ChevaliersWaveSummonMarker;amount=1;r=10;yr=4;os=true;repeat=4;repeatInterval=36} @Self
+  - summon{type=HOL2[SYS]_Conductor-RipplesLite;amount=2;r=10;yr=4;os=true;repeat=5;repeatInterval=40;delay=20} @Self
+  - summon{type=HOL2[SYS]_Conductor-ChevaliersRingSummonMarker;amount=1;r=0;yr=4;os=true;repeat=2;repeatInterval=48;delay=140} @Self
+  - skill{s=Ripples_Pattern_Ring;delay=240}
+  - delay 300
+  - submodel{mid=the_conductor;pid=master;smid=the_conductor;spid=whale;remove=true} @Self
+  - defaultstate{mid=the_conductor;t=IDLE;s=idle} @Self
+  - modifytargetscore{objective=drama;action=set;value=0} @Self
+  - removetag{t=Drama} @Self
+  
+Conductor_OceanRythme-TICK:
+  Skills:
+  - summon{type=HOL2[SYS]_Conductor-Ripples;amount=2;r=10;yr=4;os=true;repeat=11;repeatInterval=40} @Self
+  - delay 80
+  - skill{s=Conductor_OceanRythme-TICK2;repeat=2;repeatInterval=120} @Self
+  - delay 320
+  - summon{type=HOL2[SYS]_Conductor-ChevaliersRingSummonMarker;amount=1;r=0;yr=0;os=true} @Self
+
+Conductor_OceanRythme_Chevaliers:
+  Skills:
+  - summon{type=HOL2[SYS]_Conductor-ChevaliersWaveSummonMarker;amount=1;r=10;yr=4;os=true;repeat=2;repeatInterval=18} @Self
+
+Conductor_CoralSummon:
+  Conditions:
+  - offgcd
+  - score{objective=coral;value=<8}  #Adjust concurrent Coral limit here
+  - hastag{t=Drama} cancel
+  - targetwithin{d=24}
+  Skills:
+  - summon{type=HOL2[SUB]_Conductor-BashfulCoral;amount=1;r=15;yr=4;os=true} @Self
+  - modifytargetscore{objective=coral;action=add;value=1} @Self
+
+BashfulCoral-SPAWN:
+  Skills:
+  - setstance{s=Emerging} @Self
+  - state{s=emerge;li=0;lo=3} @Self
+  - sound{s=pixelbarrel_hol2:coral_spawn;p=1;v=3} @SelfLocation
+  - sound{s=block.grass.hit;p=0.8;v=1.5;repeat=3;repeatInterval=4} @Self
+  - delay 15
+  - sound{s=entity.player.hurt_sweet_berry_bush;p=0.8;v=1.5} @Self
+  - setstance{s=Available;delay=10} @Self
+
+BashfulCoral_Trigger:
+  Conditions:
+  - playerwithin{d=1.5}  #Modify coral trigger range here
+  - stance Available
+  Skills:
+  - setstance{s=Triggered} @Self
+  - state{s=trigger;li=0;lo=3} @Self
+  - signal{s=Lift} @Parent
+  - skill{s=BashfulCoral_Trigger-Impact}
+  - delay 3
+  - skill{s=BashfulCoral_Trigger-Cloud}
+  - delay 65
+  - sound{s=block.grass.hit;p=0.8;v=1.5;repeat=3;repeatInterval=4} @Self
+  - delay 10
+  - modifytargetscore{objective=coral;action=subtract;value=1} @Parent
+  - remove @Self
+
+BashfulCoral_Trigger-Impact:  #Adjust coral trigger effect here
+  Skills:
+  - sound{s=entity.player.hurt_sweet_berry_bush;p=1.2;v=1.5} @Self
+  - effect:particles{p=crit;amount=16;hS=0.3;vS=0.3;y=1} @PlayersInRadius{r=2}
+  - damage{a=1;pkb=true} @PlayersInRadius{r=2}  #Modify damage and range here
+
+BashfulCoral_Trigger-Cloud:  #Adjust coral lingering cloud effect here
+  Skills:
+  - sound{s=block.fire.extinguish;p=0.3;v=1.5} @Self
+  - effect:particles{p=reddust;color=#f760e1;amount=72;speed=0.01;hS=1.5;vS=0.5;sfo=0;y=0.5;repeat=11;repeatInterval=5} @Self
+  - damage{a=1;pkb=true;repeat=5;repeatInterval=10} @PlayersInRadius{r=3}  #Modify damage and range here
+
+BashfulCoral_Trigger-Rythme:
+  Conditions:
+  - stance Emerging castinstead BashfulCoral_Remove
+  Skills:
+  - setstance{s=Triggered} @Self
+  - state{s=trigger;li=0;lo=3} @Self
+  - skill{s=BashfulCoral_Trigger-Impact}
+  - delay 3
+  - skill{s=BashfulCoral_Trigger-Cloud}
+  - delay 65
+  - sound{s=block.grass.hit;p=0.8;v=1.5;repeat=3;repeatInterval=4} @Self
+  - delay 10
+  - modifytargetscore{objective=coral;action=subtract;value=1} @Parent
+  - remove @Self
+
+BashfulCoral_Remove:
+  Skills:
+  - modifytargetscore{objective=coral;action=subtract;value=1} @Parent
+  - remove @Self
+
+Conductor_VioarSummon:
+  Skills:
+  - summon{type=HOL2[SUB]_Conductor-Vioar;amount=1;r=4;yr=4;os=true} @Self
+
+Vioar_Aura:
+  Conditions:
+  - stance{s=Low} cast Vioar_Aura_Low
+  - stance{s=Mid} cast Vioar_Aura_Mid
+  - stance{s=High} cast Vioar_Aura_High
+  - playerwithin{d=24}
+  Skills:
+  - effect:particles{p=note;amount=3;speed=0.01;hS=0.2;vS=0.2;sfo=0;y=3} @Self
+
+Vioar_Aura_Low:
+  Skills:
+  - projectile{oE=Vioar_Aura_Low-END;v=25;mr=16;i=1;hR=1;vR=1;hp=false;sE=false;hs=true} @Ring{radius=16;points=60}
+
+Vioar_Aura_Low-END:
+  Skills:
+  - effect:particles{p=reddust;color=#78b5b8;amount=3;speed=0.01;hS=0.2;vS=0.2;sfo=0;y=0.1}
+
+Vioar_Aura_Mid:
+  Skills:
+  - projectile{oE=Vioar_Aura_Mid-END;v=25;mr=16;i=1;hR=1;vR=1;hp=false;sE=false;hs=true} @Ring{radius=16;points=60}
+
+Vioar_Aura_Mid-END:
+  Skills:
+  - effect:particles{p=reddust;color=#FFE49E;amount=3;speed=0.01;hS=0.2;vS=0.2;sfo=0;y=0.1}
+
+Vioar_Aura_High:
+  Skills:
+  - projectile{oE=Vioar_Aura_High-END;v=25;mr=16;i=1;hR=1;vR=1;hp=false;sE=false;hs=true} @Ring{radius=16;points=60}
+
+Vioar_Aura_High-END:
+  Skills:
+  - effect:particles{p=reddust;color=#F3796F;amount=3;speed=0.01;hS=0.2;vS=0.2;sfo=0;y=0.1}
+
+Vioar_Pulse:
+  Conditions:
+  - stance{s=Rythme} cancel
+  - playerwithin{d=24}
+  Skills:
+  - projectile{oT=Vioar_Pulse-TICK;oH=Vioar_Pulse-HIT;v=6;mr=16;i=1;hfs=0;hR=0.5;vR=0.5;sE=false;hs=true} @Ring{radius=16;points=48}
+
+Vioar_Pulse-TICK:
+  Skills:
+  - effect:particles{p=glow_squid_ink;amount=1;speed=0.01;hS=0.2;vS=0.2;sfo=0;y=0}
+  - effect:particles{p=note;amount=1;speed=0.1;hS=0.2;vS=0.2;sfo=0;y=0} 0.02
+
+Vioar_Pulse-HIT:  #Modify pulse hit effect here
+  Skills:
+  - potion{t=SLOW;d=80;l=1}
+
+Conductor_RippleMarkerSummon:
+  Cooldown: 7
+  Conditions:
+  - hastag{t=Drama} cancel
+  - targetwithin{d=24}
+  Skills:
+  - summon{type=HOL2[SYS]_Conductor-RippleMarkerMarker;amount=1;r=1;yr=4;onSurface=true} @PlayersInRadius{r=15;limit=1;sort=RANDOM}
+
+Conductor_RipplesSummon:
+  Skills:
+  - summon{type=HOL2[SYS]_Conductor-Ripples;amount=2;r=10;yr=4;os=true;repeat=2;repeatInterval=8}
+
+Ripples-SPAWN:
+  Skills:
+  - sound{s=pixelbarrel_hol2:ripple_jump;p=1;v=3} @SelfLocation
+  - sound{s=entity.player.swim;p=0.6;v=1.5} @Self
+  - skill{s=Ripples_Particle}
+  - delay 40
+  - state{s=jumpout;li=0;lo=3} @Self
+  - effect:particles{p=splash;amount=24;speed=0;hS=0.8;vS=0.1;sfo=0;y=0.3} @Self
+  - sound{s=entity.player.splash;p=0.8;v=1.5} @Self
+  - damage{a=3;pkb=true} @PlayersInRadius{r=2}  #Modify damage and range here
+  - skill{s=Ripples-HIT}
+  - delay 20
+  - sound{s=entity.player.splash;p=0.1;v=1.5} @Self
+  - delay 10
+  - remove @Self
+
+RipplesLite-SPAWN:
+  Skills:
+  - effect:particles{p=cloud;amount=4;speed=0.02;hS=0.3;vS=0.1;sfo=0;y=0.1;repeat=15;repeatInterval=3} @Self
+  - delay 40
+  - state{s=jumpout;li=0;lo=3} @Self
+  - effect:particles{p=splash;amount=24;speed=0;hS=0.8;vS=0.1;sfo=0;y=0.3} @Self
+  - sound{s=entity.player.splash;p=0.8;v=1.5} @Self
+  - damage{a=3;pkb=true} @PlayersInRadius{r=2}  #Modify damage and range here
+  - skill{s=Ripples-HIT}
+  - delay 20
+  - sound{s=entity.player.splash;p=0.1;v=1.5} @Self
+  - delay 10
+  - remove @Self
+
+Ripples-HIT:
+  Conditions:
+  - playerwithin{d=2}
+  Skills:
+  - signal{s=Lift} @Parent
+
+Ripples_Particle:
+  Skills:
+  - effect:particles{p=cloud;amount=4;speed=0.02;hS=0.3;vS=0.1;sfo=0;y=0.1;repeat=15;repeatInterval=3} @Self
+  - effect:particles{p=reddust;color=#87edd2;amount=24;speed=0;hS=1.5;vS=0.1;sfo=0;y=0.1;repeat=23;repeatInterval=3} @Self
+  - effect:particles{p=splash;amount=12;speed=0;hS=1.5;vS=0.1;sfo=0;y=0.1;repeat=23;repeatInterval=3} @Self
+
+Ripples_Pattern_Ring:
+  Skills:
+  - projectile{oT=Ripples_Pattern_Ring-TICK;v=15;mr=16;i=8;sfo=0;syo=0;hR=1;vR=1;hp=false;sE=false;hs=true} @Ring{radius=16;points=7}
+
+Ripples_Pattern_Ring-TICK:
+  Skills:
+  - summon{type=HOL2[SYS]_Conductor-RipplesLite;amount=1;r=0;yr=0;os=true}
+
+Chevaliers_Charge:
+  Skills:
+  - lunge{velocity=0.4;velocityY=0;repeat=26;repeatInterval=3} @Forward{f=1;y=1}
+  - state{s=charge;li=0;lo=3} @Self
+  - defaultstate{mid=chevaliers;t=IDLE;s=chargeidle} @Self
+  - delay 100
+  - remove @Self
+
+Chevaliers_Charge-TICK:
+  Skills:
+  - effect:particles{p=end_rod;amount=1;speed=0.01;hS=0.2;vS=0.2;sfo=0}
+
+Chevaliers_Timer:
+  Skills:
+  - damage{a=3;pkb=true} @PlayersInRadius{r=3}  #Modify damage and range here
+  - throw{velocity=8;velocityY=1} @PlayersInRadius{r=3}
+  
+Conductor_ChevaliersWaveN:
+  Skills:
+  - sound{s=entity.player.splash.high_speed;p=0.7;v=0.5} @Self
+  - modifytargetscore{objective=x1;action=set;value=<caster.l.x>} @Self
+  - modifytargetscore{objective=x2;action=set;value=<caster.l.x>} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersN 1 <caster.l.w>,<caster.score.x1>,<caster.l.y>,<caster.l.z>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - delay 3
+  - modifytargetscore{objective=x1;action=add;value=2} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersN 1 <caster.l.w>,<caster.score.x1>,<caster.l.y>,<caster.l.z>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - delay 3
+  - modifytargetscore{objective=x2;action=subtract;value=2} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersN 1 <caster.l.w>,<caster.score.x2>,<caster.l.y>,<caster.l.z>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - remove @Self
+
+Conductor_ChevaliersWaveE:
+  Skills:
+  - sound{s=entity.player.splash.high_speed;p=0.7;v=0.5} @Self
+  - modifytargetscore{objective=z1;action=set;value=<caster.l.z>} @Self
+  - modifytargetscore{objective=z2;action=set;value=<caster.l.z>} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersE 1 <caster.l.w>,<caster.l.x>,<caster.l.y>,<caster.score.z1>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - delay 3
+  - modifytargetscore{objective=z1;action=add;value=2} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersE 1 <caster.l.w>,<caster.l.x>,<caster.l.y>,<caster.score.z1>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - delay 3
+  - modifytargetscore{objective=z2;action=subtract;value=2} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersE 1 <caster.l.w>,<caster.l.x>,<caster.l.y>,<caster.score.z2>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - remove @Self
+
+Conductor_ChevaliersWaveS:
+  Skills:
+  - sound{s=entity.player.splash.high_speed;p=0.7;v=0.5} @Self
+  - modifytargetscore{objective=x1;action=set;value=<caster.l.x>} @Self
+  - modifytargetscore{objective=x2;action=set;value=<caster.l.x>} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersS 1 <caster.l.w>,<caster.score.x1>,<caster.l.y>,<caster.l.z>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - delay 3
+  - modifytargetscore{objective=x1;action=add;value=2} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersS 1 <caster.l.w>,<caster.score.x1>,<caster.l.y>,<caster.l.z>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - delay 3
+  - modifytargetscore{objective=x2;action=subtract;value=2} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersS 1 <caster.l.w>,<caster.score.x2>,<caster.l.y>,<caster.l.z>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - remove @Self
+
+Conductor_ChevaliersWaveW:
+  Skills:
+  - sound{s=entity.player.splash.high_speed;p=0.7;v=0.5} @Self
+  - modifytargetscore{objective=z1;action=set;value=<caster.l.z>} @Self
+  - modifytargetscore{objective=z2;action=set;value=<caster.l.z>} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersW 1 <caster.l.w>,<caster.l.x>,<caster.l.y>,<caster.score.z1>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - delay 3
+  - modifytargetscore{objective=z1;action=add;value=2} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersW 1 <caster.l.w>,<caster.l.x>,<caster.l.y>,<caster.score.z1>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - delay 3
+  - modifytargetscore{objective=z2;action=subtract;value=2} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersW 1 <caster.l.w>,<caster.l.x>,<caster.l.y>,<caster.score.z2>"}
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - remove @Self
+
+Conductor_ChevaliersRing:
+  Skills:
+  - modifytargetscore{objective=x;action=set;value=<caster.l.x>} @Self
+  - modifytargetscore{objective=z;action=set;value=<caster.l.z>} @Self
+  - modifytargetscore{objective=x;action=add;value=2} @Self
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersE 1 <caster.l.w>,<caster.score.x>,<caster.l.y>,<caster.score.z>"}
+  - delay 3
+  - modifytargetscore{objective=x;action=subtract;value=1} @Self
+  - modifytargetscore{objective=z;action=add;value=1} @Self
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersSE 1 <caster.l.w>,<caster.score.x>,<caster.l.y>,<caster.score.z>"}
+  - delay 3
+  - modifytargetscore{objective=x;action=subtract;value=1} @Self
+  - modifytargetscore{objective=z;action=add;value=1} @Self
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersS 1 <caster.l.w>,<caster.score.x>,<caster.l.y>,<caster.score.z>"}
+  - delay 3
+  - modifytargetscore{objective=x;action=subtract;value=1} @Self
+  - modifytargetscore{objective=z;action=subtract;value=1} @Self
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersSW 1 <caster.l.w>,<caster.score.x>,<caster.l.y>,<caster.score.z>"}
+  - delay 3
+  - modifytargetscore{objective=x;action=subtract;value=1} @Self
+  - modifytargetscore{objective=z;action=subtract;value=1} @Self
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersW 1 <caster.l.w>,<caster.score.x>,<caster.l.y>,<caster.score.z>"}
+  - delay 3
+  - modifytargetscore{objective=x;action=add;value=1} @Self
+  - modifytargetscore{objective=z;action=subtract;value=1} @Self
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersNW 1 <caster.l.w>,<caster.score.x>,<caster.l.y>,<caster.score.z>"}
+  - delay 3
+  - modifytargetscore{objective=x;action=add;value=1} @Self
+  - modifytargetscore{objective=z;action=subtract;value=1} @Self
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersN 1 <caster.l.w>,<caster.score.x>,<caster.l.y>,<caster.score.z>"}
+  - delay 3
+  - modifytargetscore{objective=x;action=add;value=1} @Self
+  - modifytargetscore{objective=z;action=add;value=1} @Self
+  - sound{s=entity.iron_golem.attack;p=0.7;v=1.5} @Self
+  - command{c="mm mobs spawn -s HOL2[SYS]_Conductor-ChevaliersNE 1 <caster.l.w>,<caster.score.x>,<caster.l.y>,<caster.score.z>"}
+  - remove @Self
+
+GrippingTeeth-TICK:
+  Skills:
+  - sound{s=block.grass.hit;p=0.8;v=1;repeat=3;repeatInterval=5} @Self
+  - sound{s=entity.player.hurt_sweet_berry_bush;p=0.4;v=0.8} @PlayersInRadius{r=2.5}
+  - potion{t=SLOW;d=10;l=4;p=false;repeat=3;repeatInterval=5} @PlayersInRadius{r=2.5}
+  - damage{a=2;pkb=true} @PlayersInRadius{r=2.5}  #Modify damage per tick and range here
+
+# 8885TJ6C71AWBKEYR5WZL9QQ

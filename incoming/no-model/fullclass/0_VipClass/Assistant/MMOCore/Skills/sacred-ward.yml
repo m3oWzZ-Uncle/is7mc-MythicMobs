@@ -1,0 +1,46 @@
+name: Sacred Ward
+lore:
+- 'Thánh Vực'
+- '“Vùng đất linh thiêng, nơi từng nhịp thở'
+- 'đều ngập tràn sức sống và phước lành.”'
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Eff-Level &7▸ <#FF8E6A>{level}'
+- '&3 <#78FFEF>◆ &7duration &7▸ <#FF8E6A>{duration}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: BOOK
+duration:
+  base: 7
+  per-level: 0.1
+  min: 0
+  max: 30
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+elv:
+  base: 1
+  per-level: 0.1
+  min: 0
+  max: 30
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 31
+  per-level: -0.1
+  min: 0
+  max: 30

@@ -1,0 +1,23 @@
+{
+  "id": "modelled-frontal-swing-hitbox",
+  "category": "decisions",
+  "title": "Đòn chém 180° có model tách báo hiệu và chọn vùng damage",
+  "topic": "modelled-frontal-swing",
+  "summary": "Người dùng dùng model báo hiệu rồi model chém 180°. Căn Totem ở điểm @Forward khi vùng chém tập trung phía trước, hoặc dùng targeter và bộ lọc khi vùng cần bám hình chém.",
+  "context": "Player Skill có model, đòn chém trước mặt 180° cần đồng bộ hiệu ứng và damage.",
+  "exceptions": "Hai cách là lựa chọn theo hình vùng trúng. Totem đặt lệch không mặc nhiên thành nửa hình tròn. Bài 05 không model vẫn là vòng 360°. Biến thể 180° cần asset, build và bằng chứng riêng.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-15",
+  "answer": "align-totem-or-targeter-to-modelled-strike",
+  "requires": ["player-skill", "modelled-swing", "frontal-cleave"],
+  "tags": ["modelengine", "totem", "forward", "targeters", "animation", "hitbox"],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "feedback/decisions/MM-D-2026-005.md",
+      "note": "Người dùng nêu luồng model báo hiệu → model chém 180° và hai cách đặt vùng damage thường dùng."
+    }
+  ]
+}

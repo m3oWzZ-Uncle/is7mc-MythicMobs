@@ -1,0 +1,71 @@
+# http://www.mythicmobs.net
+#
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+
+display:
+    name: 'Demon Blood'
+    lore:
+    item: REDSTONE # Supports custom model data/texture by durability
+
+options:
+    default: false
+    display: true
+    needs-permission: false
+
+exp-curve: levels
+
+max-level: 100
+
+exp-table: class_exp_table
+
+skills:
+    Test:
+        level: 1
+        max-level: 30
+
+skill-slots:
+    1:
+        name: "&aSkill Slot I (Passive)"
+        formula: "<PASSIVE>"
+        unlocked-by-default: true
+    2:
+        name: "&aSkill Slot II"
+        unlocked-by-default: true
+    3:
+        name: "&aSkill Slot III"
+        unlocked-by-default: true
+    4:
+        name: "&aSkill Slot IV"
+        unlocked-by-default: true
+    5:
+        name: "&aSkill Slot V"
+        unlocked-by-default: true
+    6:
+        name: "&aSkill Slot VI"
+        unlocked-by-default: true
+    7:
+        name: "&aSkill Slot VII"
+        unlocked-by-default: true
+
+#skill-trees:
+#    - 'Human2'
+#    - 'general'
+#    - 'archerSkillTree'
+#    - 'combat'
+
+#attributes:
+#    movement-speed:
+#        base: .1
+#        per-level: 0
+#    attack-damage:
+#        base: 4
+#        per-level: 0.05
+
+
+#main-exp-sources:
+#- 'killmob{type=ZOMBIE;amount=1}'
+#- 'killmob{type=SKELETON;amount=1}'
+#- 'killmob{type=SPIDER;amount=1}'
+#- 'killmob{type=ENDERMAN;amount=2-3}'
+# 1750HBIFRR7QX0M2E

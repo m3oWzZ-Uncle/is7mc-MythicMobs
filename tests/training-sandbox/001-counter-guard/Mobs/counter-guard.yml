@@ -1,0 +1,12 @@
+TrainingCounterGuard:
+  Type: HUSK
+  Display: 'Training Counter Guard'
+  Health: 40
+  Options:
+    PreventOtherDrops: true
+  AIGoalSelectors:
+    - clear
+  AITargetSelectors:
+    - clear
+  Skills:
+    - skill{s=TrainingCounterGuardRetaliate} @trigger ~onDamaged

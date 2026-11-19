@@ -1,0 +1,7 @@
+TrainingSavedAnchor:
+  Cooldown: 3
+  Skills:
+    - setvarloc{var=skill.ionanchor;val=@Forward{f=3;y=1;lockpitch=true}}
+    - particle{p=flame;a=8} @VariableLocation{var=skill.ionanchor}
+    - delay 12
+    - particle{p=end_rod;a=8} @VariableLocation{var=skill.ionanchor}

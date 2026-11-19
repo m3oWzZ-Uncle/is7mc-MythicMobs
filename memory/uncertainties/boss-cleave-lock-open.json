@@ -1,0 +1,16 @@
+{
+  "id": "boss-cleave-lock-open",
+  "category": "uncertainties",
+  "title": "Chưa có lựa chọn về thời điểm khóa hướng đòn quét boss",
+  "topic": "boss-cleave-direction",
+  "summary": "Phỏng vấn đang chờ chọn khóa từ đầu, khóa 5 tick cuối hoặc bám đến lúc ra đòn.",
+  "context": "Tình huống giả định đòn quét hình nón có telegraph 18 tick và hai người chơi.",
+  "exceptions": "Chỉ tiếp tục câu hỏi khi đang phỏng vấn hoặc khi sự khác biệt ảnh hưởng tới công việc hiện tại.",
+  "scope": "global",
+  "claim": "FACT",
+  "confidence": "UNKNOWN",
+  "recorded": "2026-11-13",
+  "requires": ["boss", "melee-cleave", "multiplayer"],
+  "tags": ["boss", "cleave", "telegraph", "khoa-huong", "melee", "multiplayer"],
+  "sources": [{"type": "document", "ref": "feedback/decisions/MM-D-2026-001.md", "note": "Hồ sơ câu hỏi đang chờ. Chưa có lựa chọn được người dùng xác nhận."}]
+}

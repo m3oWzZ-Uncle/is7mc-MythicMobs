@@ -1,0 +1,122 @@
+luccotchivuong:
+  Skills:
+  - orbital{auraName=luccotchivuong;duration=60;
+        bulletType=MOB;mob=luccotchivuong_summoned;
+        hr=1;vr=1;r=0;points=1;
+        oy=0;rx=0;ry=0;rz=0;avx=0;avy=0;avz=0;
+        hp=false;hnp=false;
+        cocd=true;cocw=true;coq=true;desot=true;
+        onStart=[
+          - setvariable{var=caster.lccv_hand_count;value=2}
+          - setvariable{var=caster.lccv_hand_1_availability;value=1}
+          - setvariable{var=caster.lccv_hand_2_availability;value=1}
+          
+        ];
+        onEnd=[
+          - variableUnset{var=caster.lccv_hand_count}
+          - variableUnset{var=caster.lccv_hand_1_availability}
+          - variableUnset{var=caster.lccv_hand_2_availability}
+          - removetag{t=lccv_form}
+        ]
+    } @caster
+
+lccv_hand_1_Out:
+  Conditions:
+  - varEquals{var=caster.lccv_hand_1_availability;value=1}
+  Skills:
+  - setvariable{var=caster.lccv_hand_1_availability;value=0} @caster
+  - variableadd{var=caster.lccv_hand_count;value=-1} @caster
+  - auraRemove{aura=lccv_haitay} @caster
+  
+  - SudoSkill{s=[
+      - state{s=mattaytrai;li=0;lo=0}
+    ];setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+  
+  - delay 30
+  - SudoSkill{s=lccv_hand_1_Invisible;setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+
+lccv_hand_1_Return:
+  Conditions:
+  - varEquals{var=caster.lccv_hand_1_availability;value=0}
+  Skills:
+  - setvariable{var=caster.lccv_hand_1_availability;value=1} @caster
+  - variableadd{var=caster.lccv_hand_count;value=1} @caster
+  
+  
+  - SudoSkill{s=[
+      - state{s=cotaytrai;li=0;lo=0}
+    ];setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+  
+  - delay 3
+  - SudoSkill{s=lccv_hand_1_Visible;setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+
+lccv_hand_2_Out:
+  Conditions:
+  - varEquals{var=caster.lccv_hand_2_availability;value=1}
+  Skills:
+  - setvariable{var=caster.lccv_hand_2_availability;value=0} @caster
+  - variableadd{var=caster.lccv_hand_count;value=-1} @caster
+  - auraRemove{aura=lccv_haitay} @caster
+  
+  - SudoSkill{s=[
+      - state{s=mattayphai;li=0;lo=0}
+    ];setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+  
+  - delay 30
+  - SudoSkill{s=lccv_hand_2_Invisible;setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+
+lccv_hand_2_Return:
+  Conditions:
+  - varEquals{var=caster.lccv_hand_2_availability;value=0}
+  Skills:
+  - setvariable{var=caster.lccv_hand_2_availability;value=1} @caster
+  - variableadd{var=caster.lccv_hand_count;value=1} @caster
+  
+  
+  - SudoSkill{s=[
+      - state{s=cotayphai;li=0;lo=0}
+    ];setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+  
+  - delay 3
+  - SudoSkill{s=lccv_hand_2_Visible;setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+
+
+
+################################################################################
+
+lccv_hand_1_Visible:
+  TriggerConditions:
+  - owner
+  Skills:
+  - partvis{m=luccotchivuong;p=taytrai;v=true}
+
+lccv_hand_1_Invisible:
+  TriggerConditions:
+  - owner
+  Skills:
+  - partvis{m=luccotchivuong;p=taytrai}
+
+
+lccv_hand_2_Visible:
+  TriggerConditions:
+  - owner
+  Skills:
+  - partvis{m=luccotchivuong;p=tayphai;v=true}
+
+lccv_hand_2_Invisible:
+  TriggerConditions:
+  - owner
+  Skills:
+  - partvis{m=luccotchivuong;p=tayphai}
+
+################################################################################
+## Animation (Lục Cốt Chi Vương Form)
+#cc_Enter_lccv_Form:
+#  Skills:
+#  - addtag{t=lccv_form} @caster
+#  - defaultstate{m=pbws_shield_suit;t=idle;s=crab_idle} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+
+#PbWS_Orbit_Shield_Leave_Crab_Form:
+#  Skills:
+#  - removetag{t=lccv_form} @caster
+#  - defaultstate{m=pbws_shield_suit;t=idle;s=idle} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}

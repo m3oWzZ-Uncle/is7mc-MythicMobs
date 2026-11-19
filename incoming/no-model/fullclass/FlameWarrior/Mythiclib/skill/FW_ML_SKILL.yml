@@ -1,0 +1,18 @@
+FireballBurns:
+  mythicmobs-skill-id: FW_SKILL_ONE
+  modifiers:
+  - damage
+
+Sprayfire:
+  mythicmobs-skill-id: FW_SKILL_TWO
+  modifiers:
+  - damage
+
+firemeteor:
+  mythicmobs-skill-id: FW_SKILL_THREE
+  modifiers:
+  - damage
+  
+fireAura:
+  mythicmobs-skill-id: FW_SKILL_PASS
+  modifiers: []

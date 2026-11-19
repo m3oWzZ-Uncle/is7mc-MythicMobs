@@ -1,0 +1,107 @@
+# http://www.mythicmobs.net
+#
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+
+ScoreMob:
+  Type: zombie
+  Health: 20
+  Damage: 0.1
+  Display: "score Test"
+  BossBar:
+    Enabled: true
+    Title: "Score - <player.score.Soul>"
+    Style: SOLID
+    Color: WHITE
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.01
+    Silent: true
+  Skills:
+  - particleline{particle=flame;amount=1;fromOrigin=true} @target ~onTimer:10
+#  - modifymobscore{objective=Soul;action=add;v=1} @self ~onInteract
+#  - message{m="&bSoul &8[&7o&8] <player.score.Soul>"} @target ~onInteract
+#  - modifyscore{o=TestScore;e=Bob;a=add;v=1} ~onInteract
+#  - message{m="&bSoul &8[&7o&8] <player.score.TestScore>"} @target ~onInteract
+ # - modifymobscore{objective=Soul;action=add;v=1} @target ~onInteract
+ # - message{m="&bSoul &8[&7o&8] <player.score.Soul>"} @target ~onInteract
+ # - modifytargetscore{objective=Soul;e=<target.name>;action=add;value=1} @trigger ~onInteract
+#  - message{m="&bSoul &8[&7o&8] <player.score.Soul>"} @trigger ~onDamaged
+ # - command{c="scoreboard players list @s"} @trigger ~onDamaged
+ # - command{c="scoreboard players list NOOB123ok"} @trigger ~onInteract
+
+
+
+StesMob:
+  Type: ZOMBIE
+  Health: 50
+  Damage: 10
+  Display: "<#FFAF9B>★ &8[<#76FFF9>Quái&8] <#7CE03F>Undead &8[<#FF2F2F><caster.hp{round=0}> <&heart>&8]"
+  Faction: Undead
+#  BossBar:
+ #   Enabled: true
+#    Title: ""
+#    Style: SOLID
+#    Color: WHITE
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.3
+ #   Silent: true
+  DamageModifiers:
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 3 randomstroll
+  AITargetSelectors:
+  - 0 clear
+  - 1 ownertarget
+  - 2 ownerattacker
+  - 3 monsters
+  Skills:
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  - particleline{particle=reddust;color=#59cf93;amount=1;fromOrigin=true} @Owner ~onTimer:10
+  - skill{s=Undead-Death;delay=400} @self ~onSpawn
+
+StesMob_TW:
+  Type: WOLF
+  Health: 100
+  Damage: 18
+  Display: "<#FFAF9B>★ &8[<#76FFF9>Quái&8] <#7CE03F>Undead Bloody &8[<#FF2F2F><caster.hp{round=0}> <&heart>&8]"
+  Faction: Undead
+#  BossBar:
+ #   Enabled: true
+#    Title: ""
+#    Style: SOLID
+#    Color: WHITE
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.4
+ #   Silent: true
+  DamageModifiers:
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 movetowardstarget
+  - 3 randomstroll
+  - 4 gotoowner
+  AITargetSelectors:
+  - 0 clear
+  - 1 ownertarget
+  - 2 ownerattacker
+  Skills:
+  - disguise{d="Zombie"} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  - particleline{particle=reddust;color=#cf5959;amount=1;fromOrigin=true} @Owner ~onTimer:10
+  
+  - skill{s=Undead-Spawn;delay=1} @self ~onSpawn 
+  - skill{s=Undead-Death;delay=600} @self ~onSpawn
+  

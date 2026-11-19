@@ -1,0 +1,46 @@
+skeletonRogue:
+  Type: SKELETON
+  Display: '&8Generic Skeleton Rogue'
+  Health: 20
+  Damage: 4
+  Faction: Undead
+  Equipment: ## Rogue looking armours ##
+  - STONE_SWORD HAND
+  - STONE_SWORD OFFHAND
+  - CHAINMAIL_HELMET HEAD
+  - LEATHER_CHESTPLATE CHEST
+  - CHAINMAIL_LEGGINGS LEGS
+  - LEATHER_BOOTS FEET
+  Drops: ## You could give it some more enticing drops ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/drops/Drops ##
+  - BONE 1 0.5
+  - BONE 1 0.35
+  - EMERALD 1 0.5
+  - EMERALD 2 0.3
+  DamageModifiers:
+  - FIRE 1.75 ## Fire burns the undead ##
+  - PROJECTILE 0.33 ## Arrows tend to go through bones ##
+  Skills:
+  - effect:spin{d=5;v=-60} @self ~onAttack ## A visual effect ##
+  - setNoDamageTicks{ticks=0;delay=1} @trigger ~onAttack ## Consecutive attack prep ##
+  - effect:particles{p=sweep_attack;a=1;hs=0.5;vs=0;uel=true} @self ~onAttack ## Visual and audio #
+  - sound{s=entity.player.attack.sweep;p=1.4;sc=master} @self ~onAttack       # sound effects    ##
+  - sound{s=entity.player.attack.crit;p=1.7;sc=master} @self ~onAttack
+                     ## Self Preservation Skills ##
+  - skill{s=BackstepRandomizer} @self ~onTimer:190 0.65
+  - skill{s=BackstepRandomizer} @self ~onAttack 0.88
+  - skill{s=Backstep} @self ~onDamaged 0.2
+  - skill{s=FastStepsRandomizer} @self ~onTimer:60 0.25 ## Faster than the Zombie Knight's setting ##
+  - skill{s=RogueStrafes} @self ~onTimer:2 0.85 ## The strafes happen quickly, making the mob harder to hit ##
+  - skill{s=RandomDodgeRandomizer;delay=<random.1to10>} @self ~onTimer:75 0.65 ## A powerful form of movement ##
+                       ## Offense Skills ##
+  - skill{s=ExtraStrike} @target ~onAttack ## This is the double slash strike that happens immediately after an attack ##
+  - skill{s=DaggerThrow} @self ~onDamaged 0.1
+  - skill{s=DaggerThrow} @self ~onTimer:115 0.35
+  Options: ## https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Mobs/Options ##
+    PreventOtherDrops: true
+    FollowRange: 40
+    AlwaysShowName: false
+    MovementSpeed: 0.233
+    Despawn: true
+    NoDamageTicks: 6
+    PreventSunburn: true

@@ -1,0 +1,165 @@
+# http://www.mythicmobs.net
+#
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+
+
+
+BUNNY_BUFF_JUMP:
+  Skills:
+  - leap{velocity=250} @forward{f=4;y=3;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - skill{s=BUNNY_ATTACKtickTW;repeat=10;repeatInterval=1}
+  - potion{type=SLOW_FALLING;duration=120;level=1;p=false} @self
+  - delay 20
+  - leap{velocity=250} @forward{f=5;y=2;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - skill{s=BUNNY_ATTACKtick;repeat=12;repeatInterval=1}
+  - delay 20
+  - leap{velocity=250} @forward{f=5;y=2;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - skill{s=BUNNY_ATTACKtick;repeat=12;repeatInterval=1}
+  
+##################################################
+  
+BUNNY_BOMBB:
+  Skills:
+  - projectile{bulletType=MOB;mob=RABIT_MOBS;onTick=BUNNY_BOMBB-Tick;oH=BUNNY_BOMBB-Hit;oE=BUNNY_BOMBB-End;v=10;i=1;hR=1;vR=1;vO=2;g=0.5;mr=20;sB=true} @targetlocation
+  - effect:sound{s=entity.tnt.primed;v=1;p=1} @origin
+BUNNY_BOMBB-Tick:
+  Skills:
+  - effect:particles{p=smoke;amount=1;speed=0;hS=0;vS=0;y=-1} @origin
+BUNNY_BOMBB-Hit:
+  Skills:
+BUNNY_BOMBB-End:
+  Skills:
+  - damage{a="<modifier.damage>";ignoreArmor=false} @ENO{r=3}
+  - potion{type=SLOW;duration=100;lvl=2}
+  - effect:sound{s=entity.generic.explode;v=1;p=1} @origin
+  - effect:particlering{p=reddust;color=#94ffe2;radius=4;points=15;amount=30;hS=1;vS=1} @origin
+  - effect:blockmask{m=LIGHT_BLUE_WOOL;r=4;d=94} @origin
+  - delay 2
+  - effect:particlering{p=reddust;color=#a3ff94;radius=3;points=15;amount=30;hS=1;vS=1} @origin
+  - effect:blockmask{m=LIME_WOOL;r=3;d=92} @origin
+  - delay 2
+  - effect:particlering{p=reddust;color=#ffff94;radius=2;points=15;amount=30;hS=1;vS=21} @origin
+  - effect:blockmask{m=YELLOW_WOOL;r=2;d=90} @origin
+  - delay 2
+  - effect:particlering{p=reddust;color=#ff9494;radius=1;points=15;amount=30;hS=1;vS=1} @origin
+  - effect:blockmask{m=RED_WOOL;r=1;d=288} @origin
+
+####################################################  
+  
+BUNNY_ATTACK:
+  Cooldown: 1
+  Skills:
+  - skill{s=BUNNY_ATTACKtick;repeat=12;repeatInterval=1}
+  - leap{velocity=250} @forward{f=2;y=3;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - delay 20
+  - leap{velocity=400} @forward{f=4;y=-5;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - skill{s=BUNNY_ATTACKtickTW;repeat=12;repeatInterval=1}
+  - delay 10
+  - skill{s=BUNNY_ATTACKPushBack} @self
+
+BUNNY_ATTACKtick:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#ff9494;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ffd294;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ffff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#e0ff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#a3ff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ffbb;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ffe2;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ddff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94b8ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#9494ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#c094ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#da94ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ff94e7;amount=1;radius=1} @self
+  - damage{a="<modifier.damage-tick>";i=true} @EIR{r=2}
+
+BUNNY_ATTACKtickTW:
+  Skills:
+  - effect:particlesphere{p=reddust;color=#ff9494;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ffd294;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ffff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#e0ff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#a3ff94;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ffbb;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ffe2;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94ddff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#94b8ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#9494ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#c094ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#da94ff;amount=1;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ff94e7;amount=1;radius=1} @self
+
+BUNNY_ATTACKPushBack:
+  Skills:
+  - summon{type=VFX_BUNNY_ATTACK;amount=1} @self
+  - delay 2
+  
+  - throw{velocity="<modifier.velocity>";velocityY="<modifier.velocity-Y>"} @EIR{r=8}
+  - damage{a="<modifier.damage>";ignoreArmor=false} @EIR{r=8}
+BUNNY_ATTACKPushBackMOBS:
+  Skills:
+  - effect:particlering{p=reddust;color=#ff9494;radius=1;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=RED_WOOL;r=1;d=2} @self
+  - delay 1
+  - effect:particlering{p=reddust;color=#ffff94;radius=2;points=15;amount=30;hS=1;vS=21} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=YELLOW_WOOL;r=2;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#a3ff94;radius=3;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=LIME_WOOL;r=3;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#94ffe2;radius=4;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=LIGHT_BLUE_WOOL;r=4;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#c094ff;radius=5;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=PINK_WOOL;r=5;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#da94ff;radius=6;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=MAGENTA_WOOL;r=6;d=2} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#ff94e7;radius=7;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=PURPLE_WOOL;r=7;d=100} @self
+  - effect:particlesphere{p=wax_off;r=0.1;a=1;hs=0.2;vs=0.06;s=0.05} @origin
+  - delay 2
+  - effect:particlering{p=reddust;color=#da94ff;radius=6;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=MAGENTA_WOOL;r=6;d=98} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#c094ff;radius=5;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=PINK_WOOL;r=5;d=96} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#94ffe2;radius=4;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=LIGHT_BLUE_WOOL;r=4;d=94} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#a3ff94;radius=3;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=LIME_WOOL;r=3;d=92} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#ffff94;radius=2;points=15;amount=30;hS=1;vS=21} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=YELLOW_WOOL;r=2;d=90} @self
+  - delay 2
+  - effect:particlering{p=reddust;color=#ff9494;radius=1;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=RED_WOOL;r=1;d=288} @self
+  
+
+
+
+###############################################################

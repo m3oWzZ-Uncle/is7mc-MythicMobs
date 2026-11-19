@@ -1,0 +1,42 @@
+name: Clone
+lore:
+- Tạo ra bản sao đi về các phía ngẫu nhiên
+- khi chạm vào sẽ gây sát thương và làm kẻ
+- địch bị đông cứng.
+- ''
+- '&8[&c!&8] &7Yêu cầu Mở lãnh địa Băng (Arctic Aura)'
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Damage &7▸ <#FF8E6A>{damage}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: TOTEM_OF_UNDYING
+damage:
+  base: 40
+  per-level: 0.1
+  min: 1
+  max: 30
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 25
+  per-level: -0.1
+  min: 22
+  max: 25

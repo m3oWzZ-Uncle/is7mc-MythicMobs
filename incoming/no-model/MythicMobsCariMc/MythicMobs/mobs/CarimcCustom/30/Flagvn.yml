@@ -1,0 +1,14 @@
+THE_vietnamflag:
+  Type: ARMOR_STAND
+  Display: '<gradient:#f200ff:#ff0000><bold>The Eye</gradient>'
+  Health: 2000
+  Damage: 1
+  Equipment:
+  - vietnamflag HEAD
+  Options:
+    Silent: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 0.8
+    PreventOtherDrops: true
+    PreventRenaming: true
+    Invisible: true

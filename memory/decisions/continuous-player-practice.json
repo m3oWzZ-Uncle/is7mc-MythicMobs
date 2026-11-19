@@ -1,0 +1,27 @@
+{
+  "id": "continuous-player-practice",
+  "category": "decisions",
+  "title": "Vòng thực hành Player Skills liên tục",
+  "topic": "practical-training-workflow",
+  "summary": "Ưu tiên player-cast khi đề để mở. Đối chiếu quyết định và lỗi cũ trước khi thiết kế. Tự phân tích phản hồi tự nhiên, chỉ hỏi một câu khi thiếu dữ kiện làm thay đổi gameplay. Ghi bằng chứng từng nhiệm vụ và đánh giá sau mỗi 5 bài có bằng chứng.",
+  "context": "Bài thực hành và nhiệm vụ thiết kế/sửa MythicMobs trong kho Training.",
+  "exceptions": "Khi người dùng chỉ định boss hoặc mob, theo caller thực tế. Bài học chốt cần xác nhận, trạng thái runtime cần bằng chứng đúng bản YAML.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-15",
+  "answer": "evidence-driven-player-practice",
+  "tags": [
+    "player-skill",
+    "practice",
+    "feedback",
+    "benchmark"
+  ],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "AGENTS.md",
+      "note": "Yêu cầu trực tiếp «CONTINUOUS PRACTICAL TRAINING», gồm mặc định player-cast, phản hồi tự nhiên và cách ghi bằng chứng."
+    }
+  ]
+}

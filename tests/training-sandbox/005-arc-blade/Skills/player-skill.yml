@@ -1,0 +1,8 @@
+TrainingArcBlade:
+  Cooldown: 2
+  Skills:
+    - slash{a=100;w=3;h=3;p=16;d=6;mpd=true;yo=1;oP=TrainingArcBladePoint} @self
+
+TrainingArcBladePoint:
+  Skills:
+    - particle{p=end_rod;a=1;hs=0;vs=0;s=0} @targetedlocation

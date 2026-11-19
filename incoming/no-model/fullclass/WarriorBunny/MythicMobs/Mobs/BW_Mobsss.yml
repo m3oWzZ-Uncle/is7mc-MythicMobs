@@ -1,0 +1,41 @@
+# http://www.mythicmobs.net
+#
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+
+
+
+RABIT_MOBS:
+  MobType: RABBIT
+  Faction: DARK
+  Health: 10
+  Damage: 1
+  Options:
+    Tameable: false
+    Tamed: true
+    Silent: true
+    Despawn: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventLeashing: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    NoAI: false
+  Skills:
+
+
+VFX_BUNNY_ATTACK:
+  Type: block_display
+  DisplayOptions:
+    Block: AIR
+    Billboard: FIXED
+  Options:
+    Invincible: true
+    Collidable: false
+  Skills:
+  - skill{s=BUNNY_ATTACKPushBackMOBS} @self ~onSpawn
+  - remove{delay=40} @self ~onSpawn

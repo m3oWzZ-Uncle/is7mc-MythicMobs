@@ -1,0 +1,11 @@
+TrainingFoundationDecoy:
+  Cooldown: 4
+  Skills:
+    - skill{s=TrainingFoundationDecoyAtPoint} @Forward{f=3;lockpitch=true}
+
+TrainingFoundationDecoyAtPoint:
+  Skills:
+    - particlering{p=flame;r=2;points=16;a=1;hs=0;vs=0;s=0;y=0.15} @TargetedLocation
+    - delay 20
+    - particlering{p=sweep_attack;r=2;points=8;a=1;hs=0;vs=0;s=0;y=0.8} @TargetedLocation
+    - damage{a=4} @LivingNearTargetLocation{r=2;targetplayers=false;targetarmorstands=false}

@@ -1,0 +1,16 @@
+{
+  "id": "002-directional-sword-wave",
+  "kind": "practice",
+  "level": "basic",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "direct-hit",
+    "side-miss",
+    "solid-wall",
+    "first-target",
+    "yaw-change",
+    "pitch-change",
+    "range-expiry"
+  ]
+}

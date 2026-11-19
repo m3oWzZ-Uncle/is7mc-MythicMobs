@@ -1,0 +1,37 @@
+name: Geppo
+lore:
+- Giúp cho người chơi có khả năng nhảy
+- trên không trung 3 lần liên tiếp
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+material: IRON_BOOTS
+damage:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 19
+  per-level: -0.5
+  min: 0
+  max: 10

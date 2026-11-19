@@ -1,0 +1,11 @@
+{
+  "id": "007-vector-dash",
+  "kind": "practice",
+  "level": "basic",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "vector",
+    "dash"
+  ]
+}

@@ -1,0 +1,18 @@
+TrainingDashCleave:
+  Cooldown: 4
+  Skills:
+    - particle{p=flame;a=8;hs=0.12;vs=0.08;y=1} @self
+    - delay 12
+    - look{force=true} @trigger
+    - lunge{velocity=0.85;velocityY=0} @trigger
+    - delay 6
+    - velocity{m=SET;x=0;y=0;z=0} @self
+    - playanimation{a=0} @self
+    - skill{s=TrainingDashCleaveDamage} @LivingInCone{a=90;r=4;usepitch=false}
+
+TrainingDashCleaveDamage:
+  TargetConditions:
+    - entitytype{t=PLAYER} true
+    - lineofsight true
+  Skills:
+    - damage{a=6}

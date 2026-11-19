@@ -1,0 +1,10 @@
+TrainingDashCleaveBoss:
+  Type: HUSK
+  Display: 'Training Dash Cleave Boss'
+  Health: 80
+  AIGoalSelectors:
+    - clear
+  AITargetSelectors:
+    - clear
+  Skills:
+    - skill{s=TrainingDashCleave} @self ~onInteract

@@ -1,0 +1,259 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+# *Lưu ý: skill sử dụng nhiều particle nên hãy cân nhắc server đủ mạnh, máy của bạn đủ mạnh để chịu được nhé! 
+#  và sát thương của kỹ năng cũng to khoảng 30-80,các cơn gió tuyết có thể ánh hưởng tới bản thân bạn
+# để dùng skill hãy sử dụng lệnh /mm test cast Bankai_Snow
+# để thử theo góc nhìn của kẻ địch sử dụng lệnh /mm mobs spawn MobstestSkillBankai
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+# giá bán gốc của file 40k
+Bankai_Snow:
+  Skills:
+  - sendtitle{title="&dBanKai";subtitle="&bVạn Hoa Tuyết";d=20} @self
+  - delay 10
+  - potion{type=SLOW;duration=100;level=99;p=false} @self
+  - sendtitle{title="&bHãy chạy đi";subtitle="&fTiến hành Bankai &e1%";d=20} @EIR{r=20}
+  - sendtitle{title="&3Bankai &bVạn hoa tuyết";subtitle="&fTiến trình &e1%";d=20} @self
+  - effect:blockmask{m=ICE;r=1;d=20} @self
+  - delay 20
+  - sendtitle{title="&bHãy chạy đi";subtitle="&fTiến hành Bankai &e14%";d=20} @EIR{r=20}
+  - sendtitle{title="&3Bankai &bVạn hoa tuyết";subtitle="&fTiến trình &e14%";d=20} @self
+  - effect:blockmask{m=ICE;r=2;d=20} @self
+  - delay 20
+  - sendtitle{title="&bHãy chạy đi";subtitle="&fTiến hành Bankai &e36%";d=20} @EIR{r=20}
+  - sendtitle{title="&3Bankai &bVạn hoa tuyết";subtitle="&fTiến trình &e36%";d=20} @self
+  - effect:blockmask{m=ICE;r=3;d=20} @self
+  - delay 20
+  - sendtitle{title="&bHãy chạy đi";subtitle="&fTiến hành Bankai &e57%";d=20} @EIR{r=20}
+  - sendtitle{title="&3Bankai &bVạn hoa tuyết";subtitle="&fTiến trình &e57%";d=20} @self
+  - effect:blockmask{m=ICE;r=3;d=20} @self
+  - delay 20
+  - sendtitle{title="&bHãy chạy đi";subtitle="&fTiến hành Bankai &e78%";d=20} @EIR{r=20}
+  - sendtitle{title="&3Bankai &bVạn hoa tuyết";subtitle="&fTiến trình &e78%";d=20} @self
+  - effect:blockmask{m=ICE;r=3;d=20} @self
+  - delay 20
+  - sendtitle{title="&bHãy chạy đi";subtitle="&fTiến hành Bankai &e99%";d=20} @EIR{r=20}
+  - sendtitle{title="&3Bankai &bVạn hoa tuyết";subtitle="&fTiến trình &e99%";d=20} @self
+  - effect:blockmask{m=ICE;r=3;d=20} @self
+  - delay 10
+  - skill{s=FrozenDown}
+  - potion{type=SLOW;duration=40;level=99;p=false} @self
+  - effect:blockmask{m=BLUE_ICE;r=1;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=2;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=3;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=4;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=5;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=6;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=7;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=8;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=9;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=10;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=11;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=12;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=13;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=14;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=15;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=16;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=17;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=18;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=19;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=20;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=21;d=3} @self
+  - delay 3
+  - effect:blockmask{m=BLUE_ICE;r=22;d=3} @self
+  - delay 1
+  - effect:particlebox{particle=snowflake;amount=100;radius=5} @self
+  - summon{type=bankai_Mobs2;amount=1} @self
+  - delay 1
+  - potion{type=WEAKNESS;duration=200;level=1;p=false} @EIR{r=30}
+  - potion{type=SLOW;duration=80;level=2;p=false} @EIR{r=30}
+  - delay 1
+  - summon{type=bankai_Mobs_shield;amount=1} @self
+  - summon{type=bankai_Mobs_shieldTwo;amount=1} @self
+  - delay 1
+  - prison{material=ICE;duration=60} @EIR{r=30}
+  - effect:blockmask{m=SNOW_BLOCK;r=22;d=497} @self
+  - delay 20
+  - skill{s=Bankai_SnowSS}
+  - delay 80
+  - skill{s=Bankai_IceHold}
+  - delay 100
+  - skill{s=Bankai_SnowSS}
+  - delay 100
+  - skill{s=Bankai_IceHold}
+  - skill{s=Bankai_WindFrozen}
+  
+Bankai_SnowMobs2:
+  Skills:
+  - effect:blockmask{m=BLUE_ICE;r=35;d=400} @self
+#  - effect:particlebox{particle=snowflake;amount=1000;radius=30} @self
+  - sound{s=entity.zombie_villager.cure;v=0.3;p=1} @EIR{r=30}
+  - damage{a=30;pkb=true} @EIR{r=30}
+#  - delay 20
+#  - skill{s=Bankai_SnowSS}
+#  - delay 80
+#  - skill{s=Bankai_SnowSS}
+#  - delay 100
+#  - skill{s=Bankai_SnowSS}
+#  - delay 100
+#  - skill{s=Bankai_SnowSS}
+Bankai_SnowSS:
+  Skills:
+  - summon{type=bankai_Mobs;amount=1} @EIR{r=20}
+Bankai_SnowMobs:
+  Skills:
+  - sound{s=block.bell.use;p=0.5;v=1} @PIR{r=4}
+  - effect:blockmask{m=snow_block;r=2;d=60} @self
+  - potion{type=WEAKNESS;duration=100;level=1;p=false} @EIR{r=4}
+  - damage{a=30;pkb=true} @EIR{r=4}
+  - delay 20
+  - damage{a=40;pkb=true} @EIR{r=4}
+  - delay 20
+  - damage{a=60;pkb=true} @EIR{r=4}
+
+testparticle:
+  Skills:
+  - effect:particletornado{p=snowflake;cp=largeexplode;mr=1;h=6;i=1;d=100;rs=1;sh=4;cs=5;ca=0;chs=1;cvs=0;cps=1;cyo=0;scd=true;sed=true} @self ~onTimer:100
+
+testPotion:
+  Skills:
+  - potion{type=SPEED;duration=200;level=1;p=false} @self
+
+testskill:
+  Skills:
+  - effect:particlering{p=reddust;color=#239323;radius=21;points=80;amount=2;hS=0;vS=0.3;y=+0.1;repeat=4;repeatInterval=8} @Self
+  - projectile{oT=[ - effect:particles{p=reddust;color=#ef0f14;amount=2;hs=0;vs=0 } @Origin - throw{velocity=-8;velocityY=5} @EIR{r=21} ];oH=[ - skill{s=Bankai_WindFrozen} - remove @Self ];v=0;d=10;i=2;hR=1;vR=1;hp=true;hnp=false;sE=false;sB=false;sfo=1;syo=0.1;sso=-0.1} @Self
+
+testMechanic:
+  Skills:
+  - effect:geyser{type=LAVA;height=6;speed=10} @selflocation{yo=2}
+
+Bankai_shield:
+  Skills:
+  - orbital{i=1;radius=20;points=128;oS=Bankai_shieldSound;oT=Bankai_shield_tick;oH=Bankai_shield_hit;oE=Bankai_shield_end;duration=400;oy=1} @self
+  - orbital{i=1;radius=20;points=64;oS=Bankai_shieldSound;oT=Bankai_shield_tick;oH=Bankai_shield_hit;oE=Bankai_shield_end;duration=400;oy=1} @self
+  - delay 20
+  - orbital{i=1;radius=20;points=64;oS=Bankai_shieldSound;oT=Bankai_shield_tick;oH=Bankai_shield_hit;oE=Bankai_shield_end;duration=380;oy=1.5} @self
+  - delay 20
+  - orbital{i=1;radius=20;points=64;oS=Bankai_shieldSound;oT=Bankai_shield_tick;oH=Bankai_shield_hit;oE=Bankai_shield_end;duration=360;oy=2} @self
+  - delay 40
+  - orbital{i=1;radius=20;points=32;oS=Bankai_shieldSound;oT=Bankai_shield_tick;oH=Bankai_shield_hit;oE=Bankai_shield_end;duration=320;oy=3} @self
+Bankai_shieldSound:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0.3;p=1} @self
+Bankai_shield_tick:
+  Skills:
+  - effect:particlering{particle=snowflake;a=1;y=0.2;r=2;points=64} @origin
+Bankai_shield_hit:
+  Skills:
+  - effect:particles{p=snowflake;a=25;hs=0.1;vs=0.1;s=0.05}
+  - delay 1
+  - damage{a=80;pkb=true}
+Bankai_shield_end:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0.3;p=1} @self
+
+Bankai_ShieldTwo:
+  Skills:
+  - orbital{i=1;radius=20;points=128;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=400;oy=1} @self
+  - orbital{i=1;radius=20;points=64;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=400;oy=1} @self
+  - orbital{i=1;radius=20;points=32;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=400;oy=1} @self
+  - delay 20
+  - orbital{i=1;radius=21;points=128;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=380;oy=1} @self
+  - orbital{i=1;radius=21;points=64;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=380;oy=1} @self
+  - orbital{i=1;radius=21;points=32;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=380;oy=1} @self
+  - delay 20
+  - orbital{i=1;radius=22;points=128;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=360;oy=1} @self
+  - orbital{i=1;radius=22;points=64;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=360;oy=1} @self
+  - orbital{i=1;radius=22;points=32;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=360;oy=1} @self
+  - delay 20
+  - orbital{i=1;radius=23;points=128;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=340;oy=1} @self
+  - orbital{i=1;radius=23;points=64;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=340;oy=1} @self
+  - orbital{i=1;radius=23;points=32;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=340;oy=1} @self
+  - delay 20
+  - orbital{i=1;radius=24;points=128;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=320;oy=1} @self
+  - orbital{i=1;radius=24;points=64;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=320;oy=1} @self
+  - orbital{i=1;radius=24;points=32;oS=Bankai_ShieldTwoSound;oT=Bankai_ShieldTwo_tick;oH=Bankai_ShieldTwo_hit;oE=Bankai_ShieldTwo_end;duration=320;oy=1} @self
+Bankai_ShieldTwoSound:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0;p=0} @self
+Bankai_ShieldTwo_tick:
+  Skills:
+  - effect:particles{p=snowflake;a=25;hs=0.1;vs=0.1;s=0.05} @origin
+Bankai_ShieldTwo_hit:
+  Skills:
+  - prison{material=ICE;duration=60}
+  - effect:bloodyScreen{d=60}
+  - damage{a=40;pkb=true}
+Bankai_ShieldTwo_end:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0;p=0} @self
+
+Bankai_WindFrozen:
+  Skills:
+  - orbital{i=1;radius=5;points=64;oS=Bankai_WindFrozenSound;oT=Bankai_WindFrozen_tick;oH=Bankai_WindFrozen_hit;oE=Bankai_WindFrozen_end;duration=60;oy=1} @self
+Bankai_WindFrozenSound:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=1;p=1} @self
+Bankai_WindFrozen_tick:
+  Skills:
+  - effect:particletornado{p=snowflake;cp=largeexplode;mr=1;h=3;i=1;d=100;rs=1;sh=1;cs=0;ca=0;chs=6;cvs=0.1;cps=1;cyo=-1.8} @origin
+Bankai_WindFrozen_hit:
+  Skills:
+  - throw{velocity=-15;velocityY=15}
+  - damage{a=40;pkb=true}
+  - delay 20
+  - prison{material=ICE;duration=60}
+  - effect:bloodyScreen{d=60}
+Bankai_WindFrozen_end:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0;p=0} @self
+
+Bankai_IceHold:
+  Skills:
+  - effect:particlering{p=reddust;color=#239323;radius=21;points=80;amount=2;hS=0;vS=0.3;y=+0.1;repeat=4;repeatInterval=8} @Self
+  - projectile{oT=[ - effect:particles{p=reddust;color=#ef0f14;amount=2;hs=0;vs=0 } @Origin - throw{velocity=-8;velocityY=5} @EIR{r=21} ];oH=[ - skill{s=Bankai_WindFrozen} - remove @Self ];v=0;d=20;i=2;hR=1;vR=1;hp=true;hnp=false;sE=false;sB=false;sfo=1;syo=0.1;sso=-0.1} @Self
+  
+  
+FrozenDown:
+  Skills:
+  - projectile{oT=FDt;oH=FDh;oE=FDe;v=12;i=1;mr=10;sE=false} @Ring{radius=360;points=36}
+
+FDt:
+  Skills:
+  - effect:particles{p=block_crack;m=ice;a=10;vS=0.3;hs=0.2}
+
+FDh:
+  Skills:
+  - prison{material=ICE;duration=60}
+
+FDe:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=1;p=1} @self
+  
+
+Bankai_Snow_Image:
+  Skills:
+  - effect:particlering{p=snowflake;mr=1;h=3;i=1;d=100;rs=1;sh=1;cs=0;ca=0;chs=6;cvs=0.1;cps=1;cyo=-1.8} @Ring{radius=8;points=36}

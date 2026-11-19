@@ -1,0 +1,13 @@
+TrainingBoundedFork:
+  Cooldown: 4
+  Skills:
+    - projectile{v=12;i=1;d=30;mr=12;sE=true;sB=true;hp=true;hnp=true;onEnd=TrainingBoundedForkSplit;onTick=TrainingBoundedForkTrail} @Forward{f=12;y=1}
+
+TrainingBoundedForkSplit:
+  Skills:
+    - projectile{fromorigin=true;syo=0;sfo=0;v=9;i=2;d=16;mr=6;sB=true;sE=false;hp=false;hnp=false;onTick=TrainingBoundedForkTrail} @ProjectileForward{f=6;rot=-25}
+    - projectile{fromorigin=true;syo=0;sfo=0;v=9;i=2;d=16;mr=6;sB=true;sE=false;hp=false;hnp=false;onTick=TrainingBoundedForkTrail} @ProjectileForward{f=6;rot=25}
+
+TrainingBoundedForkTrail:
+  Skills:
+    - particle{p=end_rod;a=1;s=0} @origin

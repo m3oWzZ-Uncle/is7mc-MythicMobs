@@ -1,0 +1,28 @@
+VFX_VKQT_SWORD:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+    Interactable: false
+    Invincible: true
+    HasGravity: false
+    NoAI: true
+  Skills:
+  - model{usestatemachine=true;mid=vankiemquytong_sword;lockpitch=true} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn
+
+
+VFX_VKQT_MAGIC_CIRCLE:
+  Type: ARMOR_STAND
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+    Interactable: false
+    Invincible: true
+    HasGravity: false
+    NoAI: true
+  Skills:
+  - model{usestatemachine=true;mid=vankiemquytong_circle;lockpitch=true} @self ~onSpawn
+  - brightness{b=15;s=15} @self ~onSpawn

@@ -1,0 +1,6 @@
+TrainingDelayedSelfHeal:
+  Cooldown: 6
+  Skills:
+    - message{m="Dang chuan bi hoi mau"} @self
+    - delay 20
+    - heal{amount=4} @self

@@ -1,0 +1,30 @@
+{
+  "id": "dash-cleave-strike-after-dodge",
+  "category": "decisions",
+  "title": "Lướt tới người chơi và vẫn chém khi hụt",
+  "topic": "dash-cleave-follow-through",
+  "summary": "Boss Dash Cleave phải lướt về người chơi rồi chém dù người đó né trong lúc lướt. Vùng chém được dùng để quyết định damage.",
+  "context": "TrainingDashCleave, cú lướt có một đòn chém tiếp theo.",
+  "exceptions": "Skill có yêu cầu hủy lúc mất mục tiêu, hoặc chiêu chỉ thực hiện hiệu ứng khi trúng, cần luật riêng. Phản hồi này không chốt thời điểm khóa hướng cho mọi boss.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-14",
+  "answer": "target-player-and-strike-on-miss",
+  "requires": [
+    "training-dash-cleave"
+  ],
+  "tags": [
+    "boss",
+    "lunge",
+    "cleave",
+    "dodge"
+  ],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "feedback/corrections/MM-2026-006.md",
+      "note": "Người dùng xác nhận yêu cầu ở phản hồi 3. Runtime bản sửa còn chờ thử."
+    }
+  ]
+}

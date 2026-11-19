@@ -1,0 +1,117 @@
+## Đánh Thường (skill 1)
+lccv_danhthuong:
+  Cooldown: 0.2
+  Conditions:
+  - hasAura{auraName=lccv_xoaytay} false
+  - hasAura{auraName=luccotchivuong}
+  - hasAura{auraName=lccv_haitay} castinstead lccv_danhthuong_haitay
+  Skills:
+  - setvariable{var=skill.casted;v=0} @caster
+  
+  - skill{s=[
+      - skill{s=lccv_danhthuong_alltrai}
+      - setvariable{var=skill.casted;v=1} @caster
+    ]} ?varEquals{var=caster.lccv_hand_1_availability;value=1}
+
+  - skill{s=lccv_danhthuong_allphai} ?varEquals{var=caster.lccv_hand_2_availability;value=1} ?varEquals{var=skill.casted;value=0}
+
+## Đánh Thường
+lccv_danhthuong_alltrai:
+  Conditions:
+  - varEquals{var=caster.lccv_hand_1_availability;value=1}
+  Skills:
+  - setvariable{var=caster.lccv_hand_1_availability;value=0} @caster
+  - variableadd{var=caster.lccv_hand_count;value=-1} @caster
+  
+  - SudoSkill{s=[
+      - state{s=taytraiattack} @self
+    ];setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+  
+  - skill{s=lccv_danhthuong_Attack_DAMAGE;delay=18}
+  
+  - delay 35
+  - setvariable{var=caster.lccv_hand_1_availability;value=1} @caster ?hasAura{auraName=luccotchivuong}
+  - variableadd{var=caster.lccv_hand_count;value=1} @caster ?hasAura{auraName=luccotchivuong}
+
+lccv_danhthuong_allphai:
+  Conditions:
+  - varEquals{var=caster.lccv_hand_2_availability;value=1}
+  Skills:
+  - setvariable{var=caster.lccv_hand_2_availability;value=0} @caster
+  - variableadd{var=caster.lccv_hand_count;value=-1} @caster
+  
+  - SudoSkill{s=[
+      - state{s=tayphaiattack} @self
+    ];setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+
+  - skill{s=lccv_danhthuong_Attack_DAMAGE;delay=18}
+  
+  - delay 35
+  - setvariable{var=caster.lccv_hand_2_availability;value=1} @caster ?hasAura{auraName=luccotchivuong}
+  - variableadd{var=caster.lccv_hand_count;value=1} @caster ?hasAura{auraName=luccotchivuong}
+
+lccv_danhthuong_Attack_DAMAGE:
+  Conditions:
+  - hasAura{auraName=luccotchivuong}
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<modifier.damage> / 100)";pkb=false;hnp=true;hp=true;types=SKILL,PHYSICAL} @EIC{a=225;r=6.5}
+
+## Đánh Thường (Hai Tay) PASSIVE Cường Hóa
+
+lccv_passive:
+  Conditions:
+  - hasAura{auraName=luccotchivuong}
+  - varEquals{var=caster.lccv_hand_count;value=2}
+  Skills:
+  - aura{auraname=lccv_haitay;duration=400} @caster
+
+lccv_danhthuong_haitay:
+  Conditions:
+  - varEquals{var=caster.lccv_hand_count;value=2}
+  - varEquals{var=caster.lccv_hand_1_availability;value=1}
+  - varEquals{var=caster.lccv_hand_2_availability;value=1}
+  Skills:
+  - setvariable{var=caster.lccv_hand_1_availability;value=0} @caster
+  - setvariable{var=caster.lccv_hand_2_availability;value=0} @caster
+  - variableadd{var=caster.lccv_hand_count;value=-2} @caster
+  
+  - auraRemove{aura=lccv_haitay} @caster
+  - SudoSkill{s=[
+      - state{s=haitayattack} @self
+    ];setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+
+  - skill{s=lccv_danhthuong_Attack_DAMAGE;delay=18}
+  
+  - delay 35
+  - setvariable{var=caster.lccv_hand_1_availability;value=1} @caster ?hasAura{auraName=luccotchivuong}
+  - setvariable{var=caster.lccv_hand_2_availability;value=1} @caster ?hasAura{auraName=luccotchivuong}
+  - variableadd{var=caster.lccv_hand_count;value=2} @caster ?hasAura{auraName=luccotchivuong}
+
+## Xoay Tay
+
+lccv_xoay_tay:
+  Conditions:
+  - varEquals{var=caster.lccv_hand_count;value=2}
+  - varEquals{var=caster.lccv_hand_1_availability;value=1}
+  - varEquals{var=caster.lccv_hand_2_availability;value=1}
+  Skills:
+  - setvariable{var=caster.lccv_hand_1_availability;value=0} @caster
+  - setvariable{var=caster.lccv_hand_2_availability;value=0} @caster
+  - variableadd{var=caster.lccv_hand_count;value=-2} @caster
+
+  - aura{auraname=lccv_xoaytay;duration=160} @caster
+
+  - SudoSkill{s=[
+      - state{s=haitayxoay} @self
+    ];setcasterastrigger=true} @Children{target=armorstands;conditions=[  - mythicmobtype{t=luccotchivuong_summoned} ]}
+
+  - skill{s=lccv_xoaytay_Attack_DAMAGE;repeat=14;repeati=10;delay=20}
+  
+  - delay 160
+  - setvariable{var=caster.lccv_hand_1_availability;value=1} @caster ?hasAura{auraName=luccotchivuong}
+  - setvariable{var=caster.lccv_hand_2_availability;value=1} @caster ?hasAura{auraName=luccotchivuong}
+  - variableadd{var=caster.lccv_hand_count;value=2} @caster ?hasAura{auraName=luccotchivuong}
+
+lccv_xoaytay_Attack_DAMAGE:
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<modifier.damage> / 100) * 0.25";pkb=false;hnp=true;hp=true;types=SKILL,PHYSICAL} @EIR{r=5.5} ?hasAura{auraName=luccotchivuong}

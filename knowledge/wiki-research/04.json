@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-11-14",
+  "pages": [
+    {"path":"Skills/Skills.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Skills","status":"aligned","finding":"Cùng phân biệt mechanic, trigger, condition và targeter trong tóm tắt cấu trúc skill.","note":"entries/mythicmobs--metaskill--metaskills.md"},
+    {"path":"Skills/Mechanics/damage.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/changelogs/Changelogs#damage","status":"differs","finding":"Snapshot chưa ghi then/onDamage, skill.var.damage-dealt hoặc triggerSkillDamage. Changelog 5.14.0 nêu rõ các bổ sung và phạm vi.","note":"entries/mythicmobs--mechanic--damage.md"},
+    {"path":"Skills/Mechanics/setvariable.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/setvariable","status":"aligned","finding":"Đối chiếu scope mặc định và giới hạn save/duration trên SKILL.","note":"entries/mythicmobs--meta-mechanic--setvariable.md"},
+    {"path":"Skills/Mechanics/summon.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/summon?version_id=0ccd9c68412f6fecbfc0fa57350f4c8634a3dc05","status":"aligned","finding":"Đối chiếu onSummon, owner/parent là hai trường riêng, sio và sip đều ghi mặc định true.","note":"entries/mythicmobs--mechanic--summon.md"},
+    {"path":"Skills/Targeters/Owner.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Targeters/Owner","status":"differs","finding":"Online mở rộng đến owner của dropped item đang online, được ghi trong 5.14.0. Snapshot chỉ mô tả mob.","note":"entries/mythicmobs--targeter--owner.md"},
+    {"path":"Skills/Conditions/hasaura.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Conditions/hasaura","status":"aligned","finding":"Đối chiếu cách tra tên aura bằng HasAura. Việc gắn, cộng hoặc xóa stack thuộc các mechanic khác.","note":"entries/mythicmobs--condition--hasaura.md"},
+    {"path":"API/Placeholders.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/API/Placeholders","status":"aligned","finding":"Các phần GenericPlaceholder, constructor và annotation tương ứng trong phạm vi đã đọc. Chưa compile với dependency của server."}
+  ]
+}

@@ -1,0 +1,56 @@
+VFX_LIGHT_ATTACK_MOBS_V1:
+  Type: ARMOR_STAND
+  Pose:
+      RightArm: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+#  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - skill{s=VFX_LIGHT_HIEUUNG_V1} @self ~onSpawn
+  - remove{delay=40} @self ~onSpawn
+VFX_LIGHT_ATTACK_MOBS_V2:
+  Type: ARMOR_STAND
+  Pose:
+      RightArm: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+#  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - skill{s=VFX_LIGHT_HIEUUNG_V2} @self ~onSpawn
+  - remove{delay=40} @self ~onSpawn
+VFX_LIGHT_ATTACK_MOBS_V3:
+  Type: ARMOR_STAND
+  Pose:
+      RightArm: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+#  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - skill{s=VFX_LIGHT_HIEUUNG_V3} @self ~onSpawn
+  - remove{delay=40} @self ~onSpawn
+VFX_LIGHT_ATTACK_MOBS_V4:
+  Type: ARMOR_STAND
+  Pose:
+      RightArm: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+#  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - skill{s=VFX_LIGHT_HIEUUNG_V4} @self ~onSpawn
+  - remove{delay=40} @self ~onSpawn

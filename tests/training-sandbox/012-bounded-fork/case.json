@@ -1,0 +1,12 @@
+{
+  "id": "012-bounded-fork",
+  "kind": "practice",
+  "level": "intermediate",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "hit",
+    "end-at-range",
+    "packed"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "curriculum-sword-wave-r1",
+  "category": "patterns",
+  "title": "Kiếm Khí Trảm r1 được người dùng thử và chấp nhận",
+  "topic": "player-sword-wave",
+  "summary": "Người dùng báo Kiếm Khí Trảm r1 chạy đúng trong Minecraft. Cú vung chạy lúc cast, projectile dùng origin cho VFX và target va chạm cho damage.",
+  "context": "Bài 01 của chương trình 40 bài, player caster, PvE trong arena thử. Mốc tài liệu 5.14.0.",
+  "exceptions": "Chấp nhận bản hiện tại trong bài này. Chưa có build chạy thật hoặc kết quả theo từng ca. Cần kiểm tra riêng nếu đổi chính sách PvP, xuyên đích, AoE hoặc mục tiêu hỗn hợp.",
+  "scope": "global",
+  "claim": "FACT",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-15",
+  "tags": ["player-skill", "projectile", "collision", "pve", "curriculum"],
+  "sources": [
+    {"type": "user", "ref": "tests/training-sandbox/018-curriculum-sword-wave/evidence/user-confirmation-r1.md", "note": "Phản hồi trực tiếp xác nhận kết quả chung trên bản r1."},
+    {"type": "yaml", "ref": "tests/training-sandbox/018-curriculum-sword-wave/Skills/player-skill.yml", "note": "Bản được chấp nhận. Hash có trong biên bản."}
+  ]
+}

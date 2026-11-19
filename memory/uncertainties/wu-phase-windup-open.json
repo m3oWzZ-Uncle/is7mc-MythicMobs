@@ -1,0 +1,37 @@
+{
+  "id": "wu-phase-windup-open",
+  "category": "uncertainties",
+  "topic": "boss-phase-windup-priority",
+  "title": "Ưu tiên đòn đang báo hay đổi phase ở ngưỡng máu",
+  "summary": "Tình huống Wu còn 8 tick tới hit khi xuống dưới 50% máu. Dự đoán chờ hết đòn có độ tin cậy thấp.",
+  "context": "Boss hai người, phase mới dùng chung quyền điều khiển AI với đòn đang báo và có thể chờ vài tick.",
+  "exceptions": "Cần xét lại nếu thiết kế bắt buộc chuyển phase tức thì hoặc có quy tắc riêng về ngắt đòn.",
+  "scope": "global",
+  "claim": "FACT",
+  "confidence": "UNKNOWN",
+  "recorded": "2026-11-14",
+  "requires": [
+    "boss",
+    "phase-threshold",
+    "attack-windup",
+    "phase-can-wait"
+  ],
+  "tags": [
+    "wu",
+    "boss",
+    "phase",
+    "wind-up",
+    "interrupt",
+    "cleanup"
+  ],
+  "related": [
+    "simple-full-gameplay"
+  ],
+  "sources": [
+    {
+      "type": "document",
+      "ref": "feedback/decisions/MM-D-2026-002.md",
+      "note": "Tình huống giả định và dự đoán trước khi hỏi. Chưa có phản hồi của người dùng."
+    }
+  ]
+}

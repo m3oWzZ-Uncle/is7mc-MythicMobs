@@ -1,0 +1,25 @@
+TrainingEchoLance:
+  Cooldown: 4
+  Skills:
+    - setvarloc{var=skill.ionecho;val=@Forward{f=8;y=1;lockpitch=true}}
+    - skill{s=TrainingEchoLanceWarning} @VariableLocation{var=skill.ionecho}
+    - delay 12
+    - skill{s=TrainingEchoLanceFire} @VariableLocation{var=skill.ionecho}
+    - delay 6
+    - skill{s=TrainingEchoLanceFire} @VariableLocation{var=skill.ionecho}
+
+TrainingEchoLanceWarning:
+  Skills:
+    - particle{p=flame;a=14;hs=0.4;vs=0.15} @targetedlocation
+
+TrainingEchoLanceFire:
+  Skills:
+    - projectile{v=16;i=1;mr=14;d=20;hR=0.5;vR=0.6;sE=true;sB=true;hnp=true;hp=false;onTick=TrainingEchoLanceTrail;onHit=TrainingEchoLanceHit} @targetedlocation
+
+TrainingEchoLanceTrail:
+  Skills:
+    - particle{p=crit;a=1;s=0} @origin
+
+TrainingEchoLanceHit:
+  Skills:
+    - damage{a=4}

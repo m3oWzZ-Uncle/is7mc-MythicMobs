@@ -1,0 +1,31 @@
+{
+  "id": "long-term-memory-rollout",
+  "category": "conversations",
+  "title": "Triển khai và kiểm thử bộ nhớ dài hạn",
+  "topic": "learning-workflow",
+  "summary": "Phiên Codex mới tra được nguyên tắc kiến trúc, lỗi Windows và câu hỏi đòn quét đang mở.",
+  "context": "Ca kiểm thử chỉ đọc trong kho MythicMobs-AI-Training, dựa trên hồ sơ trên đĩa.",
+  "exceptions": "Các tình huống kiểm thử thuộc truy xuất bộ nhớ. Thống kê tái sử dụng cần bằng chứng từ nhiệm vụ thực tế.",
+  "scope": "global",
+  "claim": "FACT",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-13",
+  "tags": [
+    "bo-nho",
+    "tra-cuu",
+    "kiem-thu",
+    "codex"
+  ],
+  "related": [
+    "simple-full-gameplay",
+    "boss-cleave-lock-open",
+    "windows-python-stdout"
+  ],
+  "sources": [
+    {
+      "type": "test",
+      "ref": "memory/index/assessment.md",
+      "note": "Kết quả và mã phiên Codex kiểm thử chỉ đọc."
+    }
+  ]
+}

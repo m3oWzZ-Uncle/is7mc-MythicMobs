@@ -1,0 +1,36 @@
+{
+  "id": "mythiccraft-official-core-reference",
+  "category": "preferences",
+  "topic": "mythicmobs-documentation-source",
+  "title": "Ưu tiên MythicCraft Wiki khi xác minh MythicMobs core",
+  "summary": "Người dùng chỉ định trang MythicMobs của MythicCraft làm nguồn tra cứu chính thức.",
+  "context": "Đối chiếu mechanic, condition, targeter, trigger hoặc tùy chọn thuộc MythicMobs core.",
+  "exceptions": "Đọc changelog theo build. Với addon, tra tài liệu của plugin sở hữu. Hành vi trên server cần bằng chứng chạy thật.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-14",
+  "answer": "use-official-mythiccraft-wiki",
+  "requires": [
+    "mythicmobs-core"
+  ],
+  "tags": [
+    "wiki",
+    "mythiccraft",
+    "tai-lieu",
+    "source",
+    "core"
+  ],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "docs/wiki/README.md",
+      "note": "Ghi lại chỉ định trực tiếp của người dùng ngày 14/11/2026 về URL wiki chính thức."
+    },
+    {
+      "type": "document",
+      "ref": "https://wiki.mythiccraft.io/mythicmobs/home",
+      "note": "Trang chủ của bộ tài liệu MythicMobs trên MythicCraft."
+    }
+  ]
+}

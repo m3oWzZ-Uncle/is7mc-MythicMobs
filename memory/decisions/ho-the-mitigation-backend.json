@@ -1,0 +1,23 @@
+{
+  "id": "ho-the-mitigation-backend",
+  "category": "decisions",
+  "title": "Hộ Thể giảm sát thương chọn effect hoặc stat theo server",
+  "topic": "player-defensive-mitigation",
+  "summary": "Khi Hộ Thể cần giảm damage trong một cửa sổ, ưu tiên Resistance nếu không cần tích hợp stat. Chỉ dùng stat MythicMobs khi server dùng hệ đó cho nguồn damage cần giảm. Tránh mặc định gọi lệnh MythicLib ở aura onStart.",
+  "context": "Bài 04 và biến thể Player Skill phòng thủ có yêu cầu giảm sát thương theo thời gian.",
+  "exceptions": "Nếu cần khiên hữu hạn có thể vỡ, dùng Absorption. Nếu buff cần tham gia công thức MythicLib, xác minh tích hợp và vòng đời riêng. Không dự đoán hệ stat từ mức độ phổ biến.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-15",
+  "answer": "select-mitigation-by-damage-system",
+  "requires": ["player-skill", "timed-mitigation"],
+  "tags": ["ho-the", "resistance", "absorption", "aura", "mythiclib", "stats"],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "feedback/decisions/MM-D-2026-004.md",
+      "note": "Phản hồi trực tiếp về Hộ Thể, Resistance, stat MythicMobs và tránh lệnh MythicLib làm giải pháp mặc định."
+    }
+  ]
+}

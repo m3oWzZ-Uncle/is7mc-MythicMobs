@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "records": [
+    {
+      "id": "anh-bo-grounded-step",
+      "category": "decisions",
+      "title": "Ảnh Bộ đi bộ ưu tiên cảm giác sát nền",
+      "topic": "dash-ground-feel",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/decisions/anh-bo-grounded-step.json"
+    },
+    {
+      "id": "animation-impact-timing",
+      "category": "patterns",
+      "title": "Đặt mốc chạm của animation cạnh mốc hitbox",
+      "topic": "animation-damage-sync",
+      "scope": "global",
+      "claim": "INFERENCE",
+      "confidence": "INFERRED",
+      "path": "memory/patterns/animation-impact-timing.json"
+    },
+    {
+      "id": "boss-cleave-lock-open",
+      "category": "uncertainties",
+      "title": "Chưa có lựa chọn về thời điểm khóa hướng đòn quét boss",
+      "topic": "boss-cleave-direction",
+      "scope": "global",
+      "claim": "FACT",
+      "confidence": "UNKNOWN",
+      "path": "memory/uncertainties/boss-cleave-lock-open.json"
+    },
+    {
+      "id": "conductor-reference-open",
+      "category": "corrections",
+      "title": "Conductor_OceanRythme-TICK2 chưa tìm thấy ở đợt 01",
+      "topic": "conductor-callback-reference",
+      "scope": "project:carimc",
+      "claim": "FACT",
+      "confidence": "CONFIRMED",
+      "status": "open",
+      "path": "memory/corrections/conductor-reference-open.json"
+    },
+    {
+      "id": "continuous-player-practice",
+      "category": "decisions",
+      "title": "Vòng thực hành Player Skills liên tục",
+      "topic": "practical-training-workflow",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/decisions/continuous-player-practice.json"
+    },
+    {
+      "id": "curriculum-fireball-r1",
+      "category": "patterns",
+      "title": "Hỏa Cầu Thuật r1 được người dùng thử và chấp nhận",
+      "topic": "player-fireball-impact",
+      "scope": "global",
+      "claim": "FACT",
+      "confidence": "CONFIRMED",
+      "path": "memory/patterns/curriculum-fireball-r1.json"
+    },
+    {
+      "id": "curriculum-sword-wave-r1",
+      "category": "patterns",
+      "title": "Kiếm Khí Trảm r1 được người dùng thử và chấp nhận",
+      "topic": "player-sword-wave",
+      "scope": "global",
+      "claim": "FACT",
+      "confidence": "CONFIRMED",
+      "path": "memory/patterns/curriculum-sword-wave-r1.json"
+    },
+    {
+      "id": "dash-cleave-lunge",
+      "category": "decisions",
+      "title": "Chọn mechanic di chuyển theo hành vi",
+      "topic": "movement-mechanic-selection",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/decisions/dash-cleave-lunge.json"
+    },
+    {
+      "id": "dash-cleave-strike-after-dodge",
+      "category": "decisions",
+      "title": "Lướt tới người chơi và vẫn chém khi hụt",
+      "topic": "dash-cleave-follow-through",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/decisions/dash-cleave-strike-after-dodge.json"
+    },
+    {
+      "id": "design-profile",
+      "category": "profile",
+      "title": "Hồ sơ tư duy thiết kế MythicMobs",
+      "topic": "design-profile",
+      "scope": "global",
+      "claim": "FACT",
+      "confidence": "CONFIRMED",
+      "path": "memory/profile/design-profile.json"
+    },
+    {
+      "id": "ho-the-mitigation-backend",
+      "category": "decisions",
+      "title": "Hộ Thể giảm sát thương chọn effect hoặc stat theo server",
+      "topic": "player-defensive-mitigation",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/decisions/ho-the-mitigation-backend.json"
+    },
+    {
+      "id": "learning-system-setup",
+      "category": "conversations",
+      "title": "Phiên thiết lập hồ sơ học tư duy MythicMobs",
+      "topic": "learning-workflow",
+      "scope": "global",
+      "claim": "FACT",
+      "confidence": "CONFIRMED",
+      "path": "memory/conversations/learning-system-setup.json"
+    },
+    {
+      "id": "long-term-memory-rollout",
+      "category": "conversations",
+      "title": "Triển khai và kiểm thử bộ nhớ dài hạn",
+      "topic": "learning-workflow",
+      "scope": "global",
+      "claim": "FACT",
+      "confidence": "CONFIRMED",
+      "path": "memory/conversations/long-term-memory-rollout.json"
+    },
+    {
+      "id": "modelled-frontal-swing-hitbox",
+      "category": "decisions",
+      "title": "Đòn chém 180° có model tách báo hiệu và chọn vùng damage",
+      "topic": "modelled-frontal-swing",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/decisions/modelled-frontal-swing-hitbox.json"
+    },
+    {
+      "id": "mythiccraft-official-core-reference",
+      "category": "preferences",
+      "title": "Ưu tiên MythicCraft Wiki khi xác minh MythicMobs core",
+      "topic": "mythicmobs-documentation-source",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/preferences/mythiccraft-official-core-reference.json"
+    },
+    {
+      "id": "owner-return-projectile",
+      "category": "patterns",
+      "title": "Projectile khứ hồi và owner",
+      "topic": "returning-projectile",
+      "scope": "global",
+      "claim": "INFERENCE",
+      "confidence": "INFERRED",
+      "path": "memory/patterns/owner-return-projectile.json"
+    },
+    {
+      "id": "player-skill-training-priority",
+      "category": "decisions",
+      "title": "Ưu tiên Player Skills khi chọn chủ đề huấn luyện",
+      "topic": "training-focus",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/decisions/player-skill-training-priority.json"
+    },
+    {
+      "id": "require-evidence-for-defensive-logic",
+      "category": "decisions",
+      "title": "Chỉ thêm bảo vệ khi có lý do cụ thể",
+      "topic": "defensive-logic",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/decisions/require-evidence-for-defensive-logic.json"
+    },
+    {
+      "id": "simple-full-gameplay",
+      "category": "preferences",
+      "title": "Chọn kiến trúc đơn giản nhất đáp ứng gameplay",
+      "topic": "architecture-complexity",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/preferences/simple-full-gameplay.json"
+    },
+    {
+      "id": "vampire-slash-vanilla-particles",
+      "category": "decisions",
+      "title": "Tận dụng particle để tạo hiệu ứng cho Vampire Slash vanilla",
+      "topic": "vanilla-melee-slash-visuals",
+      "scope": "global",
+      "claim": "PREFERENCE",
+      "confidence": "CONFIRMED",
+      "path": "memory/decisions/vampire-slash-vanilla-particles.json"
+    },
+    {
+      "id": "windows-python-stdout",
+      "category": "corrections",
+      "title": "Lỗi Unicode khi trình kiểm tra YAML in tiếng Việt trên Windows",
+      "topic": "yaml-checker-encoding",
+      "scope": "global",
+      "claim": "FACT",
+      "confidence": "CONFIRMED",
+      "status": "technical",
+      "verification": "syntax-checked",
+      "path": "memory/corrections/windows-python-stdout.json"
+    },
+    {
+      "id": "wu-phase-windup-open",
+      "category": "uncertainties",
+      "title": "Ưu tiên đòn đang báo hay đổi phase ở ngưỡng máu",
+      "topic": "boss-phase-windup-priority",
+      "scope": "global",
+      "claim": "FACT",
+      "confidence": "UNKNOWN",
+      "path": "memory/uncertainties/wu-phase-windup-open.json"
+    }
+  ],
+  "report": {
+    "records": 22,
+    "confirmed_decisions": 9,
+    "confirmed_preferences": 2,
+    "inferred_rules": 2,
+    "confidence": {
+      "CONFIRMED": 18,
+      "INFERRED": 2,
+      "UNKNOWN": 2
+    },
+    "answered_questions": 0,
+    "questions_reused": 0,
+    "answer_reuse_events": 0,
+    "needs_verification": [
+      {
+        "id": "conductor-reference-open",
+        "category": "corrections",
+        "title": "Conductor_OceanRythme-TICK2 chưa tìm thấy ở đợt 01",
+        "topic": "conductor-callback-reference",
+        "scope": "project:carimc",
+        "claim": "FACT",
+        "confidence": "CONFIRMED",
+        "status": "open",
+        "path": "memory/corrections/conductor-reference-open.json"
+      },
+      {
+        "id": "animation-impact-timing",
+        "category": "patterns",
+        "title": "Đặt mốc chạm của animation cạnh mốc hitbox",
+        "topic": "animation-damage-sync",
+        "scope": "global",
+        "claim": "INFERENCE",
+        "confidence": "INFERRED",
+        "path": "memory/patterns/animation-impact-timing.json"
+      },
+      {
+        "id": "owner-return-projectile",
+        "category": "patterns",
+        "title": "Projectile khứ hồi và owner",
+        "topic": "returning-projectile",
+        "scope": "global",
+        "claim": "INFERENCE",
+        "confidence": "INFERRED",
+        "path": "memory/patterns/owner-return-projectile.json"
+      },
+      {
+        "id": "boss-cleave-lock-open",
+        "category": "uncertainties",
+        "title": "Chưa có lựa chọn về thời điểm khóa hướng đòn quét boss",
+        "topic": "boss-cleave-direction",
+        "scope": "global",
+        "claim": "FACT",
+        "confidence": "UNKNOWN",
+        "path": "memory/uncertainties/boss-cleave-lock-open.json"
+      },
+      {
+        "id": "wu-phase-windup-open",
+        "category": "uncertainties",
+        "title": "Ưu tiên đòn đang báo hay đổi phase ở ngưỡng máu",
+        "topic": "boss-phase-windup-priority",
+        "scope": "global",
+        "claim": "FACT",
+        "confidence": "UNKNOWN",
+        "path": "memory/uncertainties/wu-phase-windup-open.json"
+      }
+    ]
+  }
+}

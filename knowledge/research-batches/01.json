@@ -1,0 +1,829 @@
+{
+  "id": "01",
+  "checked_on": "2026-11-13",
+  "dataset": "dataset-batch-01.json",
+  "entries": [
+    {
+      "id": "mythicmobs:meta-mechanic:projectile",
+      "syntax": "projectile{...} @targeter",
+      "function": "Phóng projectile có callback theo vòng đời và cấu hình va chạm riêng.",
+      "attributes": "Chia thuộc tính theo va chạm (hR/vR, sE/sB, hitConditions), chuyển động (i/v/mr, offset, ham, nội suy) và bullet. Bảng bullet chỉ áp dụng cho loại đã chọn. hitConditions cần Premium theo wiki.",
+      "selection": "Chọn location để điều khiển đường bay, dùng target kế thừa trong onHit nếu chỉ đánh entity bị chạm và dùng @origin khi xử lý AoE/visual tại projectile.",
+      "comparison": "Vạn Kiếm dùng chung callback hit entity/block. SkyFall có callback đường bay và AoE cuối riêng.",
+      "risk": "Kiểm tra tường, hit đúp, mục tiêu chạy ngang, nhiều caster và chi phí nội suy.",
+      "gameplay": [
+        "projectile",
+        "collision",
+        "aoe"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_skill.yml",
+          29,
+          "Kiếm có mob bullet, nội suy và callback va chạm."
+        ],
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          178,
+          "SkyFall có bộ callback riêng."
+        ]
+      ],
+      "patterns": [
+        "projectile-va-cham.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:missile",
+      "syntax": "missile{...}",
+      "function": "Biến thể homing theo dõi mục tiêu.",
+      "attributes": "Kế thừa các thuộc tính được đánh dấu inheritable của Projectile. Inertia tác động mức đổi hướng, bounce/bounceVelocity cần kiểm tra điều kiện Premium. Kiểm tra default hnp riêng của Missile.",
+      "selection": "Chọn entity rõ ràng cho homing và xét quyền nhận hiệu ứng ở callback hit. Gọi qua đúng bridge nếu đó là skill người chơi.",
+      "comparison": "Assistant dùng missile cho nhánh heal, Circle of Might dùng projectile đến vị trí trên ring.",
+      "risk": "Thử target biến mất, đổi world, góc cua và bounce. Kiểm tra target kế thừa của cast thật.",
+      "gameplay": [
+        "projectile",
+        "support"
+      ],
+      "examples": [
+        [
+          "incoming/no-model/fullclass/0_VipClass/Assistant/MythicMobs/Skills/AssistantSkill.yml",
+          41,
+          "Ray of Vitalis dùng missile và hai callback."
+        ]
+      ],
+      "patterns": [
+        "cau-noi-mmocore-mythiclib.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:mechanic:damage",
+      "syntax": "damage{amount=...} @targeter",
+      "function": "Gây damage lên entity đã chọn.",
+      "attributes": "amount là đầu vào. Các cờ bỏ qua giáp, enchantment, effect, resistance, shield và invulnerability xử lý các lớp khác nhau. preventimmunity liên quan cửa miễn nhiễm, còn triggerSkills ảnh hưởng event liên kết.",
+      "selection": "Dùng target onHit kế thừa khi đánh người vừa bị chạm. Dùng targeter vùng và condition riêng khi đòn là AoE.",
+      "comparison": "Fishball khai báo damage trực tiếp. Lục Cốt gọi mmodamage cho công thức theo stat MMO.",
+      "risk": "Đo HP mất, chống hit lặp, miễn nhiễm, damage vanilla và listener plugin. Đối chiếu option với changelog trước khi dùng.",
+      "gameplay": [
+        "damage",
+        "combat"
+      ],
+      "examples": [
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+          121,
+          "Fishball khai báo lượng damage 2 và tùy chọn knockback."
+        ]
+      ],
+      "patterns": [
+        "damage-hit-detection.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:delay",
+      "syntax": "delay 30",
+      "function": "Dời phần kế tiếp của skill tree theo tick.",
+      "attributes": "ticks có dạng positional hoặc trong braces và nhận placeholder theo wiki. Universal delay trên một dòng lên lịch cho dòng đó.",
+      "selection": "Đặt sau telegraph. Khi trạng thái có thể đổi trong lúc đợi, kiểm tra guard trong metaskill hit.",
+      "comparison": "Vạn Kiếm trì hoãn cả chuỗi trước wave. Lục Cốt lên lịch hit riêng với delay trên mechanic skill.",
+      "risk": "Đo tick thực khi TPS thấp và thử hủy/đổi target trong wind-up.",
+      "gameplay": [
+        "timing",
+        "animation",
+        "multi-stage"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_skill.yml",
+          12,
+          "Delay 30 tick trước wave."
+        ],
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          30,
+          "So sánh delay trên một dòng gọi skill."
+        ]
+      ],
+      "patterns": [
+        "dong-bo-animation-damage.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:skill",
+      "syntax": "skill{s=ID} @targeter",
+      "function": "Gọi metaskill theo ID, truyền ngữ cảnh target theo quy tắc kế thừa.",
+      "attributes": "skill chọn ID; forcesync, branch, executeafterdeath và snapshotcasterstats lần lượt liên quan scheduler, cây con, việc gọi sau khi caster chết và dữ liệu stat chụp lại.",
+      "selection": "Gắn trigger ở điểm vào mob; giữ target kế thừa nếu child dùng cùng tập mục tiêu. Cố định targeter khi child cần ngữ cảnh khác.",
+      "comparison": "Wave lặp ID, đòn tay dùng chung skill damage và gắn delay ở caller.",
+      "risk": "Dò ID, target rỗng, branch và thứ tự callback. Đo khi cast đồng thời.",
+      "gameplay": [
+        "multi-stage",
+        "timing"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_skill.yml",
+          15,
+          "Wave được gọi lặp bằng ID."
+        ],
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          30,
+          "Damage được gọi theo mốc riêng."
+        ]
+      ],
+      "patterns": [
+        "multi-stage-skill.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:sudoskill",
+      "syntax": "sudoskill{s=ID;setcasterastrigger=true} @Children",
+      "function": "Cho entity được chọn làm caster của metaskill con.",
+      "attributes": "target có thể chọn tập target kế thừa cho child; chained đổi cách chạy trên nhiều entity; setcasterastrigger đổi trigger. Wiki ghi kế thừa thuộc tính của Skill.",
+      "selection": "Dùng @Children có lọc đúng loại hoặc chọn một entity theo luật. Xét owner ở TriggerConditions nếu cần xác thực người gọi ban đầu.",
+      "comparison": "Xích Huyết dùng để gọi thương về. Lục Cốt dùng để child phát animation.",
+      "risk": "Thử caster/trigger/target bị đổi ra sao, không có child và hai caster đứng gần.",
+      "gameplay": [
+        "summon",
+        "animation",
+        "multiplayer"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          215,
+          "Recall chuyển caster sang thương rơi."
+        ]
+      ],
+      "patterns": [
+        "summon-owner-cleanup.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:mechanic:summon",
+      "syntax": "summon{type=ID;amount=...} @origin",
+      "function": "Tạo mob theo điểm hoặc entity được chọn.",
+      "attributes": "type và amount chọn mob/số lượng. radius/yRadius/onSurface điều khiển nơi spawn, sio/sip tách owner và parent. Kiểm tra các cờ threat/faction/despawn trước khi áp cho add.",
+      "selection": "Dùng @origin cho điểm va chạm hoặc @self cho quanh boss. Chọn quan hệ owner/parent theo việc cần xác minh hoặc cleanup.",
+      "comparison": "Thương rơi xuất hiện tại điểm end; Conductor xếp nhiều lượt spawn add.",
+      "risk": "Thử vị trí không hợp lệ, trần số mob, ownership, chết/despawn và chi phí AI.",
+      "gameplay": [
+        "summon",
+        "cleanup",
+        "multiplayer"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          143,
+          "Thương rơi có owner và parent."
+        ],
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+          218,
+          "Conductor summon theo lượt."
+        ]
+      ],
+      "patterns": [
+        "summon-owner-cleanup.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:mechanic:remove",
+      "syntax": "remove @targeter",
+      "function": "Loại entity được chọn. Trang wiki ghi mechanic này không áp dụng cho player.",
+      "attributes": "onRemoveSkill/then là callback ghi trong wiki, mặc định để trống. delay là thuộc tính chung khi dùng ở một dòng.",
+      "selection": "Chọn @self trong entity dùng một lần, hoặc @Children theo đúng trận. Kiểm tra quan hệ đối với entity spawn bằng lệnh.",
+      "comparison": "Thương rơi tự dọn sau thời hạn, Conductor dọn con khi chết.",
+      "risk": "Kiểm tra cleanup bị gọi hai lần, mất liên kết khi unload và callback dọn tương thích build.",
+      "gameplay": [
+        "summon",
+        "cleanup"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          152,
+          "Timeout của thương rơi."
+        ],
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Mobs/Conductor.yml",
+          18,
+          "Boss dọn children khi chết."
+        ]
+      ],
+      "patterns": [
+        "summon-owner-cleanup.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:aura",
+      "syntax": "aura{auraName=...;duration=...} @targeter",
+      "function": "Gắn hiệu ứng có thời hạn, stack, điều kiện hủy và callback.",
+      "attributes": "Ưu tiên đọc duration/interval, refreshDuration và các cờ merge/overwrite. Kiểm tra hủy theo target hay caster và callback khi kết thúc. Nhóm attachment và boss bar áp dụng khi dùng chức năng tương ứng.",
+      "selection": "Dùng @self cho trạng thái cast, target kế thừa cho cờ áp lên người bị hit. Chọn tên nhất quán với guard/cleanup.",
+      "comparison": "Vạn Kiếm đánh dấu CASTING, Xích Huyết lưu charge trên target của callback.",
+      "risk": "Thử refresh, stack, logout, remove chủ động và nhiều caster dùng chung tên aura. Component thay đổi qua các bản.",
+      "gameplay": [
+        "state",
+        "control",
+        "cleanup"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_skill.yml",
+          3,
+          "Đặt CASTING ở entry."
+        ],
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          137,
+          "Đặt aura ngắn trong callback hit."
+        ]
+      ],
+      "patterns": [
+        "variable-scope.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:mechanic:auraremove",
+      "syntax": "auraRemove{aura=...;stacks=...} @targeter",
+      "function": "Xóa aura hoặc số stack trên entity được chọn.",
+      "attributes": "auraName chọn aura; stacks giới hạn số stack bị lấy. Việc chạy onEnd khi xóa phụ thuộc DoEndSkillOnTerminate của aura.",
+      "selection": "Chọn đúng entity đang giữ aura. Guard stack nếu cần tiêu hao một charge và kiểm tra onEnd trước khi dùng cho cleanup.",
+      "comparison": "Dash của Xích Huyết lấy một charge; Lục Cốt xóa aura cường hóa theo nhánh.",
+      "risk": "Thử stack bằng không, charge cuối, hai cast gần nhau và side effect của onEnd.",
+      "gameplay": [
+        "state",
+        "cleanup",
+        "movement"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          100,
+          "Lấy một stack khi dash."
+        ],
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          78,
+          "Xóa aura hai tay."
+        ]
+      ],
+      "patterns": [
+        "conditional-skills.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:setvariable",
+      "syntax": "setvariable{var=scope.name;value=...;type=...}",
+      "function": "Ghi giá trị có kiểu vào scope đã chọn.",
+      "attributes": "variable/scope chỉ nơi lưu. value/type phải tương thích. save/duration cần kiểm tra khả năng áp dụng theo scope. Bảng tách nhóm inheritable.",
+      "selection": "Dùng SKILL cho dữ liệu cast, CASTER cho trạng thái cần chia sẻ giữa các lần gọi cùng caster. Đặt khởi tạo trước guard đọc biến.",
+      "comparison": "Vạn Kiếm lưu offset float, Lục Cốt lưu số tay rảnh.",
+      "risk": "Kiểm tra ghi đè trước khi callback đọc, khởi tạo lại và biến bị xóa khi aura hết.",
+      "gameplay": [
+        "variable",
+        "state"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_skill.yml",
+          27,
+          "Offset FLOAT trong skill tree."
+        ],
+        [
+          "incoming/Tutien/luccotchivuong/lccv_backgroung.yml",
+          10,
+          "Counter của caster khi khởi tạo form."
+        ]
+      ],
+      "patterns": [
+        "variable-scope.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:variableadd",
+      "syntax": "variableadd{var=...;value=...}",
+      "function": "Cập nhật biến theo thao tác cộng của kiểu đang dùng.",
+      "attributes": "amount là giá trị cộng. Cần đối chiếu hành vi theo kiểu và các thuộc tính kế thừa từ SetVariable.",
+      "selection": "Chỉ cập nhật trên đúng caster giữ counter. Guard nhánh giữ/hồi tay trước khi cộng để tránh gọi lặp.",
+      "comparison": "Lục Cốt trừ 1 khi giữ tay và cộng 1 khi hồi.",
+      "risk": "Thử biến thiếu, sai kiểu, giá trị âm, hồi hai lần và counter lệch cờ.",
+      "gameplay": [
+        "variable",
+        "state"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          24,
+          "Giữ tay làm counter giảm."
+        ],
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          34,
+          "Hồi tay làm counter tăng nếu form còn."
+        ]
+      ],
+      "patterns": [
+        "variable-scope.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:variableunset",
+      "syntax": "variableUnset{var=scope.name}",
+      "function": "Bỏ một biến khỏi scope.",
+      "attributes": "Trang mục dẫn tới nhóm thuộc tính inheritable của SetVariable. Đọc variable và scope ở mục SetVariable trước khi đổi cấu hình.",
+      "selection": "Gọi ở cleanup của scope chứa biến, và kiểm tra guard đọc biến sau khi form kết thúc.",
+      "comparison": "Lục Cốt xóa counter và cả hai cờ trong onEnd.",
+      "risk": "Thử hết hạn, remove chủ động, callback cũ chạy vào form mới và biến đã bị xóa.",
+      "gameplay": [
+        "variable",
+        "cleanup"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/luccotchivuong/lccv_backgroung.yml",
+          16,
+          "Cleanup counter khi orbital kết thúc."
+        ]
+      ],
+      "patterns": [
+        "variable-scope.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:mechanic:signal",
+      "syntax": "signal{s=...} @targeter",
+      "function": "Gửi signal tới Mythic mob được chọn để trigger nhận chạy.",
+      "attributes": "signal là tên mà onSignal bên nhận cần khớp. Tên mặc định được nêu trong bảng.",
+      "selection": "Dùng @Children khi mỗi boss cần gửi cho add riêng, hoặc @Parent cho đường gửi về. Không cần quét toàn map nếu quan hệ đã có.",
+      "comparison": "Conductor phát Mid và Rythme cho children; nhánh Lift đi ngược về boss qua các nguồn trong pack.",
+      "risk": "Thử add spawn sau lần phát, trùng tên signal và hai boss cạnh nhau.",
+      "gameplay": [
+        "phase",
+        "summon",
+        "multiplayer"
+      ],
+      "examples": [
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+          67,
+          "Phát Mid cho mob con."
+        ],
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+          204,
+          "Phát Rythme trong ultimate."
+        ]
+      ],
+      "patterns": [
+        "boss-phase-score-signal.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:mechanic:setstance",
+      "syntax": "setstance{s=...} @self",
+      "function": "Ghi stance lên Mythic mob để các condition có thể xét trạng thái.",
+      "attributes": "stance là giá trị cần ghi. Trang mục giới hạn tác dụng vào Mythic mob.",
+      "selection": "Ghi đúng mob, guard stance hiện tại khi chỉ muốn thực hiện side effect ở lúc chuyển.",
+      "comparison": "Conductor đổi stance của chính nó; Vioar đổi stance trong trigger nhận signal.",
+      "risk": "Thử reset, nhận signal lặp và trạng thái sau despawn/respawn.",
+      "gameplay": [
+        "phase",
+        "state"
+      ],
+      "examples": [
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+          68,
+          "Boss đổi stance sau khi báo con."
+        ],
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Mobs/Conductor.yml",
+          59,
+          "Vioar nhận signal và đổi stance."
+        ]
+      ],
+      "patterns": [
+        "boss-phase-score-signal.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:globalcooldown",
+      "syntax": "gcd{ticks=650}",
+      "function": "Đặt GCD trên caster để condition offgcd có thể khóa nhánh.",
+      "attributes": "ticks là thời lượng theo tick. Cơ chế tác động lên caster.",
+      "selection": "Thêm offgcd vào đúng nhánh cần chia sẻ GCD. Giữ cooldown metaskill riêng cho thời gian hồi của từng chiêu.",
+      "comparison": "Ultimate Conductor đặt GCD dài, các nhánh khác có độ dài GCD riêng.",
+      "risk": "Thử hai timer cùng tick, nhánh thiếu offgcd và GCD hết trước cleanup của ultimate.",
+      "gameplay": [
+        "cooldown",
+        "phase"
+      ],
+      "examples": [
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+          203,
+          "Ultimate đặt GCD 650 tick."
+        ]
+      ],
+      "patterns": [
+        "boss-phase-score-signal.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:meta-mechanic:cancelevent",
+      "syntax": "CancelEvent",
+      "function": "Hủy event làm phát sinh skill.",
+      "attributes": "Trang mục ghi không có thuộc tính riêng. sync=true là yêu cầu thực thi; chạy trước delay.",
+      "selection": "Chọn trigger có event hủy được. Kiểm tra đoạn đầu sync và tách phần hậu xử lý theo luật gameplay.",
+      "comparison": "Conductor hủy melee bằng một skill ngắn, có các timer riêng cho combat.",
+      "risk": "Thử listener khác, triggerSkills, điều kiện event bị hủy và HP trước/sau.",
+      "gameplay": [
+        "damage",
+        "event",
+        "timing"
+      ],
+      "examples": [
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Mobs/Conductor.yml",
+          19,
+          "Dòng gọi sync từ onAttack."
+        ],
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+          3,
+          "Metaskill hủy event."
+        ]
+      ],
+      "patterns": [
+        "huy-event-dong-bo.md"
+      ]
+    },
+    {
+      "id": "modelengine:mechanic:state",
+      "syntax": "state{s=...} @targeter",
+      "function": "Phát hoặc dừng state animation của ModelEngine.",
+      "attributes": "modelid/srcmodelid và state chọn model/animation; remove chia hai bảng. speed/lerpin/lerpout thay đổi thời gian hiển thị, priority có ngữ cảnh hệ animation.",
+      "selection": "Chọn entity đã gắn model. Nếu model ở child, đổi caster cho nhánh animation và giữ đường hit riêng theo người chơi.",
+      "comparison": "Lục Cốt phát state tay trái hoặc hai tay, tùy nhánh.",
+      "risk": "Đo mốc visual thực tế, addon build, tên state, model load, tốc độ và FPS.",
+      "gameplay": [
+        "animation",
+        "timing"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          27,
+          "Model con phát taytraiattack."
+        ],
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          80,
+          "Nhánh hai tay phát haitayattack."
+        ]
+      ],
+      "patterns": [
+        "dong-bo-animation-damage.md"
+      ]
+    },
+    {
+      "id": "modelengine:mechanic:model",
+      "syntax": "model{mid=...} @self",
+      "function": "Thêm hoặc gỡ model ModelEngine trên entity.",
+      "attributes": "modelid và remove chọn thao tác. Bảng add có nhóm hitbox/scale, tracking/render, mount và state machine. killowner thuộc nhánh gỡ.",
+      "selection": "Chọn entity giữ model, ví dụ VFX mob tại onSpawn. Xác nhận mid đăng ký và đo hitbox server nếu dùng override.",
+      "comparison": "Vạn Kiếm gắn model ở mob bullet, Conductor gắn model lên chính boss.",
+      "risk": "Tên asset và model ID có thể lệch. Kiểm tra phiên bản ModelEngine, resource pack và mật độ model.",
+      "gameplay": [
+        "animation",
+        "summon",
+        "visual"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_mobs.yml",
+          12,
+          "Model của kiếm gắn khi spawn."
+        ],
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Mobs/Conductor.yml",
+          14,
+          "Boss gắn model khi spawn."
+        ]
+      ],
+      "patterns": [
+        "dong-bo-animation-damage.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:mechanic:lunge",
+      "syntax": "lunge{velocity=...;velocityY=...} @forward",
+      "function": "Áp vận tốc để tạo chuyển động lao.",
+      "attributes": "velocity và velocityY cấu hình vận tốc; oldmath chọn cách tính cũ theo trang mục.",
+      "selection": "Chọn hướng/vị trí đầu vào phù hợp. Nếu dash có damage, thiết kế một đường hitbox rõ và kiểm tra cùng hướng.",
+      "comparison": "Xích Huyết dùng lunge cho caster rồi tạo projectile dò hit riêng.",
+      "risk": "Thử sát tường, góc dốc, xoay mặt, vận tốc tồn tại và lệch hitbox với đường dịch chuyển.",
+      "gameplay": [
+        "movement",
+        "combat"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          103,
+          "Dash tiến về vị trí trước mặt."
+        ]
+      ],
+      "patterns": [
+        "movement-combat-ai.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:condition:hasaura",
+      "syntax": "hasAura{auraName=...}",
+      "function": "Kiểm tra entity đang giữ aura đã nêu.",
+      "attributes": "aura là tên cần tìm. Tên phải khớp nơi tạo và dọn aura.",
+      "selection": "Đặt trong Conditions nếu guard theo caster, hoặc TargetConditions nếu guard theo từng người nhận.",
+      "comparison": "Lục Cốt dùng false để chặn khi đang xoay và castinstead khi aura hai tay tồn tại.",
+      "risk": "Thử tên trùng, aura hết giữa delay và nhiều caster cùng ảnh hưởng một target.",
+      "gameplay": [
+        "condition",
+        "state"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          5,
+          "Chặn khi có aura xoay."
+        ],
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          7,
+          "Điều kiện đổi nhánh."
+        ]
+      ],
+      "patterns": [
+        "conditional-skills.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:condition:hasaurastacks",
+      "syntax": "hasaurastacks{auraName=...;stacks=...}",
+      "function": "So số stack của aura trên entity đang được xét.",
+      "attributes": "aura chọn tên, stacks là điều kiện số lượng. Dùng action true/false theo luật cụ thể.",
+      "selection": "Ở pickup, đặt target condition trên người nhặt. Ở recall, xét stack caster trước khi chọn child.",
+      "comparison": "Xích Huyết dùng guard cùng tên aura ở cả pickup và recall.",
+      "risk": "Test đúng ngưỡng, refresh, tiêu hao stack và hai callback cùng tick.",
+      "gameplay": [
+        "condition",
+        "state",
+        "multiplayer"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          158,
+          "Guard trên người nhặt."
+        ],
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          213,
+          "Guard ở entry Recall."
+        ]
+      ],
+      "patterns": [
+        "summon-owner-cleanup.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:condition:variableequals",
+      "syntax": "varEquals{var=scope.name;value=...}",
+      "function": "So biến trong scope với giá trị mong đợi.",
+      "attributes": "variable, scope và value là ba đầu vào. Kiểm tra kiểu của biến đã khởi tạo trước khi so.",
+      "selection": "Đặt Conditions cho biến caster của form. Khi kiểm tra target, xác nhận đối tượng và scope trỏ đúng entity.",
+      "comparison": "Lục Cốt xét tay trái rảnh và xét counter đủ hai tay.",
+      "risk": "Thử biến chưa tồn tại, giá trị bị đổi trước callback và kiểu số/text.",
+      "gameplay": [
+        "condition",
+        "variable"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          21,
+          "Kiểm tra tay trái."
+        ],
+        [
+          "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+          70,
+          "Kiểm tra cả hai tay qua counter."
+        ]
+      ],
+      "patterns": [
+        "variable-scope.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:condition:owner",
+      "syntax": "owner true",
+      "function": "Kiểm tra entity đang xét có là chủ của caster theo loại entity hay không.",
+      "attributes": "Trang mục ghi không có thuộc tính riêng. Wiki mô tả cách xét khác nhau cho tameable, mob thường và dropped item.",
+      "selection": "Sau SudoSkill, xét TriggerConditions nếu chủ ban đầu trở thành trigger. Dùng TargetConditions khi xét người nhận pickup.",
+      "comparison": "Xích Huyết dùng owner ở cả pickup và recall.",
+      "risk": "Thử hai chủ, owner offline, entity không có owner và ownership khác parent.",
+      "gameplay": [
+        "condition",
+        "multiplayer",
+        "summon"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          157,
+          "Owner condition trong pickup."
+        ],
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          220,
+          "Owner condition ở trigger recall."
+        ]
+      ],
+      "patterns": [
+        "summon-owner-cleanup.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:condition:score",
+      "syntax": "score{objective=...;value=...}",
+      "function": "Kiểm tra giá trị scoreboard của đối tượng được xét.",
+      "attributes": "objective chọn objective, entry là đầu vào riêng nếu dùng, value chọn giá trị hoặc khoảng. Ô mặc định trống trong nguồn.",
+      "selection": "Đặt Conditions khi score thuộc boss. Dùng từng dải và thử chính xác giá trị sát biên.",
+      "comparison": "Conductor dùng khoảng Mid và ngưỡng ultimate khác nhau.",
+      "risk": "Thử score chưa khởi tạo, 91, 119, reset và hai instance.",
+      "gameplay": [
+        "phase",
+        "condition"
+      ],
+      "examples": [
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+          64,
+          "Dải Mid."
+        ],
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+          199,
+          "Ngưỡng ultimate."
+        ]
+      ],
+      "patterns": [
+        "boss-phase-score-signal.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:targeter:entitiesnearorigin",
+      "syntax": "@EntitiesNearOrigin{r=...}",
+      "function": "Lấy entity quanh origin của metaskill.",
+      "attributes": "Trang mục ghi kế thừa EntitiesInRadius và không có thuộc tính riêng. sort/limit thuộc targeter chung, target filters có ngữ cảnh edition.",
+      "selection": "Dùng trong callback projectile khi tâm cần là vị trí va chạm. Kết hợp bộ lọc quyền damage và entity sống.",
+      "comparison": "Vạn Kiếm chọn bán kính 2.5; SkyFall chọn 2.25 ở end.",
+      "risk": "Thử lệch tâm, entity đứng sát viền, ally và target limit trong đám đông.",
+      "gameplay": [
+        "targeting",
+        "aoe",
+        "collision"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_skill.yml",
+          43,
+          "AoE tại điểm chạm."
+        ],
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          196,
+          "AoE tại điểm kết thúc SkyFall."
+        ]
+      ],
+      "patterns": [
+        "projectile-va-cham.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:targeter:children",
+      "syntax": "@Children",
+      "function": "Chọn entity con đã summon theo quan hệ của caster.",
+      "attributes": "Trang mục ghi không có thuộc tính riêng. Tùy chọn chung dùng để lọc, sort và giới hạn khi có hỗ trợ.",
+      "selection": "Dùng cho signal, animation và cleanup thuộc caster. Nếu cần một child, dùng lọc đúng loại và trần rõ.",
+      "comparison": "Conductor dọn mọi child, Xích Huyết chọn một thương gần nhất.",
+      "risk": "Thử player caster, owner/parent, mob sinh bằng command, unload và trận gần nhau.",
+      "gameplay": [
+        "targeting",
+        "summon",
+        "cleanup",
+        "multiplayer"
+      ],
+      "examples": [
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Mobs/Conductor.yml",
+          18,
+          "Cleanup toàn tập child."
+        ],
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          215,
+          "Chọn một child đúng loại."
+        ]
+      ],
+      "patterns": [
+        "summon-owner-cleanup.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:targeter:owner",
+      "syntax": "@Owner",
+      "function": "Chọn owner của caster.",
+      "attributes": "Trang mục ghi không có thuộc tính riêng. Đường lấy owner phụ thuộc loại thực thể.",
+      "selection": "Dùng sau khi đã xác nhận caster là summon có owner. Kiểm tra trường hợp owner vắng mặt.",
+      "comparison": "Xích Huyết nhắm projectile recall về owner, trong khi pickup dùng owner như condition.",
+      "risk": "Đo owner đổi world hoặc offline, projectile hụt, và cleanup thương ẩn.",
+      "gameplay": [
+        "targeting",
+        "summon",
+        "multiplayer"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          237,
+          "Projectile quay về owner."
+        ]
+      ],
+      "patterns": [
+        "summon-owner-cleanup.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:targeter:forward",
+      "syntax": "@Forward{f=...}",
+      "function": "Tạo vị trí phía trước caster.",
+      "attributes": "forward/rotate điều khiển độ xa và hướng xoay. useeyelocation và lockpitch thay đổi cách lấy hướng; offsets chung cần xem trang Targeters.",
+      "selection": "Dùng cho đường bay có hướng theo caster. Nếu gameplay khóa hướng tại wind-up, kiểm tra lúc targeter được đánh giá.",
+      "comparison": "Vạn Kiếm dùng forward làm đích, dash Xích Huyết dùng forward cho chuyển động.",
+      "risk": "Thử nhìn lên/xuống, mép địa hình và đổi hướng khi delay.",
+      "gameplay": [
+        "targeting",
+        "projectile",
+        "movement"
+      ],
+      "examples": [
+        [
+          "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_skill.yml",
+          29,
+          "Chọn vị trí phía trước cho kiếm."
+        ],
+        [
+          "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+          103,
+          "Chọn hướng của dash."
+        ]
+      ],
+      "patterns": [
+        "movement-combat-ai.md"
+      ]
+    },
+    {
+      "id": "mythicmobs:trigger:ontimer",
+      "syntax": "~onTimer:<ticks>",
+      "function": "Kích hoạt theo nhịp tick của đồng hồ chung.",
+      "attributes": "Tick dương nằm trong cú pháp trigger. Không thấy bảng mặc định cho trigger; tránh suy từ thời điểm spawn.",
+      "selection": "Khai báo trên mob; chọn target/conditions rõ vì wiki ghi timer không có entity trigger.",
+      "comparison": "Conductor kiểm tra drama mỗi 20 tick, các nhánh summon và barrage dùng nhịp khác.",
+      "risk": "Đo nhiều mob đồng pha, nhịp thực khi TPS giảm, và tải callback/packet.",
+      "gameplay": [
+        "trigger",
+        "performance",
+        "phase"
+      ],
+      "examples": [
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Mobs/Conductor.yml",
+          22,
+          "Timer tích lũy drama."
+        ],
+        [
+          "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Mobs/Conductor.yml",
+          25,
+          "Timer gọi Coral Summon."
+        ]
+      ],
+      "patterns": [
+        "toi-uu-timer-va-callback.md"
+      ]
+    }
+  ]
+}

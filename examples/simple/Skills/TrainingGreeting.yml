@@ -1,0 +1,8 @@
+TrainingGreeting:
+  Cooldown: 5
+  TargetConditions:
+    - isPlayer true
+  Skills:
+    - message{m="Da nhan tuong tac."}
+    - delay 20
+    - message{m="Da qua 20 tick."}

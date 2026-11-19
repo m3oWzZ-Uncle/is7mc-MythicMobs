@@ -1,0 +1,23 @@
+{
+  "id": "vampire-slash-vanilla-particles",
+  "category": "decisions",
+  "title": "Tận dụng particle để tạo hiệu ứng cho Vampire Slash vanilla",
+  "topic": "vanilla-melee-slash-visuals",
+  "summary": "Người dùng muốn dùng particle để hoàn thiện phần nhìn của Vampire Slash khi bài dùng hiệu ứng vanilla.",
+  "context": "Phản hồi về r1 của bài 07. Phần thuật toán được đánh giá ổn, phần hình ảnh cần được chăm chút.",
+  "exceptions": "Đây là lựa chọn cho Vampire Slash và bối cảnh tương tự dùng VFX vanilla. Màu, hình cung, thời điểm và dấu hiệu hồi do bản thử r2 đề xuất và chờ đánh giá.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-16",
+  "answer": "compose-vanilla-particle-vfx",
+  "requires": ["player-skill", "vanilla-vfx", "melee-slash"],
+  "tags": ["particle", "vampire-slash", "visual-effects"],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "feedback/corrections/MM-2026-008.md",
+      "note": "Người dùng muốn tận dụng particle vì Vampire Slash là skill thuần vanilla."
+    }
+  ]
+}

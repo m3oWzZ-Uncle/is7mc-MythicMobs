@@ -1,0 +1,14 @@
+luccotchivuong_summoned:
+  Type: ARMOR_STAND
+  Pose:
+      Head: 0,0,0
+  Options:
+    Marker: true
+    Invisible: true
+    Collidable: false
+    Interactable: false
+    Invincible: true
+  Skills:
+  - model{usestatemachine=true;mid=luccotchivuong} @self ~onSpawn
+#  - partvis{m=pbws_shield_suit;p=energy_shield} @self ~onSpawn
+  - bodyclamp{m=luccotchivuong;mh=0;mb=0} @self ~onSpawn

@@ -1,0 +1,3310 @@
+{
+  "batch": 2,
+  "yaml_limit": 30,
+  "parser": "PyYAML 6.0.3 compose",
+  "files": [
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/classes/ArcticKnight.yml",
+      "sha256": "fe6673c3682c06d7f24c4bbd6aaccb4c113986361966b37de47cc1d02f3b3743",
+      "kind": "mmocore-class",
+      "scope": "incoming/no-model/fullclass/0_VipClass/IgnisArctic",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "ArcticKnight",
+          "line": 13,
+          "fields": [
+            "display",
+            "options",
+            "exp-curve",
+            "max-level",
+            "exp-table",
+            "skills",
+            "skill-slots",
+            "attributes",
+            "main-exp-sources"
+          ],
+          "steps": [],
+          "refs": []
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-attack.yml",
+      "sha256": "ca155fd8ca416d551116f77cec3afbecd815bb574c413c1cb5597c517a5093a6",
+      "kind": "mmocore-skill",
+      "scope": "incoming/no-model/fullclass/0_VipClass/IgnisArctic",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "arctic-knight-attack",
+          "line": 1,
+          "fields": [
+            "name",
+            "lore",
+            "material",
+            "damage",
+            "duration",
+            "timer",
+            "delay",
+            "mana",
+            "stamina",
+            "cooldown"
+          ],
+          "steps": [],
+          "refs": []
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-aura.yml",
+      "sha256": "4cafe9bea9e7d3f3bf2702134f49e4f48a044bfb16d1c8d7ded135cd50fe73e0",
+      "kind": "mmocore-skill",
+      "scope": "incoming/no-model/fullclass/0_VipClass/IgnisArctic",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "arctic-knight-aura",
+          "line": 1,
+          "fields": [
+            "name",
+            "lore",
+            "material",
+            "timer",
+            "delay",
+            "mana",
+            "stamina",
+            "cooldown",
+            "duration"
+          ],
+          "steps": [],
+          "refs": []
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-break-down.yml",
+      "sha256": "a6986040061a35116fb01b08240c331c682d41b06a70cdf947dfd7c9aa83da96",
+      "kind": "mmocore-skill",
+      "scope": "incoming/no-model/fullclass/0_VipClass/IgnisArctic",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "arctic-knight-break-down",
+          "line": 1,
+          "fields": [
+            "name",
+            "lore",
+            "material",
+            "damage",
+            "duration",
+            "radius",
+            "timer",
+            "delay",
+            "mana",
+            "stamina",
+            "cooldown"
+          ],
+          "steps": [],
+          "refs": []
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-clone.yml",
+      "sha256": "803244aac195b0ec6f70a5c12013f3a45668b95baf8479687e2fd59908c54860",
+      "kind": "mmocore-skill",
+      "scope": "incoming/no-model/fullclass/0_VipClass/IgnisArctic",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "arctic-knight-clone",
+          "line": 1,
+          "fields": [
+            "name",
+            "lore",
+            "material",
+            "damage",
+            "timer",
+            "delay",
+            "mana",
+            "stamina",
+            "cooldown"
+          ],
+          "steps": [],
+          "refs": []
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-ice-rain.yml",
+      "sha256": "964c09486de4cb7f092d64ea7b0be56e2caafd2acf1c5913396e942a5bdbcd67",
+      "kind": "mmocore-skill",
+      "scope": "incoming/no-model/fullclass/0_VipClass/IgnisArctic",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "arctic-knight-ice-rain",
+          "line": 1,
+          "fields": [
+            "name",
+            "lore",
+            "material",
+            "damage",
+            "duration",
+            "timer",
+            "delay",
+            "mana",
+            "stamina",
+            "cooldown"
+          ],
+          "steps": [],
+          "refs": []
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-ice-thrower.yml",
+      "sha256": "e3554d8b2ffc84d5346f8bdc3c05c8a460cf9b8764a6f818aa85fce8d0077011",
+      "kind": "mmocore-skill",
+      "scope": "incoming/no-model/fullclass/0_VipClass/IgnisArctic",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "arctic-knight-ice-thrower",
+          "line": 1,
+          "fields": [
+            "name",
+            "lore",
+            "material",
+            "damage",
+            "duration",
+            "timer",
+            "delay",
+            "mana",
+            "stamina",
+            "cooldown"
+          ],
+          "steps": [],
+          "refs": []
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/Mythiclib/skill/noob.yml",
+      "sha256": "5203493e550c0d9b24b3b19fed3555d201230d204ed20b5000342a2dadd35987",
+      "kind": "mythiclib-registration",
+      "scope": "incoming/no-model/fullclass/0_VipClass/IgnisArctic",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "Arctic_Knight_Aura",
+          "line": 1,
+          "fields": [
+            "mythicmobs-skill-id",
+            "modifiers"
+          ],
+          "steps": [],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "ArcticKnightAura",
+              "line": 2,
+              "matches": [
+                "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Skills/ArcticKnight.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Arctic_Knight_Attack",
+          "line": 6,
+          "fields": [
+            "mythicmobs-skill-id",
+            "modifiers"
+          ],
+          "steps": [],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "ArcticKnight_SKILL_1",
+              "line": 7,
+              "matches": [
+                "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Skills/ArcticKnight.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Arctic_Knight_Ice_thrower",
+          "line": 12,
+          "fields": [
+            "mythicmobs-skill-id",
+            "modifiers"
+          ],
+          "steps": [],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "ARCTIC_KNIGHT_Icethrower",
+              "line": 13,
+              "matches": [
+                "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Skills/ArcticKnight.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Arctic_Knight_Break_Down",
+          "line": 18,
+          "fields": [
+            "mythicmobs-skill-id",
+            "modifiers"
+          ],
+          "steps": [],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "ARCTIC_KNIGHT_BreakDown",
+              "line": 19,
+              "matches": [
+                "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Skills/ArcticKnight.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Arctic_Knight_Ice_Rain",
+          "line": 25,
+          "fields": [
+            "mythicmobs-skill-id",
+            "modifiers"
+          ],
+          "steps": [],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "ARCTIC_KNIGHT_ICE_RAIN",
+              "line": 26,
+              "matches": [
+                "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Skills/ArcticKnight.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Items/EC_SoulWeaver_FXS.yml",
+      "sha256": "3ec60b2adac20b2bb0967638dd0923eaca55897574e7fad9b1a2b9768f55987d",
+      "kind": "item",
+      "scope": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "SoulWeaver_Scythe",
+          "line": 2,
+          "fields": [
+            "Id",
+            "Model",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 6,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSwing"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 7,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onHold"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 8,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onPickup"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 9,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onUnHeld"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 10,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onPressQ"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 12,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onUse"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 14,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onUse"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 16,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSwingz"
+              ],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Slash",
+              "line": 6,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Descension",
+              "line": 7,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Descension",
+              "line": 8,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Cosmetics_Unequip",
+              "line": 9,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Cosmetics_Unequip",
+              "line": 10,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Nether_Grasp_Trap_Crucible",
+              "line": 12,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Crucible",
+              "line": 14,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Deprivation_Crucible",
+              "line": 16,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "soulweaver_slash_1",
+          "line": 18,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_slash_2",
+          "line": 22,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_slash_3",
+          "line": 26,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_slash_4",
+          "line": 30,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_nether_grasp_circle",
+          "line": 34,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_nether_grasp_hand",
+          "line": 38,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_nether_grasp_hand_2",
+          "line": 42,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_deprivation_eye",
+          "line": 46,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_marionette_full",
+          "line": 50,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_marionette_skill",
+          "line": 54,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_marionette_1",
+          "line": 58,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_marionette_2",
+          "line": 62,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_marionette_3",
+          "line": 66,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_marionette_4",
+          "line": 70,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_marionette_5",
+          "line": 74,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_marionette_6",
+          "line": 78,
+          "fields": [
+            "Id",
+            "Model"
+          ],
+          "steps": [],
+          "refs": []
+        },
+        {
+          "id": "soulweaver_soul",
+          "line": 83,
+          "fields": [
+            "Id",
+            "Options"
+          ],
+          "steps": [],
+          "refs": []
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml",
+      "sha256": "c5c970e4cc9b96ec44e2cb2ac84568d0e5139aeeda9a5d26adf4837490f6975f",
+      "kind": "mob",
+      "scope": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "Soulweaver_Slash_FX_1",
+          "line": 2,
+          "fields": [
+            "Type",
+            "Options",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 14,
+              "operation": "addtag",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 15,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 16,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 17,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 18,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 19,
+              "operation": "remove",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "Soulweaver_Nether_Grasp_Trap",
+          "line": 21,
+          "fields": [
+            "Type",
+            "Options",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 33,
+              "operation": "addtag",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 35,
+              "operation": "effect:particleorbital",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 36,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 37,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 38,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 39,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 40,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 41,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 42,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 43,
+              "operation": "aura",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Check_SoulWeaver_Nether_Grasp",
+              "line": 43,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Nether_Grasp_Hand",
+          "line": 45,
+          "fields": [
+            "Type",
+            "Options",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 57,
+              "operation": "addtag",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 58,
+              "operation": "teleport",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 59,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 60,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 61,
+              "operation": "effect:particleline",
+              "targeters": [
+                "Cone"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 62,
+              "operation": "teleport",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 63,
+              "operation": "sudoskill",
+              "targeters": [
+                "owner"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 64,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 65,
+              "operation": "teleport",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 66,
+              "operation": "remove",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Nether_Grasp_Hand_DamageUP",
+              "line": 63,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge",
+          "line": 69,
+          "fields": [
+            "Type",
+            "Options",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 81,
+              "operation": "addtag",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 82,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 83,
+              "operation": "animatearmorstand",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Reverse",
+          "line": 86,
+          "fields": [
+            "Type",
+            "Options",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 98,
+              "operation": "addtag",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 99,
+              "operation": "remove",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 100,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 101,
+              "operation": "missile",
+              "targeters": [
+                "owner"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 102,
+              "operation": "aura",
+              "targeters": [
+                "owner"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Grab_Scythe",
+              "line": 101,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Tick",
+              "line": 101,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Spirit_Surge",
+              "line": 101,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Soul_Collecting",
+              "line": 102,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Soul",
+          "line": 104,
+          "fields": [
+            "Type",
+            "Health",
+            "Options",
+            "AIGoalSelectors",
+            "AITargetSelectors",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 122,
+              "operation": "addtag",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 123,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 124,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 125,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 126,
+              "operation": "sudoskill",
+              "targeters": [
+                "Parent"
+              ],
+              "triggers": [
+                "onDamaged"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 127,
+              "operation": "potion",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 128,
+              "operation": "effect:particles",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 129,
+              "operation": "effect:particles",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 130,
+              "operation": "effect:particles",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 131,
+              "operation": "remove",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 132,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Soul_Damaging",
+              "line": 126,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Deprivation_Eye",
+          "line": 134,
+          "fields": [
+            "Type",
+            "Display",
+            "Health",
+            "Options",
+            "AIGoalSelectors",
+            "AITargetSelectors",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 153,
+              "operation": "addtag",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 155,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 156,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 157,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 158,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 159,
+              "operation": "effect:particlering",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 161,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 162,
+              "operation": "look",
+              "targeters": [
+                "Owner"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 163,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 164,
+              "operation": "equip",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 165,
+              "operation": "remove",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 166,
+              "operation": "potion",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 167,
+              "operation": "potion",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 168,
+              "operation": "effect:particleorbital",
+              "targeters": [
+                "Forward"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 169,
+              "operation": "effect:particleorbital",
+              "targeters": [
+                "Forward"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 170,
+              "operation": "effect:particles",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 171,
+              "operation": "effect:particles",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onDeath"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 172,
+              "operation": "skill",
+              "targeters": [
+                "EIC"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 173,
+              "operation": "skill",
+              "targeters": [
+                "EIC"
+              ],
+              "triggers": [
+                "onSpawn"
+              ],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 174,
+              "operation": "remove",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [
+                "onDeath"
+              ],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Deprivation_Eye_Choose_Target",
+              "line": 172,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Deprivation_Eye_Choose_Target",
+              "line": 173,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/packinfo.yml",
+      "sha256": "c6c5c5f82e73ef96f125af42e95e26f39b5162ce52f7283a94ad68e3e1cacb15",
+      "kind": "metadata",
+      "scope": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver",
+      "status": "syntax-checked",
+      "definitions": [],
+      "duplicate_keys": [],
+      "metadata": {
+        "Name": "EC_soul_Weaver",
+        "Version": "1.0.0"
+      }
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml",
+      "sha256": "e0facbc0717cb44b23fc018df4dbcf13733d27ba8c77318e704808378584985b",
+      "kind": "metaskill",
+      "scope": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver",
+      "status": "syntax-checked",
+      "definitions": [
+        {
+          "id": "SoulWeaver_Slash",
+          "line": 3,
+          "fields": [
+            "Cooldown",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Cooldown",
+              "line": 4,
+              "operation": "",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 6,
+              "operation": "potion",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 7,
+              "operation": "summon",
+              "targeters": [
+                "Forward"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 8,
+              "operation": "skill",
+              "targeters": [
+                "EIC"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 9,
+              "operation": "randomskill",
+              "targeters": [
+                "selflocation",
+                "selflocation",
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Slash_FX_1",
+              "line": 7,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Slash_Damage",
+              "line": 8,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "SoulWeaver_Slash_Damage",
+          "line": 11,
+          "fields": [
+            "TargetConditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "TargetConditions",
+              "line": 13,
+              "operation": "mythicmobtype",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 15,
+              "operation": "damage",
+              "targeters": [],
+              "triggers": [],
+              "variables": [
+                "<modifier.damage>"
+              ]
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Slash_SoulSlash_SFX",
+              "line": 13,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "SoulWeaver_Slash_SoulSlash_SFX",
+          "line": 17,
+          "fields": [
+            "Conditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Conditions",
+              "line": 19,
+              "operation": "offgcd",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 21,
+              "operation": "gcd",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 22,
+              "operation": "damage",
+              "targeters": [],
+              "triggers": [],
+              "variables": [
+                "<modifier.damage>"
+              ]
+            },
+            {
+              "section": "Skills",
+              "line": 23,
+              "operation": "randomskill",
+              "targeters": [
+                "selflocation",
+                "selflocation",
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "SoulWeaver_Descension",
+          "line": 26,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 28,
+              "operation": "aura",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Apply_FXS",
+              "line": 28,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Cosmetics_Equip",
+              "line": 28,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "SoulWeaver_Apply_FXS",
+          "line": 30,
+          "fields": [
+            "Conditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Conditions",
+              "line": 32,
+              "operation": "health",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 34,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 35,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 36,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Cosmetics_Particle",
+              "line": 36,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "SoulWeaver_Cosmetics_Equip",
+          "line": 38,
+          "fields": [
+            "Conditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Conditions",
+              "line": 40,
+              "operation": "wearing",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 42,
+              "operation": "command",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 43,
+              "operation": "command",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Cosmetics_Unequip",
+              "line": 40,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "SoulWeaver_Cosmetics_Particle",
+          "line": 45,
+          "fields": [
+            "Cooldown",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Cooldown",
+              "line": 46,
+              "operation": "1",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 48,
+              "operation": "effect:particles",
+              "targeters": [
+                "Forward"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 49,
+              "operation": "effect:particles",
+              "targeters": [
+                "Forward"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "SoulWeaver_Cosmetics_Unequip",
+          "line": 51,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 53,
+              "operation": "skill",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 54,
+              "operation": "delay",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 55,
+              "operation": "command",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 56,
+              "operation": "command",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "SoulWeaver_Cosmetics_Particle",
+              "line": 53,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "SoulWeaver_Nether_Grasp_Trap_Crucible",
+          "line": 61,
+          "fields": [
+            "Cooldown",
+            "Conditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Cooldown",
+              "line": 62,
+              "operation": "10",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Conditions",
+              "line": 64,
+              "operation": "crouching",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Conditions",
+              "line": 65,
+              "operation": "mobsinradius",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Conditions",
+              "line": 66,
+              "operation": "onground",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 68,
+              "operation": "setvariable",
+              "targeters": [
+                "Self"
+              ],
+              "triggers": [],
+              "variables": [
+                "var=caster.nether_grasp_damage",
+                "<modifier.graspdamage>"
+              ]
+            },
+            {
+              "section": "Skills",
+              "line": 69,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 70,
+              "operation": "summon",
+              "targeters": [
+                "SelfLocation"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Nether_Grasp_Trap",
+              "line": 70,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "SoulWeaver_Nether_Grasp_Trap",
+          "line": 72,
+          "fields": [
+            "Conditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Conditions",
+              "line": 74,
+              "operation": "mobsinradius",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Conditions",
+              "line": 75,
+              "operation": "onground",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 77,
+              "operation": "setvariable",
+              "targeters": [
+                "Self"
+              ],
+              "triggers": [],
+              "variables": [
+                "var=caster.nether_grasp_damage",
+                "<modifier.graspdamage>"
+              ]
+            },
+            {
+              "section": "Skills",
+              "line": 78,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 79,
+              "operation": "summon",
+              "targeters": [
+                "SelfLocation"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Nether_Grasp_Trap",
+              "line": 79,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Check_SoulWeaver_Nether_Grasp",
+          "line": 81,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 83,
+              "operation": "skill",
+              "targeters": [
+                "owner"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 84,
+              "operation": "skill",
+              "targeters": [
+                "EIC"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 85,
+              "operation": "setrotation",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Check_SoulWeaver_Nether_Grasp_Check_Owner",
+              "line": 83,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Check_SoulWeaver_Nether_Grasp_Entities",
+              "line": 84,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Check_SoulWeaver_Nether_Grasp_Check_Owner",
+          "line": 87,
+          "fields": [
+            "TargetConditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "TargetConditions",
+              "line": 89,
+              "operation": "targetwithin",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 91,
+              "operation": "remove",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "Check_SoulWeaver_Nether_Grasp_Entities",
+          "line": 93,
+          "fields": [
+            "TargetConditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "TargetConditions",
+              "line": 95,
+              "operation": "mythicmobtype",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "TargetConditions",
+              "line": 96,
+              "operation": "hastag",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "TargetConditions",
+              "line": 97,
+              "operation": "owner",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 99,
+              "operation": "skill",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Check_SoulWeaver_Nether_Hand",
+              "line": 95,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Check_SoulWeaver_Nether_Hand",
+              "line": 99,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Check_SoulWeaver_Nether_Hand",
+          "line": 101,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 103,
+              "operation": "remove",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 104,
+              "operation": "sudoskill",
+              "targeters": [
+                "owner"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Check_SoulWeaver_Summon_Hand",
+              "line": 104,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Check_SoulWeaver_Summon_Hand",
+          "line": 106,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 108,
+              "operation": "summon",
+              "targeters": [
+                "TriggerLocation"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Nether_Grasp_Hand",
+              "line": 108,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Nether_Grasp_Hand_DamageUP",
+          "line": 110,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 112,
+              "operation": "totem",
+              "targeters": [
+                "TriggerLocation"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Nether_Grasp_Damage",
+              "line": 112,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Nether_Grasp_Damage",
+          "line": 114,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 116,
+              "operation": "potion",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 117,
+              "operation": "velocity",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 118,
+              "operation": "damage",
+              "targeters": [],
+              "triggers": [],
+              "variables": [
+                "caster.var.nether_grasp_damage"
+              ]
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Crucible",
+          "line": 122,
+          "fields": [
+            "Cooldown",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Cooldown",
+              "line": 123,
+              "operation": "1",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 125,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 126,
+              "operation": "projectile",
+              "targeters": [
+                "Forward"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Hit",
+              "line": 126,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Tick",
+              "line": 126,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Scythe_Back",
+              "line": 126,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Spirit_Surge",
+              "line": 126,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge",
+          "line": 128,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 130,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 131,
+              "operation": "projectile",
+              "targeters": [
+                "Forward"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Hit",
+              "line": 131,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Tick",
+              "line": 131,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Scythe_Back",
+              "line": 131,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Spirit_Surge",
+              "line": 131,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Scythe_Back",
+          "line": 133,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 135,
+              "operation": "summon",
+              "targeters": [
+                "Origin"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Spirit_Surge_Reverse",
+              "line": 135,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Hit",
+          "line": 137,
+          "fields": [
+            "TargetConditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "TargetConditions",
+              "line": 139,
+              "operation": "hastag",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "TargetConditions",
+              "line": 140,
+              "operation": "entitytype",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "TargetConditions",
+              "line": 141,
+              "operation": "mythicmobtype",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 143,
+              "operation": "aura",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 144,
+              "operation": "sudoskill",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 145,
+              "operation": "damage",
+              "targeters": [],
+              "triggers": [],
+              "variables": [
+                "<modifier.damage>"
+              ]
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Soul_Collecting",
+              "line": 143,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Soul_Pulling",
+              "line": 144,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Tick",
+          "line": 147,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 149,
+              "operation": "effect:particles",
+              "targeters": [
+                "Origin"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Grab_Scythe",
+          "line": 151,
+          "fields": [
+            "TargetConditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "TargetConditions",
+              "line": 153,
+              "operation": "owner",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 155,
+              "operation": "aura",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 156,
+              "operation": "sudoskill",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 157,
+              "operation": "potion",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Scythe_Receive",
+              "line": 153,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Soul_Collecting",
+              "line": 155,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            },
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Soul_Pulling",
+              "line": 156,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Scythe_Receive",
+          "line": 159,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 161,
+              "operation": "sound",
+              "targeters": [
+                "owner"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 162,
+              "operation": "delay",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 163,
+              "operation": "remove",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Soul_Pulling",
+          "line": 165,
+          "fields": [
+            "Conditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Conditions",
+              "line": 167,
+              "operation": "entitytype",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Conditions",
+              "line": 168,
+              "operation": "mythicmobtype",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 170,
+              "operation": "summon",
+              "targeters": [
+                "SelfLocation"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Spirit_Surge_Soul",
+              "line": 170,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Soul_Collecting",
+          "line": 172,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 174,
+              "operation": "pull",
+              "targeters": [
+                "MIR"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Soul_Damaging",
+          "line": 176,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 178,
+              "operation": "sudoskill",
+              "targeters": [
+                "Trigger"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Spirit_Surge_Soul_Damaging_Trigger",
+              "line": 178,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Spirit_Surge_Soul_Damaging_Trigger",
+          "line": 180,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 182,
+              "operation": "damage",
+              "targeters": [
+                "Trigger"
+              ],
+              "triggers": [],
+              "variables": [
+                "skill.var.damage-amount"
+              ]
+            }
+          ],
+          "refs": []
+        },
+        {
+          "id": "Soulweaver_Deprivation_Crucible",
+          "line": 186,
+          "fields": [
+            "Cooldown",
+            "Conditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Cooldown",
+              "line": 187,
+              "operation": "10",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Conditions",
+              "line": 189,
+              "operation": "crouching",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 191,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 192,
+              "operation": "projectile",
+              "targeters": [
+                "Origin",
+                "Forward"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Deprivation_Eye_Summon",
+              "line": 192,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Deprivation",
+          "line": 194,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 196,
+              "operation": "sound",
+              "targeters": [
+                "selflocation"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 197,
+              "operation": "projectile",
+              "targeters": [
+                "Origin",
+                "Forward"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Deprivation_Eye_Summon",
+              "line": 197,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Deprivation_Eye_Summon",
+          "line": 199,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 201,
+              "operation": "summon",
+              "targeters": [
+                "Origin"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "mob",
+              "id": "Soulweaver_Deprivation_Eye",
+              "line": 201,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Deprivation_Eye_Choose_Target",
+          "line": 203,
+          "fields": [
+            "TargetConditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "TargetConditions",
+              "line": 205,
+              "operation": "owner",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 207,
+              "operation": "sudoskill",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Deprivation_Eye_Choose_Sudo",
+              "line": 207,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Deprivation_Eye_Choose_Sudo",
+          "line": 209,
+          "fields": [
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "Skills",
+              "line": 211,
+              "operation": "skill",
+              "targeters": [
+                "EIC"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": [
+            {
+              "kind": "metaskill",
+              "id": "Soulweaver_Deprivation_Eye_Looking",
+              "line": 211,
+              "matches": [
+                "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml"
+              ],
+              "resolution": "static-match"
+            }
+          ]
+        },
+        {
+          "id": "Soulweaver_Deprivation_Eye_Looking",
+          "line": 213,
+          "fields": [
+            "TargetConditions",
+            "Skills"
+          ],
+          "steps": [
+            {
+              "section": "TargetConditions",
+              "line": 215,
+              "operation": "inlineofsight",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "TargetConditions",
+              "line": 216,
+              "operation": "mythicmobtype",
+              "targeters": [],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 218,
+              "operation": "sendtitle",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 219,
+              "operation": "effect:particles",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 220,
+              "operation": "potion",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 221,
+              "operation": "potion",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            },
+            {
+              "section": "Skills",
+              "line": 222,
+              "operation": "potion",
+              "targeters": [
+                "self"
+              ],
+              "triggers": [],
+              "variables": []
+            }
+          ],
+          "refs": []
+        }
+      ],
+      "duplicate_keys": [],
+      "metadata": {}
+    }
+  ],
+  "reference_counts": {
+    "static-match": 60
+  }
+}

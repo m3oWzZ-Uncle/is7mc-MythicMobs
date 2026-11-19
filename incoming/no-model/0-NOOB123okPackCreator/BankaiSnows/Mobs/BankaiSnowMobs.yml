@@ -1,0 +1,62 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+# *Lưu ý: skill sử dụng nhiều particle nên hãy cân nhắc server đủ mạnh, máy của bạn đủ mạnh để chịu được nhé! 
+#  và sát thương của kỹ năng cũng to khoảng 30-80,các cơn gió tuyết có thể ánh hưởng tới bản thân bạn
+# để dùng skill hãy sử dụng lệnh /mm test cast Bankai_Snow
+# để thử theo góc nhìn của kẻ địch sử dụng lệnh /mm mobs spawn MobstestSkillBankai
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+# giá bán gốc của file 40k
+MobstestSkillBankai:
+  Type: ARMOR_STAND 
+  Health: 1000
+  Options.Silent: true
+  Options.Invisible: true
+  Skills:
+  - skill{s=Bankai_Snow} ~onSpawn
+  - remove @self ~onTimer:1000
+  
+bankai_Mobs:
+  Type: ARMOR_STAND 
+  Health: 1000
+  Options.Silent: true
+  Options.Invisible: true
+  Skills:
+  - skill{s=Bankai_SnowMobs} ~onSpawn
+  - remove @self ~onTimer:1000
+bankai_Mobs2:
+  Type: ARMOR_STAND 
+  Health: 1000
+  Options.Silent: true
+  Options.Invisible: true
+  Skills:
+  - skill{s=Bankai_SnowMobs2} ~onSpawn
+  - remove @self ~onTimer:1000
+bankai_Mobs_shield:
+  Type: ARMOR_STAND 
+  Health: 1000
+  Options.Silent: true
+  Options.Invisible: true
+  Skills:
+  - skill{s=Bankai_shield} ~onSpawn
+  - remove @self ~onTimer:1000
+bankai_Mobs_shieldTwo:
+  Type: ARMOR_STAND 
+  Health: 1000
+  Options.Silent: true
+  Options.Invisible: true
+  Skills:
+  - skill{s=Bankai_ShieldTwo} ~onSpawn
+  - remove @self ~onTimer:1000
+  
+##############################################
+Lightbeam_Mobs:
+  Type: ARMOR_STAND 
+  Health: 1000
+  Options.Silent: true
+  Options.Invisible: true
+  Skills:
+  - skill{s=Lightbeam_cooldown} ~onSpawn
+  - remove @self ~onTimer:100

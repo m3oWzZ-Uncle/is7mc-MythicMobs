@@ -1,0 +1,12 @@
+{
+  "id": "009-local-coordinates",
+  "kind": "practice",
+  "level": "intermediate",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "yaw-zero",
+    "yaw-ninety",
+    "pitch"
+  ]
+}

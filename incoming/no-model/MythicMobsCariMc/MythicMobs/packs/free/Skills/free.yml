@@ -1,0 +1,128 @@
+FlowerFastShoot:
+  Skills:
+  - projectile{bulletType=ITEM;material=netherite_sword;v=50;i=1;mr=100;hnp=true;oT=FlowerTick;oH=FlowerHit;size=10;sso=0;sfo=0} @Targetlocation
+  
+FlowerTick:
+  Skills:
+  - effect:particles{particle=reddust;color=#f9a4f0;a=5;hs=0.2;vs=0.2} @origin
+  - effect:particles{particle=reddust;color=#fdfdfd;a=5;hs=0.2;vs=0.2} @origin
+  - sound{s=entity.evoker.prepare_attack;v=0.3}
+FlowerHit:
+  Skills:
+  - damage{amount="<modifier.damage>";ignoreArmor=true}
+  - delay 5
+  - teleport{spreadh=0;spreadv=0} @target
+  - sound{s=entity.enderman.teleport;v=5} @EIR{r=20}
+  - delay 10
+  - effect:particlesphere{particle=reddust;color=#fcb4f5;amount=1000;radius=2.5;size=2;y=1} @self
+  - sound{s=block.grass.hit;v=1;p=0.01}
+  - sound{s=block.grass.hit;v=1;p=0.5}
+  - delay 5
+  - sound{s=block.grass.hit;v=1;p=0.5}
+
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=4}
+
+################################################################################################################################
+
+
+InfinityBladesProjectiles:
+  Skills:
+  - projectile{bulletType=ITEM;material=netherite_sword;v=10;i=1;mr=45;hnp=true;oT=IBPTick;oH=IBPHit;size=1;hs=0;vs=0;sso=0;sfo=0} @ring{radius=160;points=10}
+  - delay 20
+  - projectile{bulletType=ITEM;material=netherite_sword;v=10;i=1;mr=45;hnp=true;oT=IBPTick;oH=IBPHit;size=1;hs=0;vs=0;sso=0;sfo=0} @ring{radius=360;points=20}
+  - delay 20
+  - projectile{bulletType=ITEM;material=netherite_sword;v=10;i=1;mr=45;hnp=true;oT=IBPTick;oH=IBPHit;size=1;hs=0;vs=0;sso=0;sfo=0} @ring{radius=360;points=28}
+  - delay 20 
+  - projectile{bulletType=ITEM;material=netherite_sword;v=10;i=1;mr=45;hnp=true;oT=IBPTick;oH=IBPHit;size=1;hs=0;vs=0;sso=0;sfo=0} @ring{radius=160;points=10}
+  - delay 20
+  - projectile{bulletType=ITEM;material=netherite_sword;v=10;i=1;mr=45;hnp=true;oT=IBPTick;oH=IBPHit;size=1;hs=0;vs=0;sso=0;sfo=0} @ring{radius=360;points=20}
+  - delay 20
+  - projectile{bulletType=ITEM;material=netherite_sword;v=10;i=1;mr=45;hnp=true;oT=IBPTick;oH=IBPHit;size=1;hs=0;vs=0;sso=0;sfo=0} @ring{radius=360;points=28}
+  
+IBPTick:
+  Skills:
+  - effect:particles{particle=reddust;color=#f9a4f0;a=1;hs=0.1;vs=0.1;size=0.5} @origin
+  - sound{s=entity.evoker.prepare_attack;v=0.1}
+IBPHit:
+  Skills:
+  - damage{amount="<modifier.damage>";ignoreArmor=true}
+
+################################################################
+
+MasterMeteorShot:
+    Skills:
+    - projectile{type=METEOR;onTick=MasterMeteorShot-Tick;onEnd=MasterMeteorShot-Hit;onHit=MasterMeteorShot-Hit;v=50;i=1;hR=2;vR=1;mr=100;g=1.5;hfs=20} @RLNTE{amount=3;radius=5;spacing=1;minradius=0}
+
+MasterMeteorShot-Tick:
+    Skills:
+    - effect:particles{p=flame;amount=10;speed=0.00001;hS=0.1;vS=0.5} @origin
+
+MasterMeteorShot-Hit:
+    Skills:
+    - damage{amount="<modifier.damage>";ignoreArmor=true}
+    - effect:particles{p=lava;amount=15;speed=0.2;hS=0.1;vS=1} @origin
+
+########################################################################################################
+
+
+OdinProjectile:
+  Conditions:
+  - targetnotwithin{d=6} true
+  Skills:
+  - projectile{onTick=OdinProjectileonTick;onHit=OdinProjectileonHit;onEnd=OdinProjectileonHit;v=15;i=1;hR=0.5;vR=0.5;MaxRange=16;StartYOffset=2;hp=true;hnp=true} @targetlocation
+OdinProjectileonTick:
+  Skills:
+  - effect:particlesphere{particle=cloud;amount=30;radius=0.3} @origin 
+OdinProjectileonHit:
+  Skills:
+  - lightning{d=0.15} @Origin
+  - effect:blockmask{m=ice;r=3;d=40}  @Origin
+  - throw{v=10;vY=3}
+  - effect:particles{particle=cloud;amount=50;hS=1;vS=3;speed=0.1} @Origin
+  - damage{amount="<modifier.damage>";ignoreArmor=true}
+##########################################################################
+
+OdinAttack:
+  Skills:
+  - teleport @target
+  - effect:particles{particle=cloud;amount=50;hS=1;vS=3;speed=0.1} @self
+  - effect:blockmask{m=ice;r=4;d=60} @Self
+  - damage{amount="<modifier.damage>";ignoreArmor=true} @EIR{r=5}
+  - throw{v=20;vY=5} @EIR{r=5}
+  - delay 8
+  - effect:lightning @self
+  - effect:lightning @RLNTE{r=10;minr=8}
+  - effect:lightning @RLNTE{r=10;minr=8}
+  - effect:lightning @RLNTE{r=10;minr=8}
+  - effect:lightning @RLNTE{r=10;minr=8}
+  - effect:lightning @RLNTE{r=10;minr=8}
+  - effect:lightning @RLNTE{r=10;minr=8}
+  - effect:lightning @RLNTE{r=10;minr=8}
+  - effect:lightning @RLNTE{r=10;minr=8}
+
+
+################################################################################
+
+EruptionRainEclipse:
+  Skills:
+  - effect:sound{s=entity.firework_rocket.blast_far;v=1;p=0.7} @PIR{r=60}
+  - effect:sound{s=block.ender_chest.open;v=1;p=0.7} @PIR{r=60}
+  - projectile{onTick=ERainTick;onHit=ERainHit;onEnd=ERainEnd;v=10;i=1;hR=1;vR=1;StopAtBlock=true;HitNonPlayers=true;g=0.3;vO=1.8;syO=12;repeat=3;repeatInterval=50;sso=0;sfo=0} @Cone{angle=360;points=28;range=60;rotation=360}
+  - delay 90
+  - projectile{onTick=ERainTick;onHit=ERainHit;onEnd=ERainEnd;v=12;i=1;hR=1;vR=1;StopAtBlock=true;HitNonPlayers=true;g=0.3;vO=1.8;syO=12;repeat=3;repeatInterval=50;sso=0;sfo=0} @Cone{angle=360;points=28;range=60;rotation=360}
+  - delay 80
+  - projectile{onTick=ERainTick;onHit=ERainHit;onEnd=ERainEnd;v=13;i=1;hR=1;vR=1;StopAtBlock=true;HitNonPlayers=true;g=0.3;vO=1.8;syO=12;repeat=3;repeatInterval=50;sso=0;sfo=0} @Cone{angle=360;points=28;range=80;rotation=360}
+  - delay 80
+  - projectile{onTick=ERainTick;onHit=ERainHit;onEnd=ERainEnd;v=14;i=1;hR=1;vR=1;StopAtBlock=true;HitNonPlayers=true;g=0.3;vO=1.8;syO=12;repeat=3;repeatInterval=50;sso=0;sfo=0} @Cone{angle=360;points=28;range=100;rotation=360}
+
+ERainTick:
+  Skills:
+  - effect:particles{p=flame;amount=1;speed=0} @origin
+  - sound{s=entity.generic.extinguish_fire;v=0.1;p=0.6} @origin
+ERainHit:
+  Skills:
+  - damage{amount="<modifier.damage>";ignoreArmor=true}
+
+  - ignite{tick=150;pk=true;i=true} @EntitiesNearOrigin{r=5}
+  - effect:sound{s=block.ender_chest.close;v=1;p=2}
+  - effect:lightning @RLNTE{r=10;minr=8}

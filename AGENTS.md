@@ -1,0 +1,22 @@
+# Quy tắc làm việc trong MythicMobs-AI-Training
+
+- Nhiệm vụ là xây dựng kho kiến thức có nguồn và có bằng chứng, không tự bịa tài liệu.
+- Ưu tiên thiết kế, tối ưu và sửa skill do người chơi thi triển. Tỷ lệ định hướng nghiên cứu, phỏng vấn và bài tập là 75% Player Skills, 15% Boss Skills, 10% Mob Skills. Đáp ứng đầy đủ yêu cầu boss hoặc mob khi được giao.
+- Xác định điểm vào và caster từ YAML, lệnh, sự kiện hoặc plugin gọi skill. Với caster là player, chỉ dùng thành phần boss, mob AI hoặc phase khi có vai trò cụ thể trong gameplay được yêu cầu. Xem [chỉ mục Player Skills](knowledge/player-skills/README.md).
+- Khi nghiên cứu: ưu tiên file thực tế của người dùng, wiki chính thức đúng phiên bản, rồi ví dụ cộng đồng đã đối chiếu.
+- Dùng [MythicCraft Wiki – MythicMobs](https://wiki.mythiccraft.io/mythicmobs/home) làm nguồn chính thức cho cú pháp và hành vi được tài liệu hóa của MythicMobs core. Đối chiếu changelog theo build và dùng tài liệu của plugin sở hữu cho các tích hợp. Xem [quy ước nguồn và phiên bản](docs/wiki/README.md).
+- KHÔNG gắn nhãn `verified-in-game` nếu chưa có bằng chứng thử nghiệm trong game.
+- Phân biệt: `unverified`, `syntax-checked`, `server-loaded`, `verified-in-game`.
+- Tư duy giải pháp: chọn kiến trúc đơn giản nhất đáp ứng ĐẦY ĐỦ hành vi được yêu cầu; không đơn giản hóa làm sai gameplay.
+- Chỉ thêm condition, variable, timer, lớp metaskill hoặc cơ chế bảo vệ khi có yêu cầu gameplay, lỗi thực tế hoặc lý do kỹ thuật đã xác minh. Chọn mechanic theo hành vi và ngữ cảnh. Quyết định dùng `lunge` trong Dash Cleave áp dụng cho cú lướt của bài đó. [Phản hồi Dash Cleave](feedback/corrections/MM-2026-006.md)
+- Với skill chiến đấu cần xét trigger, target, timing, animation, hitbox, damage, cooldown, interrupt, cleanup, multiplayer, performance.
+- Không tự tạo tên mechanics, targeters, conditions. Tra cứu nguồn tương thích trước khi dùng.
+- Khi phân tích skill: ghi rõ hành vi quan sát được và hành vi chỉ suy đoán từ YAML.
+- Nếu phát hiện lỗi cũ, tạo báo cáo tại feedback/corrections/ theo template; không tự đổi lịch sử hoặc ý kiến người dùng.
+- Thay đổi code/config của project khác phải có backup hoặc diff; không phá file gốc.
+- Cuối nhiệm vụ tóm tắt file đổi, bằng chứng đã kiểm tra, điều còn phải test trong server.
+- Với nhiệm vụ MythicMobs, đọc [chỉ mục bộ nhớ](memory/index/README.md), tra theo bối cảnh trước khi hỏi và ghi bài học có căn cứ sau nhiệm vụ theo [quy trình bộ nhớ](memory/README.md).
+- Với bài thực hành và ca tái hiện khi thiết kế hoặc sửa MythicMobs, áp dụng [quy trình thực hành](tests/training-sandbox/README.md). Dùng sandbox cho YAML thử, tự kiểm tra và chuẩn bị ca Minecraft. Ghi bài học sau xác nhận và dùng `python -X utf8 tools/training.py status` để tiếp tục mốc đánh giá sau mỗi 5 bài đã có bằng chứng gameplay.
+- Khi đề bài để loại caster mở, ưu tiên player-cast và ghi điểm vào giả định. Trước khi tạo skill, đối chiếu lỗi cũ, quyết định và ví dụ cùng bối cảnh. Mở nghiên cứu IonTech khi thuật toán hoặc module thực sự liên quan.
+- Với phản hồi tự nhiên, bám yêu cầu và phiên bản YAML đang thử, tự tìm nguyên nhân và sửa. Chỉ hỏi một câu nếu thông tin còn thiếu ảnh hưởng trực tiếp tới kết quả. Cuối bài cập nhật [nhật ký](feedback/training/README.md), ghi bằng chứng đã có và để mở phần chờ xác nhận. Sau mỗi 5 bài có bằng chứng gameplay, đánh giá tiến bộ qua [đề độc lập](tests/training-benchmarks/README.md).
+- Với [chương trình 40 bài](training/curriculum.md), chỉ triển khai đề người dùng yêu cầu. Tính mốc riêng bằng `tools/training.py status --curriculum`. Chỉ gắn GAMEPLAY_VERIFIED cho đúng bản YAML và build sau khi có bằng chứng Minecraft và xác nhận trực tiếp của người dùng.

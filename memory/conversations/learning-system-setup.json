@@ -1,0 +1,16 @@
+{
+  "id": "learning-system-setup",
+  "category": "conversations",
+  "title": "Phiên thiết lập hồ sơ học tư duy MythicMobs",
+  "topic": "learning-workflow",
+  "summary": "Thiết lập cách ghi quyết định theo tình huống. Phiên đặt câu hỏi đầu tiên về khóa hướng đòn quét boss.",
+  "context": "Dùng để tiếp tục phỏng vấn hoặc tìm hồ sơ gốc về quyết định thiết kế.",
+  "exceptions": "Tình huống phỏng vấn chưa có câu trả lời tại thời điểm ghi phiên này.",
+  "scope": "global",
+  "claim": "FACT",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-13",
+  "tags": ["phong-van", "hoc-tu-duy", "boss"],
+  "related": ["boss-cleave-lock-open"],
+  "sources": [{"type": "document", "ref": "feedback/decisions/README.md", "note": "Chỉ mục phỏng vấn và quy trình ghi quyết định."}]
+}

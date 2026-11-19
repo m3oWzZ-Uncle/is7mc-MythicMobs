@@ -1,0 +1,30 @@
+{
+  "id": "dash-cleave-lunge",
+  "category": "decisions",
+  "title": "Chọn mechanic di chuyển theo hành vi",
+  "topic": "movement-mechanic-selection",
+  "summary": "Trong TrainingDashCleave, người dùng thử và đánh giá lunge cho cú lướt tốt hơn velocity. Chọn theo hành vi mong muốn.",
+  "context": "Boss lướt về người chơi rồi chém trong bài #2.",
+  "exceptions": "Velocity vẫn phù hợp khi cần thao tác vectơ hoặc dừng tức thời. Đánh giá lại ở skill, server hoặc hành vi khác.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-14",
+  "answer": "choose-lunge-for-this-targeted-dash",
+  "requires": [
+    "training-dash-cleave",
+    "targeted-dash"
+  ],
+  "tags": [
+    "lunge",
+    "velocity",
+    "movement"
+  ],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "feedback/corrections/MM-2026-006.md",
+      "note": "Người dùng báo lunge cho kết quả tốt hơn trong bài; chưa cung cấp phép đo hoặc build."
+    }
+  ]
+}

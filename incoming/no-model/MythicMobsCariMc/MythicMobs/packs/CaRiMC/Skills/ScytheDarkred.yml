@@ -1,0 +1,90 @@
+CR_ScytheDarkRed_SKILL:
+  Skills:
+  - leap{velocity=800} @targetlocation
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - skill{s=CR_ScytheDarkRed_tick;repeat=7;repeatInterval=1}
+  - delay 10
+  - effect:bloodyScreen{d=400} @self
+  - potion{type=SPEED;duration=400;lvl=3} @self
+  - potion{type=STRENGTH;duration=400;lvl=0} @self
+  - effect:enderbeam{d=100;y=7} @EIR{r=30}
+#  - effect:glow{color=BLUE;duration=80} @EIR{r=30}
+  - potion{type=WEAKNESS;duration=100;lvl=2} @EIR{r=30}
+  
+CR_ScytheDarkRed_tick:
+  Skills:
+  - effect:particles{p=reddust;color=#ff0000;amount=40;radius=1} @self
+  - effect:particlesphere{p=reddust;color=#ff4444;amount=40;radius=1} @self
+  - damage{a="<modifier.damage>";pkb=false;hnp=true;hp=true;i=true} @EIR{r=3}
+  - velocity{m=add;x=0;y=-1;z=0} @self
+
+CR_ScytheDarkRed_Swap:
+  Skills:
+  - swap @EIR{r=30}
+
+CR_ScytheDarkRed_BlackScreen:
+  Skills:
+  - blackscreen{d=40} @self
+
+CR_ScytheDarkRed_BloodyScreen:
+  Skills:
+  - effect:bloodyScreen{d=400} @self
+  - potion{type=SPEED;duration=400;lvl=3} @self
+  - potion{type=STRENGTH;duration=400;lvl=0} @self
+  - effect:glow{color=BLUE;duration=80} @EIR{r=30}
+  - delay 120
+  - effect:glow{color=BLUE;duration=80} @EIR{r=30}
+  - delay 120
+  - effect:glow{color=BLUE;duration=80} @EIR{r=30}
+
+
+CR_ScytheDarkRed_tele:
+  Skills:
+#  - teleportto{location=0,0,1;relative=true} @self
+  - teleportin{vector=0,0,1} @self
+  - delay 1
+  - teleportin{vector=0,0,-2} @self
+  - delay 1
+  - teleportin{vector=0,0,1} @self
+  - delay 1
+  - teleportin{vector=0,0,2} @self
+  - delay 1
+  - teleportin{vector=0,0,-3} @self
+  - delay 1
+  - teleportin{vector=0,0,3} @self
+  - delay 1
+  - teleportin{vector=0,0,-4} @self
+  - delay 1
+  - teleportin{vector=0,0,4} @self
+  - delay 1
+  - teleportin{vector=0,0,-5} @self
+  - delay 1
+  - teleportin{vector=0,0,5} @self
+  - delay 1
+  - teleportin{vector=0,0,-6} @self
+  - delay 1
+  - teleportin{vector=0,0,4} @self
+  - delay 1
+  - teleportin{vector=0,0,1} @self
+  - delay 1
+  - teleportin{vector=0,0,-2} @self
+  - delay 1
+  - teleportin{vector=0,0,1} @self
+  - delay 1
+  - teleportin{vector=0,0,2} @self
+  - delay 1
+  - teleportin{vector=0,0,-3} @self
+  - delay 1
+  - teleportin{vector=0,0,3} @self
+  - delay 1
+  - teleportin{vector=0,0,-4} @self
+  - delay 1
+  - teleportin{vector=0,0,4} @self
+  - delay 1
+  - teleportin{vector=0,0,-5} @self
+  - delay 1
+  - teleportin{vector=0,0,5} @self
+  - delay 1
+  - teleportin{vector=0,0,-6} @self
+  - delay 1
+  - teleportin{vector=0,0,4} @self

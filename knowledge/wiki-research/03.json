@@ -1,0 +1,15 @@
+{
+  "checked_on": "2026-11-14",
+  "pages": [
+    {"path":"Skills/Metaskills.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Metaskills#hidden","status":"differs","finding":"Trang online có Hidden, mặc định false, và ghi skill vẫn gọi được bằng ID; snapshot chưa có trường này. Changelog ghi bổ sung ở 5.14.0.","note":"wiki-research/version-gaps.md"},
+    {"path":"Skills/Variables.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Variables#variable-scopes","status":"aligned","finding":"Các scope SKILL, CASTER, TARGET, WORLD và GLOBAL cùng ý nghĩa trong đoạn đã so. Đọc thêm riêng khi cần kiểu phức tạp.","note":"patterns/variable-scope.md"},
+    {"path":"Skills/Mechanics/auraremove.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/auraremove","status":"aligned","finding":"Đối chiếu tên aura, stacks và chỗ kiểm DoEndSkillOnTerminate trên Aura.","note":"entries/mythicmobs--mechanic--auraremove.md"},
+    {"path":"Skills/Mechanics/aura.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/aura","status":"aligned","finding":"Đối chiếu phần component thực thi thành công, charge, hủy khi thoát và callback khi remove.","note":"entries/mythicmobs--meta-mechanic--aura.md"},
+    {"path":"Skills/Targeters/EntitiesNearOrigin.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Targeters/EntitiesNearOrigin","status":"aligned","finding":"Kế thừa thuộc tính EntitiesInRadius; cùng ví dụ onEnd và alias ENO.","note":"entries/mythicmobs--targeter--entitiesnearorigin.md"},
+    {"path":"Skills/Mechanics/missile.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/skills/mechanics/missile","status":"aligned","finding":"Đối chiếu homing với entity/location và Inertia mặc định 1.5.","note":"entries/mythicmobs--meta-mechanic--missile.md"},
+    {"path":"Skills/Triggers/onDamaged.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Triggers/onDamaged","status":"aligned","finding":"Cùng định nghĩa trigger bị đánh, kẻ gây damage ở @trigger, và các biến damage. Tách khỏi mechanic/component.","note":"wiki-research/ondamaged.md"},
+    {"path":"Skills/Conditions/EntityType.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Skills/Conditions/EntityType","status":"aligned","finding":"Đối chiếu vị trí trường variant lồng và ví dụ CAT/HORSE.","note":"wiki-research/entitytype.md"},
+    {"path":"API.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/API","status":"aligned","finding":"Đoạn registry và ví dụ build dependency khớp phạm vi đã đọc. Phiên bản 5.12.1 trong ví dụ dependency là giá trị mẫu; chọn dependency và kiểm compile theo server."},
+    {"path":"Mobs/Options.md","official_url":"https://wiki.mythiccraft.io/mythicmobs/Mobs/Options","status":"aligned","finding":"Đối chiếu NoAI, NoGravity ở phạm vi các tùy chọn của mob; chưa so toàn bộ trang."}
+  ]
+}

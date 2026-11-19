@@ -1,0 +1,39 @@
+name: Aura
+lore:
+- triệu hồi lãnh địa băng với bán kính
+- 20 blocks và làm chậm kẻ địch trong 10s
+- Thời gian tồn tại lãnh địa {duration}s
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: ICE
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 45
+  per-level: -0.2
+  min: 0
+  max: 30
+duration:
+  base: 20
+  per-level: 0.2
+  min: 0
+  max: 30

@@ -1,0 +1,495 @@
+MaAnhThichKhach:
+  Skills:
+  - Aura{auraName=ShadowAura;onStart=MaAnhThichKhach_Start;onTick=MaAnhThichKhach_tick;onEnd=MaAnhThichKhach_End;interval=1;duration=50} @self
+MaAnhThichKhach_Start:
+  Skills:
+  - projectile{oT=MaAnhThichKhach_Prj_tick;oH=MaAnhThichKhach_Prj_H;oE=MaAnhThichKhach_Prj_E;v=80;mr=10;i=1;sE=false;sB=true;syo=0.8;sfo=0;sso=0;hnp=true;vR=3;hR=3;hnp=true;hp=true} @targetlocation # nhắm mục tiêu để dịch chuyển
+#  - projectile{oT=MaAnhThichKhach_Prj_tick;oH=MaAnhThichKhach_Prj_H;oE=MaAnhThichKhach_Prj_E;v=80;mr=10;i=1;sE=false;sB=true;syo=0.8;sfo=0;sso=0;hnp=true;vR=3;hR=3;hnp=true;hp=false} @EIR{r=10} # Random sinh vật trong bán Kính 10 block dịch chuyển
+MaAnhThichKhach_tick:
+  Skills:
+#  - effect:particles{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=16;radius=2;points=16;y=1;hs=0.4;vs=0.4;v=0.2} @self
+  - effect:particles{p=cloud;a=1-5;y=2;hs=0.3;vs=0.3;s=0.1}
+  - effect:particles{p=dust_color_transition;color=#751d39;color2=#ff114d;a=5-10;y=1;hs=0.8;vs=0.8;s=0.8;size=1.5}
+
+MaAnhThichKhach_End:
+  Skills:
+  - effect:particles{p=dust_color_transition;color=#751d39;color2=#ff114d;amount=10;y=-1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=-0.5} @ring{r=1}
+  - effect:particles{p=dust_color_transition;color=#751d39;color2=#ff114d;amount=10;y=0} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=0.5} @ring{r=1}
+  - sound{s=entity.breeze.idle_ground;v=1.0;p=1.2} @self
+  - effect:particles{p=dust_color_transition;color=#751d39;color2=#ff114d;amount=10;y=1} @ring{r=1}
+  - effect:particles{p=reddust;color=#4f0303;amount=15;y=1.5} @ring{r=1}
+  - effect:particles{p=dust_color_transition;color=#751d39;color2=#ff114d;amount=10;y=2} @ring{r=1}
+MaAnhThichKhach_Prj_tick:
+  Skills:
+
+MaAnhThichKhach_Prj_E:
+  Skills:
+  - sound{s=entity.illusioner.mirror_move;v=1;p=1.02}
+
+MaAnhThichKhach_Prj_H:
+  Skills:
+  - damage{a="<modifier.damage> * 1.5";pkb=false;hnp=true;hp=true}
+  - teleport{spreadh=0;spreadv=0} @origin
+  - Aura{auraName=Bleed;onStart=Bleed_start;onEnd=Bleed_End;onTick=Bleed_tick;interval=20;duration=60}
+  - delay 5
+  - skill{skill=ShadowSlashT} @self
+  - potion{type=INVISIBILITY;duration=50;level=100} @self
+  - potion{type=SPEED;duration=50;level=4} @self
+Bleed_start:
+  Skills:
+  - effect:bloodyScreen{d=60}
+Bleed_tick:
+  Skills:
+  - effect:particles{p=reddust;color=#ff3535;a=10;hs=0.2;vs=0.2;v=2;y=1}
+  - damage{a=20;pkb=true}
+Bleed_End:
+  Skills:
+  - effect:particles{p=reddust;color=#ff3535;a=10;hs=0.2;vs=0.2;v=2;y=1}
+  - damage{a=20;pkb=true}
+
+ShadowSlashT:
+  Skills:
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=100} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=97} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=94} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=91} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=88} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=85} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.64;hO=82} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.64;hO=79} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.64;hO=76} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.61;hO=73} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.61;hO=70} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.61;hO=67} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.58;hO=64} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.58;hO=61} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.58;hO=58} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=55} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=52} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=49} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=46} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=43} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=40} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=37} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=34} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=46} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=43} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=40} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=37} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=34} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=31} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=28} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=25} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=21} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=18} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=15} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=11} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=8} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=5} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=3} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=0} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=-3} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=6} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=-9} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-12} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-15} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-18} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-12} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-15} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-18} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-21} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-24} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=-27} @forward{f=2;y=0.9}
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashE;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=-30} @forward{f=2;y=0.9}
+
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=100} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=97} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.70;hO=94} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=91} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=88} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.67;hO=85} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.64;hO=82} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.64;hO=79} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.64;hO=76} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.61;hO=73} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.61;hO=70} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.61;hO=67} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.58;hO=64} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.58;hO=61} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2.5;vO=0.58;hO=58} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=55} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=52} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.55;hO=49} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=46} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=43} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.51;hO=40} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=37} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=34} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.48;hO=46} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=43} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=40} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.45;hO=37} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=34} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=31} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.41;hO=28} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=25} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.38;hO=18} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=15} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=11} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.35;hO=8} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=5} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=3} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.31;hO=0} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=-3} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=6} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.28;hO=-9} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-12} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-15} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-18} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-12} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.25;hO=-15} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-18} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-21} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.21;hO=-24} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=-27} @forward
+  - projectile{oT=ShadowSlashTT;oH=ShadowSlashTH;oE=ShadowSlashEW;sE=false;hp=false;hnp=true;hr=2;vr=2;v=30;i=1;mr=2;vO=0.18;hO=-30} @forward
+  
+ShadowSlashTT:
+  Skills:
+
+ShadowSlashEW:
+  Skills:
+  - effect:particles{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=2;repeat=2;repeatInterval=1} 
+  
+
+ShadowSlashTH:
+  Skills:
+
+
+
+################################################################################################################################
+################################################################################################################################
+################################################################################################################################
+
+AnhPhanTHan_Shadow:
+  Skills:
+  - effect:particlering{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=1;radius=1;points=16;y=0.1} @self
+  - delay 3
+  - effect:particlering{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=1;radius=2;points=32;y=0.1} @self
+  - delay 3
+  - effect:particlering{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=1;radius=3;points=64;y=0.1} @self
+  - delay 3
+  - effect:particlering{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=1;radius=4;points=64;y=0.1} @self
+  - delay 3
+  - effect:sound{s=entity.wither.spawn;volume=0.7;pitch=1.3} @self
+  - effect:particlering{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=1;radius=5;points=64;y=0.1} @self
+  - summon{type=AnhPhanTHanMobs;amount=3;radius=2} @self
+  - command{c="ml tempstat add %player_name% DODGE_RATING 30 100 default"} @self
+  - delay 3
+  - effect:particlering{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=1;radius=6;points=64;y=0.1} @self
+
+Shadow-Spawn:
+  Skills:
+  - setmaxhealth{amount=50;mode=STATIC} @self
+#  - delay 1
+  - sethealth{a=50} @self
+
+Shadow-Death:
+  Skills:
+  - effect:particlering{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=32;radius=1;points=8;y=0.1} @self
+  - remove @self
+
+
+################################################################################################################################
+################################################################################################################################
+################################################################################################################################
+
+ShadowStep:
+  Skills:
+  - Aura{auraName=ShadowStep;onStart=ShadowStep_Start;onTick=ShadowStep_tick;interval=1;duration=35} @self
+
+ShadowStep_Start:
+  Skills:
+  - leap{velocity=900} @forward{f=2;y=-1;lockpitch=true}
+  - effect:particlesphere{p=reddust;a=30;color=#ff144d;repeat=5;repeatInterval=1;y=0.1;hs=0.1-0.5} @self
+  - effect:sound{s=entity.illusioner.mirror_move;volume=1.2;pitch=1.0} @self
+  - delay 12
+  - leap{velocity=900} @forward{f=2;y=-1;lockpitch=true}
+  - effect:particlesphere{p=reddust;a=30;color=#ff144d;repeat=5;repeatInterval=1;y=0.1;hs=0.1-0.5} @self
+  - effect:sound{s=entity.illusioner.mirror_move;volume=1.2;pitch=1.0} @self
+  - delay 12
+  - leap{velocity=900} @forward{f=2;y=-1;lockpitch=true}
+  - effect:particlesphere{p=reddust;a=30;color=#ff144d;repeat=5;repeatInterval=1;y=0.1;hs=0.1-0.5} @self
+  - effect:sound{s=entity.illusioner.mirror_move;volume=1.2;pitch=1.0} @self
+
+ShadowStep_tick:
+  Skills:
+  - potion{type=RESISTANCE;duration=20;level=100}
+  - damage{a="<modifier.damage>";pkb=false;hnp=true;hp=true} @EIR{r=2}
+  - potion{type=SLOW;duration=40;level=1} @EIR{r=2}
+
+
+
+
+################################################################################################################################
+################################################################################################################################
+################################################################################################################################
+
+
+
+TuyetAnhKetLieu:
+#  TargetConditions:
+#  - healthpercent{p=<30%} true
+  Skills:
+  - potion{type=SPEED;duration=40;level=1} @self
+#  - potion{type=SLOW;duration=40;level=10} @self
+  - leap{velocity=500} @forward{f=3;y=-1;lockpitch=true}
+#  - leap{velocity=500} @target
+
+  - delay 7
+
+  - effect:sound{s=entity.player.attack.sweep;volume=0.7;pitch=1.3} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=0.1;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=0.1;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=0.2;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=0.1;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=0.1;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=0.2;sso=-0.5} @Self
+  - delay 1
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=0.2;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=0.4;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=0.5;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=0.6;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=0.6;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=0.2;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=0.4;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=0.5;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=0.6;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=0.6;sso=-0.5} @Self
+  - delay 1
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=0.7;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=0.8;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.0;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.1;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3.0;syo=1.2;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=0.7;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=0.8;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.0;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.1;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3.0;syo=1.2;sso=-0.5} @Self
+
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3.0;syo=1.3;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3.0;syo=1.3;sso=-0.4} @Self
+  - totem{md=2;c=1;oH=TuyetAnhKetLieu_DAMAGE_TW;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=2.5;lockpitch=true}
+
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3.0;syo=1.4;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.5;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.6;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.8;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.9;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3.0;syo=1.4;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.9;syo=1.5;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.8;syo=1.6;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.7;syo=1.8;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.6;syo=1.9;sso=-0.5} @Self
+  - delay 1
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=2.0;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=2.0;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=2.1;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=2.2;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=2.4;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.5;syo=2.0;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.4;syo=2.0;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.3;syo=2.1;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.2;syo=2.2;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.1;syo=2.4;sso=-0.5} @Self
+  - delay 1
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=2.4;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=2.6;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=2.6;sso=0.4} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2.0;syo=2.4;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.8;syo=2.6;sso=-0.5} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TWT;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=1.6;syo=2.6;sso=-0.5} @Self
+
+  - delay 7
+
+  - effect:sound{s=entity.player.attack.sweep;volume=0.7;pitch=1.3} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.2;sso=-2.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.3;sso=-2.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.4;sso=-1.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.5;sso=-1.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.6;sso=-1.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.7;sso=-1.25} @Self
+  - delay 1
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.8;sso=-1.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.9;sso=-0.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.0;sso=-0.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.1;sso=-0.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.2;sso=-0.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.05} @Self
+  - delay 1
+  - totem{md=2;c=1;oH=TuyetAnhKetLieu_DAMAGE_D2_TW;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=2.5;lockpitch=true}
+#  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2;syo=1.3;sso=0.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.4;sso=0.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.5;sso=0.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.6;sso=0.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.7;sso=0.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.8;sso=1.05} @Self
+  - delay 1
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.9;sso=1.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.0;sso=1.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.1;sso=1.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.2;sso=1.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.3;sso=2.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.4;sso=2.25} @Self
+
+
+  - delay 3
+  - effect:sound{s=entity.player.attack.sweep;volume=0.7;pitch=1.3} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.2;sso=2.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.3;sso=2.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.4;sso=1.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.5;sso=1.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.6;sso=1.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.7;sso=1.25} @Self
+  - delay 1
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.8;sso=1.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.9;sso=0.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.0;sso=0.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.1;sso=0.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.2;sso=0.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.05} @Self
+  - delay 1
+  - totem{md=2;c=1;oH=TuyetAnhKetLieu_DAMAGE_D2_TW;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=2.5;lockpitch=true}
+#  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2;syo=1.3;sso=-0.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.4;sso=-0.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.5;sso=-0.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.6;sso=-0.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.7;sso=-0.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.8;sso=-1.05} @Self
+  - delay 1
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.9;sso=-1.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.0;sso=-1.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.1;sso=-1.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.2;sso=-1.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.3;sso=-2.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.4;sso=-2.25} @Self
+  
+  - delay 5
+  
+  - leap{velocity=300} @forward{f=-0.5;y=0.2;lockpitch=true}
+  - potion{type=LEVITATION;duration=10;level=1} @self
+  - delay 5
+  - leap{velocity=300} @forward{f=3;y=-4;lockpitch=true}
+  - delay 8
+  
+  - effect:sound{s=entity.wither.spawn;volume=0.7;pitch=1.3} @self
+  - effect:sound{s=entity.wither.shoot;volume=0.4;pitch=1.5} @self
+
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.2;sso=-2.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.3;sso=-2.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.4;sso=-1.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.5;sso=-1.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.6;sso=-1.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.7;sso=-1.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.8;sso=-1.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.9;sso=-0.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.0;sso=-0.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.1;sso=-0.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.2;sso=-0.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=-0.05} @Self
+#  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2;syo=1.3;sso=0.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.4;sso=0.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.5;sso=0.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.6;sso=0.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.7;sso=0.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.8;sso=1.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.9;sso=1.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.0;sso=1.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.1;sso=1.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.2;sso=1.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.3;sso=2.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.4;sso=2.25} @Self
+ # - totem{md=2;c=1;oH=TuyetAnhKetLieu_DAMAGE_D2;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=2.5;lockpitch=true}
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.2;sso=2.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.3;sso=2.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.4;sso=1.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.5;sso=1.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.6;sso=1.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.7;sso=1.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.8;sso=1.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=0.9;sso=0.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.0;sso=0.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.1;sso=0.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.2;sso=0.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.3;sso=0.05} @Self
+#  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=2;syo=1.3;sso=-0.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.4;sso=-0.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.5;sso=-0.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.6;sso=-0.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.7;sso=-0.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.8;sso=-1.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=1.9;sso=-1.25} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.0;sso=-1.45} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.1;sso=-1.65} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.2;sso=-1.85} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.3;sso=-2.05} @Self
+  - projectile{oT=TuyetAnhKetLieu_Tick_END;oH=TuyetAnhKetLieu_DAMAGE_D;v=0;d=5;i=1;hR=1;vR=1;hp=true;hnp=true;sE=false;sB=false;sfo=3;syo=2.4;sso=-2.25} @Self
+  
+  - projectile{oT=TuyetAnhKetLieu_Tick_END_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=8;i=1;hR=1;vR=1;hp=false;mr=10;sE=true;hs=true} @forward
+  - projectile{oT=TuyetAnhKetLieu_Tick_END_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=8;i=1;hR=1;vR=1;hp=false;mr=10;sE=true;hs=true;hO=25} @forward
+  - projectile{oT=TuyetAnhKetLieu_Tick_END_TW;oH=TuyetAnhKetLieu_DAMAGE_D;v=8;i=1;hR=1;vR=1;hp=false;mr=10;sE=true;hs=true;hO=-25} @forward
+  
+  - totem{md=2;c=1;oH=TuyetAnhKetLieu_DAMAGE_D2;hnp=true;hp=true;hR=2;vR=2;i=1} @forward{f=2.5;lockpitch=true}
+
+TuyetAnhKetLieu_Tick:
+  Skills:
+#  - effect:particles{p=reddust;color=#00abff;a=3;vs=0.1;hs=0.1;v=2;size=1}
+  - effect:particles{p=reddust;color=#ff144d;a=3;vs=0.1;hs=0.1;v=2;size=1}
+TuyetAnhKetLieu_Tick_TW:
+  Skills:
+#  - effect:particles{p=reddust;color=#ff2525;a=3;vs=0.1;hs=0.1;v=2;size=0.8}
+  - effect:particles{p=reddust;color=#ff144d;a=3;vs=0.1;hs=0.1;v=2;size=0.8}
+TuyetAnhKetLieu_Tick_TWT:
+  Skills:
+#  - effect:particles{p=reddust;color=#a265ff;a=2;vs=0.1;hs=0.1;v=2;size=0.8}
+  - effect:particles{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=2;vs=0.1;hs=0.1;v=2;size=0.8}
+TuyetAnhKetLieu_Tick_END:
+  Skills:
+  - effect:particles{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=3;vs=0.1;hs=0.1;v=1;size=0.6}
+
+TuyetAnhKetLieu_Tick_END_TW:
+  Skills:
+  - effect:particles{p=dust_color_transition;color=#ff144d;color2=#ffdae3;a=2;vs=0;hs=0;v=1;size=0.6} @origin
+  
+TuyetAnhKetLieu_DAMAGE_D:
+  Skills:
+
+TuyetAnhKetLieu_DAMAGE_D2:
+  Skills:
+  - skill{s=TuyetAnhKetLieu_DAMAGE;delay=3} @EntitiesNearOrigin{r=4}
+  
+TuyetAnhKetLieu_DAMAGE:
+  Skills:
+  - damage{a="<modifier.damage> * 1.5";pkb=true;hnp=true;hp=true}
+  - throw{velocity=0;velocityY=8}
+
+TuyetAnhKetLieu_DAMAGE_D2_TW:
+  Skills:
+  - skill{s=TuyetAnhKetLieu_DAMAGE_TW;delay=3} @EntitiesNearOrigin{r=4}
+  
+TuyetAnhKetLieu_DAMAGE_TW:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true;hnp=true;hp=true}
+
+Remove_Skills_Mobs:
+  Skills:
+  - delay 100
+  - remove @self

@@ -1,0 +1,87 @@
+SmokeSwirlSkill:
+  Skills:
+  - smokeswirl{duration=200;interval=10} @TargetLocation
+
+SmashAttack:
+  Cooldown: 8
+  Conditions:
+  - targetwithin{d=25}
+  Skills:
+  - message{cooldown=30;m="<mob.name><&co> Hahahah! I will crush you, fool!"} @PlayersInRadius{r=40}
+  - teleport @target
+  - effect:sound{s=mob.endermen.portal;volume=1.0;pitch=0.5}
+  - delay 10
+  - damage{amount=5;ignorearmor=true} @PlayersInRadius{r=5}
+  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=5}
+  - effect:explosion @Self
+SummonSkeletons:
+  Cooldown: 15
+  Skills:
+  - message{m="<caster.name><&co> Arise, my minions!"} @PlayersInRadius{r=40}
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+  - delay 20
+  - summon{mob=SkeletalMinion;amount=2;noise=5} @Self
+AngrySludgePoison:
+  Cooldown: 10
+  Skills:
+  - potion{type=POISON;lvl=2;duration=100} @PlayersInRadius{r=15}
+  - effect:particles{p=happyVillager;amount=1000;hSpread=15;ySpread=1;speed=0;yOffset=0.5}
+    @Self
+
+
+Zombie-Ability:
+  Skills:
+  - sound{s=entity.zombie.converted_to_drowned} @self
+  - potion{type=STRENGTH;duration=160;lvl=1} @self
+  - potion{type=SPEED;duration=160;lvl=1} @self
+#  - command{c="ml statmod %player_name% DEFENSE -30% 200"}
+Creeper-Ability:
+  Skills:
+  - sound{s=entity.creeper.death} @self
+  - delay 5
+  - sound{s=entity.dragon_fireball.explode} @self
+  - sound{s=entity.dragon_fireball.explode} @EIR{r=8}
+  - effect:particles{p=explosion_emitter;amount=2;hs=0} @self
+  - damage{a=14;i=true} @EIR{r=4}
+
+Skeleton-Ability:
+  Skills:
+  - sound{s=block.note_block.imitate.wither_skeleton} @self
+  - sound{s=block.note_block.imitate.skeleton} @EIR{r=4}
+  - effect:particlering{particle=cloud;i=1;v=40;amount=40;radius=4} @self
+  - potion{type=SLOW;duration=160;lvl=1} @EIR{r=4}
+  - potion{type=WEAKNESS;duration=160;lvl=1} @EIR{r=4}
+
+Spider-Ability:
+  Skills:
+  - sound{s=entity.shulker.shoot;v=1;sc=hostile;p=1.3} @self
+  - effect:itemspray{item=cobweb;amount=20;velocity=2;d=100} @Self
+  - stun{d=120} @EIR{r=4}
+  - damage{a=14;i=true} @EIR{r=4}
+
+Spider-Abl-shoot:
+  Skills:
+  - projectile{oT=Spider-Abl-Shoot_Tick;oH=Spider-Abl-Shoot_hit;oE=Spider-Abl-Shoot_End;i=1;v=8;mr=20;sE=true} @target
+Spider-Abl-Shoot_Tick:
+  Skills:
+  - sound{s=entity.shulker.shoot;v=1;sc=hostile;p=1.3}
+  - effect:itemspray{item=cobweb;amount=2;d=100} @origin
+ # - effect:particles{p=reddust;a=200;color=#e0e5e8;y=0.5;s=1} @origin
+Spider-Abl-Shoot_hit:
+  Skills:
+  - stun{d=120}
+  - damage{a=14;i=true}
+  - potion{type=POISON;duration=160;lvl=1}
+Spider-Abl-Shoot_End:
+  Skills:
+  - effect:itemspray{item=cobweb;amount=30;velocity=1;d=100}
+
+Zomske-Abl-Skills:
+  Skills:
+  - effect:itemspray{item=bone;amount=10;velocity=3;d=100} @ring #@origin
+  - damage{a=16;i=true} @EIR{r=5}
+  - delay 20
+  - summon{type=SkeletonClone;amount=1} @ring

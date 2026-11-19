@@ -1,0 +1,13 @@
+{
+  "id": "015-personal-guard",
+  "kind": "practice",
+  "level": "basic",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "caster-only",
+    "damage",
+    "expiration",
+    "cooldown"
+  ]
+}

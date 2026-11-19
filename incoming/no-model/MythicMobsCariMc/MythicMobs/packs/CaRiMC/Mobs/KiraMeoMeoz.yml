@@ -1,0 +1,28 @@
+KiraMeoMeoz_Mobs:
+  MobType: zombie
+  Faction: DARK
+  Health: 10
+  Damage: 1
+  Disguise: player Unknown setSkin KiraMeoMeoz setAddEntityAnimations true setCapeEnabled false setDynamicName true
+  Options:
+    Tameable: false
+    Tamed: true
+    Silent: true
+    Despawn: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventLeashing: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    NoAI: false
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players

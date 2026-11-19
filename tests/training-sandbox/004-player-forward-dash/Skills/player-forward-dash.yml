@@ -1,0 +1,4 @@
+TrainingPlayerForwardDash:
+  Cooldown: 3
+  Skills:
+    - lunge{velocity=0.85;velocityY=0} @Forward{f=5;lockpitch=true}

@@ -1,0 +1,30 @@
+LarcticShield:
+  ItemStack:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: SHIELD
+    meta:
+      ==: ItemMeta
+      meta-type: SHIELD
+      display-name: '{"text":"","extra":[{"text":"item MObs","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"white","bold":false}]}'
+      lore:
+      - '{"text":"","extra":[{"text":"","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"white","bold":false}]}'
+      - '{"text":"","extra":[{"text":" ","italic":false,"color":"dark_aqua"},{"text":"🛡
+        ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"#7EFFEF","bold":false},{"text":"Phòng
+        thủ ","italic":false,"color":"white"},{"text":"▸ ","italic":false,"color":"gray"},{"text":"+20","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"#7EFFEF","bold":false}]}'
+      - '{"text":"","extra":[{"text":" ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"white","bold":false},{"text":"☀
+        ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"#9290FB","bold":false},{"text":"Giáp
+        ","italic":false,"color":"white"},{"text":"▸ ","italic":false,"color":"gray"},{"text":"+30","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"#9290FB","bold":false}]}'
+      - '{"text":"","extra":[{"text":" ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"white","bold":false},{"text":"❤
+        ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"#FF2121","bold":false},{"text":"Sinh
+        lực ","italic":false,"color":"white"},{"text":"▸ ","italic":false,"color":"gray"},{"text":"+500","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"#FF2121","bold":false}]}'
+      custom-model-data: 102
+      attribute-modifiers:
+        minecraft:attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 0.0
+          operation: 0
+          key: mmoitems:decoy
+      ItemFlags:
+      - HIDE_ATTRIBUTES
+      custom: H4sIAAAAAAAA/21Qy0rDQBS9KJRYVHzgxlWYbV3EVil2oUmTSRPIZEomgqWUoGJtQau0WSil6FeIG8GCkHVdCcVN+iXtvhu/wDwgmOIwHObOOXPumZsF4GCHEKrbmDBHqZkS0WXHoBaGnzryvSbaC9H3CrzvPfhe0few76nRDg/z9+/5eBhwzWpr8tm55t3WdOwFdXH28vX/k1xeiE1j+sj38hEKkaI8e30O7SrtyfA+5bMozBVSPnGDQLEf4+ztI/Rh7U6Lv5mOR5cps0V17lAQUIODrWQWITp2rYphlaqqI0u2ZNSYzcFGWqIrkGWajg2F0DLjYC2hg1liWGm7V7c8oRe9DKwnlGQRaonHEK1l2E0I+ZTZlDiEKthwlKBnwDc52EwE2JQ1ybQZLNUbGdhO7ol05mhYMmxNfBIjWw6yGrOtWpzjpI+Ye+6iEgrLYHC0wty77iMq1fsoFdmZjHpuNxAmydGgMcj8+beCVWwyLB7E+eEXwYostkYCAAA=

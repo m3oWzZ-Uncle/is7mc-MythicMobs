@@ -1,0 +1,304 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+# *Lưu ý: skill sử dụng nhiều particle nên hãy cân nhắc server đủ mạnh, máy của bạn đủ mạnh để chịu được nhé! 
+#  và sát thương của kỹ năng cũng to khoảng 10-50,các cơn gió tuyết có thể ánh hưởng tới bản thân bạn
+# để dùng skill hãy sử dụng lệnh /mm test cast skills
+# để thử theo góc nhìn của kẻ địch sử dụng lệnh /mm mobs spawn
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+# giá bán gốc của file 150k
+
+
+Freeze_CauseFreezeEffect_Inline:
+  Skills:
+  - aura{d=100;i=1;onTick=[  - freeze{ticks=280} - damage{a=1;cd=2;damagecause=FREEZE} ]} #@self
+
+Freeze_CauseFreezeEffect_Normal:
+  Skills:
+  - aura{d=100;i=1;onTick=Freeze_CauseFreezeEffect_Normal_onTick} #@self
+Freeze_CauseFreezeEffect_Normal_onTick:
+  Skills:
+  - freeze{ticks=280}
+  - damage{a=1;cd=2;damagecause=FREEZE}
+ArcticKnightAura:
+  Skills:
+#  - aura{auraname=ArcticKnight;oS=ArcticKnightAuraStart;oT=ArcticKnightAuraT;oE=ArcticKnightAuraE;duration=600} @self
+  - onDamaged{auraname=arcticknight;i=1;duration=600;oS=ArcticKnightAuraStart;oT=ArcticKnightAuraT;oE=ArcticKnightAuraE;c=1000;oH=ArcticKnightAuraH} @self
+ArcticKnightAuraStart:
+#  Conditions:
+#  - hasaura ArcticKnightAura true
+  Skills:
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=1;d=600} @self
+  - delay 2
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=3;d=600} @self
+  - delay 2
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=5;d=600} @self
+  - delay 2
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=7;d=600} @self
+  - delay 2
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=9;d=600} @self
+  - delay 2
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=11;d=600} @self
+  - delay 2
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=13;d=600} @self
+  - delay 2
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=15;d=600} @self
+  - delay 2
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=20;d=600} @self
+  - potion{type=slow;duration=200;lvl=2} @EIR{r=20}
+ArcticKnightAuraT:
+  Skills:
+  - effect:particles{p=snowflake;amount=1;hs=0.1;vs=0.1;s=0.1;y=0.1}
+ArcticKnightAuraE:
+  Skills:
+  - effect:particles{p=snowflake;amount=1;hs=0.1;vs=0.1;s=0.1;y=0.1}
+
+ArcticKnightAuraH:
+  Skills:
+  - effect:particles{p=snowflake;amount=1;hs=0.1;vs=0.1;s=0.1;y=0.1}
+
+
+ArcticKnight_SKILL_1:
+  Conditions:
+  - hasaura arcticknight true
+  Skills:
+  - projectile{oT=ArcticKnight_SKILL_1_Tick;oH=ArcticKnight_SKILL_1_hit;i=1;v=30;mr=30;sE=true} @targetlocation
+ArcticKnight_SKILL_1_Tick:
+  Skills:
+  - sound{s=entity.shulker.shoot;v=1;sc=hostile;p=1.3}
+  - effect:particles{p=block_crack;material=ice;amount=10;hs=0} @origin
+  - effect:particles{p=snowflake;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+ # - effect:particles{p=reddust;a=200;color=#e0e5e8;y=0.5;s=1} @origin
+ArcticKnight_SKILL_1_hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+  - stun{d=20}
+  - aura{d=100;i=1;onTick=[  - freeze{ticks=280} - damage{a=1;cd=2;damagecause=FREEZE} ]}
+#
+########################################
+
+ARCTIC_KNIGHT_Icethrower:
+  Conditions:
+  - hasaura arcticknight true
+  Skills:
+  - sound{s=entity.player.breath;p=0.66;sc=master;v=2}
+  - delay 15
+  - sound{s=entity.blaze.burn;p=2;sc=master;v=2}
+  - sound{s=block.campfire.crackle;p=2;sc=master;v=2}
+  - sound{s=block.blastfurnace.fire_crackle;p=2;sc=master;v=2}
+  - delay 20
+  - aura{i=1;d=50;oT=ARCTIC_KNIGHT_ICEProjectile;oE=ARCTIC_KNIGHT_ICEProjectileEnd} @self
+  - sound{s=entity.zombie.infect;p=0.71;sc=master;v=2} @self
+
+ARCTIC_KNIGHT_ICEProjectile:
+  Skills:
+  - effect:blockmask{m=light;r=0;d=5;s=cube;onlyair=true;na=false;sync=true} @selflocation{y=1}
+  - projectile{i=1;oT=ARCTIC_KNIGHT_ICETick;oH=ARCTIC_KNIGHT_ICEHit;oE=ARCTIC_KNIGHT_ICEEnd;mr=13.5;sE=false;v=5.5;tyo=3.15;hnp=true;hn=0.55;vn=0.55;ac=0.8;g=0.09;syo=1.15} @targetLocation
+  - sound{s=block.candle.extinguish;p=0.5;sc=master;v=3}
+  - sound{s=block.blastfurnace.fire_crackle;p=2;sc=master;v=2}
+
+ARCTIC_KNIGHT_ICETick:
+  Skills:
+  - effect:particlesphere{p=snowflake;r=0.25;a=1;hs=0.16;vs=0.02;s=0.05} @origin
+  - effect:particlesphere{p=BLOCKCRACK;material=ICE;r=0.1;a=1;hs=0.1;vs=0.06;s=0.05} @origin 0.1
+  - effect:particlesphere{p=reddust;r=0.1;color=#5efdfb;a=1;hs=0.2;vs=0.06;s=0.05} @origin 0.5
+
+ARCTIC_KNIGHT_ICEHit:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true;pi=true;ia=true;type=ICE}
+  - stun{d=0.2}
+  - aura{d=100;i=1;onTick=[  - freeze{ticks=280} - damage{a=1;cd=2;damagecause=FREEZE} ]}
+ARCTIC_KNIGHT_ICEEnd:
+  Skills:
+  - effect:particles{p=BLOCKCRACK;material=ICE;a=3;hs=0.3;vs=0.22;s=0.05} @origin
+  - effect:particles{p=snowflake;a=5;hs=0.3;vs=0.22;s=0.05} @origin
+  - effect:particlesphere{p=white_smoke;r=0.1;a=1;hs=0.2;vs=0.06;s=0.05} @origin
+  
+ARCTIC_KNIGHT_ICEProjectileEnd:
+  Skills:
+  - effect:particles{p=snowflake;r=0.1;a=20;hs=1.1;vs=1.1}
+  - sound{s=block.fire.extinguish;p=0.88;v=2;sc=master} @origin
+
+##########################################################
+
+ARCTIC_KNIGHT_BreakDown:
+  # Conditions:
+  # - hasaura arcticknight true
+  Cooldown: 1
+  Skills:
+  - skill{s=ARCTIC_KNIGHT_BreakDowntick;repeat=12;repeatInterval=1}
+  - leap{velocity=250} @forward{f=2;y=3;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - delay 20
+  - leap{velocity=400} @forward{f=4;y=-5;lockpitch=true}
+  - effect:sound{s=entity.witch.throw;v=1;p=0.5} @self
+  - skill{s=ARCTIC_KNIGHT_BreakDowntickTW;repeat=12;repeatInterval=1}
+  - delay 10
+  - skill{s=ARCTIC_KNIGHT_BreakDownPushBack} @self
+
+ARCTIC_KNIGHT_BreakDowntick:
+  Skills:
+  - effect:particles{p=snowflake;amount=10;hs=0} @self
+  - effect:particlesphere{particle=item_snowball;amount=10;radius=1} @self
+  - damage{a="<modifier.damage>";i=true} @EIR{r=2}
+
+ARCTIC_KNIGHT_BreakDowntickTW:
+  Skills:
+  - effect:particles{p=snowflake;amount=10;radius=1} @self
+  - effect:particlesphere{particle=BLOCKCRACK;material=ICE;amount=10;radius=1} @self
+
+ARCTIC_KNIGHT_BreakDownPushBack:
+  Skills:
+  - throw{velocity=20;velocityY=8} @EntitiesInRadius{r=6}
+  - damage{a="<modifier.damage>";ignoreArmor=false} @EntitiesInRadius{r=6} 
+  - effect:particlering{particle=BLOCKCRACK;material=ICE;radius=1;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=1;d=2} @self
+  - delay 2
+  - effect:particlering{particle=BLOCKCRACK;material=ICE;radius=2;points=15;amount=30;hS=1;vS=21} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - prison{material=PACKED_ICE;duration=80} @EIR{r=7}
+  - aura{d=100;i=1;onTick=[  - freeze{ticks=280} - damage{a=1;cd=2;damagecause=FREEZE} ]} @EIR{r=7}
+  - effect:blockmask{m=ice;r=2;d=2} @self
+  - delay 2
+  - effect:particlering{particle=BLOCKCRACK;material=ICE;radius=3;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=3;d=2} @self
+  - delay 2
+  - effect:particlering{particle=BLOCKCRACK;material=ICE;radius=4;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=4;d=2} @self
+  - delay 2
+  - effect:particlering{particle=BLOCKCRACK;material=ICE;radius=5;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=5;d=2} @self
+  - delay 2
+  - effect:particlering{particle=BLOCKCRACK;material=ICE;radius=6;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=6;d=2} @self
+  - delay 2
+  - effect:particlering{particle=BLOCKCRACK;material=ICE;radius=7;points=15;amount=30;hS=1;vS=1} @Self
+  - effect:sound{s=block.amethyst_block.resonate;v=1;p=1} @self
+  - effect:blockmask{m=ice;r=7;d=100} @self
+  - effect:particlesphere{p=wax_off;r=0.1;a=1;hs=0.2;vs=0.06;s=0.05} @origin
+
+######
+
+ARCTIC_KNIGHT_ICE_RAIN:
+  Cooldown: 20
+  # Conditions:
+  # - hasaura arcticknight true
+  Skills:
+  - effect:particleline{particle=snowflake;amount=1;fromOrigin=true} @SelfLocation{y=12.0}
+  - delay 8
+  - effect:explosion @SelfLocation{y=12.0}
+  - Aura{auraName=ARCTIC_KNIGHT_ICE_RAIN;onStart=ARCTIC_KNIGHT_ICE_RAIN_START;onTick=ARCTIC_KNIGHT_ICE_RAIN_EFFECT;onEnd=ARCTIC_KNIGHT_ICE_RAIN_END;interval=60;duration=300;cotd=false} @self
+
+ARCTIC_KNIGHT_ICE_RAIN_START:
+  Skills:
+  - potion{t=SPEED;d=20;l=2;force=true} @self
+ARCTIC_KNIGHT_ICE_RAIN_EFFECT:
+  Skills:
+  - skill{s=ARCTIC_KNIGHT_ICE_RAIN_METEOR}
+ARCTIC_KNIGHT_ICE_RAIN_END:
+  Skills:
+  - potion{t=SLOW;d=1;l=1;force=true} @self
+
+ARCTIC_KNIGHT_ICE_RAIN_METEOR:
+  Skills:
+  - projectile{Type=METEOR;onTick=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Tick;onHit=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Hit;onEnd=ARCTIC_KNIGHT_ICE_RAIN_METEOR-End;v=8;i=1;hR=1;vR=1;hnp=true;hfs=10;g=0.2} @Ring{radius=2-3;points=4-8;xRotation=0-10;zRotation=0-10}
+  - delay 10
+  - projectile{Type=METEOR;onTick=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Tick;onHit=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Hit;onEnd=ARCTIC_KNIGHT_ICE_RAIN_METEOR-End;v=8;i=1;hR=1;vR=1;hnp=true;hfs=10;g=0.2} @Ring{radius=4-6;points=4-8;xRotation=0-10;zRotation=0-10}
+  - delay 10
+  - projectile{Type=METEOR;onTick=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Tick;onHit=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Hit;onEnd=ARCTIC_KNIGHT_ICE_RAIN_METEOR-End;v=8;i=1;hR=1;vR=1;hnp=true;hfs=10;g=0.2} @Ring{radius=7-10;points=4-8;xRotation=0-10;zRotation=0-10}
+  - delay 10
+  - projectile{Type=METEOR;onTick=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Tick;onHit=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Hit;onEnd=ARCTIC_KNIGHT_ICE_RAIN_METEOR-End;v=8;i=1;hR=1;vR=1;hnp=true;hfs=10;g=0.2} @Ring{radius=11-14;points=8-12;xRotation=0-10;zRotation=0-10}
+  - delay 10
+  - projectile{Type=METEOR;onTick=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Tick;onHit=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Hit;onEnd=ARCTIC_KNIGHT_ICE_RAIN_METEOR-End;v=8;i=1;hR=1;vR=1;hnp=true;hfs=10;g=0.2} @Ring{radius=15-20;points=12-16;xRotation=0-10;zRotation=0-10}
+  - delay 10
+  - projectile{Type=METEOR;onTick=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Tick;onHit=ARCTIC_KNIGHT_ICE_RAIN_METEOR-Hit;onEnd=ARCTIC_KNIGHT_ICE_RAIN_METEOR-End;v=8;i=1;hR=1;vR=1;hnp=true;hfs=10;g=0.2} @PIR{r=20}
+ARCTIC_KNIGHT_ICE_RAIN_METEOR-Tick:
+  Skills:
+  - effect:particles{p=snowflake;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=BLOCKCRACK;material=ICE;amount=10;speed=0;hS=0.2;vS=0.2} @origin
+  - sound{s=entity.stray.ambient;v=0.2;p=1.0} @origin
+ARCTIC_KNIGHT_ICE_RAIN_METEOR-Hit:
+  Skills:
+  - damage{a="<modifier.damage>";ignoreArmor=true}
+  - stun{d=10}
+  - aura{d=100;i=1;onTick=[  - freeze{ticks=280} - damage{a=1;cd=2;damagecause=FREEZE} ]}
+ARCTIC_KNIGHT_ICE_RAIN_METEOR-End:
+  Skills:
+  - effect:blockmask{m=ICE;r=1;d=40}
+
+
+ARCTIC_KNIGHT_CLONE:
+  Conditions:
+  - hasaura arcticknight true
+  Skills:
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=2}
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=45}
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=90}
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=135}
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=180}
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=225}
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=270}
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+  - delay 8
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @Forward{f=25;rot=315}
+  - projectile{bulletType=MOB;mob=ARCTIC_DOPPLEGANGER;onTick=ARCTIC_KNIGHT_CLONE-Tick;onHit=ARCTIC_KNIGHT_CLONE-Hit;v=5;i=1;hR=1;vR=1;sfo=0;syo=1.5;tyo=0.5;mr=5-25;hs=true;hfs=0.9} @target 0.3
+  - sound{s=entity.warden.sonic_boom;v=1.0;p=1.2} @self
+ARCTIC_KNIGHT_CLONE-Tick:
+  Skills:
+  - effect:particles{p=snowflake;amount=5;speed=0;hS=1;vS=1} @origin
+  - effect:particles{p=snowflake;amount=5;speed=0.2;hS=1;vS=1} @origin
+  - effect:particles{p=reddust;color=#006b70;amount=5;speed=0;hS=1;vS=1} @origin
+ARCTIC_KNIGHT_CLONE-Hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+  - stun{d=10}
+  - aura{d=100;i=1;onTick=[  - freeze{ticks=280} - damage{a=1;cd=2;damagecause=FREEZE} ]}
+  - effect:itemspray{item=ICE;amount=1;velocity=0.5;d=30}
+  - effect:itemspray{item=ENDER_EYE;amount=1;velocity=0.5;d=30}
+  - effect:itemspray{item=ECHO_SHARD;amount=1;velocity=0.5;d=30}
+ARCTIC_KNIGHT_CLONE-End:
+  Skills:
+  - damage{a="<modifier.damage>";i=true} @PlayersNearOrigin{r=2}
+  - effect:itemspray{item=ICE;amount=1;velocity=0.5;d=30} @origin
+  - effect:itemspray{item=ENDER_EYE;amount=1;velocity=0.5;d=30} @origin
+  - effect:itemspray{item=ECHO_SHARD;amount=1;velocity=0.5;d=30} @origin
+
+#######################################################################################################################################################
+
+
+

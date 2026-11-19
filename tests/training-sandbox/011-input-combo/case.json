@@ -1,0 +1,12 @@
+{
+  "id": "011-input-combo",
+  "kind": "practice",
+  "level": "intermediate",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "two-inputs",
+    "timeout",
+    "multiplayer"
+  ]
+}

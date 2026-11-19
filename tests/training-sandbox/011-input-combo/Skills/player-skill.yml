@@ -1,0 +1,18 @@
+TrainingInputCombo:
+  Cooldown: 3
+  Skills:
+    - setvariable{var=caster.ioncombo;type=INTEGER;val=0;duration=40} @self
+    - aura{auraName=TrainingInputWindow;d=40;i=1;components=[
+      - onSwing{onSwing=TrainingInputComboSwing}
+      ]} @self
+
+TrainingInputComboSwing:
+  Skills:
+    - variableadd{var=caster.ioncombo;amount=1} @self
+    - skill{s=TrainingInputComboFinish} @self ?variableequals{var=caster.ioncombo;value=2}
+
+TrainingInputComboFinish:
+  Skills:
+    - particle{p=sweep_attack;a=1;y=1} @self
+    - auraremove{aura=TrainingInputWindow} @self
+    - variableunset{var=caster.ioncombo} @self

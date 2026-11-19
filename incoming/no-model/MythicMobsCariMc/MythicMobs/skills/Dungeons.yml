@@ -1,0 +1,26 @@
+######## created by samus2002 #########
+
+Training_Dummy_Look:
+  TriggerConditions:
+  - crouching true
+  - haspermission{p=*} true
+  Skills:
+  - look{headOnly=false;immediately=false;repeat=5;repeatinterval=2}
+
+
+# 5423KKTRXMOYVOBV1GR
+PushUpLeft:
+  Skills:
+    - velocity{x=-0.5; y=1.3}
+
+PushUpRight:
+  Skills:
+    - velocity{x=0.5; y=1.2}
+
+PushUpForward:
+  Skills:
+    - velocity{z=0.5; y=1}
+
+PushUpBackward:
+  Skills:
+    - velocity{z=-0.5; y=1.5} 

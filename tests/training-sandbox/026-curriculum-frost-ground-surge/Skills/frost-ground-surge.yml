@@ -1,0 +1,120 @@
+TrainingFrostGroundSurge:
+  Cooldown: 12
+  Skills:
+    - setvariable{var=skill.frost_pulse;type=INTEGER;value=0} @self
+    - setvariable{var=skill.frost_hits;type=INTEGER;value=0} @self
+    - playanimation{a=0} @self
+    - >-
+      projectile{onTick=TrainingFrostGroundSurgeTick;onHit=TrainingFrostGroundSurgeHit;
+      onHitBlock=TrainingFrostGroundSurgeWall;velocity=2;interval=2;maxRange=12;duration=140;
+      hugSurface=true;heightFromSurface=0.25;maxClimbHeight=1;maxDropHeight=2;gravity=0;
+      stopAtBlock=true;stopAtEntity=false;highAccuracyMode=true;
+      startFOffset=0;startYOffset=0.25;hitPlayers=false;hitNonPlayers=true;hitSelf=false;
+      horizontalRadius=0.65;verticalRadius=0.65;immuneDelay=20000;
+      powerAffectsRange=false;powerAffectsVelocity=false;
+      hitConditions=[  - isLiving true  - entitytype{t=ARMOR_STAND} false ]} @Forward{f=12;y=0.25;lockpitch=true}
+
+TrainingFrostGroundSurgeTick:
+  Skills:
+    - particle{p=dust_color_transition;color=#B8F6FF;color2=#75DAF5;a=3;size=0.7;hs=0.16;vs=0.07;y=0.08;viewDistance=32} @origin
+    - variableadd{var=skill.frost_pulse;amount=1} @self
+    - skill{s=TrainingFrostGroundSurgeSample} @origin
+
+TrainingFrostGroundSurgeSample:
+  Conditions:
+    - variableinrange{var=skill.frost_pulse;value=>4} true
+  Skills:
+    - setvariable{var=skill.frost_pulse;type=INTEGER;value=0} @self
+    - blockmask{material=ICE;radius=1;radiusy=0;shape=CUBE;duration=100;noair=true;audience=@PlayersNearOrigin{r=32}} @origin{y=-0.55}
+    - particle{p=dust_color_transition;color=#75DAF5;color2=#399EEB;a=5;size=0.9;hs=0.25;vs=0.12;y=0.13;viewDistance=32} @origin
+    - skill{s=TrainingFrostGroundSurgeRise} @origin
+
+TrainingFrostGroundSurgeRise:
+  Skills:
+    - >-
+      projectile{fromorigin=true;startFOffset=0;startYOffset=-0.22;targetYOffset=0;
+      velocity=0.12;interval=5;duration=100;maxRange=1;gravity=0;deathDelay=0;
+      stopAtBlock=false;stopAtEntity=false;hitPlayers=false;hitNonPlayers=false;hitTarget=false;
+      highAccuracyMode=false;powerAffectsRange=false;powerAffectsVelocity=false;
+      bulletType=SMALLBLOCK;bulletMaterial=PACKED_ICE;bulletForwardOffset=0;audience=tracked} @origin{y=1}
+
+TrainingFrostGroundSurgeWall:
+  Skills:
+    - blockmask{material=ICE;radius=3;shape=SPHERE;duration=100;noair=true;audience=@PlayersNearOrigin{r=32}} @origin
+    - particlering{p=dust_color_transition;color=#B8F6FF;color2=#75DAF5;r=1;points=12;a=1;size=1;y=0.12;viewDistance=32} @origin
+    - delay 3
+    - particlering{p=dust_color_transition;color=#75DAF5;color2=#399EEB;r=3;points=20;a=1;size=0.9;y=0.18;viewDistance=32} @origin
+
+TrainingFrostGroundSurgeHit:
+  Skills:
+    - foreach{s=TrainingFrostGroundSurgeStrike;targettype=ENTITY} @TargetedTarget
+
+TrainingFrostGroundSurgeStrike:
+  Conditions:
+    - variableinrange{var=skill.frost_hits;value=0to5} true
+  TargetConditions:
+    - lineofsightfromorigin true
+  Skills:
+    - variableadd{var=skill.frost_hits;amount=1} @self
+    - damage{a=6;pkb=true;then=TrainingFrostGroundSurgeFreeze}
+
+TrainingFrostGroundSurgeFreeze:
+  TargetConditions:
+    - health{h=>0} true
+  Skills:
+    - aura{auraName=TrainingFrostGroundSurgeStun;duration=80;mergeAll=true;onEnd=TrainingFrostGroundSurgeThaw;components=[ - stun{stopAI=true;noknockback=true} ]}
+    - skill{s=TrainingFrostGroundSurgeCageProfile}
+
+TrainingFrostGroundSurgeCageProfile:
+  TargetConditions:
+    - entitytype{t=CHICKEN,RABBIT,SILVERFISH,ENDERMITE,CAT} castinstead TrainingFrostGroundSurgeSmallCage
+    - entitytype{t=ENDERMAN,IRON_GOLEM,RAVAGER,HORSE} castinstead TrainingFrostGroundSurgeLargeCage
+  Skills:
+    - skill{s=TrainingFrostGroundSurgeCage;cageradius=0.86;cagelow=0.34;cagehigh=1.35}
+
+TrainingFrostGroundSurgeSmallCage:
+  Skills:
+    - skill{s=TrainingFrostGroundSurgeCage;cageradius=0.57;cagelow=0.18;cagehigh=0.62}
+
+TrainingFrostGroundSurgeLargeCage:
+  Skills:
+    - skill{s=TrainingFrostGroundSurgeCage;cageradius=1.25;cagelow=0.55;cagehigh=2.3}
+
+TrainingFrostGroundSurgeCage:
+  Skills:
+    - >-
+      orbital{auraName=TrainingFrostCageBase0;tags=FGS_CAGE;mergeAll=true;duration=80;interval=4;
+      radius=<skill.cageradius>;offsety=<skill.cagelow>;points=4;startingpoint=0;rotate=false;
+      bulletType=DISPLAY;material=PACKED_ICE;bulletscale=0.43,0.76,0.43;bulletForwardOffset=0;hitPlayers=false;hitNonPlayers=false;audience=tracked}
+    - >-
+      orbital{auraName=TrainingFrostCageBase1;tags=FGS_CAGE;mergeAll=true;duration=80;interval=4;
+      radius=<skill.cageradius>;offsety=<skill.cagelow>;points=4;startingpoint=1;rotate=false;
+      bulletType=DISPLAY;material=PACKED_ICE;bulletscale=0.43,0.76,0.43;bulletForwardOffset=0;hitPlayers=false;hitNonPlayers=false;audience=tracked}
+    - >-
+      orbital{auraName=TrainingFrostCageBase2;tags=FGS_CAGE;mergeAll=true;duration=80;interval=4;
+      radius=<skill.cageradius>;offsety=<skill.cagelow>;points=4;startingpoint=2;rotate=false;
+      bulletType=DISPLAY;material=PACKED_ICE;bulletscale=0.43,0.76,0.43;bulletForwardOffset=0;hitPlayers=false;hitNonPlayers=false;audience=tracked}
+    - >-
+      orbital{auraName=TrainingFrostCageBase3;tags=FGS_CAGE;mergeAll=true;duration=80;interval=4;
+      radius=<skill.cageradius>;offsety=<skill.cagelow>;points=4;startingpoint=3;rotate=false;
+      bulletType=DISPLAY;material=PACKED_ICE;bulletscale=0.43,0.76,0.43;bulletForwardOffset=0;hitPlayers=false;hitNonPlayers=false;audience=tracked}
+    - >-
+      orbital{auraName=TrainingFrostCageTop0;tags=FGS_CAGE;mergeAll=true;duration=80;interval=4;
+      radius=<skill.cageradius>;offsety=<skill.cagehigh>;points=4;startingpoint=0;rotate=false;
+      bulletType=DISPLAY;material=ICE;bulletscale=0.43,0.76,0.43;bulletForwardOffset=0;hitPlayers=false;hitNonPlayers=false;audience=tracked}
+    - >-
+      orbital{auraName=TrainingFrostCageTop1;tags=FGS_CAGE;mergeAll=true;duration=80;interval=4;
+      radius=<skill.cageradius>;offsety=<skill.cagehigh>;points=4;startingpoint=1;rotate=false;
+      bulletType=DISPLAY;material=ICE;bulletscale=0.43,0.76,0.43;bulletForwardOffset=0;hitPlayers=false;hitNonPlayers=false;audience=tracked}
+    - >-
+      orbital{auraName=TrainingFrostCageTop2;tags=FGS_CAGE;mergeAll=true;duration=80;interval=4;
+      radius=<skill.cageradius>;offsety=<skill.cagehigh>;points=4;startingpoint=2;rotate=false;
+      bulletType=DISPLAY;material=ICE;bulletscale=0.43,0.76,0.43;bulletForwardOffset=0;hitPlayers=false;hitNonPlayers=false;audience=tracked}
+    - >-
+      orbital{auraName=TrainingFrostCageTop3;tags=FGS_CAGE;mergeAll=true;duration=80;interval=4;
+      radius=<skill.cageradius>;offsety=<skill.cagehigh>;points=4;startingpoint=3;rotate=false;
+      bulletType=DISPLAY;material=ICE;bulletscale=0.43,0.76,0.43;bulletForwardOffset=0;hitPlayers=false;hitNonPlayers=false;audience=tracked}
+
+TrainingFrostGroundSurgeThaw:
+  Skills:
+    - removeTaggedAuras{tags=FGS_CAGE;limit=8}

@@ -1,0 +1,22 @@
+ParticleTest:
+  Skills:
+  - effect:particleline{p=reddust;color=#24142C;amount=4;Size=1;zigzag=true;delay=18;repeat=2;repeatInterval=1} @Cone{angle=360;points=64;range=4;rotation=180;yoffset=0}
+  - sound{s=soulweaver_set:custom.soulweaver_set.demonhand;sc=hostile;p=-0.5;v=1;delay=15} @selflocation
+
+OrbitalMobs:
+  Skills:
+  - orbital{bulletType=MOB;mob=KiraMeoMeoz_Mobs;i=1;radius=3;points=32;oS=OrbitalMobsSound;oT=OrbitalMobs_tick;oH=OrbitalMobs_hit;oE=OrbitalMobs_end;duration=400;oy=1} @self
+OrbitalMobsSound:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0.3;p=1} @self
+OrbitalMobs_tick:
+  Skills:
+#  - effect:particlering{particle=snowflake;a=1;y=0.2;r=2;points=64} @origin
+OrbitalMobs_hit:
+  Skills:
+  - effect:particles{p=snowflake;a=25;hs=0.1;vs=0.1;s=0.05}
+  - delay 1
+  - damage{a=80;pkb=true}
+OrbitalMobs_end:
+  Skills:
+  - sound{s=entity.zombie_villager.cure;v=0.3;p=1} @self

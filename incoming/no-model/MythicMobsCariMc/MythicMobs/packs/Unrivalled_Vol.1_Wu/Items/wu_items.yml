@@ -1,0 +1,12 @@
+##======[ Ink Brush ]======= 
+ink_brush:
+  Id: 267 #item's material
+  Display: '&6Ink Brush' #Change the name of the item here
+  Model: 8001 #custommodeldata
+  Skills:
+  - skill{s=ink_brush_attack} @self ~onSwing #left click skill
+  - skill{s=ink_brush_slash} @targetlocation ~onUse #right click skill
+
+
+
+# 25533BBKGBJOXRO9

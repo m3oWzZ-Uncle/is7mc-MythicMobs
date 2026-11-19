@@ -1,0 +1,13 @@
+{
+  "id": "014-echo-lance",
+  "kind": "practice",
+  "level": "advanced",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "timing",
+    "anchor",
+    "isolation",
+    "wall"
+  ]
+}

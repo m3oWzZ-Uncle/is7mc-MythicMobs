@@ -1,0 +1,4 @@
+TrainingOrbitBlades:
+  Cooldown: 4
+  Skills:
+    - orbital{bulletType=ITEM;material=IRON_SWORD;r=2;points=24;i=2;duration=60;oy=1} @self

@@ -1,0 +1,16 @@
+{
+  "id": "design-profile",
+  "category": "profile",
+  "title": "Hồ sơ tư duy thiết kế MythicMobs",
+  "topic": "design-profile",
+  "summary": "Điểm tra cứu tiêu chí thiết kế đã xác nhận và phỏng vấn đang mở.",
+  "context": "Dùng khi chọn kiến trúc hoặc tra lại lý do của một quyết định gameplay.",
+  "exceptions": "Kiểm tra yêu cầu riêng của project và phạm vi trong hồ sơ quyết định.",
+  "scope": "global",
+  "claim": "FACT",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-13",
+  "tags": ["kien-truc", "gameplay", "tu-duy"],
+  "related": ["simple-full-gameplay", "boss-cleave-lock-open"],
+  "sources": [{"type": "document", "ref": "knowledge/learning-profile.md", "note": "Hồ sơ tư duy và trạng thái phỏng vấn."}]
+}

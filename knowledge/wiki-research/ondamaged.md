@@ -1,0 +1,11 @@
+# OnDamaged · skill và chỉnh hit trong thời gian có aura
+
+**Chức năng và cú pháp.** Aura component `onDamaged{onHit=<metaskill>}` xử lý lúc entity mang aura bị đánh. Có thể khai báo trong `aura{components=[ ... ]}`. Cơ chế độc lập `ondamaged{...} @self` được đánh dấu deprecated và dẫn tới component. Trigger `~onDamaged` dùng trực tiếp trong `Skills` của cấu hình mob. [Component online](https://wiki.mythiccraft.io/mythicmobs/Skills/Mechanics/AuraComponents/OnDamaged), [Markdown component](../../docs/wiki/MythicMobs/Skills/Mechanics/AuraComponents/OnDamaged.md), [Markdown mechanic](../../docs/wiki/MythicMobs/Skills/Mechanics/ondamaged.md)
+
+**Thuộc tính.** `onHit` (`oh`, `od` và alias trong bảng) gọi metaskill. `cancelEvent` mặc định false, `damageSub` mặc định 0, `damageMultiplier` mặc định 1. Khi cancel được bật, `conditions` riêng của component chỉ lọc khả năng hủy hit. Kiểm tra điều kiện của metaskill riêng. [Bảng thuộc tính](https://wiki.mythiccraft.io/mythicmobs/Skills/Mechanics/AuraComponents/OnDamaged#attributes)
+
+**Ví dụ và trường hợp dùng.** IgnisArctic gắn `onDamaged` với `oH=ArcticKnightAuraH` trong cửa sổ `arcticknight`. Dùng aura khi hiệu ứng chỉ có trong cửa sổ tạm. Với phản ứng luôn có của một mob và đơn giản, tra trigger `~onDamaged` và điều kiện của chính skill. [YAML Arctic](../../incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Skills/ArcticKnight.yml#L25), [Aura](../entries/mythicmobs--meta-mechanic--aura.md), [Trigger](../entries/mythicmobs--trigger--ondamaged.md)
+
+**Lỗi thường gặp.** Giả định hit đã bị hủy dù metaskill fail cooldown/condition hoặc đọc biến damage qua caller sai ngữ cảnh. Cả snapshot và wiki online đều mô tả charge, cancel và modifier phụ thuộc metaskill thành công. Wiki online còn nêu trường hợp bộ lọc `conditions` thất bại và modifier vẫn có thể áp dụng. Thử hit hợp lệ, skill fail, hit bị hủy và trạng thái hết charge riêng.
+
+**Phiên bản và xác minh.** Changelog 5.14.0 ghi bổ sung thuộc tính `conditions` cho component. Snapshot đã có phần thành công và charge nhưng thiếu thuộc tính mới. Mức `Documented`, chưa chạy server. [Changelog 5.14.0](https://wiki.mythiccraft.io/mythicmobs/changelogs/Changelogs#ondamaged-aura-component)

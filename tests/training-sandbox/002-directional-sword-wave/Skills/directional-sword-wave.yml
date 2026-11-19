@@ -1,0 +1,11 @@
+TrainingDirectionalSwordWave:
+  Skills:
+    - projectile{onTick=TrainingDirectionalSwordWaveTrail;onHit=TrainingDirectionalSwordWaveHit;v=12;i=1;mr=16;d=30;hR=0.4;vR=0.6;sfo=0;syo=1;tyo=0;ac=1;g=0;ham=true;sE=true;sB=true;hp=true;hnp=false;hitSelf=false;hto=false;par=false;pav=false} @Forward{f=16;y=1;uel=false;lockpitch=false}
+
+TrainingDirectionalSwordWaveTrail:
+  Skills:
+    - particle{p=crit;a=2;hs=0;vs=0;s=0;y=0} @origin
+
+TrainingDirectionalSwordWaveHit:
+  Skills:
+    - damage{a=4}

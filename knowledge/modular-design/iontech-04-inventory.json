@@ -1,0 +1,1215 @@
+[
+  {
+    "path": "packs/IonTech's Modular Systems/items/Base Items/base-armor.yml",
+    "sha256": "368aec76fd8185ff9dfe2a94630962861bca8da81a8d0c1b687e7405f3167f0d",
+    "kind": "item",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "armor",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/items/Base Items/base-material.yml",
+    "sha256": "13c4b73fabb9cef69b3593c12e9982243da06006ce5778698d258cde9f754152",
+    "kind": "item",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "material",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/items/Base Items/base-weapons.yml",
+    "sha256": "5efd73e10eeff2fa73107a12b30eae9c219160b10e14edcfc8e4ac1529643316",
+    "kind": "item",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "weapon",
+        "line": 1
+      },
+      {
+        "id": "melee",
+        "line": 11
+      },
+      {
+        "id": "bow",
+        "line": 15
+      },
+      {
+        "id": "wand",
+        "line": 19
+      },
+      {
+        "id": "cyclewand",
+        "line": 23
+      },
+      {
+        "id": "click_combo-normal",
+        "line": 35
+      },
+      {
+        "id": "click_combo-quick",
+        "line": 55
+      },
+      {
+        "id": "nbt_wand-quick",
+        "line": 79
+      },
+      {
+        "id": "click_combo-wynn",
+        "line": 138
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "cyclewand",
+        "to": "spell-cycle-cast",
+        "line": 31,
+        "kind": "metaskill"
+      },
+      {
+        "from": "cyclewand",
+        "to": "spell-cycle-right",
+        "line": 32,
+        "kind": "metaskill"
+      },
+      {
+        "from": "cyclewand",
+        "to": "spell-cycle-left",
+        "line": 33,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-normal",
+        "to": "click_combo-sendinput",
+        "line": 46,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-normal",
+        "to": "click_combo-sendinput",
+        "line": 48,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-normal",
+        "to": "click_combo-sendinput",
+        "line": 49,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-normal",
+        "to": "click_combo-sendinput",
+        "line": 52,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-normal",
+        "to": "click_combo-force_end",
+        "line": 53,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-quick",
+        "to": "click_combo-sendinput",
+        "line": 69,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-quick",
+        "to": "click_combo-sendinput",
+        "line": 72,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-quick",
+        "to": "click_combo-force_end",
+        "line": 73,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-quick",
+        "to": "click_combo-sendinput",
+        "line": 74,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-quick",
+        "to": "click_combo-sendinput",
+        "line": 75,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-wynn",
+        "to": "click_combo-sendinput",
+        "line": 150,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-wynn",
+        "to": "click_combo-sendinput",
+        "line": 151,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-wynn",
+        "to": "click_combo-force_end",
+        "line": 152,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "item-trigger-candidate": [
+        31,
+        32,
+        33,
+        48,
+        49,
+        74,
+        75,
+        126,
+        127,
+        150,
+        151
+      ],
+      "dynamic_calls": [
+        126,
+        127,
+        128,
+        132,
+        133,
+        134,
+        135
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/items/Base Items/base_icon-items.yml",
+    "sha256": "47aea9c645d2a652b8b0886212f68fe24cc22ec1e6cba3e32be2246e8c9bc0b2",
+    "kind": "item",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "base_icon",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/items/Demo Items/demo_click_combo.yml",
+    "sha256": "d2f35676a11165ed37255f7aae0f2238085eda7667d460488c6d95e1601cbdda",
+    "kind": "item",
+    "categories": [
+      "Input Handlers",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "apprentice_wand",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "apprentice_wand",
+        "to": "frost_shard-cast",
+        "line": 7,
+        "kind": "metaskill"
+      },
+      {
+        "from": "apprentice_wand",
+        "to": "click_combo",
+        "line": 9,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "item-trigger-candidate": [
+        7
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/items/Test Items/test-click_combo-items.yml",
+    "sha256": "98ce0bf66652621402e2e4dbd54ee971dbe8929e28434867a82ca28eb4875351",
+    "kind": "item",
+    "categories": [
+      "Input Handlers",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "test-click_combo-normal",
+        "line": 1
+      },
+      {
+        "id": "test-click_combo-quick",
+        "line": 20
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "test-click_combo-normal",
+        "to": "click_combo",
+        "line": 9,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-click_combo-quick",
+        "to": "click_combo",
+        "line": 28,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "item-trigger-candidate": [
+        7,
+        18,
+        26
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/items/Test Items/test-combo_weapons-items.yml",
+    "sha256": "988ebb410c767ac3a266daf186a4460123622528e002dd342f62c88f8998aefd",
+    "kind": "item",
+    "categories": [
+      "Input Handlers",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "test-combo_sword",
+        "line": 1
+      },
+      {
+        "id": "test-combo_bow",
+        "line": 20
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "test-combo_sword",
+        "to": "combo-apply",
+        "line": 9,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-combo_sword",
+        "to": "combo-hit",
+        "line": 12,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-combo_bow",
+        "to": "combo-apply",
+        "line": 28,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-combo_bow",
+        "to": "combo-hit",
+        "line": 31,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-combo_bow",
+        "to": "arrow_explosive-fire",
+        "line": 33,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        33
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/items/Test Items/test-healing_potion-items.yml",
+    "sha256": "5610b49f8365ab348c3de2e37c4dedcf59b00969a88aa0b86d27091952c75450",
+    "kind": "item",
+    "categories": [
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "base-potion",
+        "line": 1
+      },
+      {
+        "id": "base-splash_potion",
+        "line": 8
+      },
+      {
+        "id": "heal-potion-weak",
+        "line": 15
+      },
+      {
+        "id": "heal-potion",
+        "line": 27
+      },
+      {
+        "id": "heal-potion-strong",
+        "line": 39
+      },
+      {
+        "id": "potion-ichor",
+        "line": 51
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "heal-potion-weak",
+        "to": "heal-apply",
+        "line": 25,
+        "kind": "metaskill"
+      },
+      {
+        "from": "heal-potion",
+        "to": "heal-apply",
+        "line": 37,
+        "kind": "metaskill"
+      },
+      {
+        "from": "heal-potion-strong",
+        "to": "heal-apply",
+        "line": 49,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/items/Test Items/test-scaling_weapon-items.yml",
+    "sha256": "7c822504d26c87d7c7a1c46809e307f7a539717466e7aee35c04210ef3a84efd",
+    "kind": "item",
+    "categories": [
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "test-scaling_weapon",
+        "line": 1
+      },
+      {
+        "id": "test-stat_item",
+        "line": 11
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "test-stat_item",
+        "to": "blazing_sun-exec",
+        "line": 19,
+        "kind": "metaskill"
+      },
+      {
+        "from": "test-stat_item",
+        "to": "modifier-remove",
+        "line": 23,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/items/Test Items/testing-items.yml",
+    "sha256": "134d5642289d20ce640eccbdc9a41869f99a83ba3be4fd18a3d36d3564b2ab6f",
+    "kind": "item",
+    "categories": [
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "dummy_controller",
+        "line": 1
+      },
+      {
+        "id": "signal_wand",
+        "line": 9
+      },
+      {
+        "id": "template_test_1",
+        "line": 27
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "signal_wand",
+        "to": "spell-cycle-right",
+        "line": 23,
+        "kind": "metaskill"
+      },
+      {
+        "from": "signal_wand",
+        "to": "spell-cycle-left",
+        "line": 24,
+        "kind": "metaskill"
+      },
+      {
+        "from": "template_test_1",
+        "to": "blazing_sun-exec",
+        "line": 34,
+        "kind": "metaskill"
+      },
+      {
+        "from": "template_test_1",
+        "to": "modifier-remove",
+        "line": 39,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "item-trigger-candidate": [
+        6,
+        7,
+        21,
+        23,
+        24,
+        25
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Base Mobs/detection_ai-template.yml",
+    "sha256": "4e6ea1be95ca923196a12eed776aecae4905c5e09b69a3055eb63e393dfdd3c7",
+    "kind": "mob",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "detection_ai",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "detection_ai",
+        "to": "detection-init",
+        "line": 19,
+        "kind": "metaskill"
+      },
+      {
+        "from": "detection_ai",
+        "to": "detection-tick",
+        "line": 20,
+        "kind": "metaskill"
+      },
+      {
+        "from": "detection_ai",
+        "to": "detection-enter_combat",
+        "line": 22,
+        "kind": "metaskill"
+      },
+      {
+        "from": "detection_ai",
+        "to": "detection-drop_combat",
+        "line": 23,
+        "kind": "metaskill"
+      },
+      {
+        "from": "detection_ai",
+        "to": "detection-change_target",
+        "line": 24,
+        "kind": "metaskill"
+      },
+      {
+        "from": "detection_ai",
+        "to": "detection-reset",
+        "line": 26,
+        "kind": "metaskill"
+      },
+      {
+        "from": "detection_ai",
+        "to": "detection-debug",
+        "line": 27,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Base Mobs/mob_levelling-template.yml",
+    "sha256": "fa45387111f617434ee28592f7fb6a8ea13066dad7419a8804b3fa115bc39016",
+    "kind": "mob",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "mob_levelling",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "mob_levelling",
+        "to": "mob_levelling-init",
+        "line": 12,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mob_levelling",
+        "to": "mob_levelling-updatename",
+        "line": 13,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mob_levelling",
+        "to": "mob_levelling-death",
+        "line": 14,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Base Mobs/mob_spawner-template.yml",
+    "sha256": "7a5b002d1a777a742cf3ed8499b135c6481f880db9cd0ffc0838de839f3627d0",
+    "kind": "mob",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "mob_spawner",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "mob_spawner",
+        "to": "mob_spawner-init",
+        "line": 16,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mob_spawner",
+        "to": "mob_spawner-init",
+        "line": 17,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mob_spawner",
+        "to": "mob_spawner-tick",
+        "line": 18,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mob_spawner",
+        "to": "mob_spawner-start",
+        "line": 19,
+        "kind": "metaskill"
+      },
+      {
+        "from": "mob_spawner",
+        "to": "mob_spawner-debug",
+        "line": 22,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Base Mobs/mob_templates.yml",
+    "sha256": "30abd22866aca4bd3e8b5e0b860373922fab1f48c9c4ed494b136680f61bbb46",
+    "kind": "mob",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "hostile_mob",
+        "line": 1
+      },
+      {
+        "id": "hostile_mob-advanced",
+        "line": 23
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/dummy-mobs.yml",
+    "sha256": "f4eebeed22060f019390ea66314bbb71cee1f6ea6916a865e3e25ac9a6ecff35",
+    "kind": "mob",
+    "categories": [
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "dummy",
+        "line": 1
+      },
+      {
+        "id": "dummy-kb",
+        "line": 17
+      },
+      {
+        "id": "dummy-killable",
+        "line": 31
+      },
+      {
+        "id": "dummy-armor",
+        "line": 44
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/channel_indicator-mob.yml",
+    "sha256": "afa00b307360f5f9bb947b394dda392d63f67b1e76bf4cb91df6b34bfe7ed0c6",
+    "kind": "mob",
+    "categories": [
+      "VFX"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "channel_indicator",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/damage_indicator-mob.yml",
+    "sha256": "d8acf84015390b7f7165416a344748808fb1b98710d3a8b053604b60ff62eb96",
+    "kind": "mob",
+    "categories": [
+      "Damage Systems",
+      "VFX"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "damage_indicator",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/generic_marker-mobs.yml",
+    "sha256": "99e50848729ff2a58667434f036243fa51a3ab98ba8b0052f92a0e251e43220c",
+    "kind": "mob",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "generic_marker",
+        "line": 1
+      },
+      {
+        "id": "generic_living_marker",
+        "line": 12
+      },
+      {
+        "id": "generic_projectile_marker",
+        "line": 25
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/summon-mobs.yml",
+    "sha256": "b9c0103956c3561fb8875673d160e962f6149b7ce49e1d5366084a8291e900eb",
+    "kind": "mob",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "summon_base",
+        "line": 1
+      },
+      {
+        "id": "summon-allay",
+        "line": 31
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "summon_base",
+        "to": "summon-init",
+        "line": 20,
+        "kind": "metaskill"
+      },
+      {
+        "from": "summon_base",
+        "to": "summon-init",
+        "line": 21,
+        "kind": "metaskill"
+      },
+      {
+        "from": "summon_base",
+        "to": "summon-tick",
+        "line": 22,
+        "kind": "metaskill"
+      },
+      {
+        "from": "summon_base",
+        "to": "summon-death",
+        "line": 24,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/targeting_marker-mobs.yml",
+    "sha256": "816d97ff3c79ccbcde1e9bc8a060888327181f87a475fbd1709a2635b620652c",
+    "kind": "mob",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "target_marker",
+        "line": 1
+      },
+      {
+        "id": "target_marker-block",
+        "line": 23
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/timer-display-mobs.yml",
+    "sha256": "ffd7d98fb890143697630467adcedd41babd21b3d10db6417f5d12a4515b0347",
+    "kind": "mob",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "timer-display",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/vfx-mob.yml",
+    "sha256": "e5e8de188e8498770fa6fdec211c807c62deedf5b55a1cd44a40d1590c5e4a02",
+    "kind": "mob",
+    "categories": [
+      "VFX"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "vfx",
+        "line": 1
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/wardstone-mobs.yml",
+    "sha256": "f9967b13782b9135b523fcba929dbc44c046178df5bbd32074f1c9e3ab09ca02",
+    "kind": "mob",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "wardstone-base",
+        "line": 1
+      },
+      {
+        "id": "wardstone-test",
+        "line": 39
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "wardstone-base",
+        "to": "wardstone-init",
+        "line": 33,
+        "kind": "metaskill"
+      },
+      {
+        "from": "wardstone-base",
+        "to": "wardstone-init",
+        "line": 34,
+        "kind": "metaskill"
+      },
+      {
+        "from": "wardstone-base",
+        "to": "wardstone-setowner",
+        "line": 35,
+        "kind": "metaskill"
+      },
+      {
+        "from": "wardstone-base",
+        "to": "mob-configure",
+        "line": 36,
+        "kind": "metaskill"
+      },
+      {
+        "from": "wardstone-base",
+        "to": "wardstone-exec",
+        "line": 37,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/packinfo.yml",
+    "sha256": "98d10498994e1f78f45796c46066249ae02d4da0848a1bac915bca1d148508f0",
+    "kind": "metadata",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/placeholders.yml",
+    "sha256": "6b3531a130e5c1625c8558adc4d37377acdd801119388ff35f20fdad4a805b12",
+    "kind": "unclassified",
+    "categories": [
+      "Support"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "mana_charge_change",
+        "line": 9
+      },
+      {
+        "id": "mana_charge_change-oncast",
+        "line": 20
+      },
+      {
+        "id": "mana_charge_current",
+        "line": 31
+      },
+      {
+        "id": "mana_charge_value",
+        "line": 34
+      },
+      {
+        "id": "spell_charge_count",
+        "line": 39
+      },
+      {
+        "id": "spell_cooldown",
+        "line": 42
+      },
+      {
+        "id": "spell_cooldown_charges",
+        "line": 45
+      },
+      {
+        "id": "spell_on_cooldown",
+        "line": 48
+      },
+      {
+        "id": "spell_no_charges",
+        "line": 59
+      },
+      {
+        "id": "spell_cooldown_reset",
+        "line": 66
+      },
+      {
+        "id": "spell_off_cooldown",
+        "line": 73
+      },
+      {
+        "id": "spell_charges_off_recharge",
+        "line": 76
+      },
+      {
+        "id": "channel_progress",
+        "line": 82
+      },
+      {
+        "id": "damage_text",
+        "line": 126
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {
+      "placeholderapi-math": [
+        13,
+        17,
+        24,
+        28,
+        32,
+        35
+      ],
+      "placeholderapi-string": [
+        131
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/burning_blast-spell.yml",
+    "sha256": "8ef2ad8ff13f2fc7eea9dc762baf566972e6d7aea3be88f3d9b97a2acc33eaf3",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Projectile",
+      "Slash",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "burning_blast-cast",
+        "line": 2
+      },
+      {
+        "id": "burning_blast-exec",
+        "line": 12
+      },
+      {
+        "id": "burning_blast-fire",
+        "line": 16
+      },
+      {
+        "id": "burning_blast-start",
+        "line": 29
+      },
+      {
+        "id": "burning_blast-tick",
+        "line": 37
+      },
+      {
+        "id": "burning_blast-retarget",
+        "line": 43
+      },
+      {
+        "id": "burning_blast-tick_vfx",
+        "line": 62
+      },
+      {
+        "id": "burning_blast-hit_entity",
+        "line": 73
+      },
+      {
+        "id": "burning_blast-end",
+        "line": 81
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "burning_blast-cast",
+        "to": "channel-tick_fx",
+        "line": 8,
+        "kind": "metaskill"
+      },
+      {
+        "from": "burning_blast-fire",
+        "to": "setRandomID",
+        "line": 18,
+        "kind": "metaskill"
+      },
+      {
+        "from": "burning_blast-fire",
+        "to": "burning_blast-start",
+        "line": 24,
+        "kind": "metaskill"
+      },
+      {
+        "from": "burning_blast-fire",
+        "to": "burning_blast-tick",
+        "line": 25,
+        "kind": "metaskill"
+      },
+      {
+        "from": "burning_blast-fire",
+        "to": "burning_blast-hit_entity",
+        "line": 26,
+        "kind": "metaskill"
+      },
+      {
+        "from": "burning_blast-fire",
+        "to": "burning_blast-end",
+        "line": 27,
+        "kind": "metaskill"
+      },
+      {
+        "from": "burning_blast-tick",
+        "to": "burning_blast-retarget",
+        "line": 40,
+        "kind": "metaskill"
+      },
+      {
+        "from": "burning_blast-tick",
+        "to": "burning_blast-tick_vfx",
+        "line": 41,
+        "kind": "metaskill"
+      },
+      {
+        "from": "burning_blast-end",
+        "to": "burning_blast-hit_entity",
+        "line": 83,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/collapse-skills.yml",
+    "sha256": "c782edbd8b6c7dce687803b1acb4a7dd324d256bdbb9b4345eeec0f7221d8be4",
+    "kind": "metaskill",
+    "categories": [
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "collapse-cast",
+        "line": 2
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/empowered_pull-spell.yml",
+    "sha256": "bba5a07597a9bc02d27b03a8d7067880028eb2097ca2c722a1f8c39f8101729c",
+    "kind": "metaskill",
+    "categories": [
+      "Variables",
+      "Demo"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "empowered_pull-cast",
+        "line": 3
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "empowered_pull-cast",
+        "to": "channel-interrupt_fx",
+        "line": 10,
+        "kind": "metaskill"
+      },
+      {
+        "from": "empowered_pull-cast",
+        "to": "spell-cooldown",
+        "line": 11,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  }
+]

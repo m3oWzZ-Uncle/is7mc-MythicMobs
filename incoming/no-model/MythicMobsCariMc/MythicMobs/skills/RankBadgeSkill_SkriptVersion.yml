@@ -1,0 +1,97 @@
+rank_up_ef0:
+  Skills:
+  - sound{s=entity.player.levelup;v=1} @Caster
+  - sound{s=item.totem.use} @Caster
+  - particles{particle=end_rod;a=50;hs=0.1;vs=0.15;y=0.5;s=1} @self
+  - sound{s=block.anvil.place;v=1;p=1;delay=33} @Caster
+  - particlesphere{p=reddust;color=#e3945f;size=1;a=50;radius=1;y=0.65;s=0.1;delay=40} @self
+  - sound{s=entity.player.levelup;v=1;p=10;delay=40} @Caster
+  - particles{p=item_crack;m=copper_ingot;size=1;a=50;radius=1;y=1.4;s=0.2;delay=33} @self
+  - particlering{p=reddust;color=#e3945f;radius=0.7;points=15;amount=10;y=-0.89;delay=3}
+  - particlering{p=reddust;color=#e3945f;radius=0.7;points=15;amount=10;y=-0.56;delay=3}
+  - particlering{p=reddust;color=#e3945f;radius=0.7;points=15;amount=10;y=-0.23;delay=5}
+  - particlering{p=reddust;color=#e3945f;radius=0.7;points=15;amount=10;y=0.10;delay=7}
+rank_up_ef1:
+  Skills:
+  - sound{s=entity.player.levelup;v=1} @Caster
+  - sound{s=item.totem.use} @Caster
+  - particles{particle=end_rod;a=50;hs=0.1;vs=0.15;y=0.5;s=1} @self
+  - sound{s=block.anvil.place;v=1;p=1;delay=33} @Caster
+  - particlesphere{p=reddust;color=#c8cccd;size=1;a=50;radius=1;y=0.65;s=0.1;delay=40} @self
+  - sound{s=entity.player.levelup;v=1;p=10;delay=40} @Caster
+  - particles{p=item_crack;m=iron_ingot;size=1;a=50;radius=1;y=1.4;s=0.2;delay=33} @self
+  - particlering{p=reddust;color=#c8cccd;radius=0.7;points=15;amount=10;y=-0.89;delay=3}
+  - particlering{p=reddust;color=#c8cccd;radius=0.7;points=15;amount=10;y=-0.56;delay=3}
+  - particlering{p=reddust;color=#c8cccd;radius=0.7;points=15;amount=10;y=-0.23;delay=5}
+  - particlering{p=reddust;color=#c8cccd;radius=0.7;points=15;amount=10;y=0.10;delay=7}
+
+rank_up_ef2:
+  Skills:
+  - sound{s=entity.player.levelup;v=1} @Caster
+  - sound{s=item.totem.use} @Caster
+  - particles{particle=end_rod;a=50;hs=0.1;vs=0.15;y=0.5;s=1} @self
+  - sound{s=block.anvil.place;v=1;p=1;delay=33} @Caster
+  - particlesphere{p=reddust;color=#fbbe34;size=1;a=50;radius=1;y=0.65;s=0.1;delay=40} @self
+  - sound{s=entity.player.levelup;v=1;p=10;delay=40} @Caster
+  - particles{p=item_crack;m=gold_ingot;size=1;a=50;radius=1;y=1.4;s=0.2;delay=33} @self
+  - particlering{p=reddust;color=#fbbe34;radius=0.7;points=15;amount=10;y=-0.89;delay=3}
+  - particlering{p=reddust;color=#fbbe34;radius=0.7;points=15;amount=10;y=-0.56;delay=3}
+  - particlering{p=reddust;color=#fbbe34;radius=0.7;points=15;amount=10;y=-0.23;delay=5}
+  - particlering{p=reddust;color=#fbbe34;radius=0.7;points=15;amount=10;y=0.10;delay=7}
+
+rank_up_ef3:
+  Skills:
+  - sound{s=entity.player.levelup;v=1} @Caster
+  - sound{s=item.totem.use} @Caster
+  - particles{particle=end_rod;a=50;hs=0.1;vs=0.15;y=0.5;s=1} @self
+  - sound{s=block.anvil.place;v=1;p=1;delay=33} @Caster
+  - particlesphere{p=reddust;color=#3aa3f9;size=1;a=50;radius=1;y=0.65;s=0.1;delay=40} @self
+  - sound{s=entity.player.levelup;v=1;p=10;delay=40} @Caster
+  - particles{p=item_crack;m=lapis_lazuli;size=1;a=50;radius=1;y=1.4;s=0.2;delay=33} @self
+  - particlering{p=reddust;color=#3aa3f9;radius=0.7;points=15;amount=10;y=-0.89;delay=3}
+  - particlering{p=reddust;color=#3aa3f9;radius=0.7;points=15;amount=10;y=-0.56;delay=3}
+  - particlering{p=reddust;color=#3aa3f9;radius=0.7;points=15;amount=10;y=-0.23;delay=5}
+  - particlering{p=reddust;color=#3aa3f9;radius=0.7;points=15;amount=10;y=0.10;delay=7}
+
+rank_up_ef4:
+  Skills:
+  - sound{s=entity.player.levelup;v=1} @Caster
+  - sound{s=item.totem.use} @Caster
+  - particles{particle=end_rod;a=50;hs=0.1;vs=0.15;y=0.5;s=1} @self
+  - sound{s=block.anvil.place;v=1;p=1;delay=33} @Caster
+  - particlesphere{p=reddust;color=#32de84;size=1;a=50;radius=1;y=0.65;s=0.1;delay=40} @self
+  - sound{s=entity.player.levelup;v=1;p=10;delay=40} @Caster
+  - particles{p=item_crack;m=emerald;size=1;a=50;radius=1;y=1.4;s=0.2;delay=33} @self
+  - particlering{p=reddust;color=#32de84;radius=0.7;points=15;amount=10;y=-0.89;delay=3}
+  - particlering{p=reddust;color=#32de84;radius=0.7;points=15;amount=10;y=-0.56;delay=3}
+  - particlering{p=reddust;color=#32de84;radius=0.7;points=15;amount=10;y=-0.23;delay=5}
+  - particlering{p=reddust;color=#32de84;radius=0.7;points=15;amount=10;y=0.10;delay=7}
+
+rank_up_ef5:
+  Skills:
+  - sound{s=entity.player.levelup;v=1} @Caster
+  - sound{s=item.totem.use} @Caster
+  - particles{particle=end_rod;a=50;hs=0.1;vs=0.15;y=0.5;s=1} @self
+  - sound{s=block.anvil.place;v=1;p=1;delay=33} @Caster
+  - particlesphere{p=reddust;color=#67f6ff;size=1;a=50;radius=1;y=0.65;s=0.1;delay=40} @self
+  - sound{s=entity.player.levelup;v=1;p=10;delay=40} @Caster
+  - particles{p=item_crack;m=diamond;size=1;a=50;radius=1;y=1.4;s=0.2;delay=33} @self
+  - particlering{p=reddust;color=#67f6ff;radius=0.7;points=15;amount=10;y=-0.89;delay=3}
+  - particlering{p=reddust;color=#67f6ff;radius=0.7;points=15;amount=10;y=-0.56;delay=3}
+  - particlering{p=reddust;color=#67f6ff;radius=0.7;points=15;amount=10;y=-0.23;delay=5}
+  - particlering{p=reddust;color=#67f6ff;radius=0.7;points=15;amount=10;y=0.10;delay=7}
+
+rank_up_ef6:
+  Skills:
+  - sound{s=entity.player.levelup;v=1} @Caster
+  - sound{s=item.totem.use} @Caster
+  - particles{particle=end_rod;a=50;hs=0.1;vs=0.15;y=0.5;s=1} @self
+  - sound{s=block.anvil.place;v=1;p=1;delay=33} @Caster
+  - particlesphere{p=reddust;color=#bc91ff;size=1;a=50;radius=1;y=0.65;s=0.1;delay=40} @self
+  - sound{s=entity.player.levelup;v=1;p=10;delay=40} @Caster
+  - particles{p=item_crack;m=amethyst_shard;size=1;a=50;radius=1;y=1.4;s=0.2;delay=33} @self
+  - particlering{p=reddust;color=#bc91ff;radius=0.7;points=15;amount=10;y=-0.89;delay=3}
+  - particlering{p=reddust;color=#bc91ff;radius=0.7;points=15;amount=10;y=-0.56;delay=3}
+  - particlering{p=reddust;color=#bc91ff;radius=0.7;points=15;amount=10;y=-0.23;delay=5}
+  - particlering{p=reddust;color=#bc91ff;radius=0.7;points=15;amount=10;y=0.10;delay=7}
+#805a567441e1648e120b69fb230da4f3

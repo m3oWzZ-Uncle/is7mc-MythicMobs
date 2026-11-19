@@ -1,0 +1,88 @@
+# http://www.mythicmobs.net
+#
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+
+
+FW_SKILL_PASS:
+  Skills:
+  - potion{type=FIRE_RESISTANCE;duration=80;level=1;hasParticles=false} @self
+
+FW_SKILL_ONE:
+  Skills:
+  - projectile{onTick=FW_SKILL_ONE-Tick;onHit=FW_SKILL_ONE-Hit;v=8;i=1;hR=1;vR=1;hnp=true} @targetlocation
+FW_SKILL_ONE-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=20;speed=0;hS=0.3;vS=0.3} @origin
+  - effect:blockmask{m=MAGMA_BLOCK;r=1;d=20} @origin
+  - sound{s=block.candle.extinguish;p=0.5;sc=master;v=3} @origin
+  - sound{s=block.blastfurnace.fire_crackle;p=2;sc=master;v=2} @origin
+FW_SKILL_ONE-Hit:
+  Skills:
+  - damage{a="<modifier.damage>"}
+  - ignite{ticks=200}
+
+
+
+#################################################################################
+FW_SKILL_TWO:
+  Skills:
+  - aura{i=1;d=50;oT=FW_SKILL_TWO-Projectile;oE=FW_SKILL_TWO-ProjectileEnd} @self
+  - sound{s=entity.zombie.infect;p=0.71;sc=master;v=2} @self
+
+FW_SKILL_TWO-Projectile:
+  Skills:
+  - effect:blockmask{m=light;r=0;d=5;s=cube;onlyair=true;na=false;sync=true} @selflocation{y=1}
+  - projectile{i=1;oT=FW_SKILL_TWO-Tick;oH=FW_SKILL_TWO-Hit;oE=FW_SKILL_TWO-End;mr=13.5;sE=false;v=5.5;tyo=3.15;hnp=true;hn=0.55;vn=0.55;ac=0.8;g=0.09;syo=1.15} @targetLocation
+  - sound{s=block.candle.extinguish;p=0.5;sc=master;v=3}
+  - sound{s=block.blastfurnace.fire_crackle;p=2;sc=master;v=2}
+
+FW_SKILL_TWO-Tick:
+  Skills:
+  - effect:particlesphere{p=small_flame;r=0.25;a=1;hs=0.16;vs=0.02;s=0.05} @origin
+  - effect:particlesphere{p=BLOCKCRACK;material=MAGMA_BLOCK;r=0.1;a=1;hs=0.1;vs=0.06;s=0.05} @origin 0.5
+  - effect:particlesphere{p=reddust;r=0.1;color=#FF462E;a=1;hs=0.2;vs=0.06;s=0.05} @origin 0.5
+
+FW_SKILL_TWO-Hit:
+  Skills:
+  - damage{a="<modifier.damage>";pkb=true;pi=true;ia=true;type=FIRE}
+  - ignite{ticks=200}
+FW_SKILL_TWO-End:
+  Skills:
+  - effect:particles{p=BLOCKCRACK;material=MAGMA_BLOCK;a=3;hs=0.3;vs=0.22;s=0.05} @origin
+  - effect:particles{p=small_flame;a=5;hs=0.3;vs=0.22;s=0.05} @origin
+  - effect:particlesphere{p=smoke;r=0.1;a=1;hs=0.2;vs=0.06;s=0.05} @origin
+  - effect:blockmask{m=MAGMA_BLOCK;r=1;d=20} @origin
+  
+FW_SKILL_TWO-ProjectileEnd:
+  Skills:
+  - effect:particles{p=small_flame;r=0.1;a=20;hs=1.1;vs=1.1}
+  - sound{s=block.fire.extinguish;p=0.88;v=2;sc=master} @origin
+
+
+
+
+########################################################################################
+
+FW_SKILL_THREE:
+  Skills:
+  - projectile{onTick=FW_SKILL_THREE-Tick;onHit=FW_SKILL_THREE-Hit;onEnd=FW_SKILL_THREE-End;v=8;i=1;hR=1;vR=1;syo=20} @targetlocation
+  - sound{s=item.hoe.till;v=1.0;p=1.0} @self
+FW_SKILL_THREE-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=15;speed=0;hS=0.8;vS=0.8} @origin
+  - effect:particles{p=explosion_normal;amount=5;speed=0;hS=0.8;vS=0.8} @origin
+  - particles{particle=block;m=dirt;amount=20;hS=0.7;vS=0.7} @origin
+  - particles{particle=block;m=obsidian;amount=20;hS=0.7;vS=0.7} @origin
+FW_SKILL_THREE-Hit:
+  Skills:
+  - damage{a="<modifier.damage>";ia=true}
+  - ignite{ticks=200}
+FW_SKILL_THREE-End:
+  Skills:
+  - damage{a="<modifier.damage>";ia=true} @ENO{r=4}
+  - effect:explosion
+  - ignite{ticks=200} @ENO{r=4}
+  - effect:blockmask{m=MAGMA_BLOCK;r=4;d=40} @origin
+

@@ -1,0 +1,6 @@
+TrainingCounterGuardRetaliate:
+  Cooldown: 3
+  TriggerConditions:
+    - entitytype{t=PLAYER} true
+  Skills:
+    - damage{amount=2}

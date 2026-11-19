@@ -1,0 +1,88 @@
+# http://www.mythicmobs.net
+#
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+
+SoulMage_Spirit_Surge:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true
+    Marker: true
+    AlwaysShowName: false
+    Invisible: true
+    HasGravity: false
+    HasBasePlate: false
+    Small: false
+    ApplyInvisibility: true
+  Skills:
+  - addtag{t=SM_SKILL} @self ~onSpawn
+  - equip{item=SoulMage_Shovel:4} @self ~onSpawn
+  - animatearmorstand{d=40;head=0,2520,0;ignoreempty=false} @self ~onSpawn
+  
+
+SoulMage_Spirit_Surge_Reverse:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true
+    Marker: true
+    AlwaysShowName: false
+    Invisible: true
+    HasGravity: false
+    HasBasePlate: false
+    Small: false
+    ApplyInvisibility: true
+  Skills:
+  - addtag{t=SM_SKILL} @self ~onSpawn
+  - remove{delay=100} @self ~onSpawn 
+  - sound{s=entity.arrow.hit_player;sc=players;v=1;delay=90} @selflocation ~onSpawn 
+  - missile{bulletType=MOB;mob=SoulMage_Spirit_Surge;oH=SoulMage_Spirit_Surge_Grab_Scythe;oT=SoulMage_Spirit_Surge_Tick;v=20;hR=1;vR=1;hp=true;hnp=true;sfo=-2;syo=-0.25;mr=100;delay=1;sB=false;sE=false} @owner ~onSpawn
+  - Aura{auraName=Pulling_Soul;oT=SoulMage_Spirit_Surge_Soul_Collecting;d=100;i=1;rd=true;ma=true;ms=1} @owner ~onSpawn
+
+SoulMage_Spirit_Surge_Reverse_TWO:
+  Type: ARMOR_STAND
+  Options:
+    Invincible: true
+    Marker: true
+    AlwaysShowName: false
+    Invisible: true
+    HasGravity: false
+    HasBasePlate: false
+    Small: false
+    ApplyInvisibility: true
+  Skills:
+  - addtag{t=SM_SKILL} @self ~onSpawn
+  - remove{delay=100} @self ~onSpawn 
+  - sound{s=entity.arrow.hit_player;sc=players;v=1;delay=90} @selflocation ~onSpawn 
+  - missile{bulletType=ITEM;mat=soul_sand;enchanted=true;oH=SoulMage_Spirit_Surge_Grab_Scythe;oT=SoulMage_Spirit_Surge_Tick_TWO;v=20;hR=1;vR=1;hp=true;hnp=true;sfo=-2;syo=-0.25;mr=100;delay=1;sB=false;sE=false} @owner ~onSpawn
+  - Aura{auraName=Pulling_Soul;oT=SoulMage_Spirit_Surge_Soul_Collecting;d=100;i=1;rd=true;ma=true;ms=1} @owner ~onSpawn
+
+SoulMage_Spirit_Surge_Soul:
+  Type: VEX
+  Health: 9999
+  Options:
+    Invincible: false
+    AlwaysShowName: false
+    Invisible: true
+    Small: false
+    ApplyInvisibility: true
+    HasGravity: false
+    KnockbackResistance: 1
+    MovementSpeed: 0 
+  AIGoalSelectors:
+  - clear
+  - lookatplayers
+  AITargetSelectors:
+  - clear
+  Skills:
+  - addtag{t=SM_SKILL} @self ~onSpawn
+  - equip{item=SoulMage_Shovel:4} @self ~onSpawn
+  - equip{item=AIR:0} @self ~onSpawn
+  - sound{s=block.cherry_leaves.hit;sc=blocks;v=0.5;p=1.2} @selflocation ~onSpawn
+  - sudoskill{s=SoulMage_Spirit_Surge_Soul_Damaging} @Parent ~onDamaged
+  - potion{t=LEVITATION;l=-1;d=150;p=false;i=false} @self ~onSpawn
+  - effect:particles{p=reddust;color=#d39741;a=5;size=1;hS=0.125;vS=0.25;y=0.75;repeat=50;repeatInterval=2} @self ~onSpawn
+  - effect:particles{p=reddust;color=#f8f644;a=5;size=1;hS=0.05;vS=0.05;y=0.75;repeat=50;repeatInterval=2} @self ~onSpawn
+  - effect:particles{p=sculk_soul;a=1;size=1.3;hS=0.125;vS=0.25;y=0.75;repeat=10;repeatInterval=5} @self ~onSpawn
+  - remove{delay=100} @self ~onSpawn
+  - sound{s=entity.arrow.hit_player;sc=blocks;v=0.5;p=1.2;delay=98} @selflocation ~onSpawn

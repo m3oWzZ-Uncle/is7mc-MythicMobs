@@ -1,0 +1,12 @@
+{
+  "id": "013-hitzone-vfx",
+  "kind": "practice",
+  "level": "advanced",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "edge",
+    "once",
+    "wall"
+  ]
+}

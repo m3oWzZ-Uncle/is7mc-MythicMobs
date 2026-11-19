@@ -1,0 +1,18 @@
+Recluse:
+  mythicmobs-skill-id: DW_SKILL_ONE
+  modifiers:
+  - duration
+
+Blackrays:
+  mythicmobs-skill-id: DW_SKILL_TWO
+  modifiers:
+  - damage
+  
+Breakthrough:
+  mythicmobs-skill-id: DW_SKILL_THREE
+  modifiers:
+  - damage
+  
+DarkPass:
+  mythicmobs-skill-id: DW_SKILL_PASS
+  modifiers: []

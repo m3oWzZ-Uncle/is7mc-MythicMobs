@@ -1,0 +1,17 @@
+Undead-Death:
+  Skills:
+  - skill{s=SoulMage_Spirit_Surge_Soul_Pulling;cat=true} @owner
+  - effect:particles{p=redstone;color=#AAFF00;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#AAFF00;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#AAFF00;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#AAFF00;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#AAFF00;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#AAFF00;amount=20;speed=0;hS=0.3;vS=0} @self
+  - effect:particles{p=redstone;color=#AAFF00;amount=30;speed=0;hS=0.3;vS=0} @self
+  - remove @self
+
+Undead-Spawn:
+  Skills:
+  - setmaxhealth{amount=2000;mode=STATIC} @self
+  - delay 1
+  - sethealth{a=2000} @self

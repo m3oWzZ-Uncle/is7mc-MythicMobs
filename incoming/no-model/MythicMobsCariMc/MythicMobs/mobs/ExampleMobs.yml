@@ -1,0 +1,243 @@
+KR_NHA_KHUYEN:
+  MobType: WOLF
+  Health: 10
+  Damage: 1
+  Options:
+    Silent: true
+    Despawn: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventLeashing: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    NoAI: false
+
+HOAKYLAN_MOBS:
+  MobType: horse
+  Faction: DARK
+  Health: 10
+  Damage: 1
+#  Disguise: horse Unknown setSkin alexis_machin setAddEntityAnimations true setCapeEnabled false setDynamicName true
+  Options:
+    Tameable: false
+    Tamed: true
+    Silent: true
+    Despawn: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventLeashing: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    NoAI: false
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - sound{s=entity.warden.hurt;v=1.0;p=1.2} @self ~onDamaged 1
+  - sound{s=entity.warden.death;v=1.0;p=1.2} @self ~onDeath 1
+  - sound{s=entity.warden.ambient;v=1.0;p=1.2} @self ~onTimer:160 0.5
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self ~onTimer:160 0.5
+  - sound{s=entity.horse.gallop;v=1.0;p=1.2} @EIR{r=3} ~onTimer:3 1
+
+  - effect:particles{p=reddust;color=#006d70;amount=50;hS=1;vS=1;speed=0;y=0.5} @self ~onTimer:10 1
+  - effect:particles{p=flame;amount=2;speed=0;hS=1;vS=1} @self ~onTimer:10 1
+  - effect:particles{p=small_flame;amount=2;speed=0.2;hS=1;vS=1} @self ~onTimer:10 1
+  - remove{delay=300} @self ~onSpawn
+
+  - damage{a=30-40} @EIR{r=3} ~onTimer:5 1
+  
+  - saddle @self ~onSpawn
+
+
+Rider:
+  Type: skeleton
+  Display: 'Rider'
+  Health: 12
+  Mount: TestHorse
+  Skills:
+  - dismount ~onDamaged
+  - remount ~onInteract
+TestHorse:
+  Type: horse
+  Display: 'Test Horse'
+  Health: 20
+
+
+VUANHVUC_MOBS:
+  MobType: HUSK
+  Faction: DARK
+  Health: 1
+  Damage: 1
+#  Disguise: player Unknown setSkin alexis_machin setAddEntityAnimations true setCapeEnabled false setDynamicName true
+  Options:
+    Silent: true
+    Despawn: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventLeashing: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+#    Invincible: true
+    Invisible: true
+    NoAI: true
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - sound{s=entity.warden.hurt;v=1.0;p=1.2} @self ~onDamaged 1
+  - sound{s=entity.warden.death;v=1.0;p=1.2} @self ~onDeath 1
+  - sound{s=entity.warden.ambient;v=1.0;p=1.2} @self ~onTimer:160 0.5
+  - sound{s=entity.warden.heartbeat;v=1.0;p=1.2} @self ~onTimer:160 0.5
+#
+  - effect:particles{p=reddust;color=#2c2a15;amount=50;hS=1;vS=1;speed=0;y=0.5} @self ~onTimer:10 1
+  - effect:particles{p=reddust;color=#ffeb57;amount=50;hS=1;vS=1;speed=0;y=0.5} @self ~onTimer:10 1
+  - effect:particles{p=sonic_boom;amount=2;hS=1;vS=1;speed=0;y=1} @self ~onDeath 1
+  - remove{delay=300} @self ~onSpawn
+  - model{mid=dummy;n=false} @self ~onSpawn
+#  - swap @Owner ~onSpawn
+  - swap @Owner ~onTimer:290 1
+
+
+THANHVUC_MOBS:
+  MobType: HUSK
+  Faction: DARK
+  Health: 1
+  Damage: 1
+#  Disguise: player Unknown setSkin alexis_machin setAddEntityAnimations true setCapeEnabled false setDynamicName true
+  Options:
+    Silent: true
+    Despawn: true
+    PreventSunburn: true
+    PreventItemPickup: true
+    PreventLeashing: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    Invincible: true
+    Invisible: true
+    NoAI: true
+  KillMessages:
+  - '&f<target.name> &7was slain by <caster.display>'
+  AIGoalSelectors:
+  - clear
+  - meleeattack
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - skill{s=THANHVUC} @self ~onSpawn
+
+
+
+LARC_MOBS:
+  Type: ARMOR_STAND
+  Pose:
+      RightArm: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+  - effect:particlesphere{particle=redstone;color=#8affa6;radius=2;amount=3;delay=8} @self ~onTimer:10 1
+
+
+LArctic_Arise:
+  Type: WOLF
+  Disguise: PIGLIN_BRUTE
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Arise&8] <#83FF29>Shadow Warrior'
+  Health: 1000
+  Armor: 10000
+  Damage: 60
+  Skills:
+  - sethealth{a=500} @self ~onDamaged
+  - skill{s=LFrost_Strike} @self ~onAttack
+  - skill{s=LArcticSummon-Heal} @self ~onAttack
+  - randomskill{skills=PushUpLeft,PushUpRight,PushUpForward,PushUpBackward} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  - skill{s=LArcticSummon-Death;delay=220} @self ~onSpawn
+  Equipment:
+  - LarcticSpear HAND
+  - LarcticHelmet HEAD
+  - LarcticChestplate CHESTPLATE
+  - LarcticLeggings LEGS
+  - LarcticBoots BOOTS
+  - LarcticShield OFFHAND
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0.35
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Invincible: true
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 movetowardstarget
+  - 3 randomstroll
+  - 4 gotoowner
+  AITargetSelectors:
+  - 0 clear
+  - 1 ownertarget
+  - 2 ownerattacker
+
+LArctic_ArisePet:
+  Type: WOLF
+  Disguise: POLAR_BEAR
+  Display: '<#FFAF9B>☠ &8[<#FF7D5C>Arise&8] <#83FF29>Shadow Bear'
+  Health: 100
+  Damage: 40
+  Skills:
+#  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  - sethealth{a=100} @owner ~onDamaged
+  - skill{s=LFrost_Strike} @self ~onAttack
+  Options:
+    AlwaysShowName: true
+    Silent: true
+    Despawn: true
+    MovementSpeed: 0.3
+    MaxCombatDistance: 25
+    PreventOtherDrops: true
+    PreventSunburn: true
+    Invincible: true
+  Modules:
+    ThreatTable: true
+  DamageModifiers:
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 movetowardstarget
+  - 2 randomstroll
+  - 3 gotoowner
+  AITargetSelectors:
+  - 0 clear
+  - 1 ownertarget
+  - 2 ownerattacker

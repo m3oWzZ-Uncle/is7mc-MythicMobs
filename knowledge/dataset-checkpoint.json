@@ -1,0 +1,22 @@
+{
+  "updated": "2026-11-14",
+  "yaml_limit_per_batch": 30,
+  "inventory": "dataset-inventory.json",
+  "batches": [
+    {"batch": 1, "report": "dataset-batch-01.md", "manifest": "dataset-batch-01.json", "loose_yaml": 30, "archive_yaml": 0},
+    {"batch": 2, "report": "dataset-batch-02.md", "manifest": "dataset-batch-02.json", "loose_yaml": 12, "archive_yaml": 0},
+    {"batch": 3, "report": "dataset-batch-03.md", "manifest": "dataset-batch-03.json", "loose_yaml": 5, "archive_yaml": 6}
+  ],
+  "next_batch": 4,
+  "next_scopes": [
+    "CaRiMC NOOBSell: ShadowPhantom và HeavenlyLight, cùng mob và packinfo",
+    "CaRiMC Dungeons và config-mobs/config-skills: mặc định targeter và vòng đời mob",
+    "Archive boss: Ergeox hoặc Ent Keeper theo cặp mob/skill; các archive lồng theo manifest"
+  ],
+  "open_checks": [
+    "Conductor_OceanRythme-TICK2: chưa có đích trong YAML rời tìm theo ID; truy tài nguyên khác và log nạp",
+    "IgnisArctic Clone: xác định caller và bridge trên bộ cài thật",
+    "Soul Weaver: xác minh onSwingz, modifier từ item và owner của trap/return",
+    "Wu và Armor Boss: thử ngắt chuỗi, reset và multiplayer với build và model đúng"
+  ]
+}

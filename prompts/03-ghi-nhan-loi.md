@@ -1,0 +1,3 @@
+Codex vừa làm một skill chưa đúng ý tôi. Hãy so sánh yêu cầu, bản lỗi và log hoặc kết quả kiểm thử nếu có. Giữ bản trước hoặc diff, đề xuất và thực hiện bản sửa theo yêu cầu. Dùng [mẫu ghi nhận lỗi](../feedback/corrections/TEMPLATE.md) để tách bằng chứng khỏi giả thuyết.
+
+Sau khi tôi xác nhận kết quả, lưu cả hai phiên bản hoặc tham chiếu có thể mở lại, ghi nguyên tắc tái sử dụng kèm phạm vi và tạo [ca hồi quy](../tests/gameplay-regression-template.md). Nếu tôi xác nhận một tiêu chí thiết kế, cập nhật [hồ sơ tư duy](../knowledge/learning-profile.md). [Quy trình ghi nhận lỗi](../feedback/corrections/README.md)

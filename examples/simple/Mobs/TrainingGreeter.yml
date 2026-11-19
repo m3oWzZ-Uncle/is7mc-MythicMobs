@@ -1,0 +1,4 @@
+TrainingGreeter:
+  Type: CHICKEN
+  Skills:
+    - skill{s=TrainingGreeting} @trigger ~onInteract

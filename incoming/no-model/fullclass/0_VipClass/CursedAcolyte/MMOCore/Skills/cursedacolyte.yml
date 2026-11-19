@@ -1,0 +1,42 @@
+name: Cursed Acolyte
+lore:
+- 'Lời nguyền chết'
+- '“Vòng hắc quang chiến trận, khơi dậy sức'
+- 'mạnh sát phạt trong tim chiến binh.”'
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Eff-Level &7▸ <#FF8E6A>{level}'
+- '&3 <#78FFEF>◆ &7duration &7▸ <#FF8E6A>{duration}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: BOOK
+passive-type: DAMAGED
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+level:
+  base: 1
+  per-level: 0.1
+  min: 0
+  max: 30
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 8
+  per-level: 0
+  min: 0
+  max: 0

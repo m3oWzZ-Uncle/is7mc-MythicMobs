@@ -1,0 +1,6 @@
+# Combat, hỗ trợ và triệu hồi
+
+- **Kiếm, võ thuật và phép:** đặt mốc trúng từ yêu cầu gameplay. Với đòn có thời gian chuẩn bị, đo mốc animation và lần chọn mục tiêu riêng. Dùng callback va chạm khi damage phải đi theo projectile. [Hit detection](../../patterns/damage-hit-detection.md) · [Đồng bộ animation](../../patterns/dong-bo-animation-damage.md)
+- **Buff, hồi máu và phòng thủ:** truy ai là caster, ai được nhận hiệu ứng, sự kiện nào bị can thiệp và quyền tương tác. Sacred Ward là ví dụ buff hỗ trợ dùng `SUPPORT_ACTION` của MythicLib. Ca hủy melee vanilla minh họa vì sao loại event và thời điểm hủy cần đối chiếu riêng. [Sacred Ward](../../patterns/cau-noi-mmocore-mythiclib.md) · [Hủy event](../../patterns/huy-event-dong-bo.md)
+- **Triệu hồi:** khi gameplay cần owner, ghi quan hệ lúc tạo và kiểm tra hai player triệu hồi cạnh nhau. Kiểm thử thu hồi và hết hạn theo cấu hình thực tế. [Xích Huyết và vòng đời summon](../../patterns/summon-owner-cleanup.md) · [Multiplayer](../../patterns/multiplayer-safety.md)
+- **Hộ Thể:** xác định cần khiên hữu hạn hay giảm sát thương trong một cửa sổ. Dùng aura khi cần trạng thái và vòng đời riêng. Chọn stat theo pipeline damage trên server. [Quyết định và ca đối chiếu](../../../feedback/decisions/MM-D-2026-004.md)

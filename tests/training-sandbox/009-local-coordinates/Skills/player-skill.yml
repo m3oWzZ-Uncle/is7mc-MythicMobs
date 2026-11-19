@@ -1,0 +1,7 @@
+TrainingLocalCoordinates:
+  Cooldown: 2
+  Skills:
+    - setvariable{var=skill.theta;type=DOUBLE;val="toradian(<caster.l.yaw>)"}
+    - setvariable{var=skill.dx;type=DOUBLE;val="-2*sin(<skill.var.theta>)-cos(<skill.var.theta>)"}
+    - setvariable{var=skill.dz;type=DOUBLE;val="2*cos(<skill.var.theta>)-sin(<skill.var.theta>)"}
+    - particle{p=end_rod;a=1;s=0} @SelfLocation{xo=<skill.var.dx>;yo=1;zo=<skill.var.dz>}

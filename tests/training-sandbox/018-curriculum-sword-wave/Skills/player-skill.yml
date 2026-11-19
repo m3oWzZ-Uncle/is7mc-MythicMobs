@@ -1,0 +1,13 @@
+TrainingKiemKhiTram:
+  Cooldown: 3
+  Skills:
+    - playanimation{a=0} @self
+    - projectile{onTick=TrainingKiemKhiTramTrail;onHit=TrainingKiemKhiTramHit;v=12;i=1;mr=16;d=30;hR=0.4;vR=0.6;sfo=0;syo=1;sE=true;sB=true;hp=false;hnp=true} @Forward{f=16;y=1;lockpitch=false}
+
+TrainingKiemKhiTramTrail:
+  Skills:
+    - particle{p=crit;a=2;hs=0;vs=0;s=0} @origin
+
+TrainingKiemKhiTramHit:
+  Skills:
+    - damage{a=4}

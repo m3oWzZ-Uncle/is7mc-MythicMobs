@@ -1,0 +1,187 @@
+Ray_of_Vitalis:
+  mythicmobs-skill-id: Assistant_SKILL_1
+  modifiers:
+  - healpercent
+  - duration
+  - level
+
+Circle_of_Might:
+  mythicmobs-skill-id: Assistant_SKILL_2
+  modifiers:
+  - duration
+  - level
+
+Sacred_Ward:
+  mythicmobs-skill-id: Assistant_SKILL_3_MMOCORE
+  modifiers:
+  - duration
+  - level
+  
+Holy_Cry:
+  mythicmobs-skill-id: Assistant_SKILL_Pass
+  modifiers: []
+ 
+ 
+
+Curse:
+  mythicmobs-skill-id: CursedAcolyte_SKILL_1
+  modifiers:
+  - healpercent
+  - duration
+  - level
+
+Dispel:
+  mythicmobs-skill-id: CursedAcolyte_SKILL_2
+  modifiers:
+  - duration
+  - level
+  - damage
+
+Anti-Heal:
+  mythicmobs-skill-id: CursedAcolyte_SKILL_3_MMOCORE
+  modifiers:
+  - duration
+  - level
+  - damage
+  
+CursedAcolyte:
+  mythicmobs-skill-id: CursedAcolyte_SKILL_PASS
+  modifiers: []
+
+
+Arctic_Knight_Aura:
+  mythicmobs-skill-id: ArcticKnightAura
+  modifiers:
+  - duration
+
+Arctic_Knight_Attack:
+  mythicmobs-skill-id: ArcticKnight_SKILL_1
+  modifiers:
+  - damage
+  - duration
+
+Arctic_Knight_Ice_thrower:
+  mythicmobs-skill-id: ARCTIC_KNIGHT_Icethrower
+  modifiers:
+  - damage
+  - duration
+
+Arctic_Knight_Break_Down:
+  mythicmobs-skill-id: ARCTIC_KNIGHT_BreakDown
+  modifiers:
+  - damage
+  - duration
+  - radius
+
+Arctic_Knight_Ice_Rain:
+  mythicmobs-skill-id: ARCTIC_KNIGHT_ICE_RAIN
+  modifiers:
+  - damage
+  - duration
+  
+
+
+Spirit-Vfx:
+  mythicmobs-skill-id: SoulMage_Spirit_VFX
+  modifiers: []
+
+Sp-Surge:
+  mythicmobs-skill-id: SoulMage_Spirit_Surge
+  modifiers:
+  - damage
+
+SM_Summon:
+  mythicmobs-skill-id: SoulMage_Summoner
+  modifiers:
+  - damage
+
+
+Recluse:
+  mythicmobs-skill-id: DW_SKILL_ONE
+  modifiers:
+  - duration
+
+Blackrays:
+  mythicmobs-skill-id: DW_SKILL_TWO
+  modifiers:
+  - damage
+  
+Breakthrough:
+  mythicmobs-skill-id: DW_SKILL_THREE
+  modifiers:
+  - damage
+  
+DarkPass:
+  mythicmobs-skill-id: DW_SKILL_PASS
+  modifiers: []
+
+
+
+FireballBurns:
+  mythicmobs-skill-id: FW_SKILL_ONE
+  modifiers:
+  - damage
+
+Sprayfire:
+  mythicmobs-skill-id: FW_SKILL_TWO
+  modifiers:
+  - damage
+
+firemeteor:
+  mythicmobs-skill-id: FW_SKILL_THREE
+  modifiers:
+  - damage
+  
+fireAura:
+  mythicmobs-skill-id: FW_SKILL_PASS
+  modifiers: []
+
+
+
+Geppo:
+  mythicmobs-skill-id: BUNNY_BUFF_JUMP
+  modifiers: []
+  
+Bunny_Bomb:
+  mythicmobs-skill-id: BUNNY_BOMBB
+  modifiers:
+  - damage
+  
+Bunny_Attack:
+  mythicmobs-skill-id: BUNNY_ATTACK
+  modifiers:
+  - damage
+  - damage-tick
+  - velocity
+  - velocity-y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

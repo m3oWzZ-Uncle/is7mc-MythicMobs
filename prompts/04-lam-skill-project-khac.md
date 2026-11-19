@@ -1,0 +1,1 @@
+Sử dụng skill `$mythicmobs-expert` và kho MythicMobs-AI-Training tại ĐƯỜNG_DẪN_TUYỆT_ĐỐI. Đọc các ví dụ liên quan trước khi sửa YAML trong project hiện tại. Hãy giải thích hành vi gameplay định triển khai, bảo toàn đúng yêu cầu, sau đó tạo thay đổi có diff và kiểm thử trong phạm vi môi trường cho phép. Báo cáo rõ điều gì đã kiểm chứng trong server và điều gì chưa.

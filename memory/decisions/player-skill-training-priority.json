@@ -1,0 +1,22 @@
+{
+  "id": "player-skill-training-priority",
+  "category": "decisions",
+  "title": "Ưu tiên Player Skills khi chọn chủ đề huấn luyện",
+  "topic": "training-focus",
+  "summary": "Định hướng 75% Player Skills, 15% Boss Skills và 10% Mob Skills. Ưu tiên tình huống, YAML và benchmark có caster là người chơi.",
+  "context": "Khi tự chọn chủ đề nghiên cứu, phỏng vấn, học từ YAML hoặc bài đánh giá trong MythicMobs-AI-Training.",
+  "exceptions": "Tỷ lệ là định hướng. Hỗ trợ đầy đủ boss và mob khi người dùng yêu cầu. Xác định caster từ caller trong từng cấu hình.",
+  "scope": "global",
+  "claim": "PREFERENCE",
+  "confidence": "CONFIRMED",
+  "recorded": "2026-11-14",
+  "answer": "prioritize-player-skills",
+  "tags": ["player-skill", "caster", "boss", "mob", "benchmark", "adaptive-learning"],
+  "sources": [
+    {
+      "type": "user",
+      "ref": "AGENTS.md",
+      "note": "Yêu cầu trực tiếp «UPDATE MYTHICMOBS EXPERT — PLAYER SKILL FIRST», gồm tỷ lệ và phạm vi áp dụng."
+    }
+  ]
+}

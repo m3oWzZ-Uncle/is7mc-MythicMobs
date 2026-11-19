@@ -1,0 +1,25 @@
+CR_CanonIRON:
+  Conditions:
+  - onground true
+  Skills:
+  - potion{type=SLOW;duration=20;level=4;hasParticles=false} @self
+  - delay 15
+  - effect:particles{p=sonic_boom;amount=2;y=1.8} @self
+  - delay 7
+  - leap{velocity=120} @forward{f=-4;lockpitch=true}
+  - projectile{bulletType=MOB;mob=CANONIRON_MOBS;oT=CR_CanonIRON_Tick;oH=CR_CanonIRON_hit;oE=CR_CanonIRON_End;=1;v=30;mr=60;sE=true;vO=4;g=2} @targetlocation
+CR_CanonIRON_Tick:
+  Skills:
+  - sound{s=entity.shulker.shoot;v=1;sc=hostile;p=1.3}
+#  - sound{s=entity.bee.loop;v=1;sc=hostile;p=1.3}
+  - effect:particles{p=block_crack;material=Ironblock;amount=2;hs=0.3;vs=0.3} @origin
+  - effect:particles{p=reddust;a=20;color=#ff9e4e;s=1;hs=0.3;vs=0.3} @origin
+CR_CanonIRON_hit:
+  Skills:
+  - damage{a="<modifier.damage>";i=true}
+  - potion{type=POISON;duration=140;level=4;hasParticles=false}
+
+CR_CanonIRON_End:
+  Skills:
+  - blockwave{duration=40;material=GRASS_BLOCK;radius=4;radiusY=10;velocity=3}
+  - damage{a="<modifier.damage>";i=true} @EIR{r=5}

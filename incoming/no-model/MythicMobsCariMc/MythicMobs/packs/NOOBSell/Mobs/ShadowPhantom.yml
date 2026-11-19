@@ -1,0 +1,32 @@
+AnhPhanTHanMobs:
+  Type: WOLF
+  Health: 200
+  Damage: 18
+  Display: "<#76FFF9>Phân Thân &8[<#FF2F2F><caster.hp{round=0}> <&heart>&8]"
+  Faction: Undead
+  Disguise: KiraMeoMeoz
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    PreventItemPickup: true
+    MovementSpeed: 0.3
+  DamageModifiers:
+  - FALL 0
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  - 2 movetowardstarget
+  - 3 randomstroll
+  - 4 gotoowner
+  AITargetSelectors:
+  - 0 clear
+  - 1 ownertarget
+  - 2 ownerattacker
+  Skills:
+ # - disguise{d="Player KiraMeoMeoz"} @self ~onSpawn
+  - setname{n=<caster.name>;delay=2} @self ~onDamaged
+  - setname{n=<caster.name>;delay=2} @self ~onSpawn
+  - particleline{particle=reddust;color=#232323;amount=1;fromOrigin=true} @Owner ~onTimer:10
+
+  - skill{s=Shadow-Spawn;delay=1} @self ~onSpawn 
+  - skill{s=Shadow-Death;delay=600} @self ~onSpawn

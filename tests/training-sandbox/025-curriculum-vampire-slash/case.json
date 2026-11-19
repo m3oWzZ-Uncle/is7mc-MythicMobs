@@ -1,0 +1,19 @@
+{
+  "id": "025-curriculum-vampire-slash",
+  "kind": "practice",
+  "program": "40-challenge",
+  "challenge": 7,
+  "level": "rpg",
+  "mythicmobs_target": "5.14.0 Premium",
+  "dependencies": [],
+  "required_scenarios": [
+    "single-target-and-cap",
+    "mitigation",
+    "miss-and-cover",
+    "immune-or-cancelled",
+    "lethal-hit",
+    "near-full-health",
+    "multiplayer",
+    "particle-arc-and-heal-cue"
+  ]
+}

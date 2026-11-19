@@ -1,0 +1,52 @@
+name: Ray Of Vitalis
+lore:
+- 'Sinh Quang'
+- '“Một tia sáng thuần khiết lao đi, chữa lành'
+- 'vết thương và hồi sinh hy vọng.”'
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}s'
+- '&3 <#78FFEF>◆ &7Eff-Level &7▸ <#FF8E6A>{level}'
+- '&3 <#78FFEF>◆ &7Heal-Percent &7▸ <#FF8E6A>{healpercent}%'
+- '&3 <#78FFEF>◆ &7Time-buff &7▸ <#FF8E6A>{duration}s'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: BOOK
+duration:
+  base: 5
+  per-level: 0.2
+  min: 0
+  max: 30
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+elv:
+  base: 1
+  per-level: 0.1
+  min: 0
+  max: 30
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 25
+  per-level: -0.1
+  min: 0
+  max: 30
+healpercent:
+  base: 10
+  per-level: 0.2
+  min: 0
+  max: 30

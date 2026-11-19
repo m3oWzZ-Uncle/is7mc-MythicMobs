@@ -1,0 +1,358 @@
+THANHQUANGTRUNGPHAT:
+  Skills:
+  - summon{type=THANHQUANGTRUNGPHAT;amount=1} @TargetLocation
+  - delay 5
+  - projectile{oT=THANHQUANGTRUNGPHAT_PJ-Tick;oH=THANHQUANGTRUNGPHAT_PJ-Hit;oE=THANHQUANGTRUNGPHAT_PJ-END;v=30;i=1;hR=1;vR=1;hnp=true;type=METEOR;mr=10} @TargetLocation
+THANHQUANGTRUNGPHAT_PJ-Tick:
+  Skills:
+THANHQUANGTRUNGPHAT_PJ-Hit:
+  Skills:
+THANHQUANGTRUNGPHAT_PJ-END:
+  Skills:
+  - skill{s=THANHQUANGTRUNGPHAT_DMG} @origin
+  - skill{s=THANHQUANGTRUNGPHAT_DMG_DAY} @origin
+
+THANHQUANGTRUNGPHAT_DMG:
+  Conditions:
+  - day false
+  Skills:
+  - damage{a="<modifier.damage>";pkb=false;hnp=true;hp=true;repeat=20;repeatInterval=4} @ENO{r=6}
+  - stun{d=30} @ENO{r=6}
+  - ignite{ticks=100} @ENO{r=6}
+
+THANHQUANGTRUNGPHAT_DMG_DAY:
+  Conditions:
+  - day true
+  Skills:
+  - damage{a="<modifier.damage> * 1.15";pkb=false;hnp=true;hp=true;repeat=20;repeatInterval=4} @ENO{r=6}
+  - stun{d=30} @ENO{r=6}
+  - ignite{ticks=100} @ENO{r=6}
+
+THANHQUANGTRUNGPHAT_TICK:
+  Skills:
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=10} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=9.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=9} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=8.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=8} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=7.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=7} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=6.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=6} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=5.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=5} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=4.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=4} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=3.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=3} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=2.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=2} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=1.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=1} @self
+  - delay 1
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=0.1} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=0.5} @self
+  - delay 3
+  - skill{s=THANHQUANGTRUNGPHAT_TICK_TW;repeat=12;repeatInterval=4} @self
+THANHQUANGTRUNGPHAT_TICK_TW:
+  Skills:
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=10} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=9.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=9} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=8.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=8} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=7.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=7} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=6.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=6} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=5.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=4.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=4} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=3.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=3} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=2.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=2} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=1.5} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=1} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=0.1} @self
+  - effect:particlering{particle=end_rod;radius=6;points=64;amount=1;hS=0;vS=0.1;y=0.5} @self
+
+
+
+
+########################################################################################################################################
+
+
+
+
+HAOQUANGHOIPHUC:
+  Conditions:
+  - hasaurastacks{auraName=HAOQUANGHOIPHUC_aura} castinstead HAOQUANGHOIPHUC_SKILL
+  Skills:
+  - Aura{auraName=HAOQUANGHOIPHUC_aura;interval=1;duration=5} @self
+  
+HAOQUANGHOIPHUC_T:
+  Skills:
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-1}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=-0.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=0.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=1.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.6;y=0.1;sideOffset=2.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.4;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.4;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.2;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4.2;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=4;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.8;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.8;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.6;y=0.1;sideOffset=-3.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.6;y=0.1;sideOffset=3.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.4;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.4;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.2;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3.2;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=3;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.8;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.8;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.6;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.6;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.4;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.4;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.2;y=0.1;sideOffset=-4.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2.2;y=0.1;sideOffset=4.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=2;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.8;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.8;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.6;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.6;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.4;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.4;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.2;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1.2;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=1;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.8;y=0.1;sideOffset=-5}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.8;y=0.1;sideOffset=5}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.6;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.6;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.4;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.4;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.2;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0.2;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=0;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.2;y=0.1;sideOffset=-5.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.2;y=0.1;sideOffset=5.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.4;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.4;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.6;y=0.1;sideOffset=-5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.6;y=0.1;sideOffset=5.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.8;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-0.8;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1;y=0.1;sideOffset=-5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1;y=0.1;sideOffset=5.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.2;y=0.1;sideOffset=-5}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.2;y=0.1;sideOffset=5}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.4;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.4;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.6;y=0.1;sideOffset=-4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.6;y=0.1;sideOffset=4.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.8;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-1.8;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2;y=0.1;sideOffset=-4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2;y=0.1;sideOffset=4.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.2;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.2;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.4;y=0.1;sideOffset=-4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.4;y=0.1;sideOffset=4.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.6;y=0.1;sideOffset=-4.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.6;y=0.1;sideOffset=4.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.8;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-2.8;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3;y=0.1;sideOffset=-4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3;y=0.1;sideOffset=4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.2;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.2;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.4;y=0.1;sideOffset=-3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.4;y=0.1;sideOffset=3.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.6;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.6;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.8;y=0.1;sideOffset=-3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-3.8;y=0.1;sideOffset=3.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4;y=0.1;sideOffset=-3.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4;y=0.1;sideOffset=3.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.2;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.2;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.4;y=0.1;sideOffset=-3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.4;y=0.1;sideOffset=3.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.6;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.6;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.8;y=0.1;sideOffset=-3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-4.8;y=0.1;sideOffset=3}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-1}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=-0.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=0.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=1.8}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.2}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.4}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.6}
+  - effect:particles{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;amount=1;size=0.75;hS=0;vS=0;speed=0;forwardOffset=-5;y=0.1;sideOffset=2.8}
+
+HAOQUANGHOIPHUC_SKILL:
+  Cooldown: 9
+  Skills:
+  - skill{s=HAOQUANGHOIPHUC_D;repeat="<modifier.duration>";repeatinterval=20} @PIR{r=6}
+  - potion{type=DAMAGE_RESISTANCE;duration="<modifier.duration> * 20";level=1;hasParticles=false} @self
+  - potion{type=absorption;duration="<modifier.duration> * 20";level=1;hasParticles=false} @self
+  - potion{type=regeneration;duration="<modifier.duration> * 20";level=1;hasParticles=false} @self
+
+  - skill{s=HAOQUANGHOIPHUC_T;repeat="<modifier.duration> * 4";repeati=5} @Forward{f=0;y=0;sideOffset=0;lockpitch=true}
+  
+
+HAOQUANGHOIPHUC_D:
+  TargetConditions:
+  - mmoCanTarget{interaction=SUPPORT_ACTION} true
+  Skills:
+  - potion{type=DAMAGE_RESISTANCE;duration=40;level=1;hasParticles=false}
+  - potion{type=absorption;duration=40;level=1;hasParticles=false}
+  - potion{type=regeneration;duration=40;level=1;hasParticles=false}
+
+
+############################################################################
+THANPHAN:
+  TargetConditions:
+  - targetwithin{d=<10} true
+  Skills:
+  - skill{s=THANPHAN_DEFAULT}
+  - skill{s=THANPHAN_DEBUFF}
+  - skill{s=THANPHAN_DEBUFF_TW}
+  - skill{s=THANPHAN_DEBUFF_TW_A}
+
+THANPHAN_DEFAULT:
+  TargetConditions:
+  - haspotioneffect{t=SLOW} false
+  - isburning false
+  Skills:
+  - damage{a="<modifier.damage>";pkb=false;hnp=true;hp=true} @target
+  - command{c="ml tempstat add %player_name% DODGE_RATING -50 100 default"} @target
+  - potion{type=GLOWING;duration=100;level=1;hasParticles=false} @target
+
+THANPHAN_DEBUFF:
+  TargetConditions:
+  - haspotioneffect{t=SLOW} true
+  - isburning false
+  Skills:
+  - damage{a="<modifier.damage> * 2";pkb=false;hnp=true;hp=true} @target
+
+THANPHAN_DEBUFF_TW:
+  TargetConditions:
+  - haspotioneffect{t=SLOW} false
+  - isburning true
+  Skills:
+  - damage{a="<modifier.damage> * 2";pkb=false;hnp=true;hp=true} @target
+
+THANPHAN_DEBUFF_TW_A:
+  TargetConditions:
+  - haspotioneffect{t=SLOW} true
+  - isburning true
+  Skills:
+  - damage{a="<modifier.damage> * 2";pkb=false;hnp=true;hp=true} @target
+
+########################################################################################################################
+  
+THIENPHAT:
+  Skills:
+  - projectile{oT=THIENPHAT_PJ-Tick;oH=THIENPHAT_PJ-Hit;oE=THIENPHAT_PJ-END;v=30;hR=1;vR=1;hnp=false;hp=false;mr=50;syo=20;sfo=-10to10} @TargetLocation
+  - delay 20
+  - projectile{oT=THIENPHAT_PJ-Tick;oH=THIENPHAT_PJ-Hit;oE=THIENPHAT_PJ-END;v=30;hR=1;vR=1;hnp=false;hp=false;mr=50;syo=20;sfo=-10to10} @TargetLocation
+  - delay 20
+  - projectile{oT=THIENPHAT_PJ-Tick;oH=THIENPHAT_PJ-Hit;oE=THIENPHAT_PJ-END;v=30;hR=1;vR=1;hnp=false;hp=false;mr=50;syo=20;sfo=-10to10} @TargetLocation
+  - delay 20
+  - skill{s=THIENPHAT_BONUS} @self
+  - potion{type=DAMAGE_RESISTANCE;duration=120;level=2;hasParticles=false} @self
+  - effect:particlering{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;radius=0.5;points=16;amount=1;hS=0;vS=0;repeat=20;repeatInterval=4;y=1.2} @self
+THIENPHAT_BONUS:
+  Conditions:
+  - playersinradius{a=>3;r=10}
+  Skills:
+  - projectile{oT=THIENPHAT_PJ-Tick;oH=THIENPHAT_PJ-Hit;oE=THIENPHAT_PJ-END;v=30;hR=1;vR=1;hnp=false;hp=false;mr=50;syo=20;sfo=2} @TargetLocation
+THIENPHAT_PJ-Tick:
+  Skills:
+  - effect:particles{particle=end_rod;amount=3;hS=0.2;vS=0.2;speed=0} @origin
+THIENPHAT_PJ-Hit:
+  Skills:
+THIENPHAT_PJ-END:
+  Skills:
+  - skill{s=THIENPHAT_DMG} @origin
+
+THIENPHAT_DMG:
+  Skills:
+  - effect:particlering{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;radius=1;points=16;amount=1;hS=0;vS=0} @Origin
+  - delay 1
+  - effect:particlering{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;radius=2;points=32;amount=1;hS=0;vS=0} @Origin
+  - damage{a="<modifier.damage>";pkb=false;hnp=true;hp=true} @ENO{r=5}
+  - delay 1
+  - effect:particlering{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;radius=3;points=32;amount=1;hS=0;vS=0} @Origin
+  - delay 1
+  - fakelightning @Origin
+  - effect:particlering{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;radius=4;points=64;amount=1;hS=0;vS=0} @Origin
+  - delay 1
+  - effect:particlering{particle=dust_color_transition;color=#ffff00;color2=#ffffb2;radius=5;points=64;amount=1;hS=0;vS=0} @Origin

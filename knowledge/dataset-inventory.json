@@ -1,0 +1,5713 @@
+{
+  "files": [
+    {
+      "path": "incoming/MobsBoss/[Dragon world] Armor Boss.zip",
+      "extension": ".zip",
+      "sha256": "1b95e042ffc3d6520568eaaac5cb398143407544a1285b1f2d40da2adfd5a752",
+      "size": 231754
+    },
+    {
+      "path": "incoming/MobsBoss/[Dragon world] Nature Elemental Mobs.zip",
+      "extension": ".zip",
+      "sha256": "54ca19560407adae7fdaa4313a79b6aafd4d7f97ca3954f46186a29347017ba9",
+      "size": 675181
+    },
+    {
+      "path": "incoming/MobsBoss/[От Малиныча]Necromancer.zip",
+      "extension": ".zip",
+      "sha256": "9a5e429e28b2c57c9b815b862b58c87039ff6275782e83343a611be22e48a428",
+      "size": 2907629
+    },
+    {
+      "path": "incoming/MobsBoss/Baphomets_Ergeox_the_Old_Foundry_Mech.zip",
+      "extension": ".zip",
+      "sha256": "37112eac454a6f723333543be0f3bc677f6eba1ce85f43e91cbdc23d963e2938",
+      "size": 294696
+    },
+    {
+      "path": "incoming/MobsBoss/BigPig.zip",
+      "extension": ".zip",
+      "sha256": "953c811c3e709ec7fb8a80c2b40624e5e161100898eac84ffef7b92e5c92853d",
+      "size": 1940105
+    },
+    {
+      "path": "incoming/MobsBoss/bl_dark_knight.zip",
+      "extension": ".zip",
+      "sha256": "5d3ed6b0cad622bebd2e89a37ed3c073ee94dda89e5dec24687be832fb5f906a",
+      "size": 275242
+    },
+    {
+      "path": "incoming/MobsBoss/Demon-reaper-1.0.0.zip",
+      "extension": ".zip",
+      "sha256": "a134f4249bc87482449fdd9499f64d46d8f7d5a7854cdf0128ee5db1ab6ab4e4",
+      "size": 230374
+    },
+    {
+      "path": "incoming/MobsBoss/Elementals - RPG Mobs.zip",
+      "extension": ".zip",
+      "sha256": "bc7d10800026452b57954d53ab7c18042e33da31bbf475f56464cc9f05152d4e",
+      "size": 192591
+    },
+    {
+      "path": "incoming/MobsBoss/em_bandits_v1.1.zip",
+      "extension": ".zip",
+      "sha256": "4815223f5697ba48a134598a7436981d61eb8540dcd6e1c2053a7d4e1d438f36",
+      "size": 4810909
+    },
+    {
+      "path": "incoming/MobsBoss/Ent Keeper Boss.zip",
+      "extension": ".zip",
+      "sha256": "2fc1c2787267c4078d5f8578a16c2361add6c725373aac79563adeed7dba3c26",
+      "size": 64885
+    },
+    {
+      "path": "incoming/MobsBoss/From_The_Shadows_Enemies_and_Boss.zip",
+      "extension": ".zip",
+      "sha256": "50890dcdeffb416930dd918fc3f7c90084fb10f931328e9e826c6697c5b47c02",
+      "size": 1366379
+    },
+    {
+      "path": "incoming/MobsBoss/Ghost Bride.zip",
+      "extension": ".zip",
+      "sha256": "50f220c4e9aff0629397d79d44041dea8d353ae63764c6099a7e5d926d8402fd",
+      "size": 776401
+    },
+    {
+      "path": "incoming/MobsBoss/halloween.zip",
+      "extension": ".zip",
+      "sha256": "4d4d87c725733fd4d9d7df0f892dade7c14513597203ffdf0a6d57078455b5e2",
+      "size": 423909
+    },
+    {
+      "path": "incoming/MobsBoss/HanaPack.zip",
+      "extension": ".zip",
+      "sha256": "14faac76ba611c3e38cf8f3113fb0055e00efe2412548128366e6911e043dda9",
+      "size": 161495
+    },
+    {
+      "path": "incoming/MobsBoss/hv_mirabelle.zip",
+      "extension": ".zip",
+      "sha256": "bb06c2d1f809227177df7468e773969fa564040d99a125131dfade122547bfd3",
+      "size": 524880
+    },
+    {
+      "path": "incoming/MobsBoss/King-Oondasta-Trex-Boss.zip",
+      "extension": ".zip",
+      "sha256": "61eb25138f25a79d5925f72030e999ffc2206220322f268aa05e6afd1bd29d9d",
+      "size": 2374798
+    },
+    {
+      "path": "incoming/MobsBoss/LITTLEROOM_AZRIEL.zip",
+      "extension": ".zip",
+      "sha256": "b0bbb68606ba1c28127cb4e2b796caf66f46fa9633ac414efeb018f5b6930639",
+      "size": 1581580
+    },
+    {
+      "path": "incoming/MobsBoss/LITTLEROOM_borealdruid_v1_0.zip",
+      "extension": ".zip",
+      "sha256": "516708fe5fb769201d82a9956d2af2d51ddaa0b0ddf527e436245ef06d047b00",
+      "size": 1294787
+    },
+    {
+      "path": "incoming/MobsBoss/LITTLEROOM_Lillith_extras.zip",
+      "extension": ".zip",
+      "sha256": "05e292bf64ce514b966b9b0dc09df3af9286ef294ccd3ea5dbc1a1e3b3951192",
+      "size": 1589033
+    },
+    {
+      "path": "incoming/MobsBoss/LITTLEROOM_skog_v1.zip",
+      "extension": ".zip",
+      "sha256": "597d7283814a3cb107b31754318d465fb843a66a7493faed652a1e20c4acd6cf",
+      "size": 2426418
+    },
+    {
+      "path": "incoming/MobsBoss/LKhyadonv1.2.2-eoyyxh.zip",
+      "extension": ".zip",
+      "sha256": "4946f8d3bfb3a90a6774e90529be82894e90b7889fbe4a3f214ff428ebeac430",
+      "size": 2712885
+    },
+    {
+      "path": "incoming/MobsBoss/PHEONIX.zip",
+      "extension": ".zip",
+      "sha256": "0fd567ca8bf805598d4cfca8fb333821b1749ab4c863c8b0738c8192457ed414",
+      "size": 1089775
+    },
+    {
+      "path": "incoming/MobsBoss/rodent_mobs-amonde (1).zip",
+      "extension": ".zip",
+      "sha256": "58a98b51a533b919365a64b7fbcbbccfa421f34ff5b3a7a6f736b5f0ad2af303",
+      "size": 2862314
+    },
+    {
+      "path": "incoming/MobsBoss/Tenebris Boss.zip",
+      "extension": ".zip",
+      "sha256": "4d5306f5409b651bd1e24ca8707d3a69d94cc6f549f9af32c355e1f1bac4c74e",
+      "size": 481873
+    },
+    {
+      "path": "incoming/MobsBoss/The Crustarax.zip",
+      "extension": ".zip",
+      "sha256": "b35dad9d6cc1910d1644880632567199c0d8cae26a14ed7d81060c010c629926",
+      "size": 870554
+    },
+    {
+      "path": "incoming/MobsBoss/The Fallen Heroes v4.zip",
+      "extension": ".zip",
+      "sha256": "debb655977fae8cb860a407b2d24633c42432e8b90378ab755df51a366cd271a",
+      "size": 4179542
+    },
+    {
+      "path": "incoming/MobsBoss/The_Lovers_Samurai_Bossfight.zip",
+      "extension": ".zip",
+      "sha256": "8f03d9096405d4bfe2ea279134e903410cab00bf36489cbcf3c025549e763954",
+      "size": 1083350
+    },
+    {
+      "path": "incoming/MobsBoss/Unrivalled_Vol.1-_Wu-tf1cfm.zip",
+      "extension": ".zip",
+      "sha256": "c37a59acc2016c2b7613f5052e592ae09299e1e65279d0ed0c7e572be0664f67",
+      "size": 1740245
+    },
+    {
+      "path": "incoming/MobsBoss/VoidSoulsMobsPackVermins.zip",
+      "extension": ".zip",
+      "sha256": "62b0ab55f898a7a34ee525beb6b05e2a94aecf3bdcd4be649d360f46e14d6478",
+      "size": 363932
+    },
+    {
+      "path": "incoming/MobsBoss/Warden Expansion Pack 1.1.0.zip",
+      "extension": ".zip",
+      "sha256": "ad1a00f927a0d7614933c67002fd86233e0e2235adbade3992374a76edfe73c8",
+      "size": 148290
+    },
+    {
+      "path": "incoming/MobsBoss/yukio.zip",
+      "extension": ".zip",
+      "sha256": "2865df28bd5ea44e87cafe162e7198666a7ccfbdd0df86858384c7c60d2a19c8",
+      "size": 1818025
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/BankaiSnows/Mobs/BankaiSnowMobs.yml",
+      "extension": ".yml",
+      "sha256": "389b9fcc0e4e01933063efbc118daf4de2f3859645736e58a3f10afb41788ea6",
+      "size": 1877,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/BankaiSnows/Skills/BankaiSnowSkills.yml",
+      "extension": ".yml",
+      "sha256": "e0572d7f822c3ec3fcd7b98a434245cc8081b142a99f3342f789bb774356d447",
+      "size": 11768,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/BankaiSnows/Skills/LightNotBeam.yml",
+      "extension": ".yml",
+      "sha256": "40af92e65cef2831ae9945bc04378809ccad4cd072ec341ca6dc56bf5641bb73",
+      "size": 2589,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MMOCore/classes/ArcticKnight.yml",
+      "extension": ".yml",
+      "sha256": "fcae5a8315390f04194aabb337729782739f0c39802efd4362dae14d8e054309",
+      "size": 2363,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MMOCore/Skills/arctic-knight-attack.yml",
+      "extension": ".yml",
+      "sha256": "b329dd598dd5845281cd22b0068e2c55898f5eee3bf2467b6822ac26a0ada018",
+      "size": 752,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MMOCore/Skills/arctic-knight-aura.yml",
+      "extension": ".yml",
+      "sha256": "7bb7556e6521fea381b71589953239c31b145997f258ab770ffffc9375da3cf3",
+      "size": 562,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MMOCore/Skills/arctic-knight-break-down.yml",
+      "extension": ".yml",
+      "sha256": "303d27ae2c7c819752583bc53868198e371fe6030953f6b3af06e468c59f4317",
+      "size": 774,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MMOCore/Skills/arctic-knight-clone.yml",
+      "extension": ".yml",
+      "sha256": "056afa6597c00a56a3e1b96ecb399e3c88b444bc4e2ca7beb3e5acf211212924",
+      "size": 749,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MMOCore/Skills/arctic-knight-ice-rain.yml",
+      "extension": ".yml",
+      "sha256": "dff9921db99937a112bef18c3c0134d9300632ed52759191814242df7895e363",
+      "size": 725,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MMOCore/Skills/arctic-knight-ice-thrower.yml",
+      "extension": ".yml",
+      "sha256": "109ff96acabc5c149798b3190d41907436376c7515385929488a99a1765ce22a",
+      "size": 762,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/Mythiclib/skill/noob.yml",
+      "extension": ".yml",
+      "sha256": "9a133b9843656a53ef8415ab46d4ebf7d180ab26b4fe6964d74a16635a5a6ebd",
+      "size": 1759,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MythicMobs/Mobs/ArcticKnightMobs.yml",
+      "extension": ".yml",
+      "sha256": "55e6cb1ba275ef768ad38d0868226c37a962349895eec51427fe97dc2051a285",
+      "size": 1773,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MythicMobs/Skills/ArcticKnight.yml",
+      "extension": ".yml",
+      "sha256": "d8fa2a5cd54ada987dd07dfd24ab979d4610fb937abbc707b69ca763b185c4cc",
+      "size": 16097,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/Text.docx",
+      "extension": ".docx",
+      "sha256": "fbe5c4e1c011d5bd052304041b34264e0a1a300fd7ae76566e3a20181cec96f7",
+      "size": 7461
+    },
+    {
+      "path": "incoming/no-model/0-NOOB123okPackCreator/sunmoon.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "6df83e9a48682641759079382749d99d7a20d352ebbd51d0867f91af5fefd18c",
+      "size": 5546
+    },
+    {
+      "path": "incoming/no-model/DemonBlood/MMOCore/classes/DemonBlood.yml",
+      "extension": ".yml",
+      "sha256": "ca470f2876719130c206e3570b4b1501b1b3979de1964c5dcf98f833507a555c",
+      "size": 1424,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/DemonBlood/Mythiclib/skill/skillsss.yml",
+      "extension": ".yml",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/DemonBlood/MythicMobs/Mobs/Mobsss.yml",
+      "extension": ".yml",
+      "sha256": "4c0da4518211aa316ec06575468c407bf1f08121d8936503c4b55bf287446c44",
+      "size": 177,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/DemonBlood/MythicMobs/Skills/skillsss.yml",
+      "extension": ".yml",
+      "sha256": "4c0da4518211aa316ec06575468c407bf1f08121d8936503c4b55bf287446c44",
+      "size": 177,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/DemonBlood/readme.txt",
+      "extension": ".txt",
+      "sha256": "5e123634bc0f8a613673f42ba5c547768edf2b194f26167f96ff9ea32973bf02",
+      "size": 226
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/Assistant/MMOCore/classes/Assistant.yml",
+      "extension": ".yml",
+      "sha256": "301edb4939ce10216c0fa4647a32932a065a885fb1974c6a7e60f7551357faec",
+      "size": 1602,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/Assistant/MMOCore/Skills/circle-of-might.yml",
+      "extension": ".yml",
+      "sha256": "33cf6223bf728cbce1ba67b4501178a16be0894fc4a4cfbf274941a719c6f540",
+      "size": 758,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/Assistant/MMOCore/Skills/holy-cry.yml",
+      "extension": ".yml",
+      "sha256": "ac7122213948ad7f4a46e138f0472e3fe9b00d48da3880170cdec0b48636f90c",
+      "size": 601,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/Assistant/MMOCore/Skills/ray-of-vitalis.yml",
+      "extension": ".yml",
+      "sha256": "7bc8ac6d8f053616a46c4a1faaeb3dcab2c094e0ba1b7b05704330adb955eaca",
+      "size": 883,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/Assistant/MMOCore/Skills/sacred-ward.yml",
+      "extension": ".yml",
+      "sha256": "655ed40c002ad3bfd6645fea3558c027054728fe219cf695dcf8bf1cdb5b95bf",
+      "size": 764,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/Assistant/Mythiclib/skill/AS_ML_SKILL.yml",
+      "extension": ".yml",
+      "sha256": "bbe1b25ccc53b59ea2a822fa74171ec41aed61da1dfb52bd0df4702ab7bcbf66",
+      "size": 390,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/Assistant/MythicMobs/Skills/AssistantSkill.yml",
+      "extension": ".yml",
+      "sha256": "cd00d3f0793b92bbf2d43356b06be49e363413df9bb98ba003c0b8629e2d2483",
+      "size": 30485,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/Assistant/readme.txt",
+      "extension": ".txt",
+      "sha256": "5e123634bc0f8a613673f42ba5c547768edf2b194f26167f96ff9ea32973bf02",
+      "size": 226
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/MMOCore/classes/CursedAcolyte.yml",
+      "extension": ".yml",
+      "sha256": "286e5d6e4c70a6e1dee94c99f092ce1b082768075b1df158baca130bde2fa082",
+      "size": 1592,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/MMOCore/Skills/anti-heal.yml",
+      "extension": ".yml",
+      "sha256": "1247e83508bb8e04618b01d3cbbea9d1772375d623f10cdd85400484408b79b1",
+      "size": 819,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/MMOCore/Skills/curse.yml",
+      "extension": ".yml",
+      "sha256": "1ba8630c7172a5411f3272b3c94cd1a97a9870116bfb274bac017e171b4ec5d7",
+      "size": 879,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/MMOCore/Skills/cursedacolyte.yml",
+      "extension": ".yml",
+      "sha256": "1938b8b20fab3dcd3d63831a7026737b27e514320d4e6d1a37c93b446375b6e0",
+      "size": 729,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/MMOCore/Skills/dispel.yml",
+      "extension": ".yml",
+      "sha256": "34a2b30098991ba7b57e583cf5f78823daf0d41b9278e08e089002abcd065449",
+      "size": 813,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/Mythiclib/skill/CA_ML_SKILL.yml",
+      "extension": ".yml",
+      "sha256": "028be20937ee4c54a1b5f620e9b193b705cd39080e188655b63f69f0ff34420a",
+      "size": 415,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/MythicMobs/Skills/CursedAcolyteSkill.yml",
+      "extension": ".yml",
+      "sha256": "d53c505c4cc18e5aca38663e51dbc5725e843292e4006a0acef42dad18ce2f0f",
+      "size": 28826,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/readme.txt",
+      "extension": ".txt",
+      "sha256": "5e123634bc0f8a613673f42ba5c547768edf2b194f26167f96ff9ea32973bf02",
+      "size": 226
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/classes/ArcticKnight.yml",
+      "extension": ".yml",
+      "sha256": "fe6673c3682c06d7f24c4bbd6aaccb4c113986361966b37de47cc1d02f3b3743",
+      "size": 2299,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-attack.yml",
+      "extension": ".yml",
+      "sha256": "ca155fd8ca416d551116f77cec3afbecd815bb574c413c1cb5597c517a5093a6",
+      "size": 792,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-aura.yml",
+      "extension": ".yml",
+      "sha256": "4cafe9bea9e7d3f3bf2702134f49e4f48a044bfb16d1c8d7ded135cd50fe73e0",
+      "size": 611,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-break-down.yml",
+      "extension": ".yml",
+      "sha256": "a6986040061a35116fb01b08240c331c682d41b06a70cdf947dfd7c9aa83da96",
+      "size": 896,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-clone.yml",
+      "extension": ".yml",
+      "sha256": "803244aac195b0ec6f70a5c12013f3a45668b95baf8479687e2fd59908c54860",
+      "size": 735,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-ice-rain.yml",
+      "extension": ".yml",
+      "sha256": "964c09486de4cb7f092d64ea7b0be56e2caafd2acf1c5913396e942a5bdbcd67",
+      "size": 766,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-ice-thrower.yml",
+      "extension": ".yml",
+      "sha256": "e3554d8b2ffc84d5346f8bdc3c05c8a460cf9b8764a6f818aa85fce8d0077011",
+      "size": 804,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/Mythiclib/skill/noob.yml",
+      "extension": ".yml",
+      "sha256": "5203493e550c0d9b24b3b19fed3555d201230d204ed20b5000342a2dadd35987",
+      "size": 532,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Mobs/ArcticKnightMobs.yml",
+      "extension": ".yml",
+      "sha256": "55e6cb1ba275ef768ad38d0868226c37a962349895eec51427fe97dc2051a285",
+      "size": 1773,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Skills/ArcticKnight.yml",
+      "extension": ".yml",
+      "sha256": "a4bd697c900430842d0e73190da5923bed20e86eac890f0cb5aad6144711ba26",
+      "size": 17136,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/IgnisArctic/readme.txt",
+      "extension": ".txt",
+      "sha256": "5e123634bc0f8a613673f42ba5c547768edf2b194f26167f96ff9ea32973bf02",
+      "size": 226
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/MMOCore/classes/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "7d5c10b3919922b3d65e1ccc09dabcf6aca289b60ca54077d6cf7c56426f9b37",
+      "size": 1737,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/MMOCore/Skills/sm-summon.yml",
+      "extension": ".yml",
+      "sha256": "491f3d663ae5ea13c87c2d7c34b26a0ef06ad7dca827c8ba8d42c9f408d68b8d",
+      "size": 520,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/MMOCore/Skills/sp-surge.yml",
+      "extension": ".yml",
+      "sha256": "494203644cd27a5c204e3496ad1854a177b4e14e97d8d065cb0ecf8400ed6b85",
+      "size": 531,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/MMOCore/Skills/spirit-vfx.yml",
+      "extension": ".yml",
+      "sha256": "b6477be1efb6fc625faaddb02b7c0f114f521ac8b8e9739919bb24f10d67d2eb",
+      "size": 429,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/Mythiclib/skill/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "0c901a946617cdafc61f12b021bc07ec0b094ce887bcd050177e0617a0df4dd1",
+      "size": 230,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/MythicMobs/Mobs/MobScore.yml",
+      "extension": ".yml",
+      "sha256": "fc0b19b8310dd42b5af9b7d312203d907ec20218c2809e142780a72f1663a2c4",
+      "size": 3010,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/MythicMobs/Mobs/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "b8166dcd27dae44da50d33295cc9778df22d173deda0fd4afcb7a204d4c87116",
+      "size": 3256,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/MythicMobs/Skills/MobsSkill.yml",
+      "extension": ".yml",
+      "sha256": "cd29d89a5a691a46095f0238e62f0672253276000f7b8dc2addcec06fc086351",
+      "size": 972,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/MythicMobs/Skills/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "19d18210237f13c416bc9d21db0b0b60467b5c3f313f1a4bbadf029dadd7d5f8",
+      "size": 9014,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/0_VipClass/SoulMage/readme.txt",
+      "extension": ".txt",
+      "sha256": "7fa8c7254de368dd57983fdb352df339bbf99b30b67f72888e89ea04e08b0495",
+      "size": 253
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/ArcticKnight.yml",
+      "extension": ".yml",
+      "sha256": "fe6673c3682c06d7f24c4bbd6aaccb4c113986361966b37de47cc1d02f3b3743",
+      "size": 2299,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/Assistant.yml",
+      "extension": ".yml",
+      "sha256": "301edb4939ce10216c0fa4647a32932a065a885fb1974c6a7e60f7551357faec",
+      "size": 1602,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/BunnyWarrior.yml",
+      "extension": ".yml",
+      "sha256": "a5bb0974c0659e36c9d84cbef8414d132d0a59879f542a36832eb81d590b068e",
+      "size": 1546,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/CursedAcolyte.yml",
+      "extension": ".yml",
+      "sha256": "286e5d6e4c70a6e1dee94c99f092ce1b082768075b1df158baca130bde2fa082",
+      "size": 1592,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/DarkWarrior.yml",
+      "extension": ".yml",
+      "sha256": "89c28939fa3fa0fe9191554a72f1c41aa3d394e795b382463be354d4fabdc528",
+      "size": 1592,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/FlameWarrior.yml",
+      "extension": ".yml",
+      "sha256": "641b6e34b39f72b5bc61c56bee305829585d6116ea705f2ae47e27e8503e728d",
+      "size": 1601,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "7d5c10b3919922b3d65e1ccc09dabcf6aca289b60ca54077d6cf7c56426f9b37",
+      "size": 1737,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/anti-heal.yml",
+      "extension": ".yml",
+      "sha256": "498e7e0eca1902ff5baa573c11f1ee134fada1c2f7f3dac925f5d4bb1806163f",
+      "size": 821,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-attack.yml",
+      "extension": ".yml",
+      "sha256": "ca155fd8ca416d551116f77cec3afbecd815bb574c413c1cb5597c517a5093a6",
+      "size": 792,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-aura.yml",
+      "extension": ".yml",
+      "sha256": "4cafe9bea9e7d3f3bf2702134f49e4f48a044bfb16d1c8d7ded135cd50fe73e0",
+      "size": 611,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-break-down.yml",
+      "extension": ".yml",
+      "sha256": "a6986040061a35116fb01b08240c331c682d41b06a70cdf947dfd7c9aa83da96",
+      "size": 896,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-clone.yml",
+      "extension": ".yml",
+      "sha256": "803244aac195b0ec6f70a5c12013f3a45668b95baf8479687e2fd59908c54860",
+      "size": 735,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-ice-rain.yml",
+      "extension": ".yml",
+      "sha256": "964c09486de4cb7f092d64ea7b0be56e2caafd2acf1c5913396e942a5bdbcd67",
+      "size": 766,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-ice-thrower.yml",
+      "extension": ".yml",
+      "sha256": "e3554d8b2ffc84d5346f8bdc3c05c8a460cf9b8764a6f818aa85fce8d0077011",
+      "size": 804,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/blackrays.yml",
+      "extension": ".yml",
+      "sha256": "4a7e80afe8226509423723593b43da1351037c28f17a93e656599c32b6cb062a",
+      "size": 654,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/breakthrough.yml",
+      "extension": ".yml",
+      "sha256": "5ae95784fbc9f4605ffc657892d7cdfb06f76da09b0c8f8505eb06b24122e898",
+      "size": 644,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/bunny-attack.yml",
+      "extension": ".yml",
+      "sha256": "040964b55e1c67fd24aad64d37bf0303bf1dca46f12ef44ba133ae4d42d8bd44",
+      "size": 814,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/bunny-bomb.yml",
+      "extension": ".yml",
+      "sha256": "47616beae6328af92ef3ada1ca01fa046a47b0895458301f29fb8fe04ae97ecf",
+      "size": 603,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/circle-of-might.yml",
+      "extension": ".yml",
+      "sha256": "9093ed1e40234087e1a03c9a6508da0cd88e330d3fee83d7588df12fd2b9a9a4",
+      "size": 760,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/curse.yml",
+      "extension": ".yml",
+      "sha256": "57a0b9fb04d60e75e3341e7b319a74f9cb3e2c277da062285d6eb04ff8ca21c7",
+      "size": 881,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/cursedacolyte.yml",
+      "extension": ".yml",
+      "sha256": "3f4b1c944f3c3a2506d79b37f46651ff64f18935a7cec47b8a5a595daa3e0d8e",
+      "size": 729,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/darkpass.yml",
+      "extension": ".yml",
+      "sha256": "33be9a19355ca38119a3e847e9bc61963f7448deb05af24dda724c30ca521960",
+      "size": 608,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/dispel.yml",
+      "extension": ".yml",
+      "sha256": "865e014181d0ffe39ddeefcc92b2915a67dbf61c77fd6fdc8ecfaff3129ac25a",
+      "size": 815,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/fireaura.yml",
+      "extension": ".yml",
+      "sha256": "40aa07e55daf943fe9ca6355301ebcc9d249d2c853ace5d979f4b2cf75d76a29",
+      "size": 461,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/fireballburns.yml",
+      "extension": ".yml",
+      "sha256": "68ef12ef89fdbfed57e139d5a483ba243f3e43c00398f38386f2b6621151ab4d",
+      "size": 697,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/firemeteor.yml",
+      "extension": ".yml",
+      "sha256": "5e6bc15fdc5d33e7bed18fcf2a399bb0a547cf241a34ffd4df8a60e46afb177f",
+      "size": 679,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/geppo.yml",
+      "extension": ".yml",
+      "sha256": "1ba5af8647952e6377790f447e9f941eb908c10ac85dcf74bb66c56d7b24cdc7",
+      "size": 503,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/holy-cry.yml",
+      "extension": ".yml",
+      "sha256": "fb7826fad4c551739f2bd1a2ed6ee0b0d440ba31b3ec052e4c2cffa4231ea023",
+      "size": 606,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/ray-of-vitalis.yml",
+      "extension": ".yml",
+      "sha256": "a2c41d40202300c31dc8b63a864994fcb7d6a23a6fb1f8bdb3b0734cb6001592",
+      "size": 885,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/recluse.yml",
+      "extension": ".yml",
+      "sha256": "ffe5b9c4896524c59258cc8e3a8217b4f2a4c7c985018b8fa872e2afa4aa4336",
+      "size": 632,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/sacred-ward.yml",
+      "extension": ".yml",
+      "sha256": "5b3c666ca68c82a9c1a58e21ea7e1dd94702e78af4c90e37c2cad9fad14b9229",
+      "size": 766,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/sm-summon.yml",
+      "extension": ".yml",
+      "sha256": "491f3d663ae5ea13c87c2d7c34b26a0ef06ad7dca827c8ba8d42c9f408d68b8d",
+      "size": 520,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/sp-surge.yml",
+      "extension": ".yml",
+      "sha256": "494203644cd27a5c204e3496ad1854a177b4e14e97d8d065cb0ecf8400ed6b85",
+      "size": 531,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/spirit-vfx.yml",
+      "extension": ".yml",
+      "sha256": "b6477be1efb6fc625faaddb02b7c0f114f521ac8b8e9739919bb24f10d67d2eb",
+      "size": 429,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/sprayfire.yml",
+      "extension": ".yml",
+      "sha256": "ad71fb9dc79370d6776af12dbfe83c5d2c0346ff09991503f0de705069772f2f",
+      "size": 610,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythiclibs/skill/ALL_ML_SKILL.yml",
+      "extension": ".yml",
+      "sha256": "b3c0c3cd9ebefadd75a2ed620ead957b1195acffecdef422fac04729ee1b31b1",
+      "size": 2607,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/ArcticKnightMobs.yml",
+      "extension": ".yml",
+      "sha256": "55e6cb1ba275ef768ad38d0868226c37a962349895eec51427fe97dc2051a285",
+      "size": 1773,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/BW_Mobsss.yml",
+      "extension": ".yml",
+      "sha256": "261107c4e10b656a8135fee17aea4e5004a5c8848496bf3e2af49b5b28dbb66f",
+      "size": 831,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/DW_Skill.yml",
+      "extension": ".yml",
+      "sha256": "5135925fdb0206f33d2b95159bafacefd6d4ba8c7ad0a80463b85c864f80e297",
+      "size": 590,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/MobScore.yml",
+      "extension": ".yml",
+      "sha256": "fc0b19b8310dd42b5af9b7d312203d907ec20218c2809e142780a72f1663a2c4",
+      "size": 3010,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "b8166dcd27dae44da50d33295cc9778df22d173deda0fd4afcb7a204d4c87116",
+      "size": 3256,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/ArcticKnight.yml",
+      "extension": ".yml",
+      "sha256": "a4bd697c900430842d0e73190da5923bed20e86eac890f0cb5aad6144711ba26",
+      "size": 17136,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/AssistantSkill.yml",
+      "extension": ".yml",
+      "sha256": "cba618b5523134c6d87df09aa3258a0e2fcbeae67c4d4366a8feddcd8cf1ba36",
+      "size": 30347,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/BW_skillsss.yml",
+      "extension": ".yml",
+      "sha256": "c6f61241a77cb928a1a64cdefc4b23d5f6e69df05791aff2a559fd3fd24e2613",
+      "size": 7900,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/CursedAcolyteSkill.yml",
+      "extension": ".yml",
+      "sha256": "67c9d699d158f7cf7a2b95b620324eaf6826ebb3bfca25e0173ababbc7d384d2",
+      "size": 28838,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/DW_Skill.yml",
+      "extension": ".yml",
+      "sha256": "89654c9ab1de1a04a194e478de29089123b2d895d913f54fce5d70d0fb2ef509",
+      "size": 4405,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/FW_SKILL.yml",
+      "extension": ".yml",
+      "sha256": "5b665d68d5d82b2826df6d9a8c4ec9d75962a6f532df73686bfc455cb2049df6",
+      "size": 3283,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/MobsSkill.yml",
+      "extension": ".yml",
+      "sha256": "cd29d89a5a691a46095f0238e62f0672253276000f7b8dc2addcec06fc086351",
+      "size": 972,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "19d18210237f13c416bc9d21db0b0b60467b5c3f313f1a4bbadf029dadd7d5f8",
+      "size": 9014,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/DarkWarrior/MMOCore/classes/DarkWarrior.yml",
+      "extension": ".yml",
+      "sha256": "89c28939fa3fa0fe9191554a72f1c41aa3d394e795b382463be354d4fabdc528",
+      "size": 1592,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/DarkWarrior/MMOCore/Skills/blackrays.yml",
+      "extension": ".yml",
+      "sha256": "4a7e80afe8226509423723593b43da1351037c28f17a93e656599c32b6cb062a",
+      "size": 654,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/DarkWarrior/MMOCore/Skills/breakthrough.yml",
+      "extension": ".yml",
+      "sha256": "5ae95784fbc9f4605ffc657892d7cdfb06f76da09b0c8f8505eb06b24122e898",
+      "size": 644,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/DarkWarrior/MMOCore/Skills/darkpass.yml",
+      "extension": ".yml",
+      "sha256": "c4f5393c2fbd2da42dee058018a2db4db45d1ab09ca321e79a2825f989ecf48a",
+      "size": 604,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/DarkWarrior/MMOCore/Skills/recluse.yml",
+      "extension": ".yml",
+      "sha256": "ffe5b9c4896524c59258cc8e3a8217b4f2a4c7c985018b8fa872e2afa4aa4336",
+      "size": 632,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/DarkWarrior/Mythiclib/skill/DW_ML_Skill.yml",
+      "extension": ".yml",
+      "sha256": "af36ec2e0c15f6a2390054817ade6e5f7b123018832285d61f38c40a09c0f332",
+      "size": 304,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/fullclass/DarkWarrior/MythicMobs/Mobs/DW_Skill.yml",
+      "extension": ".yml",
+      "sha256": "5135925fdb0206f33d2b95159bafacefd6d4ba8c7ad0a80463b85c864f80e297",
+      "size": 590,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/DarkWarrior/MythicMobs/Skills/DW_Skill.yml",
+      "extension": ".yml",
+      "sha256": "89654c9ab1de1a04a194e478de29089123b2d895d913f54fce5d70d0fb2ef509",
+      "size": 4405,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/DarkWarrior/readme.txt",
+      "extension": ".txt",
+      "sha256": "5e123634bc0f8a613673f42ba5c547768edf2b194f26167f96ff9ea32973bf02",
+      "size": 226
+    },
+    {
+      "path": "incoming/no-model/fullclass/FlameWarrior/MMOCore/classes/FlameWarrior.yml",
+      "extension": ".yml",
+      "sha256": "641b6e34b39f72b5bc61c56bee305829585d6116ea705f2ae47e27e8503e728d",
+      "size": 1601,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/FlameWarrior/MMOCore/Skills/fireaura.yml",
+      "extension": ".yml",
+      "sha256": "a254fcc9a54f653a7ae5f0b6ba3d08ab238dfdc5038620342be7bf718c779a48",
+      "size": 461,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/FlameWarrior/MMOCore/Skills/fireballburns.yml",
+      "extension": ".yml",
+      "sha256": "68ef12ef89fdbfed57e139d5a483ba243f3e43c00398f38386f2b6621151ab4d",
+      "size": 697,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/FlameWarrior/MMOCore/Skills/firemeteor.yml",
+      "extension": ".yml",
+      "sha256": "5e6bc15fdc5d33e7bed18fcf2a399bb0a547cf241a34ffd4df8a60e46afb177f",
+      "size": 679,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/FlameWarrior/MMOCore/Skills/sprayfire.yml",
+      "extension": ".yml",
+      "sha256": "ad71fb9dc79370d6776af12dbfe83c5d2c0346ff09991503f0de705069772f2f",
+      "size": 610,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/FlameWarrior/Mythiclib/skill/FW_ML_SKILL.yml",
+      "extension": ".yml",
+      "sha256": "f2446748f9504ec23cdb0cfcfb0a0e97d037bba1ae9d13dfa47570b9beedbc62",
+      "size": 304,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/fullclass/FlameWarrior/MythicMobs/Skills/FW_SKILL.yml",
+      "extension": ".yml",
+      "sha256": "5b665d68d5d82b2826df6d9a8c4ec9d75962a6f532df73686bfc455cb2049df6",
+      "size": 3283,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/FlameWarrior/readme.txt",
+      "extension": ".txt",
+      "sha256": "5e123634bc0f8a613673f42ba5c547768edf2b194f26167f96ff9ea32973bf02",
+      "size": 226
+    },
+    {
+      "path": "incoming/no-model/fullclass/WarriorBunny/MMOCore/classes/BunnyWarrior.yml",
+      "extension": ".yml",
+      "sha256": "a5bb0974c0659e36c9d84cbef8414d132d0a59879f542a36832eb81d590b068e",
+      "size": 1546,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/fullclass/WarriorBunny/MMOCore/Skills/bunny-attack.yml",
+      "extension": ".yml",
+      "sha256": "040964b55e1c67fd24aad64d37bf0303bf1dca46f12ef44ba133ae4d42d8bd44",
+      "size": 814,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/WarriorBunny/MMOCore/Skills/bunny-bomb.yml",
+      "extension": ".yml",
+      "sha256": "47616beae6328af92ef3ada1ca01fa046a47b0895458301f29fb8fe04ae97ecf",
+      "size": 603,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/WarriorBunny/MMOCore/Skills/geppo.yml",
+      "extension": ".yml",
+      "sha256": "1ba5af8647952e6377790f447e9f941eb908c10ac85dcf74bb66c56d7b24cdc7",
+      "size": 503,
+      "hint": "MMOCore skills"
+    },
+    {
+      "path": "incoming/no-model/fullclass/WarriorBunny/Mythiclib/skill/BW_ML_Skill.yml",
+      "extension": ".yml",
+      "sha256": "7fc51d64f95e200bdfa5c2f4a0bc02f6cf0f635b148d9bb5e7a9663fc86b164f",
+      "size": 271,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/fullclass/WarriorBunny/MythicMobs/Mobs/BW_Mobsss.yml",
+      "extension": ".yml",
+      "sha256": "261107c4e10b656a8135fee17aea4e5004a5c8848496bf3e2af49b5b28dbb66f",
+      "size": 831,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/fullclass/WarriorBunny/MythicMobs/Skills/BW_skillsss.yml",
+      "extension": ".yml",
+      "sha256": "c6f61241a77cb928a1a64cdefc4b23d5f6e69df05791aff2a559fd3fd24e2613",
+      "size": 7900,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/fullclass/WarriorBunny/readme.txt",
+      "extension": ".txt",
+      "sha256": "5e123634bc0f8a613673f42ba5c547768edf2b194f26167f96ff9ea32973bf02",
+      "size": 226
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/config/config-general.yml",
+      "extension": ".yml",
+      "sha256": "6334e9db250c60555f2e16cf4d7bbebe008196c800f6469ae35794013669c2fa",
+      "size": 98,
+      "hint": "MythicMobs config/stats"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/config/config-items.yml",
+      "extension": ".yml",
+      "sha256": "fa8e1573e717ca37482c28b4a70f844b53865e24d0ae549d3ee48c2067fe7cee",
+      "size": 2590,
+      "hint": "MythicMobs config/stats"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/config/config-mobs.yml",
+      "extension": ".yml",
+      "sha256": "8db3a8a7525eba50e896f5d5d5688c76e259d560c9e7585d508a80198a4bc928",
+      "size": 742,
+      "hint": "MythicMobs config/stats"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/config/config-skills.yml",
+      "extension": ".yml",
+      "sha256": "89da80d4cb2f30352235f7f69c08359b5c70e58864f95a605869749a44925a5a",
+      "size": 1174,
+      "hint": "MythicMobs config/stats"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/config/config-spawning.yml",
+      "extension": ".yml",
+      "sha256": "6260655c1a2ba80c5a7bde2186e66028db109c4433f9c55ebc260b9cd660d38c",
+      "size": 509,
+      "hint": "MythicMobs config/stats"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/config/lang/en-us/mythiccosmetics.json",
+      "extension": ".json",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "size": 2
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/config/lang/en-us/mythicmobs.json",
+      "extension": ".json",
+      "sha256": "5e4a8931f351840880c9c0977430be8796a3356022643ce59f8447d0ce8556c8",
+      "size": 199
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/Items/30/4.yml",
+      "extension": ".yml",
+      "sha256": "647b31fa14731fdeb90fa3caebafa826f75cfe2a0635838a97eb94171fe99f2e",
+      "size": 3176,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/Items/armor_strim.yml",
+      "extension": ".yml",
+      "sha256": "600035a82959f7f12ff3b911b9f2a4899d20535f59be62b8bc30ba557c1f3a8a",
+      "size": 334,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/Items/ExampleItems.yml",
+      "extension": ".yml",
+      "sha256": "efce4d53e24313dad8c9fb2dc3016ee98c53de2a5da3968734e5e1fad1e4660f",
+      "size": 237,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/Items/LarcticBoots.yml",
+      "extension": ".yml",
+      "sha256": "d94c40306f534ddeda7163f1b5e79072529861bd380232030332308f8027cd6d",
+      "size": 422,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/Items/LarcticChestplate.yml",
+      "extension": ".yml",
+      "sha256": "93b7c7940160826786592170a8c41d98b885719212b9938ca073704ed2c8a8dd",
+      "size": 442,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/Items/LarcticHelmet.yml",
+      "extension": ".yml",
+      "sha256": "350bf147a6ee206e236ac74a11817f1c435c87440c2b1a0fff565e7321d458aa",
+      "size": 426,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/Items/LarcticLeggings.yml",
+      "extension": ".yml",
+      "sha256": "f7b7710e6b6611c891e52a156f9e0a99626cdd534ebf8d250f68f7794ebc0103",
+      "size": 434,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/Items/LarcticShield.yml",
+      "extension": ".yml",
+      "sha256": "27402c1a98e2db221ec69b79009092d5090d9184e5f854577e24753a603264f3",
+      "size": 2716,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/Items/vietnamflag.yml",
+      "extension": ".yml",
+      "sha256": "edb8e5fc99c6538199d6fd10388e3036b6370208cb1e2f65680daf07a0f8f4bb",
+      "size": 1147,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/ArcticKnightMobs.yml",
+      "extension": ".yml",
+      "sha256": "55e6cb1ba275ef768ad38d0868226c37a962349895eec51427fe97dc2051a285",
+      "size": 1773,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/CarimcCustom/30/4.yml",
+      "extension": ".yml",
+      "sha256": "309400cf2d91330053f33bb20afb85c20cc817d9c75b2df7c5a81ca5983cc284",
+      "size": 6056,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/CarimcCustom/30/Flagvn.yml",
+      "extension": ".yml",
+      "sha256": "5c1f3c8c88f68d468f55fe24e6b6337103a0efa7cc62e3d7d3260dfb7fdec3d4",
+      "size": 325,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/CarimcCustom/CanonBee.yml",
+      "extension": ".yml",
+      "sha256": "00b6b62e28ae43d37f356f7ecfb589b1a3300b58d2f74554561b3bb9545749ba",
+      "size": 1603,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/CarimcCustom/CanonIRON.yml",
+      "extension": ".yml",
+      "sha256": "2d8e3cda79f1aab87c55e6a7e324038637e9f62fcc2212df182caf51e10472dc",
+      "size": 979,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/Dungeons.yml",
+      "extension": ".yml",
+      "sha256": "3ab2490be411ba6ae6d8d39e0c8c24d8b53cc23952fb90895b261d60666e15a7",
+      "size": 10688,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/ExampleMobs.yml",
+      "extension": ".yml",
+      "sha256": "f75fbfce916c009dbad90a7768db4dd93e6b53307aeb8f13253665e4f7364522",
+      "size": 6155,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/queen.yml",
+      "extension": ".yml",
+      "sha256": "1a1a8b4d4f7537541e4e0329725ec8e0ca99a013093acbfd4412a7d62db92274",
+      "size": 2096,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/RankBadge.yml",
+      "extension": ".yml",
+      "sha256": "3a8a574bd072eaea5e240f412542220aaf419699ec2c76716c21262bcf9f98bc",
+      "size": 3627,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/ThanhViet.yml",
+      "extension": ".yml",
+      "sha256": "a13f9f26ae37d201cdebcf8b6f3473040c53fadfa978b8a7f6ee6cefbf65696d",
+      "size": 1960,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/VanillaMobs.yml",
+      "extension": ".yml",
+      "sha256": "de3cc2a1ee3cd7ae31f17508ea691b0802c04bbffc2c710ebba1282573838242",
+      "size": 108,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/VFX_ATTACK_ELEMENT/VFX_DARK_ATTACK_MOBS.yml",
+      "extension": ".yml",
+      "sha256": "08d31f3fffc877f96f45d8ea8ce97c00cb66dcf17df3dab5888f44fe2460f6a0",
+      "size": 1415,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/VFX_ATTACK_ELEMENT/VFX_EARTH_ATTACK_MOBS.yml",
+      "extension": ".yml",
+      "sha256": "51089b2105879e24f302fe8b82e010646a3cdd518f11df81bb3d45559ec25811",
+      "size": 1423,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/VFX_ATTACK_ELEMENT/VFX_FIRE_ATTACK_MOBS.yml",
+      "extension": ".yml",
+      "sha256": "3e87c6f7998277a93f221d2b63d1a6f2c612d5e44482e8fdf5ba0721516b37de",
+      "size": 1415,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/VFX_ATTACK_ELEMENT/VFX_LIGHT_ATTACK_MOBS.yml",
+      "extension": ".yml",
+      "sha256": "eadb4b65396fcf2246b7f421f07fa15544e6bdf0e123b120bab5a9e7ec1f046a",
+      "size": 1423,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/VFX_ATTACK_ELEMENT/VFX_WATER_ATTACK_MOBS.yml",
+      "extension": ".yml",
+      "sha256": "8cfdf12650d8f44332e27caacbfdcee873057911d3ed373c67af29719035fb5f",
+      "size": 1388,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/archive-2025-04-14T151638Z.tar.gz",
+      "extension": ".tar.gz",
+      "sha256": "1a62b886a47ea5916e2b82ff9ae39ef992620cf4ab7cd7cc343ad3715bad6455",
+      "size": 17317
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/archive-2025-06-27T005515Z.tar.gz",
+      "extension": ".tar.gz",
+      "sha256": "3d8a63f4957653ac2f313016adf43f512fc581320e0876f5dec5e0527bdcb949",
+      "size": 7177
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/CaRiMC/Mobs/KiraMeoMeoz.yml",
+      "extension": ".yml",
+      "sha256": "5e3bb2ae2945508a8a8f68f2e50f642d8c8a52be6bcfd75acf0c6d9e03637f87",
+      "size": 676,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/CaRiMC/packinfo.yml",
+      "extension": ".yml",
+      "sha256": "21fa010fef0f1cb565858a2e178f0775b92f35bcb8fc2545c757368e8cf23897",
+      "size": 73,
+      "hint": "packinfo"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/CaRiMC/Skills/Element.yml",
+      "extension": ".yml",
+      "sha256": "95bae24340092129eab5c66cc78dd2d8e11b342f568081eab0facc6e18741ed5",
+      "size": 31597,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/CaRiMC/Skills/FoxArmor.yml",
+      "extension": ".yml",
+      "sha256": "6e930a0f5e04a9266482ad6889601b14df98a00aefa44148c18395f7f05a9862",
+      "size": 3110,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/CaRiMC/Skills/KiraMeoMeoz.yml",
+      "extension": ".yml",
+      "sha256": "fea7d7d6c1b19b10a30059aad48c31de5dffa9a7e3df63fb9fa5ec0ce2d5c1f3",
+      "size": 12933,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/CaRiMC/Skills/KT.yml",
+      "extension": ".yml",
+      "sha256": "b4e879b7b5a4be6383fa3a640145498bc639e41134561ca7ac621a41832414c8",
+      "size": 968,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/CaRiMC/Skills/MobsOrbital.yml",
+      "extension": ".yml",
+      "sha256": "6eb044b732fd1748adc28fc4026cd44fb990f0b979a7d5829cf43b2089690fd3",
+      "size": 895,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/CaRiMC/Skills/ScytheDarkred.yml",
+      "extension": ".yml",
+      "sha256": "460dd09b4b2068812fbd0de94a541349d26715ec62642208bb0a0b967c02dc2f",
+      "size": 2483,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Items/EC_SoulWeaver_FXS.yml",
+      "extension": ".yml",
+      "sha256": "3ec60b2adac20b2bb0967638dd0923eaca55897574e7fad9b1a2b9768f55987d",
+      "size": 1645,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Mobs/EC_SoulWeaver_FXS_Mobs.yml",
+      "extension": ".yml",
+      "sha256": "c5c970e4cc9b96ec44e2cb2ac84568d0e5139aeeda9a5d26adf4837490f6975f",
+      "size": 7667,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/packinfo.yml",
+      "extension": ".yml",
+      "sha256": "c6c5c5f82e73ef96f125af42e95e26f39b5162ce52f7283a94ad68e3e1cacb15",
+      "size": 81,
+      "hint": "packinfo"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/EC_soul_Weaver/Skills/EC_SoulWeaver_Scythe.yml",
+      "extension": ".yml",
+      "sha256": "e0facbc0717cb44b23fc018df4dbcf13733d27ba8c77318e704808378584985b",
+      "size": 9035,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/free/packinfo.yml",
+      "extension": ".yml",
+      "sha256": "38ba841cc4e1a84dfb9223183530143d6d50f3cdfa126d5b7c0229b29429f1f5",
+      "size": 71,
+      "hint": "packinfo"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/free/Skills/free.yml",
+      "extension": ".yml",
+      "sha256": "e7f58905bdd5460d7b1a6caea53d827d23d8ff3c15bf5dcca1654e0470fdd7d5",
+      "size": 5878,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/NOOBSell/Mobs/archive-2025-06-27T005634Z.tar.gz",
+      "extension": ".tar.gz",
+      "sha256": "2f823f27c94309ac616020c8c571f8f2b516862f9e91eff4be5304308393c55a",
+      "size": 844
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/NOOBSell/Mobs/HeavenlyLightMOBS.yml",
+      "extension": ".yml",
+      "sha256": "0c1f68eb2e58393c05460b747b5073ed1a99c5bb3a426408c4843cb030fe51ca",
+      "size": 365,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/NOOBSell/Mobs/ShadowPhantom.yml",
+      "extension": ".yml",
+      "sha256": "2bc9de545ed229a74bf3c3c51a155b9f0d090d94a8212ff1ef8b2504e29e9927",
+      "size": 865,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/NOOBSell/packinfo.yml",
+      "extension": ".yml",
+      "sha256": "75210024b07ef11a6c75615dfd5e29cc3486f38ba35d6433d3ed9023f90e44d1",
+      "size": 87,
+      "hint": "packinfo"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/NOOBSell/Skills/HeavenlyLight.yml",
+      "extension": ".yml",
+      "sha256": "5c29881a793eaaa9f7e43f8278db36b6bb7d959932a21db8ba3730a29aedeb9d",
+      "size": 33669,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/NOOBSell/Skills/ShadowPhantom.yml",
+      "extension": ".yml",
+      "sha256": "710cf43db7c1e00c00566b939238a394f8d11dda415c1712b877a0ddf91145ad",
+      "size": 48715,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Mobs/Conductor.yml",
+      "extension": ".yml",
+      "sha256": "e40e74cfbda897d3799b11a6ad91c9dddbd7a25f9e0f4708b772a29abe494443",
+      "size": 4636,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Mobs/Conductor_Chevaliers.yml",
+      "extension": ".yml",
+      "sha256": "6c7d9fed0f689767d3d1343d927b0c582ed3fc15e534259eabd4329cd8cd7980",
+      "size": 4948,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/packinfo.yml",
+      "extension": ".yml",
+      "sha256": "a03d7d044eea3f0fe17c0a8b6b02cab29eb66076f1280f8c0fa226dbf9e43de5",
+      "size": 99,
+      "hint": "packinfo"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/PixelBarrel's Hollow Woods Vol.2/Skills/Conductor_skills.yml",
+      "extension": ".yml",
+      "sha256": "c23516549896819e3ed6d161f27cbbb069b9a5acb8d14be6a6bbd740489d7f24",
+      "size": 25103,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/SoulMage/Items/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "1d39362021f72f2067a0eb8d92c44cd3edc6ce6857018b097b2ff73ec323a2fa",
+      "size": 32,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/SoulMage/Mobs/MobScore.yml",
+      "extension": ".yml",
+      "sha256": "801d8e613056004a5c6c75d7b2386b48d9d32a58542f63630fe36c4a6baee326",
+      "size": 2836,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/SoulMage/Mobs/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "705a95a60a41f9eb173e26380a70111c2475216cb1ddadf0a0c06693325a686c",
+      "size": 3083,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/SoulMage/packinfo.yml",
+      "extension": ".yml",
+      "sha256": "c473aeb787f45ae653999c59ff3da7af96816a9c7a034a69d136185d4f04a935",
+      "size": 80,
+      "hint": "packinfo"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/SoulMage/Skills/MobsSkill.yml",
+      "extension": ".yml",
+      "sha256": "b513b6719271c5da3451e7a587d91589bebba48e40b24d2caeb7c3bde2aa6866",
+      "size": 798,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/SoulMage/Skills/SoulMage.yml",
+      "extension": ".yml",
+      "sha256": "2c9659a485860d50830616a81cddcac7183ffefec829efc43422fc140c89aac3",
+      "size": 8840,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/Unrivalled_Vol.1_Wu/Items/wu_items.yml",
+      "extension": ".yml",
+      "sha256": "1767ce1c8ab24c5cefad5d3382548439276e1561013b699bf708990e302bc2c1",
+      "size": 323,
+      "hint": "MythicMobs items (path)"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/Unrivalled_Vol.1_Wu/Mobs/unrivalled_wu.yml",
+      "extension": ".yml",
+      "sha256": "6e22e988f366425e588ed2e0d9ad9d801787d6319f0950a1775629d2d2b7b56c",
+      "size": 33559,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/Unrivalled_Vol.1_Wu/packinfo.yml",
+      "extension": ".yml",
+      "sha256": "0e7c5bd90ea0e3167719342834e283fd7ecf3dab7c02d3f8f61d727146130b5a",
+      "size": 86,
+      "hint": "packinfo"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/Unrivalled_Vol.1_Wu/Skills/unrivalled_wu.yml",
+      "extension": ".yml",
+      "sha256": "b986bc007b05d686c42a22e788b4abb1b42b2ba0a34e99626501282c421d1246",
+      "size": 20353,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/Unrivalled_Vol.1_Wu/Skills/unrivalled_wu_items.yml",
+      "extension": ".yml",
+      "sha256": "265127b53cce4dc7f5f01794ceb94c5fdb5877e06f2d7c2fcbed2793e9ee922e",
+      "size": 1211,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/ArcticKnight.yml",
+      "extension": ".yml",
+      "sha256": "53b69049fecb19b7648fbfe4c084c56109c9cc746674ed1e9f3c7e9c474a36bb",
+      "size": 16105,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/attack_vfx.yml",
+      "extension": ".yml",
+      "sha256": "795071046ca4e094ae95105b6a6ad8a8ae1cf15ca33ed799dd417b11fcaa7fb5",
+      "size": 17633,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/CarimcCustom/30/4.yml",
+      "extension": ".yml",
+      "sha256": "f45e4495d2870ead0c7127eda4c8a4329a2a8da948378aff9b35dd5242ef64c7",
+      "size": 12419,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/CarimcCustom/CanonBee.yml",
+      "extension": ".yml",
+      "sha256": "6f2b19aa3ff0a0d6fa85b5e7231863d50e9a35d3d5339808e2859cb182c6b192",
+      "size": 1734,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/CarimcCustom/CanonIRON.yml",
+      "extension": ".yml",
+      "sha256": "5ea2aec2538deb9359db3add15951145cfcd82e10928d96837c9b96e8e7ab2aa",
+      "size": 1004,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/Dungeons.yml",
+      "extension": ".yml",
+      "sha256": "1974c20af808afc4eed934f2335481663060e966c90dc63e244b47351bfb052a",
+      "size": 448,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/ExampleSkills.yml",
+      "extension": ".yml",
+      "sha256": "b47303ba25dbe50a739da66423377d3997ae9956915c9cfe2febe7e7345f745e",
+      "size": 2861,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/NOOB123ok.yml",
+      "extension": ".yml",
+      "sha256": "441984d4bab9db0d38b1b160b968aed98e14e6715cff7bac799f6443f9eb6369",
+      "size": 134042,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/queen.yml",
+      "extension": ".yml",
+      "sha256": "a1a355b96f928aad5d727a776a4d1803eb77d5b8fa37443ad606dfebbe65f9fd",
+      "size": 56798,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/RankBadgeSkill_SkriptVersion.yml",
+      "extension": ".yml",
+      "sha256": "92f17240b2fb3f6a9a731873469a8871972f450845d1cb70702081225fa498c6",
+      "size": 5931,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/ThanhViet.yml",
+      "extension": ".yml",
+      "sha256": "3b8ef60b969161ca5f5bf5d1b763ca8caf49f4492fbf9a1f4fd52a7cf06ba3ea",
+      "size": 950,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/VFX_ATTACK_ELEMENT/archive-2025-06-24T031922Z.tar.gz",
+      "extension": ".tar.gz",
+      "sha256": "870d5def442f202290e8cd4ea41ef037ac3990a57bf4d0aea712805f6920e139",
+      "size": 13732
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/VFX_ATTACK_ELEMENT/VFX_DARK_ATTACK.yml",
+      "extension": ".yml",
+      "sha256": "fffa076f0336872391f6430257b650f2c1d127e1766c24832a05bc8f72971d39",
+      "size": 45180,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/VFX_ATTACK_ELEMENT/VFX_EARTH_ATTACK.yml",
+      "extension": ".yml",
+      "sha256": "5f70eb3130daa1bd532f8c7dae116cefc5ebd52a260008e5ccbcdbf533da48b5",
+      "size": 45692,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/VFX_ATTACK_ELEMENT/VFX_FIRE_ATTACK.yml",
+      "extension": ".yml",
+      "sha256": "0c5ae3555b144f0effe000b4d21cd3054086c5f4b629263bfd1171998b0ab361",
+      "size": 55670,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/VFX_ATTACK_ELEMENT/VFX_LIGHT_ATTACK.yml",
+      "extension": ".yml",
+      "sha256": "48ed684794e9419e3cc7ca5fa3538de6dbcc257ff361412b32b9a320b3640125",
+      "size": 45773,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/VFX_ATTACK_ELEMENT/VFX_WATER_ATTACK.yml",
+      "extension": ".yml",
+      "sha256": "d4da51633223e85d5cf80ca044344eb5004f27b5407ede802b686146d131f40a",
+      "size": 45687,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/stats.yml",
+      "extension": ".yml",
+      "sha256": "febf9955adeb4cd978e2fe4b5bc7ecda3f1088d840866eb79a8aed8aecb99bcf",
+      "size": 10489,
+      "hint": "MythicMobs config/stats"
+    },
+    {
+      "path": "incoming/no-model/Plant/MMOCore/classes/Plants.yml",
+      "extension": ".yml",
+      "sha256": "bb2889baa4d6497db3fc63c0cb9626d15d70f42fb4e053385f258417a704803a",
+      "size": 1422,
+      "hint": "MMOCore classes"
+    },
+    {
+      "path": "incoming/no-model/Plant/modelengine/blueprint/cayanthit.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "9789ba9010accda372ab1a7b9de62091c4021d989486a52865bca22a0bdf9f96",
+      "size": 90405
+    },
+    {
+      "path": "incoming/no-model/Plant/Mythiclib/skill/skillsss.yml",
+      "extension": ".yml",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/no-model/Plant/MythicMobs/Mobs/Mobsss.yml",
+      "extension": ".yml",
+      "sha256": "4c0da4518211aa316ec06575468c407bf1f08121d8936503c4b55bf287446c44",
+      "size": 177,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/no-model/Plant/MythicMobs/Skills/skillsss.yml",
+      "extension": ".yml",
+      "sha256": "4c0da4518211aa316ec06575468c407bf1f08121d8936503c4b55bf287446c44",
+      "size": 177,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/no-model/Plant/readme.txt",
+      "extension": ".txt",
+      "sha256": "5e123634bc0f8a613673f42ba5c547768edf2b194f26167f96ff9ea32973bf02",
+      "size": 226
+    },
+    {
+      "path": "incoming/no-model/Readme.md",
+      "extension": ".md",
+      "sha256": "3b0d25184b1540261785f0aeb213fee06f6e3833581b631d14c9ba8e3da15b6e",
+      "size": 40
+    },
+    {
+      "path": "incoming/OtherExamples/2026 NYE - Fireworks.zip",
+      "extension": ".zip",
+      "sha256": "e52e7e25ccef107f5b6f0572fa895e586bdaf8bcbcd6312bb02b5ffcf801fc7e",
+      "size": 18305
+    },
+    {
+      "path": "incoming/OtherExamples/[Toro] Ezekiel - The Evil Arbiter.zip",
+      "extension": ".zip",
+      "sha256": "31c2fda7dde11ac3a20bccc8c67ee4a0e62b67a5081a028b4ef695d2ca19b5bf",
+      "size": 578214
+    },
+    {
+      "path": "incoming/OtherExamples/all.zip",
+      "extension": ".zip",
+      "sha256": "dee06f84e9b735414d23258877d411bda102d35f9df768b3211a758639acda41",
+      "size": 166996
+    },
+    {
+      "path": "incoming/OtherExamples/Chicken King - cosmetics set.zip",
+      "extension": ".zip",
+      "sha256": "4d58341769df0ae73394c71ab94472c199ccfe9ae148b01453126e5b88f1dbf6",
+      "size": 12844
+    },
+    {
+      "path": "incoming/OtherExamples/Christmas Cosmetics 2023 Volume 2.zip",
+      "extension": ".zip",
+      "sha256": "7a73f38ce717c732e945a876396eb07af897c0de3f5d03e544ccb8e6fd35887a",
+      "size": 43116
+    },
+    {
+      "path": "incoming/OtherExamples/Cosmetics Ultimate Bundle.zip",
+      "extension": ".zip",
+      "sha256": "3869f47818d1d1d4748e389c5231d50ee2682a7b0ec8dd8edbd56d3fc29eea38",
+      "size": 319173
+    },
+    {
+      "path": "incoming/OtherExamples/Demon-reaper-1.0.0-z0ipcs.zip",
+      "extension": ".zip",
+      "sha256": "4d8d7c6790c2587d7414539548631dd45784cfbd0ede32bd96b626c51e413f9b",
+      "size": 225319
+    },
+    {
+      "path": "incoming/OtherExamples/EC-Backrooms-v1.6.zip",
+      "extension": ".zip",
+      "sha256": "092343337229494bf45157c1745eca7b6425ab68e6842de5b2a1cb67ed9267e4",
+      "size": 13099628
+    },
+    {
+      "path": "incoming/OtherExamples/ECEliteMountsVol1-1.4.1v (1).zip",
+      "extension": ".zip",
+      "sha256": "246d04e87bf8cedef1a4a0146b3bd23c34858a2833a5676ed3d4b20a718ae9ea",
+      "size": 1621480
+    },
+    {
+      "path": "incoming/OtherExamples/ECForestAnimalPack-2.1.6.zip",
+      "extension": ".zip",
+      "sha256": "1c1fa440dd7313fa74900dd7a2f293bf37908c1ce5c73cae210da77b72fc8ffb",
+      "size": 1571883
+    },
+    {
+      "path": "incoming/OtherExamples/ECWaterAnimalBundle-2.2.2v.zip",
+      "extension": ".zip",
+      "sha256": "a126a5a1292189e1893c355004ebd9323874a617a6f06923d4d72472fa1e93fb",
+      "size": 2196154
+    },
+    {
+      "path": "incoming/OtherExamples/Element Witch Costume Vol.2.zip",
+      "extension": ".zip",
+      "sha256": "4834425a2e0bdd559b4c15abfe22984c9044cd2e7f8dc8377d63daf93dd10542",
+      "size": 25015
+    },
+    {
+      "path": "incoming/OtherExamples/elitecreatures-rpg_bundle_v1-04nst1.zip",
+      "extension": ".zip",
+      "sha256": "5924795085a749405a8b22d210c342d2da8a2b9bf66dc1bb710856ed5e051464",
+      "size": 203838
+    },
+    {
+      "path": "incoming/OtherExamples/elitecreatures-rpg_bundle_v19-etgnvj.zip",
+      "extension": ".zip",
+      "sha256": "6a161870222238acc96ea93d6b031838d655eb548bb4410335f3e90a45139d5a",
+      "size": 98190
+    },
+    {
+      "path": "incoming/OtherExamples/elitecreatures-rpg_bundle_v6-ztiayr.zip",
+      "extension": ".zip",
+      "sha256": "a5270ee6b4d7597995ec9a460974488508e9189c188ad882129cac03d3143dd7",
+      "size": 275146
+    },
+    {
+      "path": "incoming/OtherExamples/em_Guardiansoflight_v1_BossOnly_1.2.zip",
+      "extension": ".zip",
+      "sha256": "b8f718511f6810a4080fbce423e563767f9fa0200228dc43019304d6ac3cb6e7",
+      "size": 6501560
+    },
+    {
+      "path": "incoming/OtherExamples/Fairy_Animated_Weapons__Tools_Set.zip",
+      "extension": ".zip",
+      "sha256": "bd747bb55dc9749301b9e79f68cb992d8fbc8c7d9568fdd28e4eff418dbf2b2b",
+      "size": 1491810
+    },
+    {
+      "path": "incoming/OtherExamples/Flowers Icons v1.zip",
+      "extension": ".zip",
+      "sha256": "ec25ddf9add67987890bcda3982e0b492dbc8a527bdea1bc075e8a5c1746e889",
+      "size": 57879
+    },
+    {
+      "path": "incoming/OtherExamples/Gilded Sentinel Boss + Arena.zip",
+      "extension": ".zip",
+      "sha256": "bde9a6560fc3b5e0525a88f53f0b7a584ede3f639dc4b5c6059eb219aedfa928",
+      "size": 3071549
+    },
+    {
+      "path": "incoming/OtherExamples/Graceless-Omen-1.0.1--63zrip.zip",
+      "extension": ".zip",
+      "sha256": "03558bbb9a7692d23caf46d7b1a7dabdfe211f14b5545a711aa5b0ab965c4437",
+      "size": 563052
+    },
+    {
+      "path": "incoming/OtherExamples/Halloween_Costume.zip",
+      "extension": ".zip",
+      "sha256": "43fdf1a1328da709ede045d126ea5935d1085f674b80b987147da4becc338be2",
+      "size": 445978
+    },
+    {
+      "path": "incoming/OtherExamples/HellDungeon1.06.zip",
+      "extension": ".zip",
+      "sha256": "a40a62291bf6db193cf8fbb9416bef56cfe471cb20d536153a18863466ccc27b",
+      "size": 3056540
+    },
+    {
+      "path": "incoming/OtherExamples/HyrexAnimations-1.3.1.zip",
+      "extension": ".zip",
+      "sha256": "f845c74b988c6022f8036c03a3e7e0f0a411b506f9870e69ae8724a50d587cdb",
+      "size": 3483597
+    },
+    {
+      "path": "incoming/OtherExamples/InsectPackWMount.zip",
+      "extension": ".zip",
+      "sha256": "638e9060905a7fc0594e73f434312ecdfaed2e76469df8b21c4980ec804ddafa",
+      "size": 1014817
+    },
+    {
+      "path": "incoming/OtherExamples/Liono's Weaponry Vol 2.zip",
+      "extension": ".zip",
+      "sha256": "a087c1d2b7b9def8e2633f1208a862d0713ff153bb0966fe4cec07e35c94f4e2",
+      "size": 113823
+    },
+    {
+      "path": "incoming/OtherExamples/Little_Penguin_Weapons_Tools__Cosmetics_Set.zip",
+      "extension": ".zip",
+      "sha256": "b0296edf9aaf3e270acb5ebe61d2711b747f6ad45fb967667fc68b6f6d15f476",
+      "size": 403292
+    },
+    {
+      "path": "incoming/OtherExamples/LITTLEROOM_BREWERYPACK_v1_3_1_21_4.rar",
+      "extension": ".rar",
+      "sha256": "69b7ad5431b28415d865e32e852d31b593696ecd4e4c8a9343b40e4bcee40471",
+      "size": 548689
+    },
+    {
+      "path": "incoming/OtherExamples/LITTLEROOM_DungeonHazards_v1_3(1).rar",
+      "extension": ".rar",
+      "sha256": "2553c39e2243aba679a2d8b5956059addce922e88a54e112d1934acced98871d",
+      "size": 1613159
+    },
+    {
+      "path": "incoming/OtherExamples/littleroom_herobrine_v1_9.rar",
+      "extension": ".rar",
+      "sha256": "4dcfaa80c6804b8ed1252e3b7c1d8c874dda40de69570edbff4f29f012595cfa",
+      "size": 895438
+    },
+    {
+      "path": "incoming/OtherExamples/littleroom_herobrine_v1_9_1_21_4.rar",
+      "extension": ".rar",
+      "sha256": "2367fbb2809d4cf646bbcb55280374306b1e0ae3967aaa81695b1739027be480",
+      "size": 895413
+    },
+    {
+      "path": "incoming/OtherExamples/LITTLEROOM_TowerSkeleton_v1_1.rar",
+      "extension": ".rar",
+      "sha256": "553e6ba8ba374c80dbc7e0528fa7c6534079ad063954618bc9aa2fc0f94d69dd",
+      "size": 3220867
+    },
+    {
+      "path": "incoming/OtherExamples/LITTLEROOM_TowerSkeleton_v1_1_1_21_4.rar",
+      "extension": ".rar",
+      "sha256": "1bd6f681368b1933f0a7d7b59b998764ab342463abb177273391cfd522edd661",
+      "size": 3221621
+    },
+    {
+      "path": "incoming/OtherExamples/ModelFoundry's Ember Claw Sub-hitbox 1.0.0.zip",
+      "extension": ".zip",
+      "sha256": "fae6da6c3baebb7cba1add371d868b61c83a2cfb7e825a6b05323f3f824f1cc6",
+      "size": 1629224
+    },
+    {
+      "path": "incoming/OtherExamples/ModelFoundry's Witch Class 1.1.0.zip",
+      "extension": ".zip",
+      "sha256": "4e075d8cb00c013cf682a8a9f48a0b7331a76e2c6424897112cfb44e4666c1c8",
+      "size": 1830340
+    },
+    {
+      "path": "incoming/OtherExamples/Mounts pack animal series vol4.zip",
+      "extension": ".zip",
+      "sha256": "0244f9aaf3f589268225aaa592e1c256c10c347604e792c4b31b24dc00659f14",
+      "size": 462743
+    },
+    {
+      "path": "incoming/OtherExamples/New_Year_Party_Costume.zip",
+      "extension": ".zip",
+      "sha256": "883ae781b29bfb72a4d67066cb3219e07492ee492c9abb7665307eaead89dd08",
+      "size": 355310
+    },
+    {
+      "path": "incoming/OtherExamples/Nog's Bits & Bobs [Halloween Graveyard].zip",
+      "extension": ".zip",
+      "sha256": "fa9e3df675f0e52a4b39f736ec7c46d64c9b96c2d43641a547748041193da3ee",
+      "size": 24614
+    },
+    {
+      "path": "incoming/OtherExamples/Nog's Mini You [Valentines Pets & Plushies].zip",
+      "extension": ".zip",
+      "sha256": "5a2b41bf9de73fd672c03096d5391e0c1046f43fa250fba63e44410aa9dedf6a",
+      "size": 439319
+    },
+    {
+      "path": "incoming/OtherExamples/PVP-Arena-200x200-1-01lmny.zip",
+      "extension": ".zip",
+      "sha256": "4d664c20b26bd20ea51ecb0459752088a337b6f324fdd34c97f8554ca7e00bb3",
+      "size": 2815858
+    },
+    {
+      "path": "incoming/OtherExamples/qpack_giftballoons.zip",
+      "extension": ".zip",
+      "sha256": "1317ff86b1f34c3133cfc3e2f60b5d713675296fa252b5cdabf81f66834dff03",
+      "size": 19503
+    },
+    {
+      "path": "incoming/OtherExamples/RPG_Basics_Animals_of_Farmville_v2.0.zip",
+      "extension": ".zip",
+      "sha256": "4ebfe900e57ec2f6ab6add0b0bbb80fef2d25d6b2c7d66c40d17dc67e1e2fd25",
+      "size": 363875
+    },
+    {
+      "path": "incoming/OtherExamples/Rune Knight Costume.zip",
+      "extension": ".zip",
+      "sha256": "05b212cf1be8df8844da62d87fc35ccb61ea5ef98e4cd9874f7c67abf10da520",
+      "size": 131793
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_ANIMAL_EXPANSION_JUNGLE_EDITION_v1.1-e3ro8i.zip",
+      "extension": ".zip",
+      "sha256": "d39a135775cb683a93128811500858c10c9a492db698e302144baf8a127b96d2",
+      "size": 688430
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_ARCHMAGE_PACK_v1.5.zip",
+      "extension": ".zip",
+      "sha256": "a448af92edf4c54d13f19590182731243bf04816f26e245c3831c8bd29e1b80b",
+      "size": 2116225
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_ARCTIC_KNIGHT_PACK_v1.3.zip",
+      "extension": ".zip",
+      "sha256": "3b5142c80bbdbb41ff33a186dd08b6a647b69d63237e736ca5fc3a5f5d48a29f",
+      "size": 399295
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_ASSASSIN_PACK_v1.9.zip",
+      "extension": ".zip",
+      "sha256": "4bcd6d34e4912060abe44ee246437ada1ea718f5a0942bb0b6bc8bfd3c2cf3d5",
+      "size": 949678
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_AWAKENED_ASSASSIN_v1.1.zip",
+      "extension": ".zip",
+      "sha256": "0d0939001ef2a903aa3b72cf5666cd46e80945d85a1a5a216d1dcee84c7c1d8f",
+      "size": 967305
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_CLERIC_PACK_v1.4.zip",
+      "extension": ".zip",
+      "sha256": "e1ba69f36a9b281a4e35b700ca6e4dee8e081e7062aaaf02087738ec0d9d7d7f",
+      "size": 1487761
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_GALE_GLAIVE_PACK_v1.2.zip",
+      "extension": ".zip",
+      "sha256": "c552ecebfffb701bd8534958594d9bbd63ae1dc20816f3247143cfae4efaa2a9",
+      "size": 553514
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_MARTIAL_ARTIST_PACK_v1.6.zip",
+      "extension": ".zip",
+      "sha256": "183cc1639e77685fea878dc60fbaf8f7c2dae0b86481fac627b814108c979bc1",
+      "size": 2513141
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_MONK_PACK_v1.3.zip",
+      "extension": ".zip",
+      "sha256": "4b994c795fa984140fba3c70b74b28e110c90f04e73d18b8a5a88e2a7a16e9f3",
+      "size": 371334
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_PRISMARINE_SET_PACK_v1.3.zip",
+      "extension": ".zip",
+      "sha256": "275e4d7ee903befe398a17cdf6bbae79e72778f2037a50762fb2b22e16af2350",
+      "size": 462576
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_TERRAMANCER_PACK_v1.2.zip",
+      "extension": ".zip",
+      "sha256": "179a829da02e6b34700424cdd0bbc388e33cde7c5562096fde78b0b88ddd6e1d",
+      "size": 1166363
+    },
+    {
+      "path": "incoming/OtherExamples/SavannaAnimalsEC-2.4.2v-r28dwl.zip",
+      "extension": ".zip",
+      "sha256": "05e5ef632f7a8fb2af75f8b8b98bb6dc071b48fc0d9798e72b6c887df112f0af",
+      "size": 1477731
+    },
+    {
+      "path": "incoming/OtherExamples/Sci-fi Drop Animation Pack.zip",
+      "extension": ".zip",
+      "sha256": "9aea400e30dde24fbbacfa503a5a9c3ef79f8bcaf7fed833a7f588976ae98506",
+      "size": 111214
+    },
+    {
+      "path": "incoming/OtherExamples/shizuart_geodes_crusher.zip",
+      "extension": ".zip",
+      "sha256": "bb11fffc3328a6723aee9a0d056876ae362b0e87b626b819a82ec7c1707b9236",
+      "size": 28168
+    },
+    {
+      "path": "incoming/OtherExamples/shizuart_pawstman_stamp_book_collection.zip",
+      "extension": ".zip",
+      "sha256": "a5e6e8c883a7fffbba6e3b9cf1be7b6260c60f95595341717e160242a095e6e5",
+      "size": 184716
+    },
+    {
+      "path": "incoming/OtherExamples/Summer_Furnitures.zip",
+      "extension": ".zip",
+      "sha256": "7e444748388b1e8f55f1894a7a4445321adc76f9247edc009dca4efea514a66c",
+      "size": 278222
+    },
+    {
+      "path": "incoming/OtherExamples/TaigaAnimalsEC-2.6.1v-simckp.zip",
+      "extension": ".zip",
+      "sha256": "d27459d10fc1c03cfec72c4af878b0f29b64c3abe83876b0f1536714d974d722",
+      "size": 1786445
+    },
+    {
+      "path": "incoming/OtherExamples/tooltips.zip",
+      "extension": ".zip",
+      "sha256": "98d27debdab2b45738fc5b95eed62e5240594b88b376f9cbb2000db01bee71dd",
+      "size": 15058
+    },
+    {
+      "path": "incoming/OtherExamples/Ultimate_Tooltips_Animated.zip",
+      "extension": ".zip",
+      "sha256": "8b84207327b8cd7fdea833459e4f2b02205d78c4309b2a878054729b82e8fcdf",
+      "size": 443828
+    },
+    {
+      "path": "incoming/OtherExamples/UltimateGUI_medieval_pack.zip",
+      "extension": ".zip",
+      "sha256": "3c4b596e782f07c2e29571ab71e4728503708241b5bc52818c952c59f8e27053",
+      "size": 72780
+    },
+    {
+      "path": "incoming/OtherExamples/Void_Crystal_Pack.zip",
+      "extension": ".zip",
+      "sha256": "0d827bcffabf9de84a86bdbfa948b6c9ff5959a86dcc02231b08e3e83d2c8371",
+      "size": 454183
+    },
+    {
+      "path": "incoming/OtherExamples/Witch Cosmetics.zip",
+      "extension": ".zip",
+      "sha256": "ac05860d8ac84a212a878b3a1b14369cca7e94c0f0edd766082f5bdc7bd9431e",
+      "size": 14352
+    },
+    {
+      "path": "incoming/OtherExamples/Wizard Armor.zip",
+      "extension": ".zip",
+      "sha256": "4ba0b7c01e2de50fbd58d23546f787575859e8bee17aff4e2fdf4356f093a6d3",
+      "size": 13976
+    },
+    {
+      "path": "incoming/OtherExamples/Yuletide Predator Bundle.zip",
+      "extension": ".zip",
+      "sha256": "a41f546f70647eadd6144af0a9227a193b84c25e5b0f747eaa953ac9e284d321",
+      "size": 638255
+    },
+    {
+      "path": "incoming/README.md",
+      "extension": ".md",
+      "sha256": "ef1720760d86928c0c6c5c62ef01492ed5f91d2a4c3544f472a7c0a122126c59",
+      "size": 3179
+    },
+    {
+      "path": "incoming/SkillPacks/[Blood Moon] Vol.1.zip",
+      "extension": ".zip",
+      "sha256": "41b4fa2953db81fa6a2f35e159710ae0a08eb4a52a585f42671643a30393221c",
+      "size": 592698
+    },
+    {
+      "path": "incoming/SkillPacks/[Divine One] - Gambler  Ace.zip",
+      "extension": ".zip",
+      "sha256": "d48fd4e2c600121b2ebc854e1ad52202b6c3ffe29d97a47cbe317395d3ebef9f",
+      "size": 119993
+    },
+    {
+      "path": "incoming/SkillPacks/[Divine One] - Puppet Mage  Derek.zip",
+      "extension": ".zip",
+      "sha256": "26deaa22ba40e7da78b2065cfb2087a3b01051557d0b9b43198215bc163686f8",
+      "size": 127079
+    },
+    {
+      "path": "incoming/SkillPacks/[Dragon world] ZORO SKILL PACK.zip",
+      "extension": ".zip",
+      "sha256": "0e03bf5f113a13bea8c4e33fd0783a2be5aa685ea9f42f4b3f5890d7fc20d97e",
+      "size": 303386
+    },
+    {
+      "path": "incoming/SkillPacks/Addon  daelcrath.rar",
+      "extension": ".rar",
+      "sha256": "cc1612caa49348cc4b92ca78e3233688cde2cdcbb5f98aadd7d6319c13a4d9bf",
+      "size": 36092417
+    },
+    {
+      "path": "incoming/SkillPacks/Addon [] Keris.rar",
+      "extension": ".rar",
+      "sha256": "285830c509f0e46327fb4ee891364759ee267182f9c359d037c28ed57a2b27a6",
+      "size": 7324562
+    },
+    {
+      "path": "incoming/SkillPacks/Addon RPG Class Fhantorm Katana MCPE 1.21+(by @DyrDev).zip",
+      "extension": ".zip",
+      "sha256": "1c4c3b6c1120286d05dc65df35856bad46a25ec86aacd78eb225f9985bfd2472",
+      "size": 612104
+    },
+    {
+      "path": "incoming/SkillPacks/Arcade Knight Pack.zip",
+      "extension": ".zip",
+      "sha256": "cdfe45992a7416eb4ab450914e8c64b7dad0379c8b54cd90aa3a741fa9db4ab3",
+      "size": 4064591
+    },
+    {
+      "path": "incoming/SkillPacks/blackflame_skills-h4idiy.zip",
+      "extension": ".zip",
+      "sha256": "1eb065e8866683596179762741bc7f069a86d1be190085a6bd18d2ac580e1bd7",
+      "size": 928780
+    },
+    {
+      "path": "incoming/SkillPacks/Blam Pack.zip",
+      "extension": ".zip",
+      "sha256": "eaf74309d1b746e40d61c34f5641760f3e889d4fa9e469294c43d894f597402f",
+      "size": 96246
+    },
+    {
+      "path": "incoming/SkillPacks/Blood Dagger  Class Weapon - Classic Vol. 1.zip",
+      "extension": ".zip",
+      "sha256": "80562a237a847019baaf91748aeea608f1ef8a95c20b0c940225a451da720369",
+      "size": 110802
+    },
+    {
+      "path": "incoming/SkillPacks/Cubees Sorcery Bundle.zip",
+      "extension": ".zip",
+      "sha256": "4e56a84d9ae332096ea73ceaa2c659abce29c18f5a9e8b8de67bdac0fc20ed1b",
+      "size": 7450104
+    },
+    {
+      "path": "incoming/SkillPacks/Elementals Classes 1.3.3.zip",
+      "extension": ".zip",
+      "sha256": "fa3ea9b75ef2392c070f22988be8d8e9458e947cba5352bd55c94e383ebbc2b4",
+      "size": 81691
+    },
+    {
+      "path": "incoming/SkillPacks/FlorentinoX Packs.zip",
+      "extension": ".zip",
+      "sha256": "c7bfd5488f465207edf92ce80709bd317e58f8a55d2b40364709f6705e74503f",
+      "size": 259675
+    },
+    {
+      "path": "incoming/SkillPacks/Forged Weaponry - Netherite Crucible.zip",
+      "extension": ".zip",
+      "sha256": "32e603790f72ab14c67490a113f86af17f7dcbf2f5b9354af713e104c574b1dc",
+      "size": 298365
+    },
+    {
+      "path": "incoming/SkillPacks/gb1.0.0.zip",
+      "extension": ".zip",
+      "sha256": "09382609a014de6ddfa7474b80cb2ed7b4e1a8925a781095783be00827e96ea8",
+      "size": 331902
+    },
+    {
+      "path": "incoming/SkillPacks/Ice_Wizard_2.0_by_Multipixel_Studio.zip",
+      "extension": ".zip",
+      "sha256": "d8adf2079437f0b6309acdf818498b0fe5410d4eacbdaa18cefc28e57e66a494",
+      "size": 76227
+    },
+    {
+      "path": "incoming/SkillPacks/Light Sentinel  Class Weapon - Classic Vol. 1.zip",
+      "extension": ".zip",
+      "sha256": "12ea756936655527ffac68ee6f8e7bd5a737934d35684912f08b750178f4f6cb",
+      "size": 162821
+    },
+    {
+      "path": "incoming/SkillPacks/LostAssets_OriginalClassPack_01_FrostSamurai (1).zip",
+      "extension": ".zip",
+      "sha256": "d70138ca025dbefeaae917930e00c9533ea03fe37f3719791b0234fc5f80583b",
+      "size": 1346224
+    },
+    {
+      "path": "incoming/SkillPacks/packclass-mage-darkness_v3.zip",
+      "extension": ".zip",
+      "sha256": "f18ac7e94e7d37f50b63ee06289d27644846d7c586cf87ff6a7c6aa56174f846",
+      "size": 2818410
+    },
+    {
+      "path": "incoming/SkillPacks/packclass-magic-chain.zip",
+      "extension": ".zip",
+      "sha256": "64fe424b21d3a9d5b8ea6c27622e3becf1831ab45caf3495e93314f8f0399408",
+      "size": 1305467
+    },
+    {
+      "path": "incoming/SkillPacks/packclass-samurai_warrior_skills_v1.zip",
+      "extension": ".zip",
+      "sha256": "581183fec99269d4c3b0a43c2978804c5dc92a6baefe7a4f9d0520ff8dc6e4ca",
+      "size": 1780444
+    },
+    {
+      "path": "incoming/SkillPacks/packclass_mage_light-v3.zip",
+      "extension": ".zip",
+      "sha256": "e6437c3f43d3410876799279a923a361349122272edd6637ae14dec2f1e23bf0",
+      "size": 6295122
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MageHunter.zip",
+      "extension": ".zip",
+      "sha256": "9e7ac6b109128b212e27e47fbc74e1da63c219b8f73add54a9ee4a9b24bd70e6",
+      "size": 298867
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_Magic_Lightning-bi0gfy.zip",
+      "extension": ".zip",
+      "sha256": "f777b1f6801ff580ef40b8fc8ef417625a27109816fd1053fe1d7af632606c97",
+      "size": 11250316
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MagicEarth.zip",
+      "extension": ".zip",
+      "sha256": "a032198e1f1fcd36cca0cf39b5cff78fdbe90b445ff1f189cdb86ef552e8b755",
+      "size": 556294
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MagicFire_V3-rlacht.zip",
+      "extension": ".zip",
+      "sha256": "25ffe96bc6061aac3b3c38437f4a0157b28676a27d87be048ad0e98798527be7",
+      "size": 1190309
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MagicWater_V3-2uba34.zip",
+      "extension": ".zip",
+      "sha256": "c34b510e7071479fe6d09731b6598a43b80e87bf66225a3c478990badebe20e5",
+      "size": 593400
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MagicWindv.zip",
+      "extension": ".zip",
+      "sha256": "0ceb7212b4a538c26a00ae46bf5f0feccaa1b430581b1fc5878e8f41701365e0",
+      "size": 561006
+    },
+    {
+      "path": "incoming/SkillPacks/pinejo_staffs_volume_1.zip",
+      "extension": ".zip",
+      "sha256": "9a8ff5bd48304c5032c6ea8ceba24fe2e4b6cbd5e314362d62a5101170b6eaa8",
+      "size": 91467
+    },
+    {
+      "path": "incoming/SkillPacks/RPG Items VOL 2.zip",
+      "extension": ".zip",
+      "sha256": "4659a5f2ca399b4c9b139dbd78e2c1c1193ddf05ce68b103c24ee01fc7637837",
+      "size": 545912
+    },
+    {
+      "path": "incoming/SkillPacks/RRpg  Void Edge Class v.1.3 [Mythic].zip",
+      "extension": ".zip",
+      "sha256": "d9712f734a33efa504532d827e5500cdebabc34e45ea09062c256239b20d0e56",
+      "size": 945572
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_AWAKENED_CLERIC.zip",
+      "extension": ".zip",
+      "sha256": "0b5135db79e315332d69e289e09f46eba61a33200ae54e8bd7feddc9475866bb",
+      "size": 4274598
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_AWAKENED_MAGE.zip",
+      "extension": ".zip",
+      "sha256": "f8fd314072b0b1da4a302e44eb6efbc4b165238907470fa4fdb11da13d055176",
+      "size": 3038792
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_AWAKENED_SHAMAN.zip",
+      "extension": ".zip",
+      "sha256": "05a19958e2569c63671413263be029efeb83a37185905153fab8f7f5cace2b42",
+      "size": 7338687
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_BARBARIAN_PACK_v1.1-.zip",
+      "extension": ".zip",
+      "sha256": "87a7d924d55c026939aaded505df9d9a8f5e03f25c96990943c130d9d51d623f",
+      "size": 546854
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_BLOODMOON_VAMPIRE_PACK.zip",
+      "extension": ".zip",
+      "sha256": "47c28a1693a1b04f393871154e9fe3cf844cbba9c0b97170157e31a091232e70",
+      "size": 822427
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_HEROES_WATER_SAMURAI.zip",
+      "extension": ".zip",
+      "sha256": "b863feb7b12fa64eecb10f776846abf01bac5f9804db820c011f9b7847830ae8",
+      "size": 1681147
+    },
+    {
+      "path": "incoming/SkillPacks/sKILL.exe - LASER BEAM ABILITY_v1.0.1.zip",
+      "extension": ".zip",
+      "sha256": "ba3cdd92506bc20d49dec46a587fba04f6f1c9fbd0cdfa949fa4292447baaa90",
+      "size": 2685079
+    },
+    {
+      "path": "incoming/SkillPacks/Soul Demonic  Exclusive Character.zip",
+      "extension": ".zip",
+      "sha256": "ceb2bd4f79e5c4e912cdd58f16d5800061bff0aba7970b89c2b290a9a109733b",
+      "size": 1095470
+    },
+    {
+      "path": "incoming/SkillPacks/Spirit Forest  Class Weapon - Classic Vol. 1.zip",
+      "extension": ".zip",
+      "sha256": "7914b7aff6746057caba5c96b63f7f1d60fe6083cbcabbe31acc3f132f2a917e",
+      "size": 162094
+    },
+    {
+      "path": "incoming/SkillPacks/SummonEffect fix display.rar",
+      "extension": ".rar",
+      "sha256": "3cabab0bcdb68c2a885f8d2510e12374826793fe2149207b2edfed36bc1f8f18",
+      "size": 25672
+    },
+    {
+      "path": "incoming/SkillPacks/Toffy-Animated-Gems-pack-e9tjeq.zip",
+      "extension": ".zip",
+      "sha256": "3b0beb882ff970820ccca83b799f23ef15e03f280b4f9c0e8c81f7162dcf3d2b",
+      "size": 138213
+    },
+    {
+      "path": "incoming/SkillPacks/WaterIce_Pack_2.0_1.zip",
+      "extension": ".zip",
+      "sha256": "a1f215445a80a0fd99710a98b2924be69110e6692f4e730b5d82b8482b88c417",
+      "size": 23503
+    },
+    {
+      "path": "incoming/TEMPLATE.md",
+      "extension": ".md",
+      "sha256": "82417503254fd96a67be421fa455590022f0cf8c7ed2b3682db2a544f7e83bf1",
+      "size": 1353
+    },
+    {
+      "path": "incoming/Tutien/kiemtuytong/phi_kiem.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "a3104a28c8b080633ee9a1623890a3c3652892c4ba633f2dccaefec81dc03f8a",
+      "size": 83744
+    },
+    {
+      "path": "incoming/Tutien/kiemtuytong/phi_kiem_projectile.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "11ee977465f9ab6bdcc555faafc663c630539041a7443522abd03853eea053d9",
+      "size": 11503
+    },
+    {
+      "path": "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_mobs.yml",
+      "extension": ".yml",
+      "sha256": "cdea662ee2ed647b2d08c01e955a6de72bd1e2fc3cba8a08bd094b83b1da4c53",
+      "size": 688,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_projectile_start.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "79ab574fccda2aa120d152957cc284cca25780d2e5cebb20f41884a2286f4670",
+      "size": 109917
+    },
+    {
+      "path": "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_projectile_sword.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "65424fb9dd3d96413a9300dc36e010c02153ac7cec826dd93f2a57b9d2072bfb",
+      "size": 13603
+    },
+    {
+      "path": "incoming/Tutien/kiemtuytong/vankiemquytong/vkqt_skill.yml",
+      "extension": ".yml",
+      "sha256": "5f1b3fabd9bc02287877a53fde558c1c8aa72a89654e6d8625414447bcfe9583",
+      "size": 2097,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/Tutien/luccotchivuong/lccv_backgroung.yml",
+      "extension": ".yml",
+      "sha256": "0e483675b6a6298f2885a77287179cf0a1fc68ea67b5b2212829d52963129702",
+      "size": 4369,
+      "hint": "other / ambiguous"
+    },
+    {
+      "path": "incoming/Tutien/luccotchivuong/lccv_choichan.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "4bc4b148cbed032244651b845ac050382718ac1c34d8af3af39ae774b8624b88",
+      "size": 90533
+    },
+    {
+      "path": "incoming/Tutien/luccotchivuong/lccv_mobs.yml",
+      "extension": ".yml",
+      "sha256": "441817233972b8c6ebcebf324c265a34815819d0cdb6753c77ad866c17baa439",
+      "size": 395,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/Tutien/luccotchivuong/lccv_mythiclib.yml",
+      "extension": ".yml",
+      "sha256": "00f352a815abb670a7c2d6bb6b9633c880dd31c9b3858dc306bf212722f78ef5",
+      "size": 3268,
+      "hint": "MythicLib"
+    },
+    {
+      "path": "incoming/Tutien/luccotchivuong/lccv_skills.yml",
+      "extension": ".yml",
+      "sha256": "754182bd735134b2c972d6bf0f89c04c72d713be4e17233478707cbe6d9c56ff",
+      "size": 4805,
+      "hint": "MythicMobs skill"
+    },
+    {
+      "path": "incoming/Tutien/luccotchivuong/luccotchivuong.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "715571d2fc320a999ea74eb84662491f6b36a5f1b2b42697097024aa32a3bfab",
+      "size": 327464
+    },
+    {
+      "path": "incoming/Tutien/xichhuyetphathienthuong/xichhuyetphathienthuong.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "70448acc64161fdb199348654b92080f1dcc0b46d557a082f34b9c9b00e1b0cc",
+      "size": 39300
+    },
+    {
+      "path": "incoming/Tutien/xichhuyetphathienthuong/xichhuyetphathienthuong_dash.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "b92564481c13260642a1bbba17361210d764767dfb0196ff355f0fd0cb56acdc",
+      "size": 37933
+    },
+    {
+      "path": "incoming/Tutien/xichhuyetphathienthuong/xichhuyetphathienthuong_hitvfx.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "bcf458eb075f1a140d005efbad05e1271ecf8bd852899519928217e772f676cc",
+      "size": 31822
+    },
+    {
+      "path": "incoming/Tutien/xichhuyetphathienthuong/xichhuyetphathienthuong_slash.bbmodel",
+      "extension": ".bbmodel",
+      "sha256": "0cbe0fff3c6b46219a66835bd53b39c21ab3d0913b19b49a3876b1d5f3db0a41",
+      "size": 34698
+    },
+    {
+      "path": "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_mobs.yml",
+      "extension": ".yml",
+      "sha256": "bb038301134474fb182324eb9b6bc0070f86e413351d70a1ef251cbec450c577",
+      "size": 4339,
+      "hint": "MythicMobs mob"
+    },
+    {
+      "path": "incoming/Tutien/xichhuyetphathienthuong/xichhuyetthienthuong_skill.yml",
+      "extension": ".yml",
+      "sha256": "81d986dd5d7a438e466aa76e10572dca8034962d7c7e4cf899ce6808c3592fc0",
+      "size": 11745,
+      "hint": "MythicMobs skill"
+    }
+  ],
+  "groups": {
+    "MobsBoss": {
+      ".zip": 31
+    },
+    "no-model": {
+      ".yml": 206,
+      ".docx": 1,
+      ".bbmodel": 2,
+      ".txt": 9,
+      ".json": 2,
+      ".tar.gz": 4,
+      ".md": 1
+    },
+    "OtherExamples": {
+      ".zip": 60,
+      ".rar": 6
+    },
+    "(incoming root)": {
+      ".md": 2
+    },
+    "SkillPacks": {
+      ".zip": 41,
+      ".rar": 3
+    },
+    "Tutien": {
+      ".bbmodel": 10,
+      ".yml": 8
+    }
+  },
+  "duplicates": {
+    "55e6cb1ba275ef768ad38d0868226c37a962349895eec51427fe97dc2051a285": [
+      "incoming/no-model/0-NOOB123okPackCreator/PackArcticKnight - NOOB123ok/MythicMobs/Mobs/ArcticKnightMobs.yml",
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Mobs/ArcticKnightMobs.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/ArcticKnightMobs.yml",
+      "incoming/no-model/MythicMobsCariMc/MythicMobs/mobs/ArcticKnightMobs.yml"
+    ],
+    "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": [
+      "incoming/no-model/DemonBlood/Mythiclib/skill/skillsss.yml",
+      "incoming/no-model/Plant/Mythiclib/skill/skillsss.yml"
+    ],
+    "4c0da4518211aa316ec06575468c407bf1f08121d8936503c4b55bf287446c44": [
+      "incoming/no-model/DemonBlood/MythicMobs/Mobs/Mobsss.yml",
+      "incoming/no-model/DemonBlood/MythicMobs/Skills/skillsss.yml",
+      "incoming/no-model/Plant/MythicMobs/Mobs/Mobsss.yml",
+      "incoming/no-model/Plant/MythicMobs/Skills/skillsss.yml"
+    ],
+    "5e123634bc0f8a613673f42ba5c547768edf2b194f26167f96ff9ea32973bf02": [
+      "incoming/no-model/DemonBlood/readme.txt",
+      "incoming/no-model/fullclass/0_VipClass/Assistant/readme.txt",
+      "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/readme.txt",
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/readme.txt",
+      "incoming/no-model/fullclass/DarkWarrior/readme.txt",
+      "incoming/no-model/fullclass/FlameWarrior/readme.txt",
+      "incoming/no-model/fullclass/WarriorBunny/readme.txt",
+      "incoming/no-model/Plant/readme.txt"
+    ],
+    "301edb4939ce10216c0fa4647a32932a065a885fb1974c6a7e60f7551357faec": [
+      "incoming/no-model/fullclass/0_VipClass/Assistant/MMOCore/classes/Assistant.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/Assistant.yml"
+    ],
+    "286e5d6e4c70a6e1dee94c99f092ce1b082768075b1df158baca130bde2fa082": [
+      "incoming/no-model/fullclass/0_VipClass/CursedAcolyte/MMOCore/classes/CursedAcolyte.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/CursedAcolyte.yml"
+    ],
+    "fe6673c3682c06d7f24c4bbd6aaccb4c113986361966b37de47cc1d02f3b3743": [
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/classes/ArcticKnight.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/ArcticKnight.yml"
+    ],
+    "ca155fd8ca416d551116f77cec3afbecd815bb574c413c1cb5597c517a5093a6": [
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-attack.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-attack.yml"
+    ],
+    "4cafe9bea9e7d3f3bf2702134f49e4f48a044bfb16d1c8d7ded135cd50fe73e0": [
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-aura.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-aura.yml"
+    ],
+    "a6986040061a35116fb01b08240c331c682d41b06a70cdf947dfd7c9aa83da96": [
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-break-down.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-break-down.yml"
+    ],
+    "803244aac195b0ec6f70a5c12013f3a45668b95baf8479687e2fd59908c54860": [
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-clone.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-clone.yml"
+    ],
+    "964c09486de4cb7f092d64ea7b0be56e2caafd2acf1c5913396e942a5bdbcd67": [
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-ice-rain.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-ice-rain.yml"
+    ],
+    "e3554d8b2ffc84d5346f8bdc3c05c8a460cf9b8764a6f818aa85fce8d0077011": [
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MMOCore/Skills/arctic-knight-ice-thrower.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/arctic-knight-ice-thrower.yml"
+    ],
+    "a4bd697c900430842d0e73190da5923bed20e86eac890f0cb5aad6144711ba26": [
+      "incoming/no-model/fullclass/0_VipClass/IgnisArctic/MythicMobs/Skills/ArcticKnight.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/ArcticKnight.yml"
+    ],
+    "7d5c10b3919922b3d65e1ccc09dabcf6aca289b60ca54077d6cf7c56426f9b37": [
+      "incoming/no-model/fullclass/0_VipClass/SoulMage/MMOCore/classes/SoulMage.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/SoulMage.yml"
+    ],
+    "491f3d663ae5ea13c87c2d7c34b26a0ef06ad7dca827c8ba8d42c9f408d68b8d": [
+      "incoming/no-model/fullclass/0_VipClass/SoulMage/MMOCore/Skills/sm-summon.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/sm-summon.yml"
+    ],
+    "494203644cd27a5c204e3496ad1854a177b4e14e97d8d065cb0ecf8400ed6b85": [
+      "incoming/no-model/fullclass/0_VipClass/SoulMage/MMOCore/Skills/sp-surge.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/sp-surge.yml"
+    ],
+    "b6477be1efb6fc625faaddb02b7c0f114f521ac8b8e9739919bb24f10d67d2eb": [
+      "incoming/no-model/fullclass/0_VipClass/SoulMage/MMOCore/Skills/spirit-vfx.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/spirit-vfx.yml"
+    ],
+    "fc0b19b8310dd42b5af9b7d312203d907ec20218c2809e142780a72f1663a2c4": [
+      "incoming/no-model/fullclass/0_VipClass/SoulMage/MythicMobs/Mobs/MobScore.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/MobScore.yml"
+    ],
+    "b8166dcd27dae44da50d33295cc9778df22d173deda0fd4afcb7a204d4c87116": [
+      "incoming/no-model/fullclass/0_VipClass/SoulMage/MythicMobs/Mobs/SoulMage.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/SoulMage.yml"
+    ],
+    "cd29d89a5a691a46095f0238e62f0672253276000f7b8dc2addcec06fc086351": [
+      "incoming/no-model/fullclass/0_VipClass/SoulMage/MythicMobs/Skills/MobsSkill.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/MobsSkill.yml"
+    ],
+    "19d18210237f13c416bc9d21db0b0b60467b5c3f313f1a4bbadf029dadd7d5f8": [
+      "incoming/no-model/fullclass/0_VipClass/SoulMage/MythicMobs/Skills/SoulMage.yml",
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/SoulMage.yml"
+    ],
+    "a5bb0974c0659e36c9d84cbef8414d132d0a59879f542a36832eb81d590b068e": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/BunnyWarrior.yml",
+      "incoming/no-model/fullclass/WarriorBunny/MMOCore/classes/BunnyWarrior.yml"
+    ],
+    "89c28939fa3fa0fe9191554a72f1c41aa3d394e795b382463be354d4fabdc528": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/DarkWarrior.yml",
+      "incoming/no-model/fullclass/DarkWarrior/MMOCore/classes/DarkWarrior.yml"
+    ],
+    "641b6e34b39f72b5bc61c56bee305829585d6116ea705f2ae47e27e8503e728d": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/class/FlameWarrior.yml",
+      "incoming/no-model/fullclass/FlameWarrior/MMOCore/classes/FlameWarrior.yml"
+    ],
+    "4a7e80afe8226509423723593b43da1351037c28f17a93e656599c32b6cb062a": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/blackrays.yml",
+      "incoming/no-model/fullclass/DarkWarrior/MMOCore/Skills/blackrays.yml"
+    ],
+    "5ae95784fbc9f4605ffc657892d7cdfb06f76da09b0c8f8505eb06b24122e898": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/breakthrough.yml",
+      "incoming/no-model/fullclass/DarkWarrior/MMOCore/Skills/breakthrough.yml"
+    ],
+    "040964b55e1c67fd24aad64d37bf0303bf1dca46f12ef44ba133ae4d42d8bd44": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/bunny-attack.yml",
+      "incoming/no-model/fullclass/WarriorBunny/MMOCore/Skills/bunny-attack.yml"
+    ],
+    "47616beae6328af92ef3ada1ca01fa046a47b0895458301f29fb8fe04ae97ecf": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/bunny-bomb.yml",
+      "incoming/no-model/fullclass/WarriorBunny/MMOCore/Skills/bunny-bomb.yml"
+    ],
+    "68ef12ef89fdbfed57e139d5a483ba243f3e43c00398f38386f2b6621151ab4d": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/fireballburns.yml",
+      "incoming/no-model/fullclass/FlameWarrior/MMOCore/Skills/fireballburns.yml"
+    ],
+    "5e6bc15fdc5d33e7bed18fcf2a399bb0a547cf241a34ffd4df8a60e46afb177f": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/firemeteor.yml",
+      "incoming/no-model/fullclass/FlameWarrior/MMOCore/Skills/firemeteor.yml"
+    ],
+    "1ba5af8647952e6377790f447e9f941eb908c10ac85dcf74bb66c56d7b24cdc7": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/geppo.yml",
+      "incoming/no-model/fullclass/WarriorBunny/MMOCore/Skills/geppo.yml"
+    ],
+    "ffe5b9c4896524c59258cc8e3a8217b4f2a4c7c985018b8fa872e2afa4aa4336": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/recluse.yml",
+      "incoming/no-model/fullclass/DarkWarrior/MMOCore/Skills/recluse.yml"
+    ],
+    "ad71fb9dc79370d6776af12dbfe83c5d2c0346ff09991503f0de705069772f2f": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/MMocore/skill/sprayfire.yml",
+      "incoming/no-model/fullclass/FlameWarrior/MMOCore/Skills/sprayfire.yml"
+    ],
+    "261107c4e10b656a8135fee17aea4e5004a5c8848496bf3e2af49b5b28dbb66f": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/BW_Mobsss.yml",
+      "incoming/no-model/fullclass/WarriorBunny/MythicMobs/Mobs/BW_Mobsss.yml"
+    ],
+    "5135925fdb0206f33d2b95159bafacefd6d4ba8c7ad0a80463b85c864f80e297": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Mobs/DW_Skill.yml",
+      "incoming/no-model/fullclass/DarkWarrior/MythicMobs/Mobs/DW_Skill.yml"
+    ],
+    "c6f61241a77cb928a1a64cdefc4b23d5f6e69df05791aff2a559fd3fd24e2613": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/BW_skillsss.yml",
+      "incoming/no-model/fullclass/WarriorBunny/MythicMobs/Skills/BW_skillsss.yml"
+    ],
+    "89654c9ab1de1a04a194e478de29089123b2d895d913f54fce5d70d0fb2ef509": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/DW_Skill.yml",
+      "incoming/no-model/fullclass/DarkWarrior/MythicMobs/Skills/DW_Skill.yml"
+    ],
+    "5b665d68d5d82b2826df6d9a8c4ec9d75962a6f532df73686bfc455cb2049df6": [
+      "incoming/no-model/fullclass/AllClass-add le sv bản cũ r/Mythicmobs/Skills/FW_SKILL.yml",
+      "incoming/no-model/fullclass/FlameWarrior/MythicMobs/Skills/FW_SKILL.yml"
+    ]
+  },
+  "archives": [
+    {
+      "path": "incoming/MobsBoss/[Dragon world] Armor Boss.zip",
+      "entries": 11,
+      "extension": ".zip",
+      "types": {
+        ".txt": 2,
+        ".bbmodel": 3,
+        ".yml": 6
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 3,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/[Dragon world] Nature Elemental Mobs.zip",
+      "entries": 34,
+      "extension": ".zip",
+      "types": {
+        ".txt": 2,
+        ".bbmodel": 11,
+        ".yml": 20,
+        ".zip": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 11,
+        "MythicMobs skill": 9
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/[От Малиныча]Necromancer.zip",
+      "entries": 32,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 6,
+        ".ogg": 11,
+        ".json": 1,
+        ".mcmeta": 1,
+        ".png": 1,
+        ".zip": 1,
+        ".yml": 6,
+        ".txt": 5
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 4,
+        "other / ambiguous": 1
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/Baphomets_Ergeox_the_Old_Foundry_Mech.zip",
+      "entries": 17,
+      "extension": ".zip",
+      "types": {
+        ".schem": 1,
+        ".json": 4,
+        ".properties": 1,
+        ".png": 4,
+        ".mcmeta": 1,
+        ".bbmodel": 2,
+        ".yml": 3,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/BigPig.zip",
+      "entries": 123,
+      "extension": ".zip",
+      "types": {
+        ".png": 80,
+        ".schem": 1,
+        ".bbmodel": 28,
+        ".yml": 12,
+        ".zip": 1,
+        ".md": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 4
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/bl_dark_knight.zip",
+      "entries": 8,
+      "extension": ".zip",
+      "types": {
+        ".yml": 2,
+        ".zip": 2,
+        ".txt": 2,
+        ".bbmodel": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/Demon-reaper-1.0.0.zip",
+      "entries": 16,
+      "extension": ".zip",
+      "types": {
+        ".schem": 1,
+        ".bbmodel": 12,
+        ".yml": 2,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/Elementals - RPG Mobs.zip",
+      "entries": 12,
+      "extension": ".zip",
+      "types": {
+        ".yml": 4,
+        ".zip": 1,
+        ".txt": 2,
+        ".bbmodel": 5
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/em_bandits_v1.1.zip",
+      "entries": 61,
+      "extension": ".zip",
+      "types": {
+        ".pdf": 1,
+        ".mcmeta": 1,
+        ".png": 1,
+        ".json": 1,
+        ".properties": 1,
+        ".ogg": 37,
+        ".bbmodel": 9,
+        ".yml": 10
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 5
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/Ent Keeper Boss.zip",
+      "entries": 12,
+      "extension": ".zip",
+      "types": {
+        ".yml": 6,
+        ".txt": 2,
+        ".zip": 1,
+        ".bbmodel": 3
+      },
+      "yaml_hints": {
+        "MythicMobs skill": 3,
+        "MythicMobs mob": 3
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/From_The_Shadows_Enemies_and_Boss.zip",
+      "entries": 192,
+      "extension": ".zip",
+      "types": {
+        ".json": 147,
+        ".bbmodel": 18,
+        ".yml": 10,
+        ".fsh": 1,
+        ".vsh": 1,
+        ".png": 10,
+        ".mcmeta": 1,
+        ".zip": 2,
+        ".txt": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 4
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/Ghost Bride.zip",
+      "entries": 49,
+      "extension": ".zip",
+      "types": {
+        ".json": 12,
+        ".png": 12,
+        ".properties": 1,
+        ".zip": 1,
+        ".mcmeta": 1,
+        ".yml": 5,
+        ".bbmodel": 10,
+        ".txt": 2,
+        "[no extension]": 2,
+        ".md": 1,
+        ".dat": 1,
+        ".bin": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/halloween.zip",
+      "entries": 10,
+      "extension": ".zip",
+      "types": {
+        ".json": 1,
+        ".bbmodel": 3,
+        ".yml": 2,
+        ".txt": 2,
+        ".zip": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/HanaPack.zip",
+      "entries": 13,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 4,
+        ".yml": 3,
+        ".properties": 1,
+        ".png": 4,
+        ".mcmeta": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/hv_mirabelle.zip",
+      "entries": 12,
+      "extension": ".zip",
+      "types": {
+        ".properties": 1,
+        ".zip": 1,
+        ".bbmodel": 7,
+        ".yml": 2,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/King-Oondasta-Trex-Boss.zip",
+      "entries": 22,
+      "extension": ".zip",
+      "types": {
+        ".png": 4,
+        ".json": 4,
+        ".mcmeta": 1,
+        ".yml": 9,
+        ".bbmodel": 4
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MythicMobs items (path)": 2,
+        "MythicMobs skill": 4,
+        "MythicMobs mob": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/LITTLEROOM_AZRIEL.zip",
+      "entries": 59,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 6,
+        ".yml": 2,
+        ".txt": 1,
+        ".json": 2,
+        ".png": 11,
+        ".properties": 1,
+        ".ogg": 35,
+        ".mcmeta": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/LITTLEROOM_borealdruid_v1_0.zip",
+      "entries": 53,
+      "extension": ".zip",
+      "types": {
+        ".txt": 1,
+        ".json": 5,
+        ".ogg": 37,
+        ".yml": 2,
+        ".bbmodel": 7,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "MythicMobs skill": 1,
+        "MythicMobs mob": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/LITTLEROOM_Lillith_extras.zip",
+      "entries": 90,
+      "extension": ".zip",
+      "types": {
+        ".yml": 5,
+        ".bbmodel": 3,
+        ".png": 11,
+        ".mcmeta": 4,
+        ".txt": 1,
+        ".json": 9,
+        ".ogg": 56,
+        ".sfk": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/LITTLEROOM_skog_v1.zip",
+      "entries": 205,
+      "extension": ".zip",
+      "types": {
+        ".json": 109,
+        ".png": 31,
+        ".properties": 1,
+        ".ogg": 27,
+        ".mcmeta": 2,
+        ".txt": 1,
+        ".yml": 12,
+        ".bbmodel": 22
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 4
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/LKhyadonv1.2.2-eoyyxh.zip",
+      "entries": 123,
+      "extension": ".zip",
+      "types": {
+        ".txt": 2,
+        ".json": 28,
+        ".yml": 10,
+        ".bbmodel": 1,
+        ".properties": 1,
+        ".ogg": 71,
+        ".png": 9,
+        ".mcmeta": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 5,
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/PHEONIX.zip",
+      "entries": 43,
+      "extension": ".zip",
+      "types": {
+        ".yml": 6,
+        ".bbmodel": 6,
+        ".png": 12,
+        ".txt": 1,
+        ".json": 3,
+        ".properties": 1,
+        ".ogg": 13,
+        ".mcmeta": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/rodent_mobs-amonde (1).zip",
+      "entries": 8,
+      "extension": ".zip",
+      "types": {
+        ".txt": 1,
+        ".json": 1,
+        ".bbmodel": 4,
+        ".yml": 2
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/Tenebris Boss.zip",
+      "entries": 18,
+      "extension": ".zip",
+      "types": {
+        ".zip": 1,
+        ".json": 2,
+        ".properties": 1,
+        ".ogg": 4,
+        ".png": 1,
+        ".bbmodel": 5,
+        ".yml": 2,
+        ".txt": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/The Crustarax.zip",
+      "entries": 19,
+      "extension": ".zip",
+      "types": {
+        ".txt": 3,
+        ".bbmodel": 2,
+        ".yml": 5,
+        ".json": 1,
+        ".png": 2,
+        ".mcmeta": 1,
+        "[no extension]": 2,
+        ".md": 1,
+        ".dat": 1,
+        ".bin": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 3,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/The Fallen Heroes v4.zip",
+      "entries": 251,
+      "extension": ".zip",
+      "types": {
+        ".json": 133,
+        ".properties": 1,
+        ".ogg": 79,
+        ".png": 15,
+        ".mcmeta": 3,
+        ".pdf": 1,
+        ".bbmodel": 10,
+        ".ini": 3,
+        ".yml": 6
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 3,
+        "packinfo": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/The_Lovers_Samurai_Bossfight.zip",
+      "entries": 20,
+      "extension": ".zip",
+      "types": {
+        ".json": 1,
+        ".bbmodel": 14,
+        ".yml": 3,
+        ".zip": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/Unrivalled_Vol.1-_Wu-tf1cfm.zip",
+      "entries": 51,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 43,
+        ".yml": 4,
+        ".txt": 1,
+        ".json": 2,
+        ".png": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/VoidSoulsMobsPackVermins.zip",
+      "entries": 23,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 12,
+        ".yml": 10,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 5,
+        "MythicMobs skill": 5
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/Warden Expansion Pack 1.1.0.zip",
+      "entries": 10,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 7,
+        ".yml": 2,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/MobsBoss/yukio.zip",
+      "entries": 32,
+      "extension": ".zip",
+      "types": {
+        ".json": 1,
+        ".ogg": 23,
+        ".bbmodel": 5,
+        ".yml": 2,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/archive-2025-04-14T151638Z.tar.gz",
+      "entries": 14,
+      "extension": ".tar.gz",
+      "types": {
+        ".yml": 14
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 4,
+        "packinfo": 3,
+        "MythicMobs skill": 6,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/archive-2025-06-27T005515Z.tar.gz",
+      "entries": 5,
+      "extension": ".tar.gz",
+      "types": {
+        ".yml": 5
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 2,
+        "packinfo": 1,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/packs/NOOBSell/Mobs/archive-2025-06-27T005634Z.tar.gz",
+      "entries": 2,
+      "extension": ".tar.gz",
+      "types": {
+        ".yml": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/no-model/MythicMobsCariMc/MythicMobs/skills/VFX_ATTACK_ELEMENT/archive-2025-06-24T031922Z.tar.gz",
+      "entries": 5,
+      "extension": ".tar.gz",
+      "types": {
+        ".yml": 5
+      },
+      "yaml_hints": {
+        "other / ambiguous": 5
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/2026 NYE - Fireworks.zip",
+      "entries": 3,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 1,
+        ".yml": 1,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/[Toro] Ezekiel - The Evil Arbiter.zip",
+      "entries": 6,
+      "extension": ".zip",
+      "types": {
+        ".schem": 1,
+        ".png": 1,
+        ".bbmodel": 1,
+        ".yml": 3
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/all.zip",
+      "entries": 122,
+      "extension": ".zip",
+      "types": {
+        ".png": 54,
+        ".yml": 5,
+        ".json": 45,
+        ".mcmeta": 18
+      },
+      "yaml_hints": {
+        "other / ambiguous": 3,
+        "MythicMobs items (path)": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Chicken King - cosmetics set.zip",
+      "entries": 10,
+      "extension": ".zip",
+      "types": {
+        ".yml": 2,
+        ".json": 4,
+        ".png": 4
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Christmas Cosmetics 2023 Volume 2.zip",
+      "entries": 34,
+      "extension": ".zip",
+      "types": {
+        ".yml": 2,
+        ".json": 11,
+        ".png": 16,
+        ".mcmeta": 5
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Cosmetics Ultimate Bundle.zip",
+      "entries": 250,
+      "extension": ".zip",
+      "types": {
+        ".yml": 14,
+        ".json": 101,
+        ".png": 117,
+        ".mcmeta": 18
+      },
+      "yaml_hints": {
+        "other / ambiguous": 14
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Demon-reaper-1.0.0-z0ipcs.zip",
+      "entries": 16,
+      "extension": ".zip",
+      "types": {
+        ".schem": 1,
+        ".bbmodel": 12,
+        ".yml": 2,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/EC-Backrooms-v1.6.zip",
+      "entries": 207,
+      "extension": ".zip",
+      "types": {
+        ".ogg": 147,
+        ".ini": 4,
+        ".png": 12,
+        ".yml": 5,
+        ".json": 29,
+        ".mcmeta": 4,
+        ".bbmodel": 5,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MythicMobs mob": 1,
+        "packinfo": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/ECEliteMountsVol1-1.4.1v (1).zip",
+      "entries": 25,
+      "extension": ".zip",
+      "types": {
+        ".yml": 22,
+        ".zip": 2,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 20,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/ECForestAnimalPack-2.1.6.zip",
+      "entries": 10,
+      "extension": ".zip",
+      "types": {
+        ".rar": 1,
+        ".zip": 1,
+        ".txt": 1,
+        ".yml": 6,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/ECWaterAnimalBundle-2.2.2v.zip",
+      "entries": 46,
+      "extension": ".zip",
+      "types": {
+        ".png": 5,
+        ".zip": 1,
+        ".txt": 4,
+        ".yml": 22,
+        ".bbmodel": 14
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 8,
+        "MythicMobs skill": 9,
+        "other / ambiguous": 3
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Element Witch Costume Vol.2.zip",
+      "entries": 20,
+      "extension": ".zip",
+      "types": {
+        ".yml": 2,
+        ".json": 3,
+        ".png": 11,
+        ".mcmeta": 4
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/elitecreatures-rpg_bundle_v1-04nst1.zip",
+      "entries": 105,
+      "extension": ".zip",
+      "types": {
+        ".png": 100,
+        ".yml": 2,
+        ".txt": 1,
+        ".zip": 1,
+        ".md": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/elitecreatures-rpg_bundle_v19-etgnvj.zip",
+      "entries": 56,
+      "extension": ".zip",
+      "types": {
+        ".png": 50,
+        ".yml": 4,
+        ".zip": 1,
+        ".md": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 3,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/elitecreatures-rpg_bundle_v6-ztiayr.zip",
+      "entries": 166,
+      "extension": ".zip",
+      "types": {
+        ".png": 136,
+        ".yml": 4,
+        ".json": 24,
+        ".zip": 1,
+        ".md": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 3,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/em_Guardiansoflight_v1_BossOnly_1.2.zip",
+      "entries": 115,
+      "extension": ".zip",
+      "types": {
+        ".pdf": 2,
+        ".properties": 1,
+        ".ogg": 74,
+        ".png": 1,
+        ".ini": 1,
+        ".json": 3,
+        ".mcmeta": 1,
+        ".bbmodel": 17,
+        ".yml": 15
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 5,
+        "packinfo": 2,
+        "MythicMobs skill": 6
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Fairy_Animated_Weapons__Tools_Set.zip",
+      "entries": 473,
+      "extension": ".zip",
+      "types": {
+        ".png": 220,
+        ".txt": 1,
+        ".yml": 17,
+        ".json": 175,
+        ".mcmeta": 60
+      },
+      "yaml_hints": {
+        "other / ambiguous": 14,
+        "MythicMobs items (path)": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Flowers Icons v1.zip",
+      "entries": 57,
+      "extension": ".zip",
+      "types": {
+        ".ini": 12,
+        ".png": 30,
+        ".yml": 4,
+        ".json": 10,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 3,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Gilded Sentinel Boss + Arena.zip",
+      "entries": 18,
+      "extension": ".zip",
+      "types": {
+        ".png": 1,
+        ".schem": 1,
+        ".bbmodel": 6,
+        ".yml": 4,
+        ".txt": 3,
+        ".json": 1,
+        ".zip": 2
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 2,
+        "MythicMobs items (path)": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Graceless-Omen-1.0.1--63zrip.zip",
+      "entries": 10,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 7,
+        ".yml": 2,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Halloween_Costume.zip",
+      "entries": 153,
+      "extension": ".zip",
+      "types": {
+        ".png": 39,
+        ".txt": 1,
+        ".yml": 11,
+        ".json": 69,
+        ".mcmeta": 33
+      },
+      "yaml_hints": {
+        "other / ambiguous": 9,
+        "MythicMobs items (path)": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/HellDungeon1.06.zip",
+      "entries": 491,
+      "extension": ".zip",
+      "types": {
+        ".png": 191,
+        ".ogg": 8,
+        ".properties": 75,
+        ".fsh": 3,
+        ".vsh": 3,
+        ".json": 134,
+        ".mcmeta": 6,
+        ".yml": 14,
+        ".txt": 2,
+        ".bbmodel": 55
+      },
+      "yaml_hints": {
+        "MythicMobs config/stats": 7,
+        "other / ambiguous": 3,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/HyrexAnimations-1.3.1.zip",
+      "entries": 2,
+      "extension": ".zip",
+      "types": {
+        ".jar": 1,
+        ".txt": 1
+      },
+      "yaml_hints": {},
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/InsectPackWMount.zip",
+      "entries": 10,
+      "extension": ".zip",
+      "types": {
+        ".txt": 1,
+        ".yml": 6,
+        ".zip": 1,
+        ".rar": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 2,
+        "MythicMobs items (path)": 1,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Liono's Weaponry Vol 2.zip",
+      "entries": 73,
+      "extension": ".zip",
+      "types": {
+        ".yml": 2,
+        ".json": 10,
+        ".png": 45,
+        ".mcmeta": 16
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Little_Penguin_Weapons_Tools__Cosmetics_Set.zip",
+      "entries": 207,
+      "extension": ".zip",
+      "types": {
+        ".png": 78,
+        ".txt": 1,
+        ".yml": 11,
+        ".json": 117
+      },
+      "yaml_hints": {
+        "other / ambiguous": 9,
+        "MythicMobs items (path)": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/LITTLEROOM_BREWERYPACK_v1_3_1_21_4.rar",
+      "entries": 102,
+      "extension": ".rar",
+      "types": {
+        ".json": 55,
+        ".ogg": 13,
+        ".mcmeta": 1,
+        ".png": 1,
+        ".bbmodel": 3,
+        ".yml": 6,
+        "[no extension]": 23
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "packinfo": 1,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/LITTLEROOM_DungeonHazards_v1_3(1).rar",
+      "entries": 88,
+      "extension": ".rar",
+      "types": {
+        ".txt": 1,
+        ".bbmodel": 18,
+        ".yml": 4,
+        ".json": 13,
+        ".ogg": 16,
+        ".png": 12,
+        ".mcmeta": 1,
+        "[no extension]": 23
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "packinfo": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/littleroom_herobrine_v1_9.rar",
+      "entries": 120,
+      "extension": ".rar",
+      "types": {
+        ".bbmodel": 18,
+        ".png": 11,
+        ".yml": 10,
+        ".txt": 2,
+        ".json": 2,
+        ".properties": 2,
+        ".ogg": 32,
+        ".mcmeta": 2,
+        "[no extension]": 41
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/littleroom_herobrine_v1_9_1_21_4.rar",
+      "entries": 120,
+      "extension": ".rar",
+      "types": {
+        ".bbmodel": 18,
+        ".png": 11,
+        ".yml": 10,
+        ".txt": 2,
+        ".json": 2,
+        ".properties": 2,
+        ".ogg": 32,
+        ".mcmeta": 2,
+        "[no extension]": 41
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/LITTLEROOM_TowerSkeleton_v1_1.rar",
+      "entries": 99,
+      "extension": ".rar",
+      "types": {
+        ".json": 8,
+        ".ogg": 45,
+        ".png": 11,
+        ".mcmeta": 1,
+        ".bbmodel": 8,
+        ".yml": 4,
+        "[no extension]": 22
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "packinfo": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/LITTLEROOM_TowerSkeleton_v1_1_1_21_4.rar",
+      "entries": 102,
+      "extension": ".rar",
+      "types": {
+        ".json": 10,
+        ".ogg": 45,
+        ".png": 11,
+        ".mcmeta": 1,
+        ".bbmodel": 8,
+        ".yml": 4,
+        "[no extension]": 23
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "packinfo": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/ModelFoundry's Ember Claw Sub-hitbox 1.0.0.zip",
+      "entries": 22,
+      "extension": ".zip",
+      "types": {
+        ".yml": 4,
+        ".bbmodel": 17,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/ModelFoundry's Witch Class 1.1.0.zip",
+      "entries": 178,
+      "extension": ".zip",
+      "types": {
+        ".png": 70,
+        ".properties": 1,
+        ".yml": 23,
+        ".json": 26,
+        ".mcmeta": 15,
+        ".bbmodel": 42,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MMOCore classes": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 3,
+        "MythicMobs mob": 3,
+        "packinfo": 3,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Mounts pack animal series vol4.zip",
+      "entries": 10,
+      "extension": ".zip",
+      "types": {
+        ".zip": 1,
+        ".rar": 1,
+        ".yml": 7,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 5,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/New_Year_Party_Costume.zip",
+      "entries": 166,
+      "extension": ".zip",
+      "types": {
+        ".png": 48,
+        ".txt": 1,
+        ".yml": 12,
+        ".json": 78,
+        ".mcmeta": 27
+      },
+      "yaml_hints": {
+        "other / ambiguous": 10,
+        "MythicMobs items (path)": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Nog's Bits & Bobs [Halloween Graveyard].zip",
+      "entries": 20,
+      "extension": ".zip",
+      "types": {
+        ".yml": 2,
+        ".json": 10,
+        ".png": 8
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Nog's Mini You [Valentines Pets & Plushies].zip",
+      "entries": 72,
+      "extension": ".zip",
+      "types": {
+        ".pdf": 1,
+        ".png": 26,
+        ".zip": 1,
+        ".yml": 21,
+        ".json": 20,
+        ".bbmodel": 3
+      },
+      "yaml_hints": {
+        "other / ambiguous": 9,
+        "MythicMobs items (path)": 8,
+        "MythicMobs mob": 3,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/PVP-Arena-200x200-1-01lmny.zip",
+      "entries": 26,
+      "extension": ".zip",
+      "types": {
+        ".dat": 8,
+        ".dat_mcr": 1,
+        ".dat_old": 1,
+        ".mca": 11,
+        ".lock": 1,
+        ".schematic": 1,
+        ".png": 1,
+        ".mcworld": 1,
+        ".json": 1
+      },
+      "yaml_hints": {},
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/qpack_giftballoons.zip",
+      "entries": 8,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 2,
+        ".yml": 5,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "packinfo": 1,
+        "MythicMobs skill": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs items (path)": 1,
+        "other / ambiguous": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/RPG_Basics_Animals_of_Farmville_v2.0.zip",
+      "entries": 32,
+      "extension": ".zip",
+      "types": {
+        ".yml": 10,
+        ".bbmodel": 20,
+        ".txt": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MythicMobs mob": 6,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Rune Knight Costume.zip",
+      "entries": 40,
+      "extension": ".zip",
+      "types": {
+        ".yml": 2,
+        ".json": 11,
+        ".png": 14,
+        ".mcmeta": 13
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_ANIMAL_EXPANSION_JUNGLE_EDITION_v1.1-e3ro8i.zip",
+      "entries": 232,
+      "extension": ".zip",
+      "types": {
+        ".txt": 2,
+        ".bbmodel": 10,
+        ".yml": 14,
+        ".json": 174,
+        ".ogg": 16,
+        ".png": 14,
+        ".mcmeta": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "other / ambiguous": 11,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_ARCHMAGE_PACK_v1.5.zip",
+      "entries": 969,
+      "extension": ".zip",
+      "types": {
+        ".ogg": 85,
+        ".png": 522,
+        ".properties": 4,
+        ".txt": 3,
+        ".yml": 30,
+        ".json": 318,
+        ".bbmodel": 5,
+        ".mcmeta": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 5,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_ARCTIC_KNIGHT_PACK_v1.3.zip",
+      "entries": 196,
+      "extension": ".zip",
+      "types": {
+        ".png": 92,
+        ".properties": 4,
+        ".txt": 4,
+        ".yml": 27,
+        ".json": 49,
+        ".mcmeta": 4,
+        ".bbmodel": 16
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "MythicMobs items (path)": 2,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_ASSASSIN_PACK_v1.9.zip",
+      "entries": 618,
+      "extension": ".zip",
+      "types": {
+        ".ogg": 35,
+        ".png": 352,
+        ".properties": 4,
+        ".txt": 3,
+        ".yml": 29,
+        ".json": 183,
+        ".mcmeta": 12
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 6,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 5,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_AWAKENED_ASSASSIN_v1.1.zip",
+      "entries": 254,
+      "extension": ".zip",
+      "types": {
+        ".ogg": 30,
+        ".png": 82,
+        ".properties": 4,
+        ".txt": 3,
+        ".yml": 27,
+        ".json": 54,
+        ".bbmodel": 52,
+        ".mcmeta": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "MythicMobs items (path)": 2,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_CLERIC_PACK_v1.4.zip",
+      "entries": 724,
+      "extension": ".zip",
+      "types": {
+        ".ogg": 65,
+        ".png": 402,
+        ".properties": 4,
+        ".txt": 3,
+        ".yml": 30,
+        ".json": 213,
+        ".bbmodel": 5,
+        ".mcmeta": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 5,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_GALE_GLAIVE_PACK_v1.2.zip",
+      "entries": 186,
+      "extension": ".zip",
+      "types": {
+        ".png": 52,
+        ".properties": 4,
+        ".txt": 3,
+        ".yml": 27,
+        ".json": 49,
+        ".bbmodel": 49,
+        ".mcmeta": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "MythicMobs items (path)": 2,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_MARTIAL_ARTIST_PACK_v1.6.zip",
+      "entries": 1363,
+      "extension": ".zip",
+      "types": {
+        ".ogg": 80,
+        ".png": 782,
+        ".properties": 4,
+        ".txt": 3,
+        ".yml": 29,
+        ".json": 463,
+        ".mcmeta": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 6,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 5,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_MONK_PACK_v1.3.zip",
+      "entries": 196,
+      "extension": ".zip",
+      "types": {
+        ".properties": 4,
+        ".png": 92,
+        ".txt": 3,
+        ".yml": 27,
+        ".json": 49,
+        ".bbmodel": 19,
+        ".mcmeta": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "MythicMobs items (path)": 2,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_PRISMARINE_SET_PACK_v1.3.zip",
+      "entries": 253,
+      "extension": ".zip",
+      "types": {
+        ".properties": 8,
+        ".png": 115,
+        ".ogg": 12,
+        ".fsh": 1,
+        ".vsh": 1,
+        ".txt": 3,
+        ".yml": 26,
+        ".json": 86,
+        ".mcmeta": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 9,
+        "MMOCore classes": 1,
+        "MMOCore skills": 3,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 4,
+        "MythicMobs mob": 3,
+        "MythicMobs skill": 5
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/samus2002_TERRAMANCER_PACK_v1.2.zip",
+      "entries": 267,
+      "extension": ".zip",
+      "types": {
+        ".properties": 4,
+        ".ogg": 35,
+        ".png": 117,
+        ".txt": 3,
+        ".yml": 27,
+        ".json": 60,
+        ".bbmodel": 19,
+        ".mcmeta": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "MythicMobs items (path)": 2,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/SavannaAnimalsEC-2.4.2v-r28dwl.zip",
+      "entries": 11,
+      "extension": ".zip",
+      "types": {
+        ".txt": 2,
+        ".yml": 6,
+        ".zip": 1,
+        ".rar": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Sci-fi Drop Animation Pack.zip",
+      "entries": 36,
+      "extension": ".zip",
+      "types": {
+        ".png": 4,
+        ".txt": 5,
+        ".mcmeta": 5,
+        ".json": 8,
+        ".yml": 8,
+        ".bbmodel": 6
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "packinfo": 1,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2,
+        "MythicMobs items (path)": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/shizuart_geodes_crusher.zip",
+      "entries": 30,
+      "extension": ".zip",
+      "types": {
+        ".png": 20,
+        ".mcmeta": 2,
+        ".json": 2,
+        ".yml": 5,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/shizuart_pawstman_stamp_book_collection.zip",
+      "entries": 246,
+      "extension": ".zip",
+      "types": {
+        ".png": 224,
+        ".yml": 17,
+        ".bbmodel": 2,
+        ".mcmeta": 2,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 12,
+        "MythicMobs mob": 2,
+        "packinfo": 2,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Summer_Furnitures.zip",
+      "entries": 176,
+      "extension": ".zip",
+      "types": {
+        ".png": 68,
+        ".yml": 4,
+        ".json": 100,
+        ".mcmeta": 4
+      },
+      "yaml_hints": {
+        "other / ambiguous": 3,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/TaigaAnimalsEC-2.6.1v-simckp.zip",
+      "entries": 11,
+      "extension": ".zip",
+      "types": {
+        ".txt": 2,
+        ".zip": 1,
+        ".rar": 1,
+        ".yml": 6,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/tooltips.zip",
+      "entries": 25,
+      "extension": ".zip",
+      "types": {
+        ".png": 12,
+        ".mcmeta": 12,
+        ".yml": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Ultimate_Tooltips_Animated.zip",
+      "entries": 235,
+      "extension": ".zip",
+      "types": {
+        ".png": 189,
+        ".yml": 4,
+        ".json": 2,
+        ".mcmeta": 36,
+        ".txt": 2,
+        ".zip": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 3,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/UltimateGUI_medieval_pack.zip",
+      "entries": 20,
+      "extension": ".zip",
+      "types": {
+        ".png": 17,
+        ".psd": 1,
+        ".yml": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Void_Crystal_Pack.zip",
+      "entries": 220,
+      "extension": ".zip",
+      "types": {
+        ".txt": 5,
+        ".yml": 12,
+        ".mcmeta": 3,
+        ".json": 146,
+        ".png": 52,
+        ".fsh": 1,
+        ".vsh": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 11,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Witch Cosmetics.zip",
+      "entries": 10,
+      "extension": ".zip",
+      "types": {
+        ".yml": 2,
+        ".json": 4,
+        ".png": 4
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Wizard Armor.zip",
+      "entries": 12,
+      "extension": ".zip",
+      "types": {
+        ".yml": 3,
+        ".json": 2,
+        ".png": 7
+      },
+      "yaml_hints": {
+        "other / ambiguous": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/OtherExamples/Yuletide Predator Bundle.zip",
+      "entries": 75,
+      "extension": ".zip",
+      "types": {
+        ".yml": 3,
+        ".json": 33,
+        ".png": 30,
+        ".properties": 1,
+        ".mcmeta": 8
+      },
+      "yaml_hints": {
+        "other / ambiguous": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/[Blood Moon] Vol.1.zip",
+      "entries": 66,
+      "extension": ".zip",
+      "types": {
+        ".yml": 6,
+        ".json": 6,
+        ".png": 8,
+        ".properties": 1,
+        ".bbmodel": 38,
+        ".txt": 2,
+        "[no extension]": 2,
+        ".md": 1,
+        ".dat": 1,
+        ".bin": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/[Divine One] - Gambler  Ace.zip",
+      "entries": 50,
+      "extension": ".zip",
+      "types": {
+        ".png": 9,
+        ".yml": 14,
+        ".json": 7,
+        ".properties": 1,
+        ".bbmodel": 18,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MMOCore classes": 1,
+        "MMOCore skills": 6,
+        "MythicLib": 1,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/[Divine One] - Puppet Mage  Derek.zip",
+      "entries": 40,
+      "extension": ".zip",
+      "types": {
+        ".png": 9,
+        ".yml": 14,
+        ".properties": 1,
+        ".json": 7,
+        ".bbmodel": 8,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MMOCore classes": 1,
+        "MMOCore skills": 6,
+        "MythicLib": 1,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/[Dragon world] ZORO SKILL PACK.zip",
+      "entries": 302,
+      "extension": ".zip",
+      "types": {
+        ".txt": 3,
+        ".yml": 18,
+        ".skin": 4,
+        ".json": 96,
+        ".properties": 1,
+        ".png": 173,
+        ".mcmeta": 7
+      },
+      "yaml_hints": {
+        "other / ambiguous": 14,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Addon  daelcrath.rar",
+      "entries": 213,
+      "extension": ".rar",
+      "types": {
+        ".json": 117,
+        ".mcfunction": 3,
+        ".png": 81,
+        ".ogg": 12
+      },
+      "yaml_hints": {},
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Addon [] Keris.rar",
+      "entries": 348,
+      "extension": ".rar",
+      "types": {
+        ".json": 236,
+        ".mcfunction": 9,
+        ".png": 90,
+        ".ogg": 12,
+        ".lang": 1
+      },
+      "yaml_hints": {},
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Addon RPG Class Fhantorm Katana MCPE 1.21+(by @DyrDev).zip",
+      "entries": 2,
+      "extension": ".zip",
+      "types": {
+        "[no extension]": 1,
+        ".mcaddon": 1
+      },
+      "yaml_hints": {},
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Arcade Knight Pack.zip",
+      "entries": 268,
+      "extension": ".zip",
+      "types": {
+        ".ogg": 80,
+        ".png": 52,
+        ".txt": 6,
+        ".mcmeta": 1,
+        ".json": 30,
+        ".yml": 47,
+        ".bbmodel": 51,
+        ".md": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 9,
+        "MMOCore classes": 3,
+        "MMOCore skills": 21,
+        "MythicLib": 3,
+        "packinfo": 3,
+        "MythicMobs mob": 3,
+        "MythicMobs skill": 3,
+        "MythicMobs items (path)": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/blackflame_skills-h4idiy.zip",
+      "entries": 385,
+      "extension": ".zip",
+      "types": {
+        ".yml": 38,
+        ".json": 102,
+        ".ogg": 14,
+        ".png": 228,
+        ".mcmeta": 2,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 13,
+        "MMOCore classes": 2,
+        "MMOCore skills": 14,
+        "MythicLib": 2,
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Blam Pack.zip",
+      "entries": 66,
+      "extension": ".zip",
+      "types": {
+        ".yml": 6,
+        ".json": 20,
+        ".fsh": 1,
+        ".glsl": 3,
+        ".png": 29,
+        ".bbmodel": 5,
+        ".txt": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Blood Dagger  Class Weapon - Classic Vol. 1.zip",
+      "entries": 43,
+      "extension": ".zip",
+      "types": {
+        ".json": 8,
+        ".properties": 1,
+        ".png": 11,
+        ".mcmeta": 1,
+        ".txt": 3,
+        ".yml": 11,
+        ".bbmodel": 2,
+        "[no extension]": 2,
+        ".md": 1,
+        ".dat": 1,
+        ".bin": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 4
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Cubees Sorcery Bundle.zip",
+      "entries": 9,
+      "extension": ".zip",
+      "types": {
+        ".zip": 2,
+        "[no extension]": 2,
+        ".md": 1,
+        ".dat": 1,
+        ".txt": 1,
+        ".bin": 1,
+        ".yml": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1
+      },
+      "nested_archives": 2,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Elementals Classes 1.3.3.zip",
+      "entries": 93,
+      "extension": ".zip",
+      "types": {
+        ".yml": 92,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "MMOCore classes": 10,
+        "MMOCore other": 1,
+        "MMOCore skills": 60,
+        "MythicLib": 10,
+        "MythicMobs skill": 10,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/FlorentinoX Packs.zip",
+      "entries": 9,
+      "extension": ".zip",
+      "types": {
+        ".yml": 7,
+        ".txt": 1,
+        ".zip": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1,
+        "other / ambiguous": 5
+      },
+      "nested_archives": 1,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Forged Weaponry - Netherite Crucible.zip",
+      "entries": 50,
+      "extension": ".zip",
+      "types": {
+        ".txt": 1,
+        ".png": 6,
+        ".mcmeta": 4,
+        ".yml": 28,
+        ".json": 1,
+        ".bbmodel": 6,
+        ".ogg": 4
+      },
+      "yaml_hints": {
+        "other / ambiguous": 5,
+        "MythicMobs mob": 2,
+        "packinfo": 2,
+        "MythicMobs skill": 18,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/gb1.0.0.zip",
+      "entries": 10,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 6,
+        ".yml": 2,
+        ".txt": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Ice_Wizard_2.0_by_Multipixel_Studio.zip",
+      "entries": 52,
+      "extension": ".zip",
+      "types": {
+        ".txt": 2,
+        ".json": 2,
+        ".yml": 22,
+        ".png": 14,
+        ".ini": 2,
+        ".bbmodel": 10
+      },
+      "yaml_hints": {
+        "other / ambiguous": 11,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 2,
+        "MMOCore classes": 1,
+        "MMOCore skills": 6,
+        "MythicLib": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Light Sentinel  Class Weapon - Classic Vol. 1.zip",
+      "entries": 37,
+      "extension": ".zip",
+      "types": {
+        ".yml": 11,
+        ".bbmodel": 3,
+        ".json": 8,
+        ".properties": 1,
+        ".png": 11,
+        ".mcmeta": 1,
+        ".txt": 2
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 4
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/LostAssets_OriginalClassPack_01_FrostSamurai (1).zip",
+      "entries": 122,
+      "extension": ".zip",
+      "types": {
+        ".json": 57,
+        ".png": 55,
+        ".yml": 9,
+        ".bbmodel": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 5,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/packclass-mage-darkness_v3.zip",
+      "entries": 1098,
+      "extension": ".zip",
+      "types": {
+        ".txt": 2,
+        ".yml": 100,
+        ".properties": 4,
+        ".json": 336,
+        ".ogg": 32,
+        ".png": 524,
+        ".mcmeta": 8,
+        "[no extension]": 92
+      },
+      "yaml_hints": {
+        "other / ambiguous": 18,
+        "MMOCore classes": 4,
+        "MMOCore skills": 24,
+        "MythicLib": 24,
+        "MythicMobs items (path)": 22,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 4
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/packclass-magic-chain.zip",
+      "entries": 761,
+      "extension": ".zip",
+      "types": {
+        "[no extension]": 89,
+        ".ds_store": 14,
+        ".txt": 2,
+        ".yml": 84,
+        ".json": 264,
+        ".png": 280,
+        ".ogg": 24,
+        ".properties": 4
+      },
+      "yaml_hints": {
+        "MMOCore classes": 4,
+        "MMOCore skills": 20,
+        "MythicMobs items (path)": 18,
+        "MythicLib": 20,
+        "other / ambiguous": 14,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 4
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/packclass-samurai_warrior_skills_v1.zip",
+      "entries": 575,
+      "extension": ".zip",
+      "types": {
+        ".yml": 44,
+        ".json": 156,
+        ".ogg": 16,
+        ".png": 352,
+        ".mcmeta": 4,
+        ".bbmodel": 2,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 21,
+        "MMOCore classes": 2,
+        "MMOCore skills": 12,
+        "MythicLib": 2,
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/packclass_mage_light-v3.zip",
+      "entries": 1582,
+      "extension": ".zip",
+      "types": {
+        ".txt": 2,
+        ".yml": 116,
+        ".properties": 4,
+        ".json": 360,
+        ".ogg": 52,
+        ".png": 888,
+        ".mcmeta": 48,
+        "[no extension]": 112
+      },
+      "yaml_hints": {
+        "other / ambiguous": 26,
+        "MMOCore classes": 4,
+        "MMOCore skills": 24,
+        "MythicLib": 24,
+        "MythicMobs items (path)": 30,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 4
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MageHunter.zip",
+      "entries": 105,
+      "extension": ".zip",
+      "types": {
+        ".txt": 1,
+        ".yml": 31,
+        ".json": 36,
+        ".ogg": 10,
+        ".png": 27
+      },
+      "yaml_hints": {
+        "other / ambiguous": 5,
+        "MMOCore classes": 1,
+        "MMOCore skills": 6,
+        "MythicLib": 6,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 6,
+        "MythicMobs skill": 6
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_Magic_Lightning-bi0gfy.zip",
+      "entries": 4,
+      "extension": ".zip",
+      "types": {
+        ".zip": 3,
+        ".yml": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1
+      },
+      "nested_archives": 3,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MagicEarth.zip",
+      "entries": 97,
+      "extension": ".zip",
+      "types": {
+        ".txt": 1,
+        ".yml": 34,
+        ".properties": 2,
+        ".json": 18,
+        ".ogg": 16,
+        ".png": 26
+      },
+      "yaml_hints": {
+        "other / ambiguous": 3,
+        "MMOCore classes": 2,
+        "MMOCore skills": 10,
+        "MythicLib": 10,
+        "MythicMobs items (path)": 5,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MagicFire_V3-rlacht.zip",
+      "entries": 497,
+      "extension": ".zip",
+      "types": {
+        ".yml": 40,
+        ".properties": 2,
+        ".json": 142,
+        ".ogg": 14,
+        ".png": 290,
+        ".mcmeta": 8,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 6,
+        "MMOCore classes": 2,
+        "MMOCore skills": 10,
+        "MythicLib": 10,
+        "MythicMobs items (path)": 8,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MagicWater_V3-2uba34.zip",
+      "entries": 385,
+      "extension": ".zip",
+      "types": {
+        ".yml": 40,
+        ".properties": 2,
+        ".json": 112,
+        ".ogg": 16,
+        ".png": 214,
+        ".txt": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 6,
+        "MMOCore classes": 2,
+        "MMOCore skills": 10,
+        "MythicLib": 10,
+        "MythicMobs items (path)": 8,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/PackClass_MagicWindv.zip",
+      "entries": 367,
+      "extension": ".zip",
+      "types": {
+        ".txt": 1,
+        ".yml": 27,
+        ".json": 191,
+        ".ogg": 8,
+        ".png": 140
+      },
+      "yaml_hints": {
+        "other / ambiguous": 5,
+        "MMOCore classes": 1,
+        "MMOCore skills": 5,
+        "MythicLib": 5,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 5,
+        "MythicMobs skill": 5
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/pinejo_staffs_volume_1.zip",
+      "entries": 15,
+      "extension": ".zip",
+      "types": {
+        ".bbmodel": 10,
+        ".yml": 3,
+        ".txt": 1,
+        ".json": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/RPG Items VOL 2.zip",
+      "entries": 217,
+      "extension": ".zip",
+      "types": {
+        ".txt": 4,
+        ".yml": 29,
+        ".properties": 3,
+        ".png": 67,
+        ".json": 51,
+        ".bbmodel": 57,
+        ".mcmeta": 1,
+        "[no extension]": 2,
+        ".md": 1,
+        ".dat": 1,
+        ".bin": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 7,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 11,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 3,
+        "MythicMobs skill": 3
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/RRpg  Void Edge Class v.1.3 [Mythic].zip",
+      "entries": 87,
+      "extension": ".zip",
+      "types": {
+        ".txt": 1,
+        ".yml": 19,
+        ".json": 3,
+        ".ogg": 8,
+        ".png": 18,
+        ".mcmeta": 4,
+        ".bbmodel": 34
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore skills": 5,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 4,
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_AWAKENED_CLERIC.zip",
+      "entries": 270,
+      "extension": ".zip",
+      "types": {
+        ".yml": 24,
+        ".json": 47,
+        ".properties": 3,
+        ".ogg": 64,
+        ".png": 91,
+        ".mcmeta": 1,
+        ".bbmodel": 39,
+        ".aseprite": 1
+      },
+      "yaml_hints": {
+        "MythicMobs items (path)": 2,
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MythicLib": 1,
+        "MythicMobs mob": 8,
+        "MythicMobs skill": 7,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_AWAKENED_MAGE.zip",
+      "entries": 327,
+      "extension": ".zip",
+      "types": {
+        ".txt": 3,
+        ".yml": 27,
+        ".png": 110,
+        ".json": 46,
+        ".ogg": 84,
+        ".properties": 3,
+        ".bbmodel": 52,
+        ".mcmeta": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "MythicMobs items (path)": 2,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_AWAKENED_SHAMAN.zip",
+      "entries": 311,
+      "extension": ".zip",
+      "types": {
+        ".txt": 3,
+        ".yml": 27,
+        ".png": 96,
+        ".json": 46,
+        ".ogg": 103,
+        ".properties": 3,
+        ".bbmodel": 31,
+        ".mcmeta": 1,
+        "[no extension]": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 6,
+        "MythicMobs items (path)": 2,
+        "packinfo": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_BARBARIAN_PACK_v1.1-.zip",
+      "entries": 167,
+      "extension": ".zip",
+      "types": {
+        ".txt": 3,
+        ".yml": 22,
+        ".json": 32,
+        ".ogg": 18,
+        ".png": 55,
+        ".properties": 3,
+        ".bbmodel": 33,
+        ".mcmeta": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 3,
+        "MythicMobs skill": 5
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_BLOODMOON_VAMPIRE_PACK.zip",
+      "entries": 143,
+      "extension": ".zip",
+      "types": {
+        ".txt": 3,
+        ".yml": 22,
+        ".json": 29,
+        ".png": 34,
+        ".mcmeta": 13,
+        ".properties": 3,
+        ".bbmodel": 39
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 2,
+        "MythicMobs mob": 3,
+        "MythicMobs skill": 5
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/samus2002_HEROES_WATER_SAMURAI.zip",
+      "entries": 179,
+      "extension": ".zip",
+      "types": {
+        ".txt": 3,
+        ".yml": 22,
+        ".json": 32,
+        ".properties": 3,
+        ".ogg": 24,
+        ".png": 46,
+        ".bbmodel": 48,
+        ".mcmeta": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 2,
+        "MMOCore classes": 1,
+        "MMOCore other": 1,
+        "MMOCore skills": 7,
+        "MythicLib": 1,
+        "MythicMobs mob": 3,
+        "MythicMobs skill": 5,
+        "MythicMobs items (path)": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/sKILL.exe - LASER BEAM ABILITY_v1.0.1.zip",
+      "entries": 50,
+      "extension": ".zip",
+      "types": {
+        ".ogg": 12,
+        ".png": 4,
+        ".yml": 20,
+        ".json": 8,
+        ".bbmodel": 4,
+        ".txt": 2
+      },
+      "yaml_hints": {
+        "MythicMobs config/stats": 2,
+        "other / ambiguous": 4,
+        "MythicLib": 2,
+        "MythicMobs mob": 4,
+        "MythicMobs skill": 4,
+        "MythicMobs items (path)": 4
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Soul Demonic  Exclusive Character.zip",
+      "entries": 37,
+      "extension": ".zip",
+      "types": {
+        ".json": 10,
+        ".properties": 1,
+        ".png": 13,
+        ".mcmeta": 1,
+        ".txt": 2,
+        ".yml": 6,
+        ".bbmodel": 4
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "packinfo": 1,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Spirit Forest  Class Weapon - Classic Vol. 1.zip",
+      "entries": 36,
+      "extension": ".zip",
+      "types": {
+        ".properties": 1,
+        ".png": 11,
+        ".json": 7,
+        ".mcmeta": 1,
+        ".txt": 2,
+        ".yml": 11,
+        ".bbmodel": 3
+      },
+      "yaml_hints": {
+        "other / ambiguous": 4,
+        "MythicLib": 1,
+        "MythicMobs items (path)": 1,
+        "MythicMobs mob": 1,
+        "MythicMobs skill": 4
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/SummonEffect fix display.rar",
+      "entries": 18,
+      "extension": ".rar",
+      "types": {
+        ".yml": 4,
+        ".txt": 4,
+        "[no extension]": 10
+      },
+      "yaml_hints": {
+        "MythicMobs mob": 2,
+        "MythicMobs skill": 2
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/Toffy-Animated-Gems-pack-e9tjeq.zip",
+      "entries": 85,
+      "extension": ".zip",
+      "types": {
+        ".json": 21,
+        ".png": 41,
+        ".mcmeta": 21,
+        ".txt": 1,
+        ".yml": 1
+      },
+      "yaml_hints": {
+        "other / ambiguous": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    },
+    {
+      "path": "incoming/SkillPacks/WaterIce_Pack_2.0_1.zip",
+      "entries": 20,
+      "extension": ".zip",
+      "types": {
+        ".txt": 1,
+        ".yml": 8,
+        ".bak": 1,
+        "[no extension]": 10
+      },
+      "yaml_hints": {
+        "MMOCore classes": 1,
+        "MythicLib": 4,
+        "MythicMobs skill": 2,
+        "MythicMobs items (path)": 1
+      },
+      "nested_archives": 0,
+      "error": null
+    }
+  ]
+}

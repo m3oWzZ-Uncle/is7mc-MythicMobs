@@ -1,0 +1,42 @@
+name: Arctic Knight Ice Rain
+lore:
+- Tạo ra một cơn mưa băng bán kính 17 block
+- gây sát thương và đông cứng kẻ địch trong
+- 1 giây.
+- ''
+- '&8[&c!&8] &7Yêu cầu Mở lãnh địa Băng (Arctic Aura)'
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Damage &7▸ <#FF8E6A>{damage}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: BLUE_DYE
+damage:
+  base: 22
+  per-level: 0.2
+  min: 1
+  max: 30
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 23
+  per-level: -0.1
+  min: 20
+  max: 23

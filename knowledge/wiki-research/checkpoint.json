@@ -1,0 +1,10 @@
+{
+  "snapshot_commit": "db28fb6a7443aca1040ac29be76b840ff7d4d38f",
+  "batch_limit": 30,
+  "batches": ["01.json", "02.json", "03.json", "04.json"],
+  "next": [
+    "examples/Common-Examples.md", "Items/Items.md", "Mobs/Mobs.md",
+    "Skills/Mechanics/sudoskill.md", "Skills/Mechanics/delay.md", "Skills/Mechanics/skill.md",
+    "Skills/Targeters/Children.md", "Skills/Conditions/owner.md", "Skills/Triggers/onSpawn.md"
+  ]
+}

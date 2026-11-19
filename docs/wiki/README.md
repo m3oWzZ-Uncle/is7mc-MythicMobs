@@ -1,0 +1,14 @@
+# Nguồn và phiên bản
+
+**Nguồn chính thức cho MythicMobs core.** Theo xác nhận của người dùng ngày 14/11/2026, bắt đầu từ [MythicCraft Wiki – MythicMobs](https://wiki.mythiccraft.io/mythicmobs/home) và dẫn tới trang của mechanic, targeter hoặc condition đang xét. Dùng YAML của người dùng để xác định cấu hình cần đối chiếu. Dùng wiki và changelog để xác định cú pháp, tính năng, edition và mốc tương thích đã được ghi. Với addon, dùng tài liệu của plugin sở hữu, chẳng hạn [ModelEngine 4](https://wiki.mythiccraft.io/modelengine/home) và [MythicLib](https://docs.phoenixdevt.fr/mythiclib/skills/custom/mythic).
+
+Đối chiếu ngày 13/11/2026. Mốc đọc tài liệu của kho là MythicMobs **5.14.0**, do Lumine phát hành trên Hangar ngày 30/10/2026. Mỗi trang wiki là tài liệu cập nhật theo thời gian. Với tính năng có mục changelog cụ thể, ghi bản phát hành ở ngay phần mô tả. Với mục chỉ có trang tham chiếu, dùng mốc đọc 5.14.0 và để phiên bản tối thiểu ở mức chưa xác định nếu thiếu bằng chứng. [Phát hành 5.14.0](https://hangar.papermc.io/Lumine/MythicMobs/versions/v5.14.0), [changelog MythicCraft](https://wiki.mythiccraft.io/mythicmobs/changelogs/Changelogs?version_id=d7c47c878837c833a7602dcf02bca7b9b87056dd)
+
+1. Lấy Minecraft, nền và build server, Java, MythicMobs build/edition và addon từ hồ sơ của case. Dùng `/mm version` hoặc dòng khởi động của plugin để lấy phiên bản MythicMobs. [Lệnh MythicMobs](https://wiki.mythiccraft.io/mythicmobs/Commands-and-Permissions)
+2. Mở trang phát hành tương ứng, kiểm tra Minecraft/nền server rồi dò changelog cho từng mechanic, option, alias, targeter, condition, kiểu biến hoặc thay đổi hành vi đang dùng. Nếu lưu được URL revision, lưu cùng ngày đối chiếu. `version_id` là revision tài liệu. Build plugin ghi theo trang phát hành và log của server. [Lịch sử phát hành của Lumine](https://hangar.papermc.io/Lumine/MythicMobs/versions), [trang tham chiếu MythicMobs](https://wiki.mythiccraft.io/mythicmobs/home)
+3. Kiểm tra riêng yêu cầu Free/Premium, Paper/Folia và addon trong mục liên quan. Với ModelEngine, ghi đúng phiên bản ModelEngine bên cạnh MythicMobs rồi đối chiếu trang cơ chế tích hợp và animation. [MythicMobs Premium Features](https://wiki.mythiccraft.io/mythicmobs/Premium-Features?version_id=28b903e755156108c8d4483e7bb8294bb5274605), [ModelEngine và MythicMobs](https://wiki.mythiccraft.io/modelengine/MythicMobs)
+4. Tóm tắt bằng lời của mình, giữ URL tới trang cụ thể và đánh dấu phần suy luận từ YAML. Nếu build hoặc nguồn còn thiếu, ghi câu hỏi cần xác nhận trong hồ sơ. Cập nhật trạng thái cấu hình theo [bằng chứng thực tế](../../tests/README.md).
+
+[Đối chiếu ngày 14/11/2026](doi-chieu-2026-11-14.md) ghi phạm vi kiểm tra catalog và kết quả rà soát Vạn Kiếm Quy Tông.
+
+[Thư viện wiki đã nhập](thu-vien.md) dẫn tới bản snapshot, chỉ mục, độ bao phủ và checkpoint đối chiếu.

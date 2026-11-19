@@ -1,0 +1,78 @@
+VAN_KIEM_QUY_TONG:
+  Conditions:
+  - entitytype{t=PLAYER} true
+  - hasaura{aura=CASTING} false
+  Skills:
+  - setvarloc{var=caster.vkqt_origin;value=@selflocation;duration=260} @self
+  - setvariable{var=caster.vkqt_lift;type=INTEGER;value=0;duration=260} @self
+  - setvariable{var=caster.vkqt_step;type=INTEGER;value=1;duration=260} @self
+  - aura{auraName=CASTING;duration=248;i=2;oT=VKQT_CAST_TICK;oE=VKQT_CAST_END;cod=true;coq=true;cocw=true;cot=false} @self
+  - orbital{auraName=VKQT_MAGIC_CIRCLE;bulletType=MOB;mob=VFX_VKQT_MAGIC_CIRCLE;r=0;p=1;duration=248;i=1;rotate=false;offsety=2.8;byo=0;bfo=0;hp=false;hnp=false;hs=false;cod=true;coq=true;cocw=true;cot=false} @self
+  - sound{s=block.enchantment_table.use;v=1.3;p=0.5} @self
+  - particles{p=enchant;amount=30;hS=0.8;vS=1;speed=0.05} @self
+
+VKQT_CAST_TICK:
+  Skills:
+  # Một bước 1 block mỗi 2 tick. Từ bước 16, điểm neo luôn ở +16 block.
+  - variableadd{var=caster.vkqt_lift;amount=1} @self ?variableinrange{var=caster.vkqt_step;value=1to16}
+  - skill{s=VKQT_CHECK_FEET} @VariableLocation{var=caster.vkqt_origin;y=<caster.var.vkqt_lift>}
+  # Bước 16–111: một kiếm mỗi 2 tick, tổng 96 kiếm.
+  - skill{s=VKQT_RANDOM_SWORD} @self ?hasaura{aura=CASTING} ?variableinrange{var=caster.vkqt_step;value=16to111}
+  - variableadd{var=caster.vkqt_step;amount=1} @self ?hasaura{aura=CASTING}
+
+VKQT_CHECK_FEET:
+  TargetConditions:
+  - blocktype{type=AIR,CAVE_AIR,VOID_AIR} orElseCast VKQT_CAST_ABORT
+  Skills:
+  - skill{s=VKQT_CHECK_BODY} @VariableLocation{var=caster.vkqt_origin;y="<caster.var.vkqt_lift> + 1"}
+
+VKQT_CHECK_BODY:
+  TargetConditions:
+  - blocktype{type=AIR,CAVE_AIR,VOID_AIR} orElseCast VKQT_CAST_ABORT
+  Skills:
+  - skill{s=VKQT_CHECK_HEAD} @VariableLocation{var=caster.vkqt_origin;y="<caster.var.vkqt_lift> + 1.8"}
+
+VKQT_CHECK_HEAD:
+  TargetConditions:
+  - blocktype{type=AIR,CAVE_AIR,VOID_AIR} orElseCast VKQT_CAST_ABORT
+  Skills:
+  - velocity{m=SET;x=0;y=0;z=0} @self
+  - teleport{unsafe=true;preserveyaw=true;preservepitch=true} @VariableLocation{var=caster.vkqt_origin;y=<caster.var.vkqt_lift>}
+
+VKQT_CAST_ABORT:
+  Skills:
+  - auraremove{aura=CASTING} @self
+
+VKQT_CAST_END:
+  Skills:
+  - auraremove{aura=VKQT_MAGIC_CIRCLE} @self
+  - potion{t=SLOW_FALLING;d=100;l=0;p=false;i=false} @self ?variableinrange{var=caster.vkqt_step;value=2to125}
+  - variableunset{var=caster.vkqt_origin} @self
+  - variableunset{var=caster.vkqt_lift} @self
+  - variableunset{var=caster.vkqt_step} @self
+
+VKQT_RANDOM_SWORD:
+  Skills:
+  # Điểm sinh quanh vòng ở +2.8. Điểm ngắm lệch độc lập để rải các đường thẳng.
+  - setvariable{var=skill.vkqt_start_side;type=FLOAT;value="random(-2.8,2.8)"} @self
+  - setvariable{var=skill.vkqt_start_y;type=FLOAT;value="2.8 + random(-1.6,1.6)"} @self
+  - setvariable{var=skill.vkqt_end_side;type=FLOAT;value="random(-7,7)"} @self
+  - setvariable{var=skill.vkqt_end_y;type=FLOAT;value="random(-5,5)"} @self
+  - projectile{bulletType=MOB;mob=VFX_VKQT_SWORD;bmd=true;byo=0;bfo=0;oT=VKQT_SWORD_TICK;oH=VKQT_SWORD_IMPACT;ohb=VKQT_SWORD_IMPACT;v=32;i=1;mr=34;g=0;hR=0.55;vR=0.7;hp=true;hnp=true;sE=true;sB=true;hs=false;sfo=1.5;sso=<skill.var.vkqt_start_side>;eso=<skill.var.vkqt_end_side>;syo=<skill.var.vkqt_start_y>;tyo=<skill.var.vkqt_end_y>;fo=false;rlos=false;tickinterpolation=2;drawhitbox=false;ham=true;hitConditions=[  - isLiving true  - entitytype{t=ARMOR_STAND} false  - mmoCanTarget{interaction=OFFENSE_ACTION} true ]} @Forward{f=32}
+
+VKQT_SWORD_TICK:
+  Skills:
+  - particles{p=end_rod;amount=1;hS=0.02;vS=0.02;speed=0} @origin
+
+VKQT_SWORD_IMPACT:
+  Conditions:
+  - hasaura{aura=CASTING} true
+  Skills:
+  - sound{s=entity.player.attack.crit;v=0.35;p=1.65} @origin
+  - particles{p=crit;amount=6;hS=0.25;vS=0.25;speed=0.09} @origin
+  - particles{p=end_rod;amount=3;hS=0.18;vS=0.18;speed=0.04} @origin
+  - skill{s=VKQT_SWORD_DAMAGE} @EntitiesNearOrigin{r=2.5;limit=8;sort=NEAREST;conditions=[  - isLiving true  - entitytype{t=ARMOR_STAND} false  - mmoCanTarget{interaction=OFFENSE_ACTION} true ]}
+
+VKQT_SWORD_DAMAGE:
+  Skills:
+  - mmodamage{amount="<mmostat.attack_damage> * (<modifier.damage> / 100)";pkb=false;hnp=true;hp=true;types=SKILL,PHYSICAL}

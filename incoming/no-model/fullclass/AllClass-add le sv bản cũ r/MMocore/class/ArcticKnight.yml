@@ -1,0 +1,91 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+# *Lưu ý: skill sử dụng nhiều particle nên hãy cân nhắc server đủ mạnh, máy của bạn đủ mạnh để chịu được nhé! 
+#  và sát thương của kỹ năng cũng to khoảng 10-50,các cơn gió tuyết có thể ánh hưởng tới bản thân bạn
+# để dùng skill hãy sử dụng lệnh /mm test cast skills
+# để thử theo góc nhìn của kẻ địch sử dụng lệnh /mm mobs spawn
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+# giá bán gốc của file 150k
+
+display:
+    name: 'Arctic'
+    lore:
+    - '&bChoose the Arctic Class'
+    item: TRIDENT # Supports custom model data/texture by durability
+
+options:
+    default: false
+    display: true
+    needs-permission: false
+
+exp-curve: levels
+
+max-level: 100
+
+exp-table: class_exp_table
+
+skills:
+    ARCTIC_KNIGHT_AURA:
+        level: 1
+        max-level: 30
+    ARCTIC_KNIGHT_ATTACK:
+        level: 1
+        max-level: 30
+    ARCTIC_KNIGHT_ICE_THROWER:
+        level: 1
+        max-level: 30
+    ARCTIC_KNIGHT_BREAK_DOWN:
+        level: 1
+        max-level: 30
+    ARCTIC_KNIGHT_ICE_RAIN:
+        level: 1
+        max-level: 30
+
+skill-slots:
+    1:
+        name: "&aSkill Slot I (Passive)"
+        formula: "<PASSIVE>"
+        unlocked-by-default: true
+    2:
+        name: "&aSkill Slot II"
+        unlocked-by-default: true
+    3:
+        name: "&aSkill Slot III"
+        unlocked-by-default: true
+    4:
+        name: "&aSkill Slot IV"
+        unlocked-by-default: true
+    5:
+        name: "&aSkill Slot V"
+        unlocked-by-default: true
+    6:
+        name: "&aSkill Slot VI"
+        unlocked-by-default: true
+    7:
+        name: "&aSkill Slot VII"
+        unlocked-by-default: true
+
+#skill-trees:
+#    - 'Human2'
+#    - 'general'
+#    - 'archerSkillTree'
+#    - 'combat'
+
+attributes:
+    movement-speed:
+        base: .1
+        per-level: 0
+    attack-damage:
+        base: 4
+        per-level: 0.05
+
+
+main-exp-sources:
+- 'killmob{type=ZOMBIE;amount=1}'
+- 'killmob{type=SKELETON;amount=1}'
+- 'killmob{type=SPIDER;amount=1}'
+- 'killmob{type=ENDERMAN;amount=2-3}'
+# 1750HBIFRR7QX0M2E

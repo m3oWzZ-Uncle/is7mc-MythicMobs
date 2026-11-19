@@ -1,0 +1,127 @@
+{
+  "source": "incoming/IonTech/IonTech-s-Modular-Systems-main",
+  "inventory_total": 84,
+  "inventoried": 84,
+  "batches": [
+    {
+      "batch": "01-vector-math-variables",
+      "yaml": 3,
+      "files": [
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/knockback_core.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/insertion_sort-demo.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/vector-skills.yml"
+      ]
+    },
+    {
+      "batch": "02-slash-projectile",
+      "yaml": 8,
+      "files": [
+        "packs/IonTech's Modular Systems/skills/Demo Skills/chain_missile.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/fractal.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/shot.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/spiral_shot.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/advanced_slash-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/particle_shockwave-vfx.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/particle_spiral-vfx.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/projectile-skills.yml"
+      ]
+    },
+    {
+      "batch": "03-handlers",
+      "yaml": 6,
+      "files": [
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/click_combo-mechanic-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/damage_core.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/modifier_handler.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/setRandomID.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/spell_cast-defaults.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/spell_handler.yml"
+      ]
+    },
+    {
+      "batch": "04-inventory",
+      "yaml": 28,
+      "files": [
+        "packs/IonTech's Modular Systems/items/Base Items/base-armor.yml",
+        "packs/IonTech's Modular Systems/items/Base Items/base-material.yml",
+        "packs/IonTech's Modular Systems/items/Base Items/base-weapons.yml",
+        "packs/IonTech's Modular Systems/items/Base Items/base_icon-items.yml",
+        "packs/IonTech's Modular Systems/items/Demo Items/demo_click_combo.yml",
+        "packs/IonTech's Modular Systems/items/Test Items/test-click_combo-items.yml",
+        "packs/IonTech's Modular Systems/items/Test Items/test-combo_weapons-items.yml",
+        "packs/IonTech's Modular Systems/items/Test Items/test-healing_potion-items.yml",
+        "packs/IonTech's Modular Systems/items/Test Items/test-scaling_weapon-items.yml",
+        "packs/IonTech's Modular Systems/items/Test Items/testing-items.yml",
+        "packs/IonTech's Modular Systems/mobs/Base Mobs/detection_ai-template.yml",
+        "packs/IonTech's Modular Systems/mobs/Base Mobs/mob_levelling-template.yml",
+        "packs/IonTech's Modular Systems/mobs/Base Mobs/mob_spawner-template.yml",
+        "packs/IonTech's Modular Systems/mobs/Base Mobs/mob_templates.yml",
+        "packs/IonTech's Modular Systems/mobs/dummy-mobs.yml",
+        "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/channel_indicator-mob.yml",
+        "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/damage_indicator-mob.yml",
+        "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/generic_marker-mobs.yml",
+        "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/summon-mobs.yml",
+        "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/targeting_marker-mobs.yml",
+        "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/timer-display-mobs.yml",
+        "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/vfx-mob.yml",
+        "packs/IonTech's Modular Systems/mobs/Game Mechanic Mobs/wardstone-mobs.yml",
+        "packs/IonTech's Modular Systems/packinfo.yml",
+        "packs/IonTech's Modular Systems/placeholders.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/burning_blast-spell.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/collapse-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/empowered_pull-spell.yml"
+      ]
+    },
+    {
+      "batch": "05-inventory",
+      "yaml": 28,
+      "files": [
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/flame_flicker-spell.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/frost_breath-spell.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/frost_shard-spell.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/glacial_spikes-spell.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/gravity_slam-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/spark_jolt-spell.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/Demo Spells/void_lance-signature.yml",
+        "packs/IonTech's Modular Systems/skills/Demo Skills/spell-test_cases.yml",
+        "packs/IonTech's Modular Systems/skills/Deprecated Skills/burn_terrain-mechanic-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Deprecated Skills/channel-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Deprecated Skills/mob-aigoals-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Deprecated Skills/model_slash-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Deprecated Skills/modelled_slash-mechanic-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Deprecated Skills/signature_spell_handler.yml",
+        "packs/IonTech's Modular Systems/skills/Deprecated Skills/slash-mechanic-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Deprecated Skills/spell_handler_old.yml",
+        "packs/IonTech's Modular Systems/skills/Deprecated Skills/vfx-shockwave-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/combo-mechanic-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/hit_evaluation-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/moveset-mechanic-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/select_target-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/spell-cycle-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/mana_charge.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/melee_core.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/summon_handler.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/heal-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/mortar-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/stun-mechanic.yml"
+      ]
+    },
+    {
+      "batch": "06-inventory",
+      "yaml": 11,
+      "files": [
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/suspend-mechanic-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Mechanics/timer-mechanic-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Mob Mechanic Skills/mob-config-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Mob Mechanic Skills/mob-detection-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Mob Mechanic Skills/mob-general-skills.yml",
+        "packs/IonTech's Modular Systems/skills/Mob Mechanic Skills/mob-levelling-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Mob Mechanic Skills/mob-targeting-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Mob Mechanic Skills/mob_spawner-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Mob Mechanic Skills/mob_spawner-weights.yml",
+        "packs/IonTech's Modular Systems/skills/Mob Mechanic Skills/model_animation-mechanic.yml",
+        "packs/IonTech's Modular Systems/skills/Mob Mechanic Skills/wardstone-skills.yml"
+      ]
+    }
+  ]
+}

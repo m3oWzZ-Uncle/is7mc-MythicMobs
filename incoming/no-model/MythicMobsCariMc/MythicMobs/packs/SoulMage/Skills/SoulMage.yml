@@ -1,0 +1,223 @@
+SummonTester:
+  Skills:
+  - summon{type=StesMob_TW;amount=1;radius=4} @self
+
+SoulMage_AddSoul:
+  Skills:
+  - chain{bounces=5;bounceRadius=10;bounceDelay=1;hitSelf=false;hitPlayers=true; hitNonPlayers=true;hitTarget=true;onBounce=[- effect:particleline{p=flame;fromOrigin=true}];bounceConditions=[- inlineofsight- hasaura{aura=damageResist} false];} @target
+
+
+ChainMissile:
+  Skills:
+  - ChainMissile{bounces=10;r=10;in=1.25;oT=CM_oT;oH=CM_oH;i=1;md=200;mr=30;v=5;hnp=true;hp=true;hR=1;vR=1;sB=False;sE=false;tyo=1;hs=true;hfs=1} @target
+CM_oT:
+  Skills:
+  - effect:particles{particle=flame;a=1;hs=0;vs=0;s=0;y=0} @origin
+CM_oH:
+  Skills:
+  - damage{a=1;pkb=true}
+
+
+#################################################################################
+SoulMage_Spirit_VFX:
+  Skills:
+  - skill{s=SoulMage_Spirit_VFX_ONE} @self
+  - skill{s=SoulMage_Spirit_VFX_TWO} @self
+  - skill{s=SoulMage_Spirit_VFX_THREE} @self
+SoulMage_Spirit_VFX_ONE:
+  Cooldown: 1
+  Conditions: 
+  - health{h=>10}
+  Skills:
+#  - effect:particles{p=reddust;color=#59cf93;a=60;size=2;hS=0.25;vS=0.5} @self >60% #@Forward{f=0.5;y=1.0}
+#  - effect:particles{p=reddust;color=#b5e7cb;a=60;size=2;hS=0.25;vS=0.5} @self >60% #@Forward{f=0.5;y=1.0}
+
+#  - effect:particlering{p=reddust;color=#59cf93;a=16;size=2;hS=0.25;vS=0.5;radius=2;points=16;y=0.1} @self
+#  - effect:particlering{p=reddust;color=#b5e7cb;a=16;size=2;hS=0.25;vS=0.5;radius=2;points=16;y=0.1} @self
+
+  - effect:particlering{p=reddust;color=#59cf93;a=16;radius=2;points=16;y=0.1} @self
+  - effect:particlering{p=reddust;color=#b5e7cb;a=16;radius=2;points=16;y=0.1} @self
+
+
+SoulMage_Spirit_VFX_TWO:
+  Cooldown: 1
+  Conditions: 
+  - health{h=<10}
+  Skills:
+#  - effect:particles{p=reddust;color=#cf5959;a=60;size=2;hS=0.25;vS=0.5} @self <60% #@Forward{f=0.5;y=1.0}
+#  - effect:particles{p=reddust;color=#e7b5b5;a=60;size=2;hS=0.25;vS=0.5} @self <60% #@Forward{f=0.5;y=1.0}
+
+  - effect:particlering{p=reddust;color=#cf5959;a=16;radius=2;points=16;y=0.1} @self
+  - effect:particlering{p=reddust;color=#e7b5b5;a=16;radius=2;points=16;y=0.1} @self
+  - potion{type=SPEED;duration=30;lvl=0} @self
+
+SoulMage_Spirit_VFX_THREE:
+  Cooldown: 1
+  Conditions: 
+  - health{h=<10}
+  - crouching true
+  Skills:
+  - effect:particles{p=reddust;color=#cf5959;a=60;size=2;hS=0.25;vS=0.5;y=0.5} @self #@Forward{f=0.5;y=1.0}
+  - effect:particles{p=reddust;color=#e7b5b5;a=60;size=2;hS=0.25;vS=0.5;y=0.5} @self #@Forward{f=0.5;y=1.0}
+  - potion{type=NIGHT_VISION;duration=30;lvl=2} @self
+################################################################
+
+
+
+SoulMage_Spirit_Surge_Crucible: 
+  Cooldown: 1
+  Skills:
+  - sound{s=item.trident.throw;sc=players;v=0.5} @selflocation 
+  - projectile{bulletType=MOB;mob=SoulMage_Spirit_Surge;oH=SoulMage_Spirit_Surge_Hit;oT=SoulMage_Spirit_Surge_Tick;oE=SoulMage_Spirit_Surge_Scythe_Back;v=10;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;mr=20;sE=false;sB=false} @Forward{f=20}
+
+SoulMage_Spirit_Surge:
+  Skills:
+  - skill{s=SoulMage_Spirit_Surge_ONE} @self
+  - skill{s=SoulMage_Spirit_Surge_ONE_TW} @self
+  - skill{s=SoulMage_Spirit_Surge_TWO} @self
+
+SoulMage_Spirit_Surge_ONE:
+  Conditions: 
+  - health{h=>10}
+  Skills:
+  - sound{s=item.trident.throw;sc=players;v=0.5} @selflocation 
+  - projectile{bulletType=MOB;mob=SoulMage_Spirit_Surge;oH=SoulMage_Spirit_Surge_Hit;oT=SoulMage_Spirit_Surge_Tick;oE=SoulMage_Spirit_Surge_Scythe_Back;v=10;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;mr=20;sE=false;sB=false} @Forward{f=20}
+
+SoulMage_Spirit_Surge_ONE_TW:
+  Conditions: 
+  - health{h=<10}
+  - crouching false
+  Skills:
+  - sound{s=item.trident.throw;sc=players;v=0.5} @selflocation 
+  - projectile{bulletType=MOB;mob=SoulMage_Spirit_Surge;oH=SoulMage_Spirit_Surge_Hit;oT=SoulMage_Spirit_Surge_Tick;oE=SoulMage_Spirit_Surge_Scythe_Back;v=10;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;mr=20;sE=false;sB=false} @Forward{f=20}
+
+SoulMage_Spirit_Surge_TWO:
+  Conditions: 
+  - health{h=<10}
+  - crouching true
+  Skills:
+  - sound{s=item.trident.throw;sc=players;v=0.5} @selflocation 
+  - projectile{bulletType=ITEM;mat=soul_sand;enchanted=true;oH=SoulMage_Spirit_Surge_Hit;oT=SoulMage_Spirit_Surge_Tick_TWO;oE=SoulMage_Spirit_Surge_Scythe_Back_TWO;v=10;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;mr=20;sE=false;sB=false} @Forward{f=20}
+
+  - projectile{bulletType=ITEM;mat=soul_sand;enchanted=true;oH=SoulMage_Spirit_Surge_Hit;oT=SoulMage_Spirit_Surge_Tick_TWO;oE=SoulMage_Spirit_Surge_Scythe_Back_TWO;v=10;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;mr=20;sE=false;sB=false} @Forward{f=20;rot=15}
+  
+  - projectile{bulletType=ITEM;mat=soul_sand;enchanted=true;oH=SoulMage_Spirit_Surge_Hit;oT=SoulMage_Spirit_Surge_Tick_TWO;oE=SoulMage_Spirit_Surge_Scythe_Back_TWO;v=10;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;mr=20;sE=false;sB=false} @Forward{f=20;rot=-15}
+
+SoulMage_Spirit_Surge_Scythe_Back:
+  Skills:
+  - summon{type=SoulMage_Spirit_Surge_Reverse;amount=1;radius=0;sio=true} @Origin
+
+SoulMage_Spirit_Surge_Scythe_Back_TWO:
+  Skills:
+  - summon{type=SoulMage_Spirit_Surge_Reverse_TWO;amount=1;radius=0;sio=true} @Origin
+
+SoulMage_Spirit_Surge_Hit:
+  TargetConditions:
+  - hastag{t=SM_SKILL} false
+  - entitytype{t=ARMOR_STAND} false 
+  - mythicmobtype{t=SoulMage_Spirit_Surge_Soul} false 
+  Skills:
+  - Aura{auraName=Pulling_Soul;oT=SoulMage_Spirit_Surge_Soul_Collecting;d=100;i=1;rd=true;ma=true;ms=1;delay=20} @self
+  - sudoskill{s=SoulMage_Spirit_Surge_Soul_Pulling;cat=true}
+  - healpercent{m=0.1} @self
+  - damage{a="<modifier.damage>"}
+
+SoulMage_Spirit_Surge_Tick:
+  Skills:
+  - effect:particles{p=reddust;color=#59cf93;a=3;size=1;hS=0.125;vS=0.125;y=-0.25} @Origin
+
+SoulMage_Spirit_Surge_Tick_TWO:
+  Skills:
+  - effect:particles{p=reddust;color=#cf5959;a=3;size=1;hS=0.125;vS=0.125;y=-0.25} @Origin
+  
+SoulMage_Spirit_Surge_Grab_Scythe:
+  TargetConditions:
+  - owner castinstead SoulMage_Spirit_Surge_Scythe_Receive
+  Skills:
+  - Aura{auraName=Pulling_Soul;oT=SoulMage_Spirit_Surge_Soul_Collecting;d=100;i=1;rd=true;ma=true;ms=1;delay=20} @self
+  - sudoskill{s=SoulMage_Spirit_Surge_Soul_Pulling;cat=true}
+  - potion{t=SLOW;d=40;l=3;p=false}
+
+SoulMage_Spirit_Surge_Scythe_Receive:
+  Skills:
+  - sound{s=entity.arrow.hit_player;v=0.5;p=1.2} @owner
+  - potion{t=SPEED;d=5;l=3;p=false} @owner
+ # - healpercent{m=0.1} @Owner
+  - delay 3
+  - remove @self
+
+SoulMage_Spirit_Surge_Soul_Pulling:
+  Conditions:
+  - entitytype{t=ARMOR_STAND} false 
+  - mythicmobtype{t=SoulMage_Spirit_Surge_Soul} false 
+  Skills:
+  - summon{type=SoulMage_Spirit_Surge_Soul;amount=1;radius=0;summonerIsParent=true;cooldown=10} @SelfLocation{y=0.75}
+  
+SoulMage_Spirit_Surge_Soul_Collecting:
+  Skills:
+  - pull{v=4;to=true} @MIR{t=SoulMage_Spirit_Surge_Soul;r=30}
+SoulMage_Spirit_Surge_Soul_Damaging:
+  Skills:
+  - sudoskill{s=SoulMage_Spirit_Surge_Soul_Damaging_Trigger;cat=true} @Trigger
+
+SoulMage_Spirit_Surge_Soul_Damaging_Trigger:
+  Skills:
+  - damage{a="<skill.var.damage-amount>"} @Trigger
+
+SoulMage_Spirit_Surge_Soul_Damaging_Heal:
+  Skills:
+  - healpercent{m=0.85} @Parent
+
+#####################################################################################################
+
+SoulMage_Summoner:
+  Skills:
+  - skill{s=SoulMage_Summoner_ONE} @self
+  - skill{s=SoulMage_Summoner_ONE_TW} @self
+  - skill{s=SoulMage_Summoner_TWO} @self
+
+SoulMage_Summoner_ONE:
+  Conditions:
+  - health{h=>10}
+  Skills:
+#  - particleline{particle=reddust;color=#59cf93;amount=1;fromOrigin=true} @Target
+  - projectile{oH=SoulMage_Summoner_Hit;oT=SoulMage_Summoner_Tick;v=50;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;sE=false;sB=false} @Target #location
+
+SoulMage_Summoner_ONE_TW:
+  Conditions:
+  - health{h=<10}
+  - crouching false
+  Skills:
+#  - particleline{particle=reddust;color=#59cf93;amount=1;fromOrigin=true} @Target
+  - projectile{oH=SoulMage_Summoner_Hit;oT=SoulMage_Summoner_Tick;v=50;hR=1;vR=1;hp=true;hnp=true;sfo=1;syo=0.75;sE=false;sB=false} @Target #location
+
+SoulMage_Summoner_Tick: 
+  Skills:
+  - particles{particle=soul;amount=1;fromOrigin=true} @origin
+
+SoulMage_Summoner_Hit: 
+  Skills:
+  - damage{a="<modifier.damage>"}
+  - summon{type=StesMob;amount=1;radius=4} @origin
+
+SoulMage_Summoner_TWO:
+  Conditions:
+  - health{h=<10}
+  - crouching true
+  Skills:
+  - effect:particlering{p=reddust;color=#e7b5b5;a=32;radius=1;points=8;y=0.1} @self
+  - delay 3
+  - effect:particlering{p=reddust;color=#e7b5b5;a=32;radius=2;points=16;y=0.1} @self
+  - delay 3
+  - effect:particlering{p=reddust;color=#e7b5b5;a=32;radius=3;points=32;y=0.1} @self
+  - delay 3
+  - effect:particlering{p=reddust;color=#e7b5b5;a=32;radius=4;points=32;y=0.1} @self
+  - delay 3
+  - effect:particlering{p=reddust;color=#e7b5b5;a=32;radius=5;points=32;y=0.1} @self
+  - summon{type=StesMob_TW;amount=2;radius=6} @self
+  - damage{a="<modifier.damage>"} @EIR{r=6}
+  - delay 3
+  - effect:particlering{p=reddust;color=#e7b5b5;a=32;radius=6;points=32;y=0.1} @self
+
+
+  

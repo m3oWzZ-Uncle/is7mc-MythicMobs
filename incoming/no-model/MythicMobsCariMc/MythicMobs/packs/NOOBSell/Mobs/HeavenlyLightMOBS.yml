@@ -1,0 +1,14 @@
+THANHQUANGTRUNGPHAT:
+  Type: ARMOR_STAND
+  Pose:
+      RightArm: 0,0,0
+  Options:
+    Marker: true
+    Small: false
+    HasArms: true
+    Invisible: true
+    Invincible: true
+  Skills:
+#  - BodyRotation{playermode=false;stable=0;rdelay=0;rduration=0} @self ~onSpawn
+  - skill{s=THANHQUANGTRUNGPHAT_TICK} @self ~onSpawn
+  - skill{s=Remove_Skills_Mobs} @self ~onSpawn

@@ -1,0 +1,31 @@
+﻿#########################################################
+## Developed by Little Room, patreon.com/littleroomdev ##
+#########################################################
+
+tv1:
+  Type: TEXT_DISPLAY
+  Display: "PARTICLE"
+  DisplayOptions:
+    Text: "⛿"
+    BackgroundColor: 0000000000
+    BlockLight: 15
+    SkyLight: 15
+    Billboard: CENTER
+    Scale: 1,1,1
+  Skills:
+  - displaytransformation{action=set;transformation=translation;value=<random.float.-0.15to1>,<random.float.-0.15to0.8>,<random.float.-0.15to0.15>} @self ~onSpawn
+  # - displaytransformation{action=set;transformation=translation;value=<random.float.-0.15to1>,<random.float.-0.15to0.8>,<random.float.-0.15to0.15>;delay=2} @self ~onSpawn
+  # - displaytransformation{action=set;transformation=translation;value=<random.float.-0.15to1>,<random.float.-0.15to0.8>,<random.float.-0.15to0.15>;delay=4} @self ~onSpawn
+  # - displaytransformation{action=set;transformation=translation;value=<random.float.-0.15to1>,<random.float.-0.15to0.8>,<random.float.-0.15to0.15>;delay=6} @self ~onSpawn
+  # - displaytransformation{action=set;transformation=translation;value=<random.float.-0.15to1>,<random.float.-0.15to0.8>,<random.float.-0.15to0.15>;delay=8} @self ~onSpawn
+  # - displaytransformation{action=set;transformation=translation;value=<random.float.-0.15to1>,<random.float.-0.15to0.8>,<random.float.-0.15to0.15>;delay=} @self ~onSpawn
+  - settextdisplay{text="";delay=2} @self ~onSpawn
+  - settextdisplay{text="";delay=4} @self ~onSpawn
+  - settextdisplay{text="";delay=6} @self ~onSpawn
+  - settextdisplay{text="";delay=8} @self ~onSpawn
+  - settextdisplay{text="";delay=10} @self ~onSpawn
+  - settextdisplay{text="";delay=12} @self ~onSpawn
+  - settextdisplay{text="";delay=14} @self ~onSpawn
+  - settextdisplay{text="";delay=16} @self ~onSpawn
+  - settextdisplay{text=" ";delay=18} @self ~onSpawn
+  - remove{delay=18} @self ~onSpawn

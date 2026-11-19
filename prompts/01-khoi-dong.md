@@ -1,0 +1,1 @@
+Hãy đọc README_BAT_DAU.md và AGENTS.md trong workspace này. Kiểm tra cấu trúc, phát hiện chỗ thiếu, tạo kế hoạch nạp dữ liệu MythicMobs từ file YAML và tài liệu chính thức. Chưa có dữ liệu thật thì không tự nhận đã học phong cách của tôi. Không sửa các project bên ngoài. Báo cáo tôi cần đặt file nào vào incoming/ trước tiên.

@@ -1,0 +1,59 @@
+# For more information, check out the plugin manual or join us on Discord:
+# http://www.mythicmobs.net
+#
+# *Lưu ý: skill sử dụng nhiều particle nên hãy cân nhắc server đủ mạnh, máy của bạn đủ mạnh để chịu được nhé! 
+#  và sát thương của kỹ năng cũng to khoảng 30-80,các cơn gió tuyết có thể ánh hưởng tới bản thân bạn
+# để dùng skill hãy sử dụng lệnh /mm test cast Bankai_Snow
+# để thử theo góc nhìn của kẻ địch sử dụng lệnh /mm mobs spawn MobstestSkillBankai
+# Bản quyền thuộc: NOOB123ok
+# Cre: NOOB123ok, 
+# FaceBook: Thái Phùng (Neko)  https://www.facebook.com/profile.php?id=100081179074116
+# giá bán gốc của file 40k
+
+Fullpower_light:
+  cooldown: 1
+  Skills:
+  - summon{type=Lightbeam_Mobs;amount=1} @self
+  - stun{d=70;f=false;stopai=true} @EIR{r=35}
+  - stun{d=70;f=false;stopai=true} @self
+  - delay 60
+  - skill{s=Lightbeam} @self
+
+
+Lightbeam_cooldown:
+  Skills:
+  - projectile{oT=Lightbeam_cooldown_tick;oH=Lightbeam_cooldown_hit;i=2;v=8;mr=20;sfo=-5;sso=10;sE=true} @EIR{r=2}
+  - projectile{oT=Lightbeam_cooldown_tick;oH=Lightbeam_cooldown_hit;i=2;v=8;mr=20;sfo=-5;sso=-10;sE=true} @EIR{r=2}
+Lightbeam_cooldown_tick:
+  Skills:
+  - effect:particlesphere{p=reddust;a=300;color=#fbc759;y=0.5;s=1;r=2} @origin
+Lightbeam_cooldown_hit:
+  Skills:
+  - damage{a=0;i=true}
+  - throw{velocity=-15;velocityY=15}
+
+LightbeamX3:
+  Skills:
+  - projectile{oT=Lightbeam_Tick;oH=Lightbeam_Hit;oE=Lightbeam_end;i=1;mr=30;v=20;syo=0;sfo=2;sso=8;sE=false} @target
+  - projectile{oT=Lightbeam_Tick;oH=Lightbeam_Hit;oE=Lightbeam_end;i=1;mr=30;v=20;syo=0;sfo=2;sso=0;sE=false} @target
+  - projectile{oT=Lightbeam_Tick;oH=Lightbeam_Hit;oE=Lightbeam_end;i=1;mr=30;v=20;syo=0;sfo=2;sso=-8;sE=false} @target
+
+Lightbeam:
+  cooldown: 1
+  Skills:
+  - projectile{oT=Lightbeam_Tick;oH=Lightbeam_Hit;oE=Lightbeam_end;i=1;mr=30;v=20;syo=0;sfo=3;sso=0;sE=false} @target #@Ring{radius=360;points=36}
+
+Lightbeam_Tick:
+  Skills:
+  - effect:particlesphere{p=reddust;a=200;color=#effb59;y=0.5;s=1;r=3} @origin
+  - effect:particlesphere{p=reddust;a=200;color=#fbc759;y=0.5;s=1;r=3} @origin
+  - blockwave{duration=10;material=gold_block;radius=3;radiusY=4;velocity=2;shape=sphere} @origin
+  - sound{s=block.amethyst_cluster.hit;v=2;p=2} @origin
+Lightbeam_Hit:
+  Skills:
+  - damage{a=90;i=true}
+  - throw{velocity=-15;velocityY=15}
+  - effect:particlesphere{p=reddust;a=200;color=#effb59;y=0.3;s=1;r=2} @Ring{radius=3;points=128}
+Lightbeam_end:
+  Skills:
+  - sound{s=block.amethyst_cluster.hit;v=2;p=2} @self

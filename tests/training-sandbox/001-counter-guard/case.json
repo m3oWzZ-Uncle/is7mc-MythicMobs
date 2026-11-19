@@ -1,0 +1,15 @@
+{
+  "id": "001-counter-guard",
+  "kind": "practice",
+  "level": "basic",
+  "mythicmobs_target": "5.14.0",
+  "dependencies": [],
+  "required_scenarios": [
+    "melee",
+    "cooldown",
+    "two-players",
+    "two-mobs",
+    "environment",
+    "cleanup"
+  ]
+}

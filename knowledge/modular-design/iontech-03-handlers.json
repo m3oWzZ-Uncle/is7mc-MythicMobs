@@ -1,0 +1,1162 @@
+[
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Input Mechanics/click_combo-mechanic-skills.yml",
+    "sha256": "cdffc291d2438a989f96d8f462a8026193e60be214828d21fe2e2189c57bdd50",
+    "kind": "metaskill",
+    "categories": [
+      "Input Handlers",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "click_combo",
+        "line": 3
+      },
+      {
+        "id": "click_combo-start",
+        "line": 11
+      },
+      {
+        "id": "click_combo-wynn_wand",
+        "line": 28
+      },
+      {
+        "id": "click_combo-wynn_weapon",
+        "line": 38
+      },
+      {
+        "id": "click_combo-normal",
+        "line": 48
+      },
+      {
+        "id": "click_combo-quick",
+        "line": 57
+      },
+      {
+        "id": "click_combo-sendinput",
+        "line": 67
+      },
+      {
+        "id": "click_combo-checkinput",
+        "line": 75
+      },
+      {
+        "id": "click_combo-readinput",
+        "line": 89
+      },
+      {
+        "id": "click_combo-input",
+        "line": 94
+      },
+      {
+        "id": "click_combo-executeskill",
+        "line": 106
+      },
+      {
+        "id": "click_combo-invalid",
+        "line": 123
+      },
+      {
+        "id": "click_combo-force_end",
+        "line": 128
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "click_combo",
+        "to": "stun-oncast",
+        "line": 7,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo",
+        "to": "click_combo-start",
+        "line": 9,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-start",
+        "to": "click_combo-quick",
+        "line": 22,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-start",
+        "to": "click_combo-wynn_wand",
+        "line": 23,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-start",
+        "to": "click_combo-wynn_weapon",
+        "line": 24,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-start",
+        "to": "click_combo-normal",
+        "line": 25,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-wynn_wand",
+        "to": "click_combo-input",
+        "line": 32,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-wynn_wand",
+        "to": "click_combo-checkinput",
+        "line": 35,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-wynn_wand",
+        "to": "click_combo-checkinput",
+        "line": 36,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-wynn_weapon",
+        "to": "click_combo-input",
+        "line": 42,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-wynn_weapon",
+        "to": "click_combo-checkinput",
+        "line": 45,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-wynn_weapon",
+        "to": "click_combo-checkinput",
+        "line": 46,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-normal",
+        "to": "click_combo-checkinput",
+        "line": 54,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-normal",
+        "to": "click_combo-checkinput",
+        "line": 55,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-quick",
+        "to": "click_combo-input",
+        "line": 62,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-quick",
+        "to": "click_combo-checkinput",
+        "line": 64,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-quick",
+        "to": "click_combo-checkinput",
+        "line": 65,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-checkinput",
+        "to": "click_combo-force_end",
+        "line": 77,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-checkinput",
+        "to": "click_combo-readinput",
+        "line": 81,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-checkinput",
+        "to": "click_combo-readinput",
+        "line": 82,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-checkinput",
+        "to": "click_combo-readinput",
+        "line": 83,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-checkinput",
+        "to": "click_combo-readinput",
+        "line": 84,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-checkinput",
+        "to": "click_combo-readinput",
+        "line": 85,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-readinput",
+        "to": "click_combo-input",
+        "line": 91,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-input",
+        "to": "click_combo-executeskill",
+        "line": 104,
+        "kind": "metaskill"
+      },
+      {
+        "from": "click_combo-executeskill",
+        "to": "click_combo-input",
+        "line": 113,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "placeholderapi-string": [
+        99,
+        132
+      ],
+      "dynamic_calls": [
+        117
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/damage_core.yml",
+    "sha256": "105c334a461f248d59ef0ef60bfaca3f7c1149418f6f05d42ebf370c29f6ff89",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Damage Systems",
+      "Variables",
+      "Projectile",
+      "Modifiers"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "damage-init",
+        "line": 1
+      },
+      {
+        "id": "damage-evaluate",
+        "line": 13
+      },
+      {
+        "id": "damage-critical",
+        "line": 26
+      },
+      {
+        "id": "damage_indicator",
+        "line": 39
+      },
+      {
+        "id": "damage",
+        "line": 63
+      },
+      {
+        "id": "damage-weapon",
+        "line": 84
+      },
+      {
+        "id": "damage-ability",
+        "line": 108
+      },
+      {
+        "id": "damage-sudo",
+        "line": 135
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "damage-init",
+        "to": "setRandomID",
+        "line": 3,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-init",
+        "to": "setRandomID",
+        "line": 4,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-evaluate",
+        "to": "modifier-trigger",
+        "line": 21,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-evaluate",
+        "to": "damage-critical",
+        "line": 23,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage",
+        "to": "damage-init",
+        "line": 69,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage",
+        "to": "damage-evaluate",
+        "line": 75,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage",
+        "to": "damage_indicator",
+        "line": 79,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage",
+        "to": "modifier-trigger",
+        "line": 81,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-weapon",
+        "to": "damage-init",
+        "line": 91,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-weapon",
+        "to": "damage-evaluate",
+        "line": 97,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-weapon",
+        "to": "damage_indicator",
+        "line": 101,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-weapon",
+        "to": "modifier-trigger",
+        "line": 103,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-weapon",
+        "to": "modifier-trigger",
+        "line": 104,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-ability",
+        "to": "damage-init",
+        "line": 115,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-ability",
+        "to": "Suspend",
+        "line": 121,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-ability",
+        "to": "damage-evaluate",
+        "line": 123,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-ability",
+        "to": "damage_indicator",
+        "line": 127,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-ability",
+        "to": "modifier-trigger",
+        "line": 129,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-ability",
+        "to": "modifier-trigger",
+        "line": 130,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-sudo",
+        "to": "setRandomID",
+        "line": 144,
+        "kind": "metaskill"
+      },
+      {
+        "from": "damage-sudo",
+        "to": "damage-evaluate",
+        "line": 147,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        73,
+        74,
+        78,
+        79,
+        95,
+        96,
+        100,
+        101,
+        119,
+        120,
+        126,
+        127,
+        148
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/modifier_handler.yml",
+    "sha256": "2d1335d1baee5b12c89c93c32e2182ebf4c02a5cdeffa77d21b57bda241f444d",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Variables",
+      "Modifiers"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "modifier-init",
+        "line": 46
+      },
+      {
+        "id": "metaspell_add",
+        "line": 70
+      },
+      {
+        "id": "modifier",
+        "line": 73
+      },
+      {
+        "id": "modifier-add",
+        "line": 76
+      },
+      {
+        "id": "modifier-remove",
+        "line": 80
+      },
+      {
+        "id": "modifier-remove_list",
+        "line": 87
+      },
+      {
+        "id": "modifier-remove_map",
+        "line": 96
+      },
+      {
+        "id": "modifier-clear",
+        "line": 108
+      },
+      {
+        "id": "modifier-trigger",
+        "line": 117
+      },
+      {
+        "id": "modifier-parse_list",
+        "line": 131
+      },
+      {
+        "id": "modifier-parse_list-trigger_check",
+        "line": 153
+      },
+      {
+        "id": "modifier-insertion_sort",
+        "line": 165
+      },
+      {
+        "id": "modifier-sort_insert",
+        "line": 176
+      },
+      {
+        "id": "modifier-sort_loop",
+        "line": 189
+      },
+      {
+        "id": "modifier-sort_end",
+        "line": 202
+      },
+      {
+        "id": "modifier-execute",
+        "line": 208
+      },
+      {
+        "id": "modifier-parse_list-execute",
+        "line": 216
+      },
+      {
+        "id": "modifier-test",
+        "line": 225
+      },
+      {
+        "id": "modifier-test2",
+        "line": 232
+      },
+      {
+        "id": "modifier-test3",
+        "line": 247
+      },
+      {
+        "id": "blazing_sun-exec",
+        "line": 254
+      },
+      {
+        "id": "modifier-blazing_sun",
+        "line": 258
+      },
+      {
+        "id": "modifier-blazing_sun-remove",
+        "line": 268
+      },
+      {
+        "id": "sunfire_lance-exec",
+        "line": 275
+      },
+      {
+        "id": "modifier-sunfire_lance",
+        "line": 281
+      },
+      {
+        "id": "blaster-exec",
+        "line": 289
+      },
+      {
+        "id": "modifier-blaster",
+        "line": 293
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "metaspell_add",
+        "to": "modifier-add",
+        "line": 71,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier",
+        "to": "modifier-add",
+        "line": 74,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-add",
+        "to": "modifier-init",
+        "line": 77,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-trigger",
+        "to": "modifier-parse_list",
+        "line": 124,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-trigger",
+        "to": "modifier-execute",
+        "line": 125,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-parse_list",
+        "to": "modifier-insertion_sort",
+        "line": 145,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-insertion_sort",
+        "to": "modifier-sort_insert",
+        "line": 172,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-sort_insert",
+        "to": "modifier-sort_loop",
+        "line": 187,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-sort_loop",
+        "to": "modifier-sort_end",
+        "line": 196,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-sort_loop",
+        "to": "modifier-sort_loop",
+        "line": 200,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-test",
+        "to": "modifier-trigger",
+        "line": 228,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-blazing_sun",
+        "to": "modifier-blazing_sun-remove",
+        "line": 266,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-blazing_sun-remove",
+        "to": "modifier-remove",
+        "line": 273,
+        "kind": "metaskill"
+      },
+      {
+        "from": "modifier-sunfire_lance",
+        "to": "modifier-remove",
+        "line": 286,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        220
+      ]
+    }
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/setRandomID.yml",
+    "sha256": "191b07a5dc3be12ba2049d3fdb59174e883f432d1196d309eccec819f9289973",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "setRandomID",
+        "line": 2
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/spell_cast-defaults.yml",
+    "sha256": "789e4cef511d174d366d169ffdd9f185211d1d9986060c899a42a5948ae28f14",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Variables"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "stat_map-default",
+        "line": 1
+      },
+      {
+        "id": "channel-start_fx",
+        "line": 50
+      },
+      {
+        "id": "channel-force_interrupt_default",
+        "line": 60
+      },
+      {
+        "id": "channel-tick_fx",
+        "line": 64
+      },
+      {
+        "id": "channel-cast_fx",
+        "line": 76
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "channel-force_interrupt_default",
+        "to": "spell-cooldown",
+        "line": 62,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {}
+  },
+  {
+    "path": "packs/IonTech's Modular Systems/skills/Game Mechanic Skills/Skill Handlers/spell_handler.yml",
+    "sha256": "8c9f5cc9a60d757789a2f6764670fb7004176a61526c64a2c1af8202da826fe4",
+    "kind": "metaskill",
+    "categories": [
+      "Spell Handlers",
+      "Variables",
+      "Modifiers"
+    ],
+    "status": "syntax-checked",
+    "ids": [
+      {
+        "id": "spell-init",
+        "line": 1
+      },
+      {
+        "id": "Spell",
+        "line": 26
+      },
+      {
+        "id": "spell",
+        "line": 29
+      },
+      {
+        "id": "spell-evaluate",
+        "line": 38
+      },
+      {
+        "id": "spell-execute",
+        "line": 52
+      },
+      {
+        "id": "spell-critical",
+        "line": 58
+      },
+      {
+        "id": "spell-select",
+        "line": 66
+      },
+      {
+        "id": "spell-channel",
+        "line": 75
+      },
+      {
+        "id": "spell-channel-begin",
+        "line": 81
+      },
+      {
+        "id": "spell-channel-interrupt_logic",
+        "line": 95
+      },
+      {
+        "id": "spell-channel-force_interrupt",
+        "line": 103
+      },
+      {
+        "id": "spell-channel-manual_interrupt",
+        "line": 113
+      },
+      {
+        "id": "spell-channel-indicator_summon",
+        "line": 122
+      },
+      {
+        "id": "spell-channel-indicator_remove",
+        "line": 132
+      },
+      {
+        "id": "spell-channel-indicator_update",
+        "line": 139
+      },
+      {
+        "id": "spell-channel-start_logic",
+        "line": 144
+      },
+      {
+        "id": "spell-channel-tick_logic",
+        "line": 150
+      },
+      {
+        "id": "spell-channel-cast_logic",
+        "line": 156
+      },
+      {
+        "id": "spell-cast",
+        "line": 169
+      },
+      {
+        "id": "spell-charges-cast",
+        "line": 175
+      },
+      {
+        "id": "spell-charges-recharge_delay",
+        "line": 189
+      },
+      {
+        "id": "spell_cooldown",
+        "line": 203
+      },
+      {
+        "id": "spell-cooldown",
+        "line": 206
+      },
+      {
+        "id": "spell-charges-cooldown",
+        "line": 220
+      },
+      {
+        "id": "spell-cooldown_end",
+        "line": 233
+      },
+      {
+        "id": "spell-charges-cooldown_end",
+        "line": 240
+      },
+      {
+        "id": "spell-reset_cooldown",
+        "line": 246
+      },
+      {
+        "id": "spell-charges_regen",
+        "line": 254
+      },
+      {
+        "id": "spell-modify_charges",
+        "line": 270
+      },
+      {
+        "id": "spell-on_cooldown",
+        "line": 277
+      },
+      {
+        "id": "spell-charges-on_cooldown",
+        "line": 284
+      },
+      {
+        "id": "spell-charges-no_charges",
+        "line": 291
+      },
+      {
+        "id": "spell-off_cooldown",
+        "line": 300
+      },
+      {
+        "id": "spell-charges-off_recharge",
+        "line": 305
+      },
+      {
+        "id": "spell-not_enough_mana",
+        "line": 313
+      }
+    ],
+    "duplicate_keys": [],
+    "parse_error": null,
+    "literal_edges": [
+      {
+        "from": "Spell",
+        "to": "spell",
+        "line": 27,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell",
+        "to": "spell-init",
+        "line": 32,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell",
+        "to": "spell-evaluate",
+        "line": 36,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-evaluate",
+        "to": "spell-on_cooldown",
+        "line": 41,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-evaluate",
+        "to": "spell-charges-on_cooldown",
+        "line": 42,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-evaluate",
+        "to": "spell-charges-no_charges",
+        "line": 43,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-evaluate",
+        "to": "channel-manual_interrupt",
+        "line": 44,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-evaluate",
+        "to": "spell-execute",
+        "line": 49,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-execute",
+        "to": "modifier-trigger",
+        "line": 54,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-execute",
+        "to": "spell-critical",
+        "line": 55,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-execute",
+        "to": "spell-select",
+        "line": 56,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-select",
+        "to": "spell-channel",
+        "line": 68,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-select",
+        "to": "spell-cast",
+        "line": 70,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-select",
+        "to": "spell-charges-cast",
+        "line": 71,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel",
+        "to": "spell-channel-begin",
+        "line": 79,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-begin",
+        "to": "spell-channel-interrupt_logic",
+        "line": 90,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-begin",
+        "to": "spell-channel-start_logic",
+        "line": 91,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-begin",
+        "to": "spell-channel-tick_logic",
+        "line": 92,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-begin",
+        "to": "spell-channel-cast_logic",
+        "line": 93,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-interrupt_logic",
+        "to": "spell-channel-force_interrupt",
+        "line": 100,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-interrupt_logic",
+        "to": "spell-channel-manual_interrupt",
+        "line": 101,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-indicator_update",
+        "to": "spell-channel-indicator_remove",
+        "line": 142,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-start_logic",
+        "to": "spell-channel-indicator_summon",
+        "line": 146,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-start_logic",
+        "to": "spell-channel-tick_logic",
+        "line": 148,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-tick_logic",
+        "to": "spell-channel-indicator_update",
+        "line": 154,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-cast_logic",
+        "to": "spell-channel-tick_logic",
+        "line": 158,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-cast_logic",
+        "to": "spell-channel-indicator_remove",
+        "line": 161,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-cast_logic",
+        "to": "spell-cast",
+        "line": 164,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-channel-cast_logic",
+        "to": "spell-charges-cast",
+        "line": 165,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-cast",
+        "to": "modifier-trigger",
+        "line": 172,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-cast",
+        "to": "spell-cooldown",
+        "line": 173,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges-cast",
+        "to": "modifier-trigger",
+        "line": 183,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges-cast",
+        "to": "spell-charges-cooldown",
+        "line": 185,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges-cast",
+        "to": "spell-charges-recharge_delay",
+        "line": 186,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges-recharge_delay",
+        "to": "spell-charges_regen",
+        "line": 198,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell_cooldown",
+        "to": "spell-cooldown",
+        "line": 204,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-cooldown",
+        "to": "spell-cooldown_end",
+        "line": 215,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges-cooldown",
+        "to": "spell-cooldown_end",
+        "line": 228,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges-cooldown",
+        "to": "spell-charges-cooldown_end",
+        "line": 229,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-cooldown_end",
+        "to": "spell-off_cooldown",
+        "line": 237,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-cooldown_end",
+        "to": "modifier-trigger",
+        "line": 238,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges-cooldown_end",
+        "to": "modifier-trigger",
+        "line": 244,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-reset_cooldown",
+        "to": "modifier-trigger",
+        "line": 249,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges_regen",
+        "to": "spell-modify_charges",
+        "line": 265,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges_regen",
+        "to": "spell-charges-off_recharge",
+        "line": 266,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges_regen",
+        "to": "spell-charges_regen",
+        "line": 267,
+        "kind": "metaskill"
+      },
+      {
+        "from": "spell-charges-no_charges",
+        "to": "spell-charges-recharge_delay",
+        "line": 296,
+        "kind": "metaskill"
+      }
+    ],
+    "dependency_signals": {
+      "dynamic_calls": [
+        33,
+        99,
+        111,
+        120,
+        147,
+        152,
+        163,
+        171,
+        182,
+        236,
+        243,
+        282,
+        289
+      ]
+    }
+  }
+]

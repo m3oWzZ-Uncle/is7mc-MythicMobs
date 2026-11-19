@@ -1,0 +1,184 @@
+HOL2[SYS]_Conductor-ChevaliersWaveSummonMarker:
+  Type: ARMOR_STAND
+  Skills:
+  - randomskill{skills=Conductor_ChevaliersWaveN,Conductor_ChevaliersWaveE,Conductor_ChevaliersWaveS,Conductor_ChevaliersWaveW} ~onSpawn
+  Options:
+    Marker: true
+    Invisible: true
+
+HOL2[SYS]_Conductor-ChevaliersRingSummonMarker:
+  Type: ARMOR_STAND
+  Skills:
+  - skill{s=Conductor_ChevaliersRing} ~onSpawn
+  Options:
+    Marker: true
+    Invisible: true
+HOL2[SYS]_Conductor-ChevaliersN:
+  Type: VEX
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=chevaliers;nametag=false} @Self ~onSpawn
+  - setrotation{relative=false;yaw=180;pitch=0} @Self ~onSpawn
+  - skill{s=Chevaliers_Charge} ~onSpawn
+  - skill{s=Chevaliers_Timer} ~onTimer:10
+  Options:
+    Silent: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+HOL2[SYS]_Conductor-ChevaliersNE:
+  Type: VEX
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=chevaliers;nametag=false} @Self ~onSpawn
+  - setrotation{relative=false;yaw=225;pitch=0} @Self ~onSpawn
+  - skill{s=Chevaliers_Charge} ~onSpawn
+  - skill{s=Chevaliers_Timer} ~onTimer:10
+  Options:
+    Silent: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+HOL2[SYS]_Conductor-ChevaliersE:
+  Type: VEX
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=chevaliers;nametag=false} @Self ~onSpawn
+  - setrotation{relative=false;yaw=270;pitch=0} @Self ~onSpawn
+  - skill{s=Chevaliers_Charge} ~onSpawn
+  - skill{s=Chevaliers_Timer} ~onTimer:10
+  Options:
+    Silent: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+HOL2[SYS]_Conductor-ChevaliersSE:
+  Type: VEX
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=chevaliers;nametag=false} @Self ~onSpawn
+  - setrotation{relative=false;yaw=315;pitch=0} @Self ~onSpawn
+  - skill{s=Chevaliers_Charge} ~onSpawn
+  - skill{s=Chevaliers_Timer} ~onTimer:10
+  Options:
+    Silent: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+HOL2[SYS]_Conductor-ChevaliersS:
+  Type: VEX
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=chevaliers;nametag=false} @Self ~onSpawn
+  - setrotation{relative=false;yaw=0;pitch=0} @Self ~onSpawn
+  - skill{s=Chevaliers_Charge} ~onSpawn
+  - skill{s=Chevaliers_Timer} ~onTimer:10
+  Options:
+    Silent: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+HOL2[SYS]_Conductor-ChevaliersSW:
+  Type: VEX
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=chevaliers;nametag=false} @Self ~onSpawn
+  - setrotation{relative=false;yaw=45;pitch=0} @Self ~onSpawn
+  - skill{s=Chevaliers_Charge} ~onSpawn
+  - skill{s=Chevaliers_Timer} ~onTimer:10
+  Options:
+    Silent: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+HOL2[SYS]_Conductor-ChevaliersW:
+  Type: VEX
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=chevaliers;nametag=false} @Self ~onSpawn
+  - setrotation{relative=false;yaw=90;pitch=0} @Self ~onSpawn
+  - skill{s=Chevaliers_Charge} ~onSpawn
+  - skill{s=Chevaliers_Timer} ~onTimer:10
+  Options:
+    Silent: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+HOL2[SYS]_Conductor-ChevaliersNW:
+  Type: VEX
+  Faction: HollowWoods
+  AITargetSelectors:
+  - 0 clear
+  AIGoalSelectors:
+  - 0 clear
+  Skills:
+  - model{mid=chevaliers;nametag=false} @Self ~onSpawn
+  - setrotation{relative=false;yaw=135;pitch=0} @Self ~onSpawn
+  - skill{s=Chevaliers_Charge} ~onSpawn
+  - skill{s=Chevaliers_Timer} ~onTimer:10
+  Options:
+    Silent: true
+    Invincible: true
+    AlwaysShowName: false
+    PreventJockeyMounts: true
+    PreventTransformation: true
+    PreventOtherDrops: true
+    PreventMobKillDrops: true
+
+# 8885TJ6C71AWBKEYR5WZL9QQ

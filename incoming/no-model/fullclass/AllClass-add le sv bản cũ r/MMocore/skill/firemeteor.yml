@@ -1,0 +1,40 @@
+name: Fire Meteor
+lore:
+- Kéo một mảnh vỡ thiên thạch từ trên trời
+- rơi xuống chỗ chỉ định gây sát thương và
+- gây cháy trong bán kính 4 block
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Damage &7▸ <#FF8E6A>{damage}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: BLAZE_POWDER
+damage:
+  base: 32
+  per-level: 0.2
+  min: 0
+  max: 30
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 30
+  per-level: -0.1
+  min: 0
+  max: 30

@@ -1,0 +1,40 @@
+name: Fireball Burns
+lore:
+- Bắn ra một quả cầu lửa về phía chỉ định
+- gây sát thương thiêu đốt và trên đường
+- bay gây cháy mọi vật thể bán kính 1 block
+- ''
+- '&3 <#78FFEF>◆ &7Cooldown &7▸ <#FF8E6A>{cooldown}'
+- '&3 <#78FFEF>◆ &7Damage &7▸ <#FF8E6A>{damage}'
+- '&3 <#78FFEF>◆ &7Mana &7▸ <#FF8E6A>{mana}'
+material: BLAZE_POWDER
+damage:
+  base: 24
+  per-level: 0.2
+  min: 0
+  max: 30
+timer:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+delay:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+mana:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+stamina:
+  base: 0
+  per-level: 0
+  min: 0
+  max: 0
+cooldown:
+  base: 19
+  per-level: -0.1
+  min: 0
+  max: 30

@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-15",
+  "source": "incoming/IonTech/IonTech-s-Modular-Systems-main",
+  "inventory": "iontech-checkpoint.json",
+  "runtime": "unverified",
+  "batches": [
+    {
+      "id": "01-vector-math-variables",
+      "status": "source-and-wiki-reviewed",
+      "articles": [
+        "../advanced-math/vectors.md",
+        "../advanced-variables/README.md"
+      ]
+    },
+    {
+      "id": "02-slash-projectile",
+      "status": "source-and-wiki-reviewed",
+      "articles": [
+        "slash-projectile.md",
+        "../advanced-math/geometry.md"
+      ],
+      "pending": [
+        "Measure callback ordering, collision and visual alignment on the target build"
+      ]
+    },
+    {
+      "id": "03-handlers",
+      "status": "main-contracts-reviewed",
+      "articles": [
+        "handlers.md"
+      ],
+      "pending": [
+        "Verify build-specific modifier order and spell charge/resource handling"
+      ]
+    },
+    {
+      "id": "04-06",
+      "status": "static-inventory",
+      "pending": [
+        "Review demo/legacy/mob-support behavior individually when needed"
+      ]
+    }
+  ]
+}
